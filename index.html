@@ -1,6 +1,13 @@
-<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="stylesheet" href="css/learning.css"><link rel="stylesheet" href="css/desktop.css" id="wideDesktopStyles"><link rel="stylesheet" href="css/adaptive.css" id="adaptiveStyle"><link rel="stylesheet" href="css/study.css" id="wortSadeStyles"></head><body>
-<title>WortDuell — Grammar + 3 skills</title>
+<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="stylesheet" href="css/learning.css"><link rel="stylesheet" href="css/desktop.css" id="wideDesktopStyles"><link rel="stylesheet" href="css/adaptive.css" id="adaptiveStyle"><link rel="stylesheet" href="css/study.css" id="wortSadeStyles"><title>WortDuell — Grammar + 3 skills</title>
+<meta name="theme-color" content="#17233A">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WortDuell">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/pwa.css">
+</head><body>
 
 
 
@@ -344,6 +351,13 @@
       <b>Timer</b>
       <div class="seg" id="segTime"><button data-v="0" aria-pressed="false">No timer</button><button data-v="20" aria-pressed="true">20 sec</button><button data-v="12" aria-pressed="false">12 sec</button></div>
     </div>
+    <div class="card" id="pwaSettings">
+      <b>App &amp; offline updates</b>
+      <span class="muted" id="pwaStatus" role="status">Checking offline support…</span>
+      <span class="notice" id="pwaInstall">iPhone / iPad: Safari → Share → Add to Home Screen. Mac: Safari → File → Add to Dock.</span>
+      <div class="pwa-actions"><button class="btn soft" id="pwaCheck" type="button">Check for updates</button><button class="btn" id="pwaApply" type="button" hidden>Apply update &amp; reload</button></div>
+      <span class="notice">Saved lessons work offline after setup. Speech availability depends on your device. Back up progress before switching browsers or installing the app.</span>
+    </div>
     <div class="card">
       <b>Back up progress</b>
       <span class="muted" style="font-size:14px">Your progress is saved on this device. Copy the backup code and import it to continue on another device.</span>
@@ -395,6 +409,12 @@
 
 
 
+<div id="pwaUpdateBanner" role="region" aria-label="WortDuell update" hidden>
+  <b>New WortDuell version ready</b>
+  <p>Finish your exercise before reloading. Other open WortDuell tabs may also reload.</p>
+  <div class="pwa-actions"><button class="btn" id="pwaBannerApply" type="button">Update &amp; reload</button><button class="btn soft" id="pwaDismiss" type="button">Later</button></div>
+</div>
+<script src="js/pwa.js" defer></script>
 <script src="js/data-loader.js"></script>
 <script src="js/app.js"></script>
 

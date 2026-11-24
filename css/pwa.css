@@ -1,0 +1,5 @@
+/* Keep the original study layout. This notice is visible only for updates. */
+#pwaUpdateBanner{position:fixed;z-index:100;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(460px,calc(100% - 24px));padding:14px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 32px #0003;display:grid;gap:8px;box-sizing:border-box}
+#pwaUpdateBanner .pwa-actions,#pwaSettings .pwa-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#pwaUpdateBanner .btn,#pwaSettings .btn{min-height:42px}
+#pwaUpdateBanner p{margin:0;font-size:13px;line-height:1.4;color:var(--muted)}
