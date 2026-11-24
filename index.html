@@ -7,6 +7,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="icons/icon-192.png">
 <link rel="stylesheet" href="css/pwa.css">
+<link rel="stylesheet" href="css/ai.css">
 </head><body>
 
 
@@ -29,6 +30,7 @@
       <button type="button" data-go="stories" class="wd-nav-item"><span class="wd-emoji">▤</span><span>Mini stories</span></button>
       <button type="button" data-go="talk" class="wd-nav-item"><span class="wd-emoji">☏</span><span>Speaking practice</span></button>
       <button type="button" data-go="builder" class="wd-nav-item"><span class="wd-emoji">✧</span><span>Sentence builder+</span></button>
+      <button type="button" data-ai-open class="wd-nav-item"><span class="wd-emoji">✦</span><span>AI tutor</span></button>
       <div class="wd-nav-rule"></div>
       <div class="wd-side-label">LIBRARY</div>
       <button type="button" data-go="academy" class="wd-nav-item"><span class="wd-emoji">▧</span><span>Grammar academy</span></button>
@@ -414,6 +416,20 @@
   <p>Finish your exercise before reloading. Other open WortDuell tabs may also reload.</p>
   <div class="pwa-actions"><button class="btn" id="pwaBannerApply" type="button">Update &amp; reload</button><button class="btn soft" id="pwaDismiss" type="button">Later</button></div>
 </div>
+<dialog id="aiDialog" aria-labelledby="aiTitle">
+  <div class="ai-heading"><h2 id="aiTitle">✦ Local AI tutor</h2><button type="button" class="btn soft" id="aiClose">Close</button></div>
+  <p>Practise German with an optional on-device language model. No AI API key or subscription.</p>
+  <p class="ai-note">Experimental: small models can make grammar mistakes. The first load downloads hundreds of MB or more from external hosts. Use Wi-Fi. Each device has its own cache; internet may be needed again. No model runs before you load it.</p>
+  <div class="ai-controls"><label>Model<select id="aiModel"><option value="light">Qwen 2.5 0.5B · light</option><option value="balanced">Qwen 2.5 1.5B · better quality</option></select></label><label>Level<select id="aiLevel"><option>A1</option><option>A2</option></select></label></div>
+  <div class="ai-actions"><button type="button" class="btn primary" id="aiLoad">Load AI model</button><button type="button" class="btn soft" id="aiStop" disabled>Stop / release AI</button></div>
+  <p id="aiStatus" role="status">AI is off.</p><progress id="aiProgress" max="1" value="0" hidden aria-label="Model loading progress"></progress>
+  <label>Activity<select id="aiMode"><option value="grammar">Grammar checker</option><option value="conversation">German conversation</option><option value="explain">Explain a word or rule</option><option value="practice">AI exercise</option></select></label>
+  <div id="aiLog" role="log" aria-label="Tutor conversation" aria-live="off"></div>
+  <form id="aiForm"><label>Your sentence or question<textarea id="aiInput" maxlength="600" required placeholder="Write a German sentence or ask in English…"></textarea></label>
+    <div class="ai-actions"><button type="button" class="btn soft" id="aiExample">Try an example</button><button type="submit" class="btn primary" id="aiSend" disabled>Ask AI</button><button type="button" class="btn soft" id="aiClear">Clear chat</button></div>
+  </form><p class="ai-note">Messages stay in this session and are processed by the local model. Closing the tutor or leaving the app stops the AI worker. Your existing study records are not changed.</p>
+</dialog>
+<script src="js/ai.js" defer></script>
 <script src="js/pwa.js" defer></script>
 <script src="js/data-loader.js"></script>
 <script src="js/app.js"></script>

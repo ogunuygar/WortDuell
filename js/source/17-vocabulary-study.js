@@ -253,7 +253,7 @@ const wdIntro=document.createElement('div');wdIntro.id='wdSimpleHome';wdIntro.in
  <div class="wd-options-row"><label>Level<select id="wdLevelPicker" class="wd-simple-select"><option value="all">A1 + A2</option><option value="A1">A1</option><option value="A2">A2</option></select></label><label>Round<select id="wdCountPicker" class="wd-simple-select"><option value="5">5 words</option><option value="10">10 words</option><option value="20">20 words</option><option value="30">30 words</option><option value="40">40 words</option><option value="50">50 words</option></select></label></div>
  <div class="wd-start-footer"><span id="wdStudySummary" class="muted-small"></span><button class="btn primary" id="wdBeginLearn">Start learning <span aria-hidden="true">→</span></button></div></div>
  <div class="wd-paths-title"><h3>Explore other activities</h3><span>No fixed schedule</span></div>
- <div class="wd-simple-paths"><button data-wd-path="academy"><span class="wd-path-icon">Aa</span><b>Grammar</b><small>Short lessons and examples</small></button><button data-wd-path="story"><span class="wd-path-icon">▤</span><b>Stories</b><small>Reading comprehension</small></button><button data-wd-path="talk"><span class="wd-path-icon">“ ”</span><b>Conversation</b><small>Everyday German</small></button><button data-wd-path="dict"><span class="wd-path-icon">⌕</span><b>My dictionary</b><small>${DATA.length.toLocaleString('en-GB')} words and notes</small></button></div>
+ <div class="wd-simple-paths"><button type="button" data-ai-open><span class="wd-path-icon">✦</span><b>AI tutor</b><small>Grammar and local AI</small></button><button data-wd-path="academy"><span class="wd-path-icon">Aa</span><b>Grammar</b><small>Short lessons and examples</small></button><button data-wd-path="story"><span class="wd-path-icon">▤</span><b>Stories</b><small>Reading comprehension</small></button><button data-wd-path="talk"><span class="wd-path-icon">“ ”</span><b>Conversation</b><small>Everyday German</small></button><button data-wd-path="dict"><span class="wd-path-icon">⌕</span><b>My dictionary</b><small>${DATA.length.toLocaleString('en-GB')} words and notes</small></button></div>
  <details class="wd-extra"><summary>More practice and daily review <span>⌄</span></summary><div class="wd-extra-actions"><button data-wd-path="review">Adaptive review</button><button data-wd-path="daily">Previous daily plan</button><button data-wd-path="hub">All exercises</button><button data-wd-path="verbs">${ACADEMY_DATA.verbs.length} verb conjugations</button><button data-wd-path="personal">My words</button></div></details>`;
 const homeTop=wdHome.querySelector('.wd-home-top');homeTop.insertAdjacentElement('afterend',wdIntro);
 setLevelOptions($('wdLevelPicker'), vocabularyLevels, allLevelLabel(vocabularyLevels));
@@ -294,6 +294,7 @@ wdDictKind.onchange=renderDict;
 // Gentle defaults only for new users; keep old settings untouched if a backup exists.
 const wdNavNames={home:"Home",hub:"Learn",academy:"Grammar",dict:"My dictionary",progress:"My progress",settings:"Settings"};
 document.querySelectorAll('.wd-side .wd-nav-item').forEach(b=>{
+ if(b.hasAttribute('data-ai-open'))return;
  const id=b.dataset.go;if(!(id in wdNavNames)){b.hidden=true;return;}
  b.lastElementChild.textContent=wdNavNames[id];
 });
