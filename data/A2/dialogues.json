@@ -1,0 +1,326 @@
+[
+  {
+    "_order": 9,
+    "id": "conv10",
+    "level": "A2",
+    "tr": "Rescheduling an appointment",
+    "title": "Termin verschieben",
+    "turns": [
+      {
+        "line": "Guten Tag, ich möchte meinen Termin verschieben.",
+        "good": "Natürlich. Wann passt es Ihnen?",
+        "bad": [
+          "Ich habe gestern nur Kaffee.",
+          "Eine Lampe steht vor."
+        ],
+        "why": "Wann passt es Ihnen? asks which time suits the other person."
+      },
+      {
+        "line": "Passt Ihnen der Donnerstag?",
+        "good": "Leider nicht. Haben Sie Freitag Zeit?",
+        "bad": [
+          "Das schmeckt nach Schule.",
+          "Ich bin ein schwer."
+        ],
+        "why": "Leider nicht declines the proposed time before suggesting Friday."
+      },
+      {
+        "line": "Freitag um elf Uhr ist frei.",
+        "good": "Vielen Dank, das passt gut.",
+        "bad": [
+          "Ich gehe sind klein.",
+          "Die Nummer war freundlich."
+        ],
+        "why": "Das passt gut confirms the new time works."
+      }
+    ]
+  },
+  {
+    "_order": 10,
+    "id": "conv11",
+    "level": "A2",
+    "tr": "In a meeting",
+    "title": "In der Besprechung",
+    "turns": [
+      {
+        "line": "Können Sie das Problem kurz erklären?",
+        "good": "Ja, der Computer startet nicht.",
+        "bad": [
+          "Ich fahre gestern klein.",
+          "Der Tee ist ein Chef."
+        ],
+        "why": "Startet nicht identifies the computer problem."
+      },
+      {
+        "line": "Haben Sie die Datei schon geprüft?",
+        "good": "Ja, ich habe sie kontrolliert.",
+        "bad": [
+          "Ja, ich bin prüfen.",
+          "Morgen den Kaffee."
+        ],
+        "why": "Sie refers back to the item mentioned. Habe kontrolliert is Perfekt."
+      },
+      {
+        "line": "Wann können wir das testen?",
+        "good": "Wir können es morgen testen.",
+        "bad": [
+          "Ich gehe den Zug schön.",
+          "Die Uhr ist laufen."
+        ],
+        "why": "With können, place the second verb at the end: testen."
+      }
+    ]
+  },
+  {
+    "_order": 11,
+    "id": "conv12",
+    "level": "A2",
+    "tr": "With a neighbour",
+    "title": "Mit dem Nachbarn",
+    "turns": [
+      {
+        "line": "Entschuldigung, ist das Ihr Paket?",
+        "good": "Ja, vielen Dank fürs Annehmen.",
+        "bad": [
+          "Nein, heute habe Bahnhof.",
+          "Die Tür fährt spät."
+        ],
+        "why": "Fürs Annehmen means for accepting it. Fürs is short for für das."
+      },
+      {
+        "line": "War jemand zu Hause?",
+        "good": "Nein, ich war bei der Arbeit.",
+        "bad": [
+          "Ich habe bei fahren.",
+          "Ja, heute lernen Tür."
+        ],
+        "why": "Bei der Arbeit means at work. War gives the past location."
+      },
+      {
+        "line": "Soll ich es hochtragen?",
+        "good": "Nein, danke. Das schaffe ich.",
+        "bad": [
+          "Morgen ich hätte.",
+          "Die Türe das Bus."
+        ],
+        "why": "Das schaffe ich means I can manage that."
+      }
+    ]
+  },
+  {
+    "_order": 12,
+    "id": "conv13",
+    "level": "A2",
+    "tr": "With the property manager",
+    "title": "Bei der Hausverwaltung",
+    "turns": [
+      {
+        "line": "Guten Tag, in meiner Küche tropft Wasser.",
+        "good": "Das tut mir leid. Seit wann?",
+        "bad": [
+          "Ich trinke heute Bus.",
+          "Der Tisch geht gestern."
+        ],
+        "why": "Seit wann? asks how long the problem has existed."
+      },
+      {
+        "line": "Seit gestern tropft es unter der Spüle.",
+        "good": "Wir schicken morgen jemanden vorbei.",
+        "bad": [
+          "Heute ist eine dreizehn.",
+          "Mein Bus ist haben."
+        ],
+        "why": "Jemanden vorbeischicken means to send someone round."
+      },
+      {
+        "line": "Muss ich zu Hause bleiben?",
+        "good": "Ja, bitte zwischen zehn und zwölf.",
+        "bad": [
+          "Das Haus kostet ich.",
+          "Nein, der Apfel."
+        ],
+        "why": "Zwischen zehn und zwölf specifies a time window."
+      }
+    ]
+  },
+  {
+    "_order": 13,
+    "id": "conv14",
+    "level": "A2",
+    "tr": "Applying for a job",
+    "title": "Bewerbung",
+    "turns": [
+      {
+        "line": "Warum möchten Sie hier arbeiten?",
+        "good": "Ich interessiere mich für diese Stelle.",
+        "bad": [
+          "Ich bin gestern ein Bahnhof.",
+          "Mein Freund ist zehn."
+        ],
+        "why": "Sich interessieren für takes the accusative: für diese Stelle."
+      },
+      {
+        "line": "Welche Erfahrung haben Sie?",
+        "good": "Ich habe an mehreren Projekten gearbeitet.",
+        "bad": [
+          "Ich habe arbeiten gestern bin.",
+          "Ich bin Projekt."
+        ],
+        "why": "An Projekten arbeiten uses the dative. Habe gearbeitet is Perfekt."
+      },
+      {
+        "line": "Haben Sie noch Fragen?",
+        "good": "Ja, wie sieht die Einarbeitung aus?",
+        "bad": [
+          "Nein, ich komme die Bus.",
+          "Ja, ich habe eine Uhr neu."
+        ],
+        "why": "Einarbeitung refers to the induction or training period in a new job."
+      }
+    ]
+  },
+  {
+    "_order": 14,
+    "id": "conv15",
+    "level": "A2",
+    "tr": "On the phone",
+    "title": "Am Telefon",
+    "turns": [
+      {
+        "line": "Guten Tag, hier ist Frau Müller.",
+        "good": "Guten Tag, wie kann ich Ihnen helfen?",
+        "bad": [
+          "Ich habe eine Kalender gehen.",
+          "Morgen ist nach."
+        ],
+        "why": "Wie kann ich Ihnen helfen? is a polite offer of help."
+      },
+      {
+        "line": "Ich möchte Herrn Becker sprechen.",
+        "good": "Einen Moment, bitte.",
+        "bad": [
+          "Gestern arbeite ich der.",
+          "Die Katze ist zum Büro."
+        ],
+        "why": "Einen Moment, bitte asks the caller to wait."
+      },
+      {
+        "line": "Er ist leider nicht da.",
+        "good": "Kann ich eine Nachricht hinterlassen?",
+        "bad": [
+          "Ich bin ein Auto gestern.",
+          "Woher arbeitet Tür?"
+        ],
+        "why": "Eine Nachricht hinterlassen means to leave a message."
+      }
+    ]
+  },
+  {
+    "_order": 15,
+    "id": "conv16",
+    "level": "A2",
+    "tr": "Making plans with friends",
+    "title": "Pläne mit Freunden",
+    "turns": [
+      {
+        "line": "Hast du am Samstag Zeit?",
+        "good": "Ja, was möchtest du machen?",
+        "bad": [
+          "Der Samstag kostet lange.",
+          "Die Schule war essen."
+        ],
+        "why": "Was möchtest du machen? asks what the other person would like to do."
+      },
+      {
+        "line": "Wollen wir ins Kino gehen?",
+        "good": "Gerne, aber ich muss zuerst arbeiten.",
+        "bad": [
+          "Ich bin arbeiten Kino.",
+          "Nein, ich war Kaffee."
+        ],
+        "why": "Gerne accepts the idea. Aber introduces a scheduling constraint."
+      },
+      {
+        "line": "Wann kannst du kommen?",
+        "good": "Ich kann gegen sieben Uhr kommen.",
+        "bad": [
+          "Ich gehen muss gestern.",
+          "Heute habe die Zug."
+        ],
+        "why": "Gegen sieben means around seven, an approximate time."
+      }
+    ]
+  },
+  {
+    "_order": 16,
+    "id": "conv17",
+    "level": "A2",
+    "tr": "Talking about a German course",
+    "title": "Über den Deutschkurs",
+    "turns": [
+      {
+        "line": "Was hast du gestern gelernt?",
+        "good": "Ich habe den Dativ wiederholt.",
+        "bad": [
+          "Ich bin gestern sprechen.",
+          "Das ist der morgen."
+        ],
+        "why": "Den Dativ wiederholen means to review the dative case."
+      },
+      {
+        "line": "Was findest du schwierig?",
+        "good": "Die Artikel sind für mich schwierig.",
+        "bad": [
+          "Ich bin Akkusativ gestern.",
+          "Meine Uhr fährt Bus."
+        ],
+        "why": "Für mich means for me. The plural subject Artikel takes sind."
+      },
+      {
+        "line": "Wie lernst du neue Wörter?",
+        "good": "Ich schreibe Sätze und höre Beispiele.",
+        "bad": [
+          "Ich kaufe morgen klein.",
+          "Es ist eine schnell."
+        ],
+        "why": "The reply describes two study methods: writing sentences and listening to examples."
+      }
+    ]
+  },
+  {
+    "_order": 17,
+    "id": "conv18",
+    "level": "A2",
+    "tr": "Writing an email",
+    "title": "Eine E-Mail schreiben",
+    "turns": [
+      {
+        "line": "Kannst du mir den Bericht schicken?",
+        "good": "Ja, ich schicke ihn dir heute.",
+        "bad": [
+          "Das ist heute kaufen.",
+          "Ich bin morgen klein."
+        ],
+        "why": "Ihn refers to a masculine object. Dir is the dative recipient."
+      },
+      {
+        "line": "Hast du die Datei schon geöffnet?",
+        "good": "Ja, ich habe sie schon gelesen.",
+        "bad": [
+          "Ich hat gestern gehen.",
+          "Der Chef ist trinken."
+        ],
+        "why": "Schon means already. Habe gelesen is the Perfekt of lesen."
+      },
+      {
+        "line": "Wann bekommst du die Antwort?",
+        "good": "Wahrscheinlich morgen Vormittag.",
+        "bad": [
+          "Ich möchte einen Tisch kaufen.",
+          "Das Buch ist schnell."
+        ],
+        "why": "Wahrscheinlich makes the timing tentative. Morgen Vormittag means tomorrow morning."
+      }
+    ]
+  }
+]

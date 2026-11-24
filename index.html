@@ -1,0 +1,401 @@
+<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="stylesheet" href="css/learning.css"><link rel="stylesheet" href="css/desktop.css" id="wideDesktopStyles"><link rel="stylesheet" href="css/adaptive.css" id="adaptiveStyle"><link rel="stylesheet" href="css/study.css" id="wortSadeStyles"></head><body>
+<title>WortDuell — Grammar + 3 skills</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+
+<link rel="stylesheet" href="css/base.css">
+
+<div class="wrap" id="app">
+
+  <!-- Wide desktop navigation. Core application screens remain unchanged. -->
+  <aside class="wd-side" aria-label="Main navigation">
+    <div class="wd-brand">
+      <div class="wd-brand-symbol" aria-hidden="true">W<span>·</span></div>
+      <div class="wd-brand-copy"><strong>WortDuell</strong><small>ACADEMY <b>PLUS</b></small></div>
+    </div>
+    <div class="wd-side-label">YOUR WORKSPACE</div>
+    <nav class="wd-nav" aria-label="Study menu">
+      <button type="button" data-go="home" class="wd-nav-item active"><span class="wd-emoji">⌂</span><span>Home</span></button>
+      <button type="button" data-go="daily" class="wd-nav-item"><span class="wd-emoji">◈</span><span>Daily lesson</span></button>
+      <button type="button" data-go="hub" class="wd-nav-item"><span class="wd-emoji">▦</span><span>Study areas</span></button>
+      <button type="button" data-go="stories" class="wd-nav-item"><span class="wd-emoji">▤</span><span>Mini stories</span></button>
+      <button type="button" data-go="talk" class="wd-nav-item"><span class="wd-emoji">☏</span><span>Speaking practice</span></button>
+      <button type="button" data-go="builder" class="wd-nav-item"><span class="wd-emoji">✧</span><span>Sentence builder+</span></button>
+      <div class="wd-nav-rule"></div>
+      <div class="wd-side-label">LIBRARY</div>
+      <button type="button" data-go="academy" class="wd-nav-item"><span class="wd-emoji">▧</span><span>Grammar academy</span></button>
+      <button type="button" data-go="verbs" class="wd-nav-item"><span class="wd-emoji">Aa</span><span>Verb conjugation</span></button>
+      <button type="button" data-go="dict" class="wd-nav-item"><span class="wd-emoji">⌕</span><span>Dictionary</span></button>
+      <button type="button" data-go="mistakes" class="wd-nav-item"><span class="wd-emoji">↺</span><span>Mistake notebook</span></button>
+      <div class="wd-nav-rule"></div>
+      <div class="wd-side-label">MY ACCOUNT</div>
+      <button type="button" data-go="progress" class="wd-nav-item"><span class="wd-emoji">▥</span><span>Progress history</span></button>
+      <button type="button" data-go="settings" class="wd-nav-item"><span class="wd-emoji">⚙</span><span>Settings</span></button>
+    </nav>
+    <div class="wd-side-footer"><span class="wd-live-dot"></span> Learn at your own pace <small>A1–A2 · No limits, no pressure</small></div>
+  </aside>
+  <!-- HOME -->
+  <section id="home" class="wrap" style="padding:0">
+    <div class="top wd-home-top">
+      <div class="brand"><h1>WortDuell</h1><span class="k num">1000</span><span class="wd-home-subtitle">A little German every day, at your own pace.</span></div>
+      <div class="row">
+        <button class="iconbtn" id="btnDict" aria-label="Dictionary">Dictionary</button>
+        <button class="iconbtn" id="btnSet" aria-label="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></button>
+      </div>
+    </div>
+
+    <div class="stats wd-stats">
+      <div class="stat"><b class="num" id="stLearn">0</b><span>learned</span></div>
+      <div class="stat"><b class="num" id="stAcc">–</b><span>accuracy</span></div>
+      <div class="stat"><b class="num" id="stPts">0</b><span>points</span></div>
+      <div class="stat"><b class="num" id="stToday">0</b><span>today</span></div>
+    </div>
+    <div class="wd-global-progress" style="display:flex;flex-direction:column;gap:6px">
+      <div class="row" style="justify-content:space-between"><span class="label">Overall progress</span><span class="num muted" style="font-size:13px" id="stProg">0 / 1000</span></div>
+      <div class="bar"><i id="barAll" style="width:0"></i></div>
+    </div>
+
+    <div class="hero">
+      <h2>Quick duel</h2>
+      <p>Mixed vocabulary, with new words and previous mistakes first.</p>
+      <div class="direction">
+        <span class="label" style="color:inherit;opacity:.82">Translation direction</span>
+        <div class="seg" id="segDir" role="group" aria-label="Translation direction">
+          <button data-v="de2tr" aria-pressed="false">DE → EN</button>
+          <button data-v="tr2de" aria-pressed="false">EN → DE</button>
+          <button data-v="mix" aria-pressed="true">Mixed</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="seg" id="segLvl" role="group" aria-label="Level">
+          <button data-v="all" aria-pressed="true">All</button><button data-v="A1" aria-pressed="false">A1</button><button data-v="A2" aria-pressed="false">A2</button>
+        </div>
+        <div class="seg" id="segLen" role="group" aria-label="Number of questions">
+          <button data-v="10" aria-pressed="true">10</button><button data-v="20" aria-pressed="false">20</button>
+        </div>
+      </div>
+      <div class="adapt-switch" aria-label="Adaptive question selection">
+        <div class="row" style="justify-content:space-between;align-items:center"><span class="label" style="color:inherit;opacity:.82">🧠 Question memory</span><span class="adapt-mini">Missed items return over time</span></div>
+        <div class="seg" id="adaptMode" role="group" aria-label="Study pace">
+          <button data-adapt="relaxed" aria-pressed="false">Relaxed</button>
+          <button data-adapt="balanced" aria-pressed="true">Balanced</button>
+          <button data-adapt="focused" aria-pressed="false">Focus on mistakes</button>
+        </div>
+      </div>
+      <button class="btn primary block" id="btnQuick">Start</button>
+    </div>
+
+    <div class="quick">
+      <button class="qcard" id="btnWrong"><b>My mistakes</b><span id="cWrong">0 words</span></button>
+      <button class="qcard" id="btnFav"><b>Favourites</b><span id="cFav">0 words</span></button>
+      <button class="qcard" id="btnReview"><b>🔁 Daily review</b><span id="cDue">0 words due</span></button>
+      <button class="qcard" id="btnProgress"><b>📊 My progress</b><span>7 / 30 days · streaks</span></button>
+    </div>
+    <div class="card wd-history">
+      <div class="sec-h"><h2>Last 7 days</h2><button class="iconbtn" id="btnHistory">View history →</button></div>
+      <div class="today-strip">
+        <div class="mini-stat"><strong id="hStreak" class="num">0</strong><span>day streak 🔥</span></div>
+        <div class="mini-stat"><strong id="hToday" class="num">0</strong><span>questions today</span></div>
+        <div class="mini-stat"><strong id="hDue" class="num">0</strong><span>due for review</span></div>
+      </div>
+      <div class="history-preview" id="historyPreview"></div>
+      <p id="adaptCount" class="adapt-counter" aria-live="polite">Preparing your reviews…</p>
+      <div class="notice">Your stats are saved in this browser. When switching HTML files, download a backup in Settings first, then import it in the new file. Different file locations may use separate storage.</div>
+    </div>
+
+
+  <div class="training-card" id="dailyCard">
+    <div class="sec-h"><h2>🎯 Personal daily lesson</h2><span class="tag" id="dailyStatus">Ready</span></div>
+    <p class="muted" style="font-size:14px;margin:0">5 new words, up to 10 scheduled reviews and up to 5 past mistakes. Resume where you left off.</p>
+    <div class="daily-meter" id="dailyMeter"></div>
+    <div class="bar"><i id="dailyBar" style="width:0"></i></div>
+    <button class="btn primary block" id="btnDaily">Start today’s lesson</button>
+  </div>
+  
+  <div class="card" id="hubHomeCard">
+    <div class="sec-h"><h2>☕ What would you like to practise?</h2><span class="muted-small">No daily target</span></div>
+    <p class="notice" style="margin:0">A1–A2 · Take five minutes or stay longer. Choose what suits you.</p>
+    <div class="hub-kind-picker" id="hubChoiceModes">
+      <button data-study-kind="mix" aria-pressed="true">🌿 Mixed</button>
+      <button data-study-kind="word" aria-pressed="false">🗂️ Vocabulary</button>
+      <button data-study-kind="grammar" aria-pressed="false">✏️ Grammar</button>
+      <button data-study-kind="story" aria-pressed="false">📖 Story</button>
+      <button data-study-kind="talk" aria-pressed="false">💬 Conversation</button>
+    </div>
+    <span class="notice" id="hubHomeCurrent"></span>
+    <div class="row"><button id="hubStartToday" class="btn primary" style="flex:1">Start practising</button><button id="btnHub" class="btn soft">All study areas →</button></div>
+  </div>
+
+  <div class="sec-h"><h2>More ways to practise</h2><span class="muted-small">Active learning</span></div>
+  <div class="mode-grid" id="modeGrid">
+    <button class="mode-card" data-mode="type"><span class="symbol">⌨️</span><b>Writing</b><small>Write the German for the English prompt</small></button>
+    <button class="mode-card" data-mode="listen"><span class="symbol">🎧</span><b>Listening</b><small>Hear the German and choose its English meaning</small></button>
+    <button class="mode-card" data-mode="sentence"><span class="symbol">🧩</span><b>Sentence building</b><small>Put the German words in order</small></button>
+    <button class="mode-card" data-mode="article"><span class="symbol">🎨</span><b>Articles and plurals</b><small>der / die / das and plural forms</small></button>
+    <button class="mode-card" data-mode="dialogue"><span class="symbol">💬</span><b>Everyday dialogues</b><small>Respond in everyday situations</small></button>
+    <button class="mode-card" id="btnAnalytics"><span class="symbol">📈</span><b>Progress analysis</b><small>Topics, translation directions and charts</small></button>
+  </div>
+
+   <div class="card home-academy">
+     <div class="sec-h"><h2>📚 A1–A2 grammar</h2><span class="tag">New</span></div>
+     <p class="notice" style="margin:0">Short lessons on cases, adjectives, tenses and verb conjugation, with examples and explanations.</p>
+     <button class="btn primary block" id="btnAcademy">Open grammar academy</button>
+     <button class="btn soft block" id="btnBuilderPlus">🧩 Sentence builder+ · Guided practice</button>
+   </div>
+     <div class="sec-h"><h2>Topics</h2><span class="muted num" style="font-size:13px">Vocabulary by topic</span></div>
+    <div class="topics" id="topics"></div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" hidden class="wrap" style="padding:0">
+    <div class="qtop">
+      <button class="iconbtn" id="btnQuit" aria-label="Exit">✕</button>
+      <div class="bar"><i id="qProg" style="width:0"></i></div>
+      <span class="num" style="font-weight:700" id="qCount">1/10</span>
+    </div>
+    <div class="row" style="justify-content:space-between">
+      <span class="label" id="qTopic">Topic</span>
+      <span class="num" style="font-family:var(--f-display);font-weight:800" id="qScore">0</span>
+    </div>
+    <div class="timer"><i id="qTimer"></i></div>
+    <div class="muted-small" id="qDirection"></div>
+    <div class="prompt" id="prompt"></div>
+    <div class="tiles" id="tiles"></div>
+    <div class="reveal" id="reveal" hidden></div>
+  </section>
+
+  <!-- RESULT -->
+  <section id="result" hidden class="wrap" style="padding:0">
+    <div class="card" style="align-items:center;text-align:center;gap:6px">
+      <span class="label">Round complete</span>
+      <div class="score num" id="rScore">0</div>
+      <div class="muted num" id="rLine">0 / 10 correct</div>
+      <div class="chips" id="rChips" style="justify-content:center"></div>
+    </div>
+    <div class="row">
+      <button class="btn primary" style="flex:1" id="btnAgain">Play again</button>
+      <button class="btn soft" style="flex:1" id="btnRetryWrong">Review mistakes</button>
+    </div>
+    <button class="btn soft block" id="btnHome">Home</button>
+    <div class="sec-h"><h2>Words in this round</h2></div>
+    <div class="rlist" id="rList"></div>
+  </section>
+
+   <!-- PROGRESS / MEMORY -->
+   <section id="progress" hidden class="wrap" style="padding:0">
+     <div class="top"><h2 style="font-size:24px">📊 Progress history</h2><button class="iconbtn" data-home>Home</button></div>
+     <p class="notice">Your progress is saved automatically. Open the file in the same browser to see your history.</p>
+     <div class="today-strip">
+       <div class="mini-stat"><strong id="pStreak">0</strong><span>day streak</span></div>
+       <div class="mini-stat"><strong id="pTotal">0</strong><span>questions in total</span></div>
+       <div class="mini-stat"><strong id="pLearn">0</strong><span>all 3 stages complete</span></div>
+     </div>
+     <div class="card">
+       <div class="sec-h"><h2>Study calendar</h2>
+         <div class="seg" id="segDays"><button data-v="7" aria-pressed="true">7 days</button><button data-v="30" aria-pressed="false">30 days</button></div>
+       </div>
+       <div class="activity-grid" id="activityGrid"></div>
+       <div class="daily-detail num" id="dayDetail"></div>
+     </div>
+     <div class="card">
+       <div class="sec-h"><h2>My memory</h2><span class="muted-small">Spaced repetition</span></div>
+       <div class="bar"><i id="pMasterBar" style="width:0"></i></div><div id="wdSkillProgress" class="wd-mastery-progress" aria-live="polite"></div>
+       <div class="row" style="justify-content:space-between"><span class="muted-small" id="pMasterText"></span><span class="muted-small" id="pDueText"></span></div>
+       <div class="better"><button class="btn primary" id="pReview">Practise again</button><button class="btn soft" id="pWrong">Review mistakes</button></div>
+       <p class="notice">Correct answers return after 1, 3, 7, 14 and 30 days. Missed words go straight back into review.</p>
+     </div>
+     <div class="card"><b>Backup</b><span class="notice">Progress is stored in this browser. Clearing browser data can erase it. Use a backup to move it between devices.</span><button class="btn soft" id="pBackup">Download backup</button></div>
+   </section>
+
+
+  <!-- PRO PRACTICE -->
+  <section id="practice" hidden class="wrap" style="padding:0">
+    <div class="qtop"><button class="iconbtn" id="practiceQuit" aria-label="Exit">✕</button><div class="bar" style="flex:1"><i id="practiceBar" style="width:0"></i></div><span class="num" id="practiceCount">1 / 10</span></div>
+    <div class="row" style="justify-content:space-between"><span class="label" id="practiceTitle">Writing</span><span class="num" style="font-weight:800" id="practiceScore">0 points</span></div>
+    <div class="training-hero" id="practicePrompt"></div>
+    <div id="practiceInteraction" class="training-card"></div>
+    <div id="practiceFeedback" class="reveal" hidden></div>
+  </section>
+  <section id="practiceResult" hidden class="wrap" style="padding:0">
+    <div class="card" style="text-align:center;align-items:center"><span class="label">Practice complete</span><div class="score" id="practiceResultScore">0</div><b id="practiceResultDetail">0 / 0</b><p class="muted" id="practiceResultNote" style="margin:0"></p></div>
+    <button class="btn primary block" id="practiceResultAgain">Practise again</button>
+    <button class="btn soft block" data-home>Back to home</button>
+    <div class="sec-h"><h2>Answers</h2></div><div class="rlist" id="practiceResultList"></div>
+  </section>
+  <section id="analytics" hidden class="wrap" style="padding:0">
+    <div class="top"><h2 style="font-size:24px">📈 Detailed statistics</h2><button class="iconbtn" data-home>Home</button></div>
+    <p class="notice">Your previous points and word progress carry over. Statistics by mode and direction start with questions answered in this version.</p>
+    <div class="analysis-mini" id="analysisTotals"></div>
+    <div class="card"><div class="sec-h"><h2>Last 30 days</h2><span class="muted-small">Questions per day</span></div><div class="history-preview" id="analysisChart" style="min-height:100px"></div></div>
+    <div class="card"><h2>Recall by translation direction</h2><div id="analysisDirections" class="analytics-list"></div></div>
+    <div class="card"><h2>Practice types</h2><div id="analysisModes" class="analytics-list"></div></div>
+    <div class="card"><h2>Topics you find hardest</h2><p class="notice" style="margin:0">Topic accuracy is tracked from this version onward.</p><div id="analysisTopics" class="analytics-list"></div></div>
+    <div class="card"><h2>Words to revisit</h2><div id="analysisDifficult" class="rlist"></div></div>
+    <button class="btn soft block" id="analysisProgress">Open study calendar</button>
+  </section>
+
+  <!-- A1-A2 Academy -->
+  <section id="academy" hidden class="wrap" style="padding:0">
+    <div class="top"><h2>📚 Grammar academy</h2><button class="iconbtn" id="academyBack">Home</button></div>
+    <p class="notice">A1–A2 practice with hints, based on nine study sheets. Work at your own pace.</p>
+    <div class="training-card"><h3>Practice areas</h3><div class="mode-grid">
+      <button class="mode-card" id="academyVerb"><span class="symbol">🔤</span><b>Verb conjugation</b><small id="academyVerbCount"></small></button>
+      <button class="mode-card" id="academyCases"><span class="symbol">🗂️</span><b>Case examples</b><small>101 example sentences</small></button>
+    </div></div>
+    <div class="sec-h"><h2>Short lessons</h2><span id="academyCount" class="muted-small"></span></div>
+    <div id="academyCards" class="academy-cards"></div>
+  </section>
+  <section id="lesson" hidden class="wrap" style="padding:0">
+    <div class="top"><h2 id="lessonTitle">Lesson</h2><button class="iconbtn" id="lessonBack">Back</button></div>
+    <span class="tag" id="lessonLevel"></span>
+    <div class="card"><h3>How it works</h3><p id="lessonIntro" style="margin:0"></p></div>
+    <div class="card"><h3>Example sentences</h3><div id="lessonSamples" class="rlist"></div></div>
+    <button class="btn primary block" id="lessonAction">Practise with 8 questions</button>
+    <span class="notice">Each mistake comes with an explanation. Stop whenever you like.</span>
+  </section>
+  <section id="grammarPlay" hidden class="wrap" style="padding:0">
+    <div class="qtop"><button class="iconbtn" id="grammarBack">✕</button><div class="bar" style="flex:1"><i id="grammarBar"></i></div><span id="grammarCount" class="num"></span></div>
+    <div class="training-hero"><span class="label">German · A1–A2</span><div class="grammar-prompt" id="grammarQuestion"></div><button class="btn soft" id="grammarHintButton">💡 Hint</button><p id="grammarHint" class="notice"></p></div>
+    <div class="gram-choice-list" id="grammarOptions"></div><div class="reveal" id="grammarReveal" hidden></div>
+  </section>
+  <section id="grammarDone" hidden class="wrap" style="padding:0">
+    <div class="card" style="align-items:center;text-align:center"><span class="label">Lesson complete</span><h2 id="grammarDoneTitle"></h2><div class="score" id="grammarDoneStat" style="font-size:31px"></div><p class="notice" id="grammarDoneMsg"></p></div>
+    <button class="btn primary block" id="grammarAgain">Practise again</button>
+    <button class="btn soft block" id="academyFromDone">Back to academy</button>
+    <button class="btn soft block" id="grammarToAcademy">Other lessons</button>
+  </section>
+  <section id="verbs" hidden class="wrap" style="padding:0">
+    <div class="top"><h2>🔤 Verb conjugation</h2><button class="iconbtn" id="verbsBack">Back</button></div>
+    <p class="notice">Explore six subject forms, example sentences and Perfekt forms where available.</p>
+    <div class="filters"><input id="verbsSearch" type="search" placeholder="Search for a verb or its English meaning"><select id="verbsLvl"><option value="all">All</option><option value="A1">Core 100</option><option value="A2">Next 100 · A2</option></select></div>
+    <div class="row" style="justify-content:space-between"><span id="verbsN" class="muted-small"></span><button class="btn primary" id="verbsTrain">10 conjugation questions</button></div>
+    <div class="rlist" id="verbsList"></div>
+  </section>
+  <section id="verbPlay" hidden class="wrap" style="padding:0">
+    <div class="top"><h2>Verb conjugation</h2><button id="verbPlayBack" class="iconbtn">Exit</button></div>
+    <span id="verbQCount" class="muted-small"></span>
+    <div id="verbPlayPart"><div class="training-hero" id="verbQuestion"></div><div id="verbChoices" class="gram-choice-list"></div><div id="verbFeedback" class="reveal" hidden></div></div>
+    <div id="verbDonePart" class="card" hidden><h2>Practice complete</h2><p id="verbDoneText"></p><button class="btn primary block" id="verbDoneBack">Back to verb list</button></div>
+  </section>
+  <section id="cases" hidden class="wrap" style="padding:0">
+    <div class="top"><h2>🗂️ Case examples</h2><button class="iconbtn" id="casesBack">Back</button></div>
+    <p class="notice">See how the nominative, accusative, dative and genitive work in sentences. Look for the highlighted word.</p>
+    <div class="filters"><select id="casesSelect"><option value="all">All cases</option><option value="Nominativ">Nominativ</option><option value="Akkusativ">Akkusativ</option><option value="Dativ">Dativ</option><option value="Genitiv">Genitiv</option></select><span id="casesCount" class="muted-small"></span></div>
+    <div id="casesList" class="rlist"></div>
+  </section>
+  <section id="builder" hidden class="wrap" style="padding:0">
+    <div class="qtop"><button class="iconbtn" id="builderBack">✕</button><div class="bar" style="flex:1"><i id="builderProgress" style="width:0"></i></div><span id="builderCounter" class="num"></span></div>
+    <div class="training-hero"><span class="label" id="builderLevel">Satzbau</span><h3 id="builderTurkish"></h3><p class="notice">Put the words in order. Supported alternative word orders are accepted.</p></div>
+    <div class="training-card"><span class="label">Your sentence (tap a word to undo)</span><div id="builderSelected" class="token-panel"></div><span class="label">Words</span><div id="builderBank" class="token-bank"></div><div class="row"><button id="builderClear" class="btn soft">Clear</button><button id="builderHint" class="btn soft">💡 Hint</button></div><p id="builderTip" class="notice"></p><button id="builderCheck" class="btn primary block">Check sentence</button></div>
+    <div id="builderFeedback" class="reveal" hidden></div>
+  </section>
+  <section id="builderEnd" hidden class="wrap" style="padding:0">
+    <div class="card" style="text-align:center;align-items:center"><span class="label">Sentence practice complete</span><h2 id="builderEndScore"></h2><p class="notice">A little practice each day is enough. Work at your own pace.</p></div>
+    <button class="btn primary block" id="builderEndAgain">Another round</button><button class="btn soft block" id="builderEndHome">Home</button>
+  </section>
+
+  
+  <!-- WortDuell calm study hub -->
+  <section id="hub" hidden class="wrap" style="padding:0">
+    <div class="top"><h2>🌿 My study space</h2><button class="iconbtn" id="hubBack">Home</button></div>
+    <p class="notice">Review, read a story, build a sentence or listen to words. Take your time.</p>
+    <div class="chips" id="hubTotals"></div>
+    <div class="card"><b>For this session</b><div class="filters"><select id="hubLevel" aria-label="Level"><option value="all">A1 + A2</option><option value="A1">A1 only</option><option value="A2">A2 only</option></select><select id="hubSize" aria-label="Questions per round"><option value="5">Short · 5 questions</option><option value="10">Standard · 10 questions</option><option value="15">Long · 15 questions</option></select></div><p class="notice">Stories and dialogues each have three questions.</p></div>
+    <div id="hubModes" class="mode-grid"></div>
+  </section>
+  <section id="hubStories" hidden class="wrap" style="padding:0"><div class="top"><h2>📖 Mini stories</h2><button class="iconbtn" data-hub-back>Back</button></div><p id="hStoryCount" class="notice"></p><div class="rlist" id="hStories"></div></section>
+  <section id="hubStory" hidden class="wrap" style="padding:0"><div class="top"><h2 id="hStoryTitle">Story</h2><button id="hStoryToList" class="iconbtn">Stories</button></div><span class="tag" id="hStoryLevel"></span><div class="training-card"><p class="hub-reading" id="hStoryText"></p><button class="btn soft" id="hStoryRead">🔊 Listen to the story</button><button class="btn soft" id="hShowTR">Show English translation</button><p class="notice" id="hStoryTR" hidden></p></div><button class="btn primary block" id="hStoryStart">Start the 3 comprehension questions</button><div id="hStoryQA" class="training-card" hidden><span class="tag" id="hStoryStep"></span><h3 id="hStoryQuestion"></h3><div id="hStoryChoices" class="gram-choice-list"></div><div id="hStoryFeedback" class="reveal" hidden></div></div><div id="hStoryFinal" class="training-card" hidden></div></section>
+  <section id="hubTalks" hidden class="wrap" style="padding:0"><div class="top"><h2>💬 Conversation practice</h2><button class="iconbtn" data-hub-back>Back</button></div><p class="notice" id="hTalkCount"></p><div class="rlist" id="hTalks"></div></section>
+  <section id="hubTalk" hidden class="wrap" style="padding:0"><div class="top"><h2 id="hTalkTitle">Conversation</h2><button id="hTalkToList" class="iconbtn">Dialogues</button></div><span class="tag" id="hTalkSub"></span><div class="training-card" id="hTalkScene"></div></section>
+  <section id="hubVerb" hidden class="wrap" style="padding:0"><div class="top"><h2>🔤 Type the verb form</h2><button class="iconbtn" id="hVerbToHub">Back</button></div><p class="notice">Practise all six subject forms with verbs and expressions. Hints are available and there is no timer.</p><div class="training-card" id="hVerbBody"></div></section>
+  <section id="hubCloze" hidden class="wrap" style="padding:0"><div class="top"><h2>✏️ Fill in the blank</h2><button class="iconbtn" id="hClozeToHub">Back</button></div><p class="notice">Practise cases, articles, prepositions and sentence structure. Each answer has a short explanation.</p><div class="training-card" id="hClozeBody"></div></section>
+  <section id="hubCards" hidden class="wrap" style="padding:0"><div class="top"><h2 id="wdCardsTitle">Learn vocabulary</h2><button class="iconbtn" id="hCardsToHub">Back</button></div><div class="filters" id="wdCardsSourceRow"><select id="hCardsSource" aria-label="Card source"><option value="all">All words</option><option value="original">Built-in vocabulary</option><option value="mine">My words</option></select></div><p class="notice" id="wdCardsIntro">Guess the meaning first, then explore examples and exercises.</p><div class="training-card" id="hCardBody"></div></section>
+  <section id="hubRepeat" hidden class="wrap" style="padding:0"><div class="top"><h2>🎙️ Listen and repeat</h2><button class="iconbtn" id="hRepeatToHub">Back</button></div><p class="notice">Listen to the sentence and repeat it aloud. The microphone is optional. Speech recognition depends on your browser.</p><div class="training-card" id="hRepeatBody"></div></section>
+  <section id="hubPersonal" hidden class="wrap" style="padding:0"><div class="top"><h2>📒 My vocabulary notebook</h2><button class="iconbtn" id="myToHub">Back</button></div><div class="card"><h3>Add a word</h3><input id="myDE" class="practice-input" placeholder="German · der Termin" maxlength="100"><input id="myTR" class="practice-input" placeholder="English · appointment" maxlength="150"><select id="myLevel" class="practice-input" aria-label="Word level"><option>A1</option><option>A2</option></select><input id="myEx" class="practice-input" placeholder="Example sentence (optional)" maxlength="250"><div class="row"><button class="btn primary" id="mySave" style="flex:1">Save word</button><button class="btn soft" id="myCancel" hidden>Cancel</button></div></div><div class="row"><b id="myTotal">0 words</b><button class="btn soft" id="myFlash">Practise my words</button></div><input id="mySearch" class="practice-input" placeholder="Search words" type="search"><div class="rlist" id="myList"></div></section>
+  <section id="hubMistakes" hidden class="wrap" style="padding:0"><div class="top"><h2>🧠 Learn from mistakes</h2><button class="iconbtn" id="hMistakeToHub">Back</button></div><p class="notice" id="hMistakeCounts"></p><div class="rlist" id="hMistakeList"></div><div class="card"><h3>Past vocabulary mistakes</h3><div class="rlist" id="hLegacyWrong"></div><button class="btn soft block" id="hMistakeReview">Review missed words</button></div></section>
+  <section id="hubGuide" hidden class="wrap" style="padding:0"><div class="top"><h2>📚 Pocket grammar guide</h2><button class="iconbtn" id="hGuideToHub">Back</button></div><p class="notice">Short explanations, examples and reference tables from the grammar lessons.</p><input id="hubGuideSearch" class="practice-input" type="search" placeholder="Dative, Perfekt, adjective, verb …"><h3>Quick reference</h3><div id="hubGuideTables" class="rlist"></div><h3>Grammar lessons</h3><div id="hubGuideLessons" class="rlist"></div></section>
+
+  <!-- DICTIONARY -->
+  <section id="dict" hidden class="wrap" style="padding:0">
+    <div class="top"><h2 style="font-size:24px">Dictionary</h2><button class="iconbtn" data-home>Close</button></div>
+    <div class="filters">
+      <input id="dSearch" type="search" placeholder="Search in German or English" autocomplete="off">
+      <select id="dTopic"></select>
+    </div>
+    <div class="row muted" style="font-size:13px;gap:14px"><span><span class="art der">der</span> masculine</span><span><span class="art die">die</span> feminine / plural</span><span><span class="art das">das</span> neuter</span><span id="dCount" class="num"></span></div>
+    <div class="rlist" id="dList"></div>
+  </section>
+
+  <!-- SETTINGS -->
+  <section id="settings" hidden class="wrap" style="padding:0">
+    <div class="top"><h2 style="font-size:24px">Settings</h2><button class="iconbtn" data-home>Close</button></div>
+    <div class="card">
+       <b>Read aloud · German / English</b>
+       <label class="row"><input type="checkbox" id="sAuto"> Read the German word after each answer</label>
+       <label class="row"><input type="checkbox" id="sAutoQuestion"> Read questions aloud automatically</label>
+      <div class="row"><span>Speed</span>
+        <div class="seg" id="segRate"><button data-v="0.75" aria-pressed="false">Slow</button><button data-v="0.9" aria-pressed="true">Normal</button><button data-v="1.05" aria-pressed="false">Fast</button></div>
+         <button class="btn soft" id="sTest">🇩🇪 Listen</button><button class="btn soft" id="sTestTR">🇬🇧 Listen</button>
+       </div>
+      <span class="muted" style="font-size:13px" id="sVoice"></span>
+    </div>
+    <div class="card">
+      <b>Timer</b>
+      <div class="seg" id="segTime"><button data-v="0" aria-pressed="false">No timer</button><button data-v="20" aria-pressed="true">20 sec</button><button data-v="12" aria-pressed="false">12 sec</button></div>
+    </div>
+    <div class="card">
+      <b>Back up progress</b>
+      <span class="muted" style="font-size:14px">Your progress is saved on this device. Copy the backup code and import it to continue on another device.</span>
+      <textarea id="sExport" readonly></textarea>
+       <div class="backup-row"><button class="btn soft" id="sDownload">Download backup file</button><button class="btn soft" id="sCopy">Copy code</button></div>
+      <textarea id="sImport" placeholder="Paste your backup code here"></textarea>
+       <div class="backup-row"><button class="btn soft" id="sLoad">Import code</button><label class="file-label">📂 Restore from file<input id="sFile" type="file" accept=".json,.txt,application/json,text/plain"></label></div>
+       <span class="notice" id="sStorage">Your progress is stored in this browser. Other devices use their own storage.</span>
+     </div>
+    <div class="card">
+      <b>Reset</b>
+      <span class="muted" style="font-size:14px">This removes all points, learned words and favourites.</span>
+      <button class="btn soft" id="sReset">Reset progress</button>
+    </div>
+  </section>
+
+  <aside class="wd-insights" aria-label="Progress and study summary">
+    <div class="wd-rail-head"><span class="wd-rail-day" id="wdDate">TODAY</span><span class="wd-level">A1 <span>+</span> A2</span></div>
+    <div class="wd-side-progress">
+      <div class="wd-progress-head"><span>Learning journey</span><strong id="wdLearn">0 / 1000</strong></div>
+      <div class="wd-big-meter"><span id="wdProgressBar" style="width:0%"></span></div>
+      <div class="wd-progress-bottom"><b id="wdPercent">0%</b><span>One step at a time.</span></div>
+    </div>
+    <div class="wd-rail-box wd-rail-today">
+      <div class="wd-card-eyebrow">DAILY ACTIVITY</div>
+      <div class="wd-rail-stats">
+        <div><strong id="wdToday">0</strong><span>Questions today</span></div>
+        <div><strong id="wdStreak">0</strong><span>Day streak</span></div>
+      </div>
+      <button class="wd-rail-action" data-go="daily" type="button">Open today’s lesson <span>↗</span></button>
+    </div>
+    <div class="wd-rail-box wd-reminder">
+      <div class="wd-card-eyebrow">TIME TO REVIEW</div>
+      <div class="wd-repeat"><div class="wd-repeat-mark">↻</div><div><strong id="wdDue">0</strong><span>words due</span></div></div>
+      <button class="wd-rail-action" data-go="review" type="button">Review <span>→</span></button>
+    </div>
+    <div class="wd-rail-box wd-word-card">
+      <div class="wd-card-eyebrow">WORD OF THE DAY</div>
+      <div class="wd-word-level" id="wdWordLv">A1</div>
+      <strong id="wdWordDe">Guten Morgen!</strong>
+      <span id="wdWordTr">Good morning!</span>
+      <div class="wd-rail-bottom"><button type="button" id="wdSpeak" aria-label="Listen to the word of the day">♫ Listen</button><button type="button" data-go="dict" aria-label="Open dictionary">Dictionary ↗</button></div>
+    </div>
+    <div class="wd-rail-note"><span>✦</span> A little practice each day adds up.</div>
+  </aside>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+
+
+
+<script src="js/data-loader.js"></script>
+<script src="js/app.js"></script>
+
+</body></html>

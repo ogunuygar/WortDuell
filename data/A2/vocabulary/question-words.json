@@ -1,0 +1,58 @@
+[
+  {
+    "_order": 197,
+    "c": "Fragewörter & Pronomen",
+    "w": "wem",
+    "t": "to whom (dative)",
+    "k": "Fragewort",
+    "f": "",
+    "l": "A2",
+    "e1": "Wem gehört das Buch?",
+    "e1t": "Who owns the book?",
+    "e2": "Wem hast du das Geschenk gegeben?",
+    "e2t": "To whom did you give the gift?",
+    "g": "The dative of wer. Use it with helfen, gehören, gefallen or danken: Wem hilfst du?"
+  },
+  {
+    "_order": 198,
+    "c": "Fragewörter & Pronomen",
+    "w": "was für ein",
+    "t": "what kind of",
+    "k": "Fragewort",
+    "f": "was für eine, was für einen",
+    "l": "A2",
+    "e1": "Was für ein Auto hast du?",
+    "e1t": "What kind of car do you have?",
+    "e2": "Was für eine Wohnung sucht ihr – groß oder klein?",
+    "e2t": "What kind of apartment are you looking for – big or small?",
+    "g": "The case depends on the expression: Mit was für einem Bus? In the plural: Was für Schuhe?"
+  },
+  {
+    "_order": 1038,
+    "c": "Fragewörter & Pronomen",
+    "w": "womit",
+    "t": "with what",
+    "k": "Fragewort",
+    "f": "",
+    "l": "A2",
+    "e1": "Womit fährst du zur Arbeit?",
+    "e1t": "How do you travel to work?",
+    "e2": "Womit kann ich bezahlen?",
+    "e2t": "What can I pay with?",
+    "g": "Wo(r) + preposition asks about things."
+  },
+  {
+    "_order": 1039,
+    "c": "Fragewörter & Pronomen",
+    "w": "worauf",
+    "t": "what ... on / for",
+    "k": "Fragewort",
+    "f": "",
+    "l": "A2",
+    "e1": "Worauf wartest du?",
+    "e1t": "What are you waiting for?",
+    "e2": "Worauf freust du dich?",
+    "e2t": "What are you looking forward to?",
+    "g": "Used with auf in questions about things."
+  }
+]

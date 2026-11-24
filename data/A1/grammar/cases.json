@@ -1,0 +1,205 @@
+[
+  {
+    "_order": 1,
+    "id": "kasus",
+    "lv": "A1",
+    "title": "Nominative · Accusative · Dative",
+    "icon": "🎯",
+    "source": "German case worksheet",
+    "intro": "The nominative marks the subject. The accusative often marks a direct object. The dative often marks a recipient. The genitive can express possession.",
+    "samples": [
+      [
+        "Der Mann arbeitet.",
+        "The man is working. Der marks the subject."
+      ],
+      [
+        "Ich sehe den Mann.",
+        "I see the man. Den marks the direct object."
+      ],
+      [
+        "Ich helfe dem Mann.",
+        "I help the man. Helfen takes the dative dem."
+      ]
+    ],
+    "qs": [
+      [
+        "Ich sehe ___ Mann.",
+        "den",
+        [
+          "der",
+          "dem"
+        ],
+        "Sehen takes an accusative object: den Mann."
+      ],
+      [
+        "Ich helfe ___ Frau.",
+        "der",
+        [
+          "die",
+          "den"
+        ],
+        "Helfen takes the dative: der Frau."
+      ],
+      [
+        "___ Kind spielt.",
+        "Das",
+        [
+          "Den",
+          "Dem"
+        ],
+        "Das Kind is the subject, so use the nominative."
+      ],
+      [
+        "Ich gebe ___ Kind ein Buch.",
+        "dem",
+        [
+          "das",
+          "den"
+        ],
+        "The child receives the book: dem Kind."
+      ],
+      [
+        "Ich kenne ___ Lehrer.",
+        "den",
+        [
+          "der",
+          "dem"
+        ],
+        "Kennen takes an accusative object: den Lehrer."
+      ],
+      [
+        "Ich fahre mit ___ Bus.",
+        "dem",
+        [
+          "den",
+          "der"
+        ],
+        "Mit always takes the dative: mit dem Bus."
+      ],
+      [
+        "Das Buch ___ Kindes.",
+        "des",
+        [
+          "dem",
+          "den"
+        ],
+        "Possession calls for the genitive: des Kindes."
+      ],
+      [
+        "Ich kaufe ___ Apfel.",
+        "einen",
+        [
+          "ein",
+          "einem"
+        ],
+        "Masculine accusative: einen Apfel."
+      ],
+      [
+        "Ich gebe ___ Frau ein Buch.",
+        "einer",
+        [
+          "eine",
+          "einen"
+        ],
+        "The recipient is dative: einer Frau."
+      ]
+    ]
+  },
+  {
+    "_order": 4,
+    "id": "praep",
+    "lv": "A1",
+    "title": "Prepositions · Wo or wohin?",
+    "icon": "📍",
+    "source": "Prepositions and cases",
+    "intro": "Use the dative after mit, aus and zu, and the accusative after für. With a two-way preposition, distinguish a location from a destination.",
+    "samples": [
+      [
+        "Ich bin in der Stadt.",
+        "I’m in the city. Where? Dative."
+      ],
+      [
+        "Ich gehe in die Stadt.",
+        "I’m going into town. Where to? Accusative."
+      ],
+      [
+        "Ich fahre mit dem Bus.",
+        "I’m taking the bus. Mit takes the dative."
+      ]
+    ],
+    "qs": [
+      [
+        "Ich fahre ___ dem Bus.",
+        "mit",
+        [
+          "für",
+          "ohne"
+        ],
+        "Mit dem Bus describes the means of transport."
+      ],
+      [
+        "Das Geschenk ist ___ dich.",
+        "für",
+        [
+          "mit",
+          "bei"
+        ],
+        "Für takes the accusative dich."
+      ],
+      [
+        "Ich wohne ___ der Stadt.",
+        "in",
+        [
+          "nach",
+          "für"
+        ],
+        "Wohnen describes a location: in der Stadt."
+      ],
+      [
+        "Ich gehe ___ die Stadt.",
+        "in",
+        [
+          "nach",
+          "bei"
+        ],
+        "The destination is in die Stadt."
+      ],
+      [
+        "Ich gehe ___ meinem Arzt.",
+        "zu",
+        [
+          "für",
+          "ohne"
+        ],
+        "Use zu for going to see a person: zu meinem Arzt."
+      ],
+      [
+        "Ich komme ___ der Türkei.",
+        "aus",
+        [
+          "von",
+          "für"
+        ],
+        "Aus gives the place of origin and takes the dative."
+      ],
+      [
+        "Das Bild hängt ___ der Wand.",
+        "an",
+        [
+          "nach",
+          "für"
+        ],
+        "The picture is already on the wall: an der Wand."
+      ],
+      [
+        "Ich hänge das Bild ___ die Wand.",
+        "an",
+        [
+          "aus",
+          "nach"
+        ],
+        "The picture is being put on the wall: an die Wand."
+      ]
+    ]
+  }
+]

@@ -1,0 +1,284 @@
+[
+  {
+    "_order": 0,
+    "id": "satzbau",
+    "lv": "A1",
+    "title": "Word order · Satzbau",
+    "icon": "🧩",
+    "source": "A1–A2 grammar worksheets",
+    "intro": "In a statement the conjugated verb is the second element. If you start with a time expression, put the subject after the verb. Start a yes/no question with the verb.",
+    "samples": [
+      [
+        "Ich lerne heute Deutsch.",
+        "I’m learning German today."
+      ],
+      [
+        "Heute lerne ich Deutsch.",
+        "Today I’m learning German."
+      ],
+      [
+        "Ich muss morgen arbeiten.",
+        "I have to work tomorrow."
+      ]
+    ],
+    "qs": [
+      [
+        "Choose the German for “I’m learning German today.”",
+        "Heute lerne ich Deutsch.",
+        [
+          "Heute ich lerne Deutsch.",
+          "Heute Deutsch lerne ich."
+        ],
+        "Heute fills the first position and lerne the second."
+      ],
+      [
+        "Choose the German for “Are you working tomorrow?”",
+        "Arbeitest du morgen?",
+        [
+          "Du arbeitest morgen?",
+          "Morgen du arbeitest?"
+        ],
+        "Start a neutral yes/no question with the conjugated verb."
+      ],
+      [
+        "Choose the German for “When are you working?”",
+        "Wann arbeitest du?",
+        [
+          "Wann du arbeitest?",
+          "Arbeitest wann du?"
+        ],
+        "Wann comes first, then the conjugated verb."
+      ],
+      [
+        "Choose the German for “I have to work tomorrow.”",
+        "Ich muss morgen arbeiten.",
+        [
+          "Ich muss arbeiten morgen.",
+          "Ich morgen muss arbeiten."
+        ],
+        "Muss is conjugated and arbeiten stays at the end."
+      ],
+      [
+        "Choose the German for “I’ll call you later.”",
+        "Ich rufe dich später an.",
+        [
+          "Ich anrufe dich später.",
+          "Ich rufe an dich später."
+        ],
+        "Anrufen splits: rufe … an."
+      ],
+      [
+        "Choose the German for “Because I have to work tomorrow.”",
+        "Weil ich morgen arbeiten muss.",
+        [
+          "Weil ich muss morgen arbeiten.",
+          "Weil muss ich morgen arbeiten."
+        ],
+        "In the weil clause, the conjugated modal muss comes last."
+      ],
+      [
+        "Choose the German for “I’m working in the office today.”",
+        "Heute arbeite ich im Büro.",
+        [
+          "Heute ich arbeite im Büro.",
+          "Heute arbeite im ich Büro."
+        ],
+        "Heute fills one position. Arbeite must follow it."
+      ],
+      [
+        "Choose the German for “I worked yesterday.”",
+        "Ich habe gestern gearbeitet.",
+        [
+          "Ich gearbeitet habe gestern.",
+          "Ich gestern habe gearbeitet."
+        ],
+        "Perfekt uses habe plus the final participle gearbeitet."
+      ]
+    ]
+  },
+  {
+    "_order": 8,
+    "id": "fragen",
+    "lv": "A1",
+    "title": "W-questions · Question words",
+    "icon": "❔",
+    "source": "German questions",
+    "intro": "Choose the question word for the information you want, then add the conjugated verb. Wo asks where, wohin where to and woher where from.",
+    "samples": [
+      [
+        "Wo bist du?",
+        "Where are you?"
+      ],
+      [
+        "Wohin gehst du?",
+        "Where are you going?"
+      ],
+      [
+        "Warum lernst du Deutsch?",
+        "Why are you learning German?"
+      ]
+    ],
+    "qs": [
+      [
+        "___ bist du? — Where are you?",
+        "Wo",
+        [
+          "Wohin",
+          "Woher"
+        ],
+        "Wo asks about a location."
+      ],
+      [
+        "___ gehst du? — Where are you going?",
+        "Wohin",
+        [
+          "Woher",
+          "Wer"
+        ],
+        "Wohin asks about a destination."
+      ],
+      [
+        "___ kommst du? — Where do you come from?",
+        "Woher",
+        [
+          "Wohin",
+          "Wo"
+        ],
+        "Woher asks about an origin."
+      ],
+      [
+        "___ beginnt der Kurs? — When?",
+        "Wann",
+        [
+          "Warum",
+          "Wie"
+        ],
+        "Wann asks for a time."
+      ],
+      [
+        "___ lernst du Deutsch? — Why?",
+        "Warum",
+        [
+          "Wie",
+          "Wer"
+        ],
+        "Warum asks for a reason."
+      ],
+      [
+        "___ ist das? — Who is that?",
+        "Wer",
+        [
+          "Was",
+          "Wie"
+        ],
+        "Wer asks about a person."
+      ],
+      [
+        "___ Buch ist das? — Whose?",
+        "Wessen",
+        [
+          "Welche",
+          "Wo"
+        ],
+        "Wessen asks who owns something."
+      ],
+      [
+        "___ Farbe magst du?",
+        "Welche",
+        [
+          "Welcher",
+          "Welches"
+        ],
+        "Farbe is feminine, so use welche."
+      ]
+    ]
+  },
+  {
+    "_order": 10,
+    "id": "imperativ",
+    "lv": "A1",
+    "title": "Commands and polite requests",
+    "icon": "🤝",
+    "source": "A1–A2 grammar worksheets",
+    "intro": "Commands have different forms for du, ihr and formal Sie. Add bitte to make a request polite.",
+    "samples": [
+      [
+        "Komm bitte rein!",
+        "Come in, please."
+      ],
+      [
+        "Warten Sie bitte!",
+        "Please wait."
+      ],
+      [
+        "Könnten Sie das bitte wiederholen?",
+        "Could you repeat that, please?"
+      ]
+    ],
+    "qs": [
+      [
+        "Formal Sie: “Please wait.”",
+        "Warten Sie bitte!",
+        [
+          "Warte bitte!",
+          "Wartet Sie bitte!"
+        ],
+        "Formal commands use the verb followed by Sie."
+      ],
+      [
+        "Informal du: “Come!”",
+        "Komm!",
+        [
+          "Kommt!",
+          "Kommen Sie!"
+        ],
+        "The du command for kommen is Komm!"
+      ],
+      [
+        "Informal plural ihr: “Do it!”",
+        "Macht!",
+        [
+          "Mach!",
+          "Machen Sie!"
+        ],
+        "The ihr command matches the ihr verb form: Macht!"
+      ],
+      [
+        "Formal Sie: “Take it!”",
+        "Nehmen Sie!",
+        [
+          "Nimm Sie!",
+          "Nehmt!"
+        ],
+        "Use the formal pattern Nehmen Sie!"
+      ],
+      [
+        "Informal du: “Give!”",
+        "Gib!",
+        [
+          "Gebt!",
+          "Geben Sie!"
+        ],
+        "The du command for geben is Gib!"
+      ],
+      [
+        "Which request is more polite?",
+        "Könnten Sie mir bitte helfen?",
+        [
+          "Helfen du!",
+          "Du helfen mir!"
+        ],
+        "Könnten Sie …? makes a request more tentative."
+      ],
+      [
+        "Choose a polite café order.",
+        "Ich hätte gern einen Kaffee.",
+        [
+          "Ich will einen Kaffee!",
+          "Ich muss Kaffee!"
+        ],
+        "Ich hätte gern … is a polite way to order."
+      ]
+    ]
+  }
+]

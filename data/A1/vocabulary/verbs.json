@@ -1,0 +1,4597 @@
+[
+  {
+    "_order": 23,
+    "c": "Begrüßung & Höflichkeit",
+    "w": "grüßen",
+    "t": "to greet",
+    "k": "Verb",
+    "f": "er grüßt, grüßte, hat gegrüßt",
+    "l": "A1",
+    "e1": "Grüß deine Schwester von mir!",
+    "e1t": "Say hello to your sister for me!",
+    "e2": "Der Nachbar grüßt mich jeden Morgen freundlich.",
+    "e2t": "The neighbor greets me kindly every morning.",
+    "g": "Takes an accusative object: Ich grüße dich. Von mir means from me. Use haben in the Perfekt."
+  },
+  {
+    "_order": 67,
+    "c": "Zahlen & Mengen",
+    "w": "zählen",
+    "t": "to count",
+    "k": "Verb",
+    "f": "er zählt, zählte, hat gezählt",
+    "l": "A1",
+    "e1": "Das Kind zählt bis zwanzig.",
+    "e1t": "The child counts to twenty.",
+    "e2": "Sie hat das Geld zweimal gezählt.",
+    "e2t": "She counted the money twice.",
+    "g": "Hat gezählt means counted. Contrast zählen with zahlen, to pay. Bis zehn zählen means to count to ten."
+  },
+  {
+    "_order": 211,
+    "c": "Grundverben",
+    "w": "sein",
+    "t": "to be",
+    "k": "Verb",
+    "f": "er ist, war, ist gewesen",
+    "l": "A1",
+    "e1": "Ich bin müde.",
+    "e1t": "I am tired.",
+    "e2": "Wir sind letztes Jahr in Italien gewesen.",
+    "e2t": "We were in Italy last year.",
+    "g": "Irregular forms: ich bin, du bist, er ist, wir sind, ihr seid, sie sind. War is common in the past.",
+    "conjugation": {
+      "n": 1,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "bin",
+        "bist",
+        "ist",
+        "sind",
+        "seid",
+        "sind"
+      ],
+      "perf": "ich bin gewesen",
+      "_order": 0,
+      "example": "Ich bin heute zu Hause."
+    }
+  },
+  {
+    "_order": 212,
+    "c": "Grundverben",
+    "w": "haben",
+    "t": "to have",
+    "k": "Verb",
+    "f": "er hat, hatte, hat gehabt",
+    "l": "A1",
+    "e1": "Ich habe ein Auto.",
+    "e1t": "I have a car.",
+    "e2": "Hast du morgen Zeit? Ich habe zwei Kinokarten.",
+    "e2t": "Do you have time tomorrow? I have two movie tickets.",
+    "g": "Takes the accusative: Ich habe einen Bruder. Also forms the Perfekt: Ich habe gegessen.",
+    "conjugation": {
+      "n": 2,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "habe",
+        "hast",
+        "hat",
+        "haben",
+        "habt",
+        "haben"
+      ],
+      "perf": "ich habe gehabt",
+      "_order": 1,
+      "example": "Ich habe einen Termin."
+    }
+  },
+  {
+    "_order": 213,
+    "c": "Grundverben",
+    "w": "werden",
+    "t": "to become",
+    "k": "Verb",
+    "f": "er wird, wurde, ist geworden",
+    "l": "A1",
+    "e1": "Es wird kalt.",
+    "e1t": "It gets cold.",
+    "e2": "Mein Sohn möchte Arzt werden.",
+    "e2t": "My son wants to be a doctor.",
+    "g": "Du wirst, er wird. Also an auxiliary for the future and passive. For become: ist geworden.",
+    "conjugation": {
+      "n": 3,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "werde",
+        "wirst",
+        "wird",
+        "werden",
+        "werdet",
+        "werden"
+      ],
+      "perf": "ich bin geworden",
+      "_order": 2,
+      "example": "Meine Schwester wird Lehrerin."
+    }
+  },
+  {
+    "_order": 214,
+    "c": "Grundverben",
+    "w": "machen",
+    "t": "to make / do",
+    "k": "Verb",
+    "f": "er macht, machte, hat gemacht",
+    "l": "A1",
+    "e1": "Was machst du?",
+    "e1t": "What are you doing?",
+    "e2": "Am Wochenende haben wir einen Ausflug gemacht.",
+    "e2t": "We went on a trip this weekend.",
+    "g": "A regular verb: gemacht. Common expressions include Pause machen and Sport machen.",
+    "conjugation": {
+      "n": 7,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "mache",
+        "machst",
+        "macht",
+        "machen",
+        "macht",
+        "machen"
+      ],
+      "perf": "ich habe gemacht",
+      "_order": 6,
+      "example": "Wir machen eine Pause."
+    },
+    "tenseExamples": [
+      "Ich mache meine Hausaufgaben.",
+      "I'm doing my homework.",
+      "Ich habe meine Hausaufgaben gemacht.",
+      "I did my homework."
+    ]
+  },
+  {
+    "_order": 215,
+    "c": "Grundverben",
+    "w": "gehen",
+    "t": "to go",
+    "k": "Verb",
+    "f": "er geht, ging, ist gegangen",
+    "l": "A1",
+    "e1": "Ich gehe nach Hause.",
+    "e1t": "I'm going home.",
+    "e2": "Wie geht es dir? – Danke, es geht mir gut.",
+    "e2t": "How are you? – Thank you, I’m fine.",
+    "g": "Forms the Perfekt with sein: Ich bin gegangen. Es geht mir gut uses the dative.",
+    "tenseExamples": [
+      "Ich gehe heute zur Arbeit.",
+      "I'm going to work today.",
+      "Ich bin gestern zur Arbeit gegangen.",
+      "I went to work yesterday."
+    ]
+  },
+  {
+    "_order": 216,
+    "c": "Grundverben",
+    "w": "kommen",
+    "t": "to come",
+    "k": "Verb",
+    "f": "er kommt, kam, ist gekommen",
+    "l": "A1",
+    "e1": "Ich komme aus der Türkei.",
+    "e1t": "I am from Turkey.",
+    "e2": "Kommst du heute Abend mit ins Kino?",
+    "e2t": "Are you coming to the movies tonight?",
+    "g": "Use sein in the Perfekt: ist gekommen. Aus + dative indicates origin. Compare ankommen and mitkommen.",
+    "conjugation": {
+      "n": 9,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "komme",
+        "kommst",
+        "kommt",
+        "kommen",
+        "kommt",
+        "kommen"
+      ],
+      "perf": "ich bin gekommen",
+      "_order": 8,
+      "example": "Ich komme aus Kempten."
+    },
+    "tenseExamples": [
+      "Ich komme um acht Uhr.",
+      "I'm coming at eight o'clock.",
+      "Ich bin gestern um acht Uhr gekommen.",
+      "I arrived yesterday at eight o'clock."
+    ]
+  },
+  {
+    "_order": 217,
+    "c": "Grundverben",
+    "w": "sehen",
+    "t": "to see",
+    "k": "Verb",
+    "f": "er sieht, sah, hat gesehen",
+    "l": "A1",
+    "e1": "Ich sehe den Bus.",
+    "e1t": "I see the bus.",
+    "e2": "Hast du den neuen Film schon gesehen?",
+    "e2t": "Have you seen the new movie yet?",
+    "g": "Stem change e → ie: du siehst, er sieht. The object is accusative: den Mann sehen.",
+    "conjugation": {
+      "n": 12,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "sehe",
+        "siehst",
+        "sieht",
+        "sehen",
+        "seht",
+        "sehen"
+      ],
+      "perf": "ich habe gesehen",
+      "_order": 11,
+      "example": "Sie sieht den Bus."
+    },
+    "tenseExamples": [
+      "Ich sehe einen Film.",
+      "I see a movie.",
+      "Ich habe gestern einen Film gesehen.",
+      "I saw a movie yesterday."
+    ]
+  },
+  {
+    "_order": 218,
+    "c": "Grundverben",
+    "w": "geben",
+    "t": "to give",
+    "k": "Verb",
+    "f": "er gibt, gab, hat gegeben",
+    "l": "A1",
+    "e1": "Gib mir das Buch, bitte.",
+    "e1t": "Give me the book, please.",
+    "e2": "Gibt es hier in der Nähe einen Supermarkt?",
+    "e2t": "Is there a supermarket nearby?",
+    "g": "The recipient is dative and the thing accusative: Ich gebe dir den Schlüssel. Es gibt also takes the accusative.",
+    "conjugation": {
+      "n": 8,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "gebe",
+        "gibst",
+        "gibt",
+        "geben",
+        "gebt",
+        "geben"
+      ],
+      "perf": "ich habe gegeben",
+      "_order": 7,
+      "example": "Ich gebe dir den Schlüssel."
+    },
+    "tenseExamples": [
+      "Ich gebe dir das Buch.",
+      "I'll give you the book.",
+      "Ich habe dir das Buch gegeben.",
+      "I gave you the book."
+    ]
+  },
+  {
+    "_order": 219,
+    "c": "Grundverben",
+    "w": "nehmen",
+    "t": "to take",
+    "k": "Verb",
+    "f": "er nimmt, nahm, hat genommen",
+    "l": "A1",
+    "e1": "Ich nehme den Bus.",
+    "e1t": "I'll take the bus.",
+    "e2": "Ich nehme die Suppe und ein Wasser, bitte.",
+    "e2t": "I'll take the soup and a water, please.",
+    "g": "Du nimmst, er nimmt. Use an accusative object, including when ordering in a restaurant.",
+    "conjugation": {
+      "n": 20,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "nehme",
+        "nimmst",
+        "nimmt",
+        "nehmen",
+        "nehmt",
+        "nehmen"
+      ],
+      "perf": "ich habe genommen",
+      "_order": 19,
+      "example": "Wir nehmen den Zug."
+    },
+    "tenseExamples": [
+      "Ich nehme den Bus.",
+      "I'll take the bus.",
+      "Ich habe den Bus genommen.",
+      "I took the bus."
+    ]
+  },
+  {
+    "_order": 220,
+    "c": "Grundverben",
+    "w": "finden",
+    "t": "to find",
+    "k": "Verb",
+    "f": "er findet, fand, hat gefunden",
+    "l": "A1",
+    "e1": "Ich finde meinen Schlüssel nicht.",
+    "e1t": "I can't find my key.",
+    "e2": "Wie findest du die neue Wohnung? – Ich finde sie sehr schön.",
+    "e2t": "How do you find the new apartment? – I find it very nice.",
+    "g": "The stem ends in d: du findest, er findet. Finden can introduce an opinion.",
+    "conjugation": {
+      "n": 15,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "finde",
+        "findest",
+        "findet",
+        "finden",
+        "findet",
+        "finden"
+      ],
+      "perf": "ich habe gefunden",
+      "_order": 14,
+      "example": "Ich finde meine Karte."
+    },
+    "tenseExamples": [
+      "Ich finde den Schlüssel.",
+      "I find the key.",
+      "Ich habe den Schlüssel gefunden.",
+      "I found the key."
+    ]
+  },
+  {
+    "_order": 221,
+    "c": "Grundverben",
+    "w": "wissen",
+    "t": "to know a fact",
+    "k": "Verb",
+    "f": "er weiß, wusste, hat gewusst",
+    "l": "A1",
+    "e1": "Ich weiß es nicht.",
+    "e1t": "I don't know.",
+    "e2": "Weißt du, wann der Zug abfährt?",
+    "e2t": "Do you know when the train leaves?",
+    "g": "Ich weiß, du weißt, er weiß. It often introduces a dass clause.",
+    "conjugation": {
+      "n": 11,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "weiß",
+        "weißt",
+        "weiß",
+        "wissen",
+        "wisst",
+        "wissen"
+      ],
+      "perf": "ich habe gewusst",
+      "_order": 10,
+      "example": "Ich weiß die Antwort."
+    }
+  },
+  {
+    "_order": 222,
+    "c": "Grundverben",
+    "w": "kennen",
+    "t": "to be familiar with",
+    "k": "Verb",
+    "f": "er kennt, kannte, hat gekannt",
+    "l": "A1",
+    "e1": "Kennst du Anna?",
+    "e1t": "Do you know Anna?",
+    "e2": "Ich kenne ein gutes Restaurant in der Altstadt.",
+    "e2t": "I know a good restaurant in the old town.",
+    "g": "Use kennen for familiarity with a person, place or thing. Use wissen for factual knowledge.",
+    "conjugation": {
+      "n": 35,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "kenne",
+        "kennst",
+        "kennt",
+        "kennen",
+        "kennt",
+        "kennen"
+      ],
+      "perf": "ich habe gekannt",
+      "_order": 34,
+      "example": "Ich kenne die neue Kollegin."
+    }
+  },
+  {
+    "_order": 223,
+    "c": "Grundverben",
+    "w": "sagen",
+    "t": "to say",
+    "k": "Verb",
+    "f": "er sagt, sagte, hat gesagt",
+    "l": "A1",
+    "e1": "Was sagst du?",
+    "e1t": "What are you saying?",
+    "e2": "Er hat gesagt, dass er später kommt.",
+    "e2t": "He said he would come later.",
+    "g": "Use a dative recipient: Sag mir die Wahrheit. In a dass clause the verb goes last.",
+    "conjugation": {
+      "n": 6,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "sage",
+        "sagst",
+        "sagt",
+        "sagen",
+        "sagt",
+        "sagen"
+      ],
+      "perf": "ich habe gesagt",
+      "_order": 5,
+      "example": "Ich sage dir gleich Bescheid."
+    }
+  },
+  {
+    "_order": 224,
+    "c": "Grundverben",
+    "w": "bleiben",
+    "t": "to stay",
+    "k": "Verb",
+    "f": "er bleibt, blieb, ist geblieben",
+    "l": "A1",
+    "e1": "Ich bleibe heute zu Hause.",
+    "e1t": "I'm staying at home today.",
+    "e2": "Wir sind drei Tage in Wien geblieben.",
+    "e2t": "We stayed in Vienna for three days.",
+    "g": "Despite describing a state, bleiben uses sein in the Perfekt: Ich bin geblieben.",
+    "conjugation": {
+      "n": 16,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "bleibe",
+        "bleibst",
+        "bleibt",
+        "bleiben",
+        "bleibt",
+        "bleiben"
+      ],
+      "perf": "ich bin geblieben",
+      "_order": 15,
+      "example": "Wir bleiben heute zu Hause."
+    },
+    "tenseExamples": [
+      "Ich bleibe heute zu Hause.",
+      "I'm staying at home today.",
+      "Ich bin gestern zu Hause geblieben.",
+      "I stayed home yesterday."
+    ]
+  },
+  {
+    "_order": 225,
+    "c": "Grundverben",
+    "w": "stehen",
+    "t": "to stand",
+    "k": "Verb",
+    "f": "er steht, stand, hat gestanden",
+    "l": "A1",
+    "e1": "Die Flasche steht auf dem Tisch.",
+    "e1t": "The bottle is on the table.",
+    "e2": "Was steht heute in der Zeitung?",
+    "e2t": "What is in the newspaper today?",
+    "g": "Stehen describes a position: auf dem Tisch stehen. Stellen describes placing something upright.",
+    "conjugation": {
+      "n": 14,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "stehe",
+        "stehst",
+        "steht",
+        "stehen",
+        "steht",
+        "stehen"
+      ],
+      "perf": "ich habe gestanden",
+      "_order": 13,
+      "example": "Der Tisch steht am Fenster."
+    }
+  },
+  {
+    "_order": 226,
+    "c": "Grundverben",
+    "w": "liegen",
+    "t": "to lie / be located",
+    "k": "Verb",
+    "f": "er liegt, lag, hat gelegen",
+    "l": "A1",
+    "e1": "Das Buch liegt auf dem Bett.",
+    "e1t": "The book is on the bed.",
+    "e2": "Kempten liegt im Allgäu, nicht weit von den Bergen.",
+    "e2t": "Kempten is located in the Allgäu, not far from the mountains.",
+    "g": "Liegen describes a location. Legen expresses placement: Ich lege das Buch auf den Tisch.",
+    "conjugation": {
+      "n": 17,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "liege",
+        "liegst",
+        "liegt",
+        "liegen",
+        "liegt",
+        "liegen"
+      ],
+      "perf": "ich habe gelegen",
+      "_order": 16,
+      "example": "Das Buch liegt auf dem Tisch."
+    }
+  },
+  {
+    "_order": 227,
+    "c": "Grundverben",
+    "w": "sitzen",
+    "t": "to sit",
+    "k": "Verb",
+    "f": "er sitzt, saß, hat gesessen",
+    "l": "A1",
+    "e1": "Ich sitze im Bus.",
+    "e1t": "I'm sitting on the bus.",
+    "e2": "Wir haben den ganzen Abend im Garten gesessen.",
+    "e2t": "We sat in the garden all evening.",
+    "g": "Sitzen describes being seated. Sich setzen describes taking a seat: Ich setze mich auf den Stuhl.",
+    "conjugation": {
+      "n": 52,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "sitze",
+        "sitzt",
+        "sitzt",
+        "sitzen",
+        "sitzt",
+        "sitzen"
+      ],
+      "perf": "ich habe gesessen",
+      "_order": 51,
+      "example": "Ich sitze am Fenster."
+    }
+  },
+  {
+    "_order": 228,
+    "c": "Grundverben",
+    "w": "bringen",
+    "t": "to bring",
+    "k": "Verb",
+    "f": "er bringt, brachte, hat gebracht",
+    "l": "A1",
+    "e1": "Bring mir bitte ein Glas Wasser.",
+    "e1t": "Please bring me a glass of water.",
+    "e2": "Ich bringe die Kinder jeden Morgen in die Kita.",
+    "e2t": "I bring the kids to daycare every morning.",
+    "g": "Mixed verb: brachte, gebracht. Use a dative recipient: Ich bringe dir den Kaffee.",
+    "conjugation": {
+      "n": 30,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "bringe",
+        "bringst",
+        "bringt",
+        "bringen",
+        "bringt",
+        "bringen"
+      ],
+      "perf": "ich habe gebracht",
+      "_order": 29,
+      "example": "Ich bringe dir ein Glas Wasser."
+    }
+  },
+  {
+    "_order": 229,
+    "c": "Grundverben",
+    "w": "denken",
+    "t": "to think",
+    "k": "Verb",
+    "f": "er denkt, dachte, hat gedacht",
+    "l": "A1",
+    "e1": "Ich denke, das ist richtig.",
+    "e1t": "I think that is right.",
+    "e2": "Ich denke oft an meine Familie in der Türkei.",
+    "e2t": "I often think of my family in Turkey.",
+    "g": "Denken an + accusative means to think of. Past forms: dachte, gedacht.",
+    "conjugation": {
+      "n": 19,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "denke",
+        "denkst",
+        "denkt",
+        "denken",
+        "denkt",
+        "denken"
+      ],
+      "perf": "ich habe gedacht",
+      "_order": 18,
+      "example": "Ich denke oft an meine Familie."
+    }
+  },
+  {
+    "_order": 230,
+    "c": "Grundverben",
+    "w": "glauben",
+    "t": "to believe",
+    "k": "Verb",
+    "f": "er glaubt, glaubte, hat geglaubt",
+    "l": "A1",
+    "e1": "Ich glaube, er kommt nicht.",
+    "e1t": "I don't think he's coming.",
+    "e2": "Ich glaube dir nicht – das ist doch nur ein Witz!",
+    "e2t": "I don’t believe you – that’s just a joke!",
+    "g": "Glauben takes a dative person: Ich glaube dir. An + accusative marks what you believe in.",
+    "conjugation": {
+      "n": 23,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "glaube",
+        "glaubst",
+        "glaubt",
+        "glauben",
+        "glaubt",
+        "glauben"
+      ],
+      "perf": "ich habe geglaubt",
+      "_order": 22,
+      "example": "Ich glaube dir."
+    }
+  },
+  {
+    "_order": 232,
+    "c": "Grundverben",
+    "w": "heißen",
+    "t": "to be called",
+    "k": "Verb",
+    "f": "er heißt, hieß, hat geheißen",
+    "l": "A1",
+    "e1": "Ich heiße Maria.",
+    "e1t": "My name is Maria.",
+    "e2": "Was heißt das auf Türkisch?",
+    "e2t": "What does that mean in Turkish?",
+    "g": "The stem ends in ß: du heißt. Das heißt (d. h.) means that is.",
+    "conjugation": {
+      "n": 18,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "heiße",
+        "heißt",
+        "heißt",
+        "heißen",
+        "heißt",
+        "heißen"
+      ],
+      "perf": "ich habe geheißen",
+      "_order": 17,
+      "example": "Wie heißt du?"
+    }
+  },
+  {
+    "_order": 233,
+    "c": "Grundverben",
+    "w": "brauchen",
+    "t": "to need",
+    "k": "Verb",
+    "f": "er braucht, brauchte, hat gebraucht",
+    "l": "A1",
+    "e1": "Ich brauche Hilfe.",
+    "e1t": "I need help.",
+    "e2": "Du brauchst keinen Regenschirm, es ist sonnig.",
+    "e2t": "You don't need an umbrella, it's sunny.",
+    "g": "Takes an accusative object. Du brauchst nicht zu kommen means you don’t need to come.",
+    "conjugation": {
+      "n": 40,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "brauche",
+        "brauchst",
+        "braucht",
+        "brauchen",
+        "braucht",
+        "brauchen"
+      ],
+      "perf": "ich habe gebraucht",
+      "_order": 39,
+      "example": "Ich brauche einen Stift."
+    }
+  },
+  {
+    "_order": 235,
+    "c": "Grundverben",
+    "w": "hören",
+    "t": "to hear",
+    "k": "Verb",
+    "f": "er hört, hörte, hat gehört",
+    "l": "A1",
+    "e1": "Ich höre Musik.",
+    "e1t": "I listen to music.",
+    "e2": "Hast du gehört? Morgen gibt es keinen Unterricht.",
+    "e2t": "Did you hear? There's no teaching tomorrow.",
+    "g": "Hören takes the accusative. Zuhören takes a dative listener’s target: Ich höre dir zu.",
+    "conjugation": {
+      "n": 177,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich höre",
+        "du hörst",
+        "er/sie/es hört",
+        "wir hören",
+        "ihr hört",
+        "sie/Sie hören"
+      ],
+      "perf": "ich habe gehört",
+      "_order": 176,
+      "example": "Ich höre morgens Nachrichten."
+    }
+  },
+  {
+    "_order": 236,
+    "c": "Trennbare Verben",
+    "w": "aufstehen",
+    "t": "to get up",
+    "k": "Verb",
+    "f": "er steht auf, stand auf, ist aufgestanden",
+    "l": "A1",
+    "e1": "Ich stehe um sechs Uhr auf.",
+    "e1t": "I get up at six o'clock.",
+    "e2": "Am Sonntag bin ich erst um zehn aufgestanden.",
+    "e2t": "On Sunday, I didn’t get up until ten.",
+    "g": "The prefix moves to the end: Ich stehe früh auf. Perfekt: bin aufgestanden.",
+    "conjugation": {
+      "n": 101,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich stehe auf",
+        "du stehst auf",
+        "er/sie/es steht auf",
+        "wir stehen auf",
+        "ihr steht auf",
+        "sie/Sie stehen auf"
+      ],
+      "perf": "ich bin aufgestanden",
+      "_order": 100,
+      "example": "Ich stehe jeden Tag um 7 Uhr auf."
+    },
+    "tenseExamples": [
+      "Ich stehe um sieben Uhr auf.",
+      "I get up at seven o'clock.",
+      "Ich bin gestern früh aufgestanden.",
+      "I got up yesterday morning."
+    ]
+  },
+  {
+    "_order": 237,
+    "c": "Trennbare Verben",
+    "w": "anrufen",
+    "t": "to call by phone",
+    "k": "Verb",
+    "f": "er ruft an, rief an, hat angerufen",
+    "l": "A1",
+    "e1": "Ich rufe dich morgen an.",
+    "e1t": "I'll call you tomorrow.",
+    "e2": "Hast du schon beim Arzt angerufen?",
+    "e2t": "Have you already called the doctor?",
+    "g": "Call a person in the accusative: Ich rufe dich an. Beim Arzt anrufen means to call the doctor’s office.",
+    "conjugation": {
+      "n": 103,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich rufe an",
+        "du rufst an",
+        "er/sie/es ruft an",
+        "wir rufen an",
+        "ihr ruft an",
+        "sie/Sie rufen an"
+      ],
+      "perf": "ich habe angerufen",
+      "_order": 102,
+      "example": "Ich rufe meine Freundin heute Abend an."
+    },
+    "tenseExamples": [
+      "Ich rufe meine Mutter an.",
+      "I'm calling my mother.",
+      "Ich habe meine Mutter angerufen.",
+      "I called my mother."
+    ]
+  },
+  {
+    "_order": 238,
+    "c": "Trennbare Verben",
+    "w": "einkaufen",
+    "t": "to go shopping",
+    "k": "Verb",
+    "f": "er kauft ein, kaufte ein, hat eingekauft",
+    "l": "A1",
+    "e1": "Ich kaufe im Supermarkt ein.",
+    "e1t": "I shop at the supermarket.",
+    "e2": "Wir müssen heute noch einkaufen, der Kühlschrank ist leer.",
+    "e2t": "We still have to shop today, the refrigerator is empty.",
+    "g": "With a modal the infinitive stays together at the end: Wir müssen einkaufen. Participle: eingekauft.",
+    "conjugation": {
+      "n": 102,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich kaufe ein",
+        "du kaufst ein",
+        "er/sie/es kauft ein",
+        "wir kaufen ein",
+        "ihr kauft ein",
+        "sie/Sie kaufen ein"
+      ],
+      "perf": "ich habe eingekauft",
+      "_order": 101,
+      "example": "Ich kaufe nach der Arbeit ein."
+    },
+    "tenseExamples": [
+      "Ich kaufe samstags ein.",
+      "I shop on Saturdays.",
+      "Ich habe gestern eingekauft.",
+      "I shopped yesterday."
+    ]
+  },
+  {
+    "_order": 239,
+    "c": "Trennbare Verben",
+    "w": "mitkommen",
+    "t": "to come along",
+    "k": "Verb",
+    "f": "er kommt mit, kam mit, ist mitgekommen",
+    "l": "A1",
+    "e1": "Kommst du mit?",
+    "e1t": "Are you coming along?",
+    "e2": "Leider konnte meine Frau nicht mitkommen, sie war krank.",
+    "e2t": "Unfortunately, my wife could not come along, she was sick.",
+    "g": "The prefix also goes last in questions: Kommst du mit? Perfekt: ist mitgekommen.",
+    "conjugation": {
+      "n": 104,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich komme mit",
+        "du kommst mit",
+        "er/sie/es kommt mit",
+        "wir kommen mit",
+        "ihr kommt mit",
+        "sie/Sie kommen mit"
+      ],
+      "perf": "ich bin mitgekommen",
+      "_order": 103,
+      "example": "Kommst du morgen mit?"
+    }
+  },
+  {
+    "_order": 240,
+    "c": "Trennbare Verben",
+    "w": "ankommen",
+    "t": "to arrive",
+    "k": "Verb",
+    "f": "er kommt an, kam an, ist angekommen",
+    "l": "A1",
+    "e1": "Der Zug kommt um 10 Uhr an.",
+    "e1t": "The train arrives at 10 a.m.",
+    "e2": "Wir sind spät in der Nacht in Istanbul angekommen.",
+    "e2t": "We arrived in Istanbul late at night.",
+    "g": "Use the place of arrival: in Berlin ankommen, am Bahnhof ankommen. Perfekt takes sein.",
+    "conjugation": {
+      "n": 118,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich komme an",
+        "du kommst an",
+        "er/sie/es kommt an",
+        "wir kommen an",
+        "ihr kommt an",
+        "sie/Sie kommen an"
+      ],
+      "perf": "ich bin angekommen",
+      "_order": 117,
+      "example": "Der Zug kommt um 9 Uhr an."
+    }
+  },
+  {
+    "_order": 241,
+    "c": "Trennbare Verben",
+    "w": "abfahren",
+    "t": "to depart (vehicle)",
+    "k": "Verb",
+    "f": "er fährt ab, fuhr ab, ist abgefahren",
+    "l": "A1",
+    "e1": "Der Bus fährt gleich ab.",
+    "e1t": "The bus is about to leave.",
+    "e2": "Wann fährt der nächste Zug nach München ab?",
+    "e2t": "When does the next train leave for Munich?",
+    "g": "Du fährst ab, er fährt ab. Use sein in the Perfekt. The noun is die Abfahrt.",
+    "conjugation": {
+      "n": 119,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich fahre ab",
+        "du fährst ab",
+        "er/sie/es fährt ab",
+        "wir fahren ab",
+        "ihr fahrt ab",
+        "sie/Sie fahren ab"
+      ],
+      "perf": "ich bin abgefahren",
+      "_order": 118,
+      "example": "Der Bus fährt um 8 Uhr ab."
+    }
+  },
+  {
+    "_order": 242,
+    "c": "Trennbare Verben",
+    "w": "fernsehen",
+    "t": "to watch TV",
+    "k": "Verb",
+    "f": "er sieht fern, sah fern, hat ferngesehen",
+    "l": "A1",
+    "e1": "Am Abend sehe ich fern.",
+    "e1t": "In the evening I watch TV.",
+    "e2": "Die Kinder dürfen nur eine Stunde am Tag fernsehen.",
+    "e2t": "The children are only allowed to watch television for one hour a day.",
+    "g": "Du siehst fern, er sieht fern. Der Fernseher is the TV set, das Fernsehen the medium.",
+    "conjugation": {
+      "n": 108,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich sehe fern",
+        "du siehst fern",
+        "er/sie/es sieht fern",
+        "wir sehen fern",
+        "ihr seht fern",
+        "sie/Sie sehen fern"
+      ],
+      "perf": "ich habe ferngesehen",
+      "_order": 107,
+      "example": "Abends sehe ich manchmal fern."
+    }
+  },
+  {
+    "_order": 243,
+    "c": "Trennbare Verben",
+    "w": "aufräumen",
+    "t": "to tidy up",
+    "k": "Verb",
+    "f": "er räumt auf, räumte auf, hat aufgeräumt",
+    "l": "A1",
+    "e1": "Ich räume mein Zimmer auf.",
+    "e1t": "I'll clean up my room.",
+    "e2": "Bevor die Gäste kommen, müssen wir noch die Küche aufräumen.",
+    "e2t": "Before the guests arrive, we have to clean the kitchen.",
+    "g": "Takes an accusative object. With a modal: Wir müssen aufräumen. Participle: aufgeräumt.",
+    "conjugation": {
+      "n": 105,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich räume auf",
+        "du räumst auf",
+        "er/sie/es räumt auf",
+        "wir räumen auf",
+        "ihr räumt auf",
+        "sie/Sie räumen auf"
+      ],
+      "perf": "ich habe aufgeräumt",
+      "_order": 104,
+      "example": "Ich räume am Samstag die Wohnung auf."
+    }
+  },
+  {
+    "_order": 244,
+    "c": "Trennbare Verben",
+    "w": "aufmachen",
+    "t": "to open",
+    "k": "Verb",
+    "f": "er macht auf, machte auf, hat aufgemacht",
+    "l": "A1",
+    "e1": "Mach bitte das Fenster auf!",
+    "e1t": "Please open the window!",
+    "e2": "Wann macht die Bäckerei am Sonntag auf?",
+    "e2t": "When does the bakery open on Sunday?",
+    "g": "In the imperative: Mach das Fenster auf! Öffnen is a more formal equivalent.",
+    "conjugation": {
+      "n": 110,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich mache auf",
+        "du machst auf",
+        "er/sie/es macht auf",
+        "wir machen auf",
+        "ihr macht auf",
+        "sie/Sie machen auf"
+      ],
+      "perf": "ich habe aufgemacht",
+      "_order": 109,
+      "example": "Ich mache das Fenster auf."
+    }
+  },
+  {
+    "_order": 245,
+    "c": "Trennbare Verben",
+    "w": "zumachen",
+    "t": "to close",
+    "k": "Verb",
+    "f": "er macht zu, machte zu, hat zugemacht",
+    "l": "A1",
+    "e1": "Mach die Tür zu!",
+    "e1t": "Close the door!",
+    "e2": "Die Geschäfte machen hier am Samstag um 18 Uhr zu.",
+    "e2t": "The shops close here on Saturday at 6 p.m.",
+    "g": "The opposite is aufmachen. A more formal equivalent is schließen. Ich mache die Tür zu.",
+    "conjugation": {
+      "n": 111,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich mache zu",
+        "du machst zu",
+        "er/sie/es macht zu",
+        "wir machen zu",
+        "ihr macht zu",
+        "sie/Sie machen zu"
+      ],
+      "perf": "ich habe zugemacht",
+      "_order": 110,
+      "example": "Mach bitte die Tür zu."
+    }
+  },
+  {
+    "_order": 246,
+    "c": "Trennbare Verben",
+    "w": "anfangen",
+    "t": "to begin",
+    "k": "Verb",
+    "f": "er fängt an, fing an, hat angefangen",
+    "l": "A1",
+    "e1": "Der Kurs fängt um neun an.",
+    "e1t": "The course starts at nine.",
+    "e2": "Ich habe letzten Monat angefangen, Gitarre zu lernen.",
+    "e2t": "I started learning guitar last month.",
+    "g": "Er fängt an. Use mit + dative for what you start. The zu-infinitive is anzufangen.",
+    "conjugation": {
+      "n": 76,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "fange an",
+        "fängst an",
+        "fängt an",
+        "fangen an",
+        "fangt an",
+        "fangen an"
+      ],
+      "perf": "ich habe angefangen",
+      "_order": 75,
+      "example": "Der Film fängt um acht an."
+    }
+  },
+  {
+    "_order": 248,
+    "c": "Trennbare Verben",
+    "w": "einladen",
+    "t": "to invite",
+    "k": "Verb",
+    "f": "er lädt ein, lud ein, hat eingeladen",
+    "l": "A1",
+    "e1": "Ich lade dich ein.",
+    "e1t": "I invite you.",
+    "e2": "Wir laden alle Freunde zu unserer Hochzeit ein.",
+    "e2t": "We invite all our friends to our wedding.",
+    "g": "Du lädst ein, er lädt ein. Invite a person in the accusative: jemanden zum Essen einladen.",
+    "conjugation": {
+      "n": 107,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich lade ein",
+        "du lädst ein",
+        "er/sie/es lädt ein",
+        "wir laden ein",
+        "ihr ladet ein",
+        "sie/Sie laden ein"
+      ],
+      "perf": "ich habe eingeladen",
+      "_order": 106,
+      "example": "Ich lade meine Freunde zum Essen ein."
+    }
+  },
+  {
+    "_order": 249,
+    "c": "Trennbare Verben",
+    "w": "mitbringen",
+    "t": "to bring along",
+    "k": "Verb",
+    "f": "er bringt mit, brachte mit, hat mitgebracht",
+    "l": "A1",
+    "e1": "Ich bringe einen Kuchen mit.",
+    "e1t": "I'll bring a cake.",
+    "e2": "Was soll ich zur Party mitbringen?",
+    "e2t": "What should I bring to the party?",
+    "g": "Mixed past forms: brachte mit, mitgebracht. Use the dative for the recipient: Ich bringe dir etwas mit.",
+    "conjugation": {
+      "n": 120,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich bringe mit",
+        "du bringst mit",
+        "er/sie/es bringt mit",
+        "wir bringen mit",
+        "ihr bringt mit",
+        "sie/Sie bringen mit"
+      ],
+      "perf": "ich habe mitgebracht",
+      "_order": 119,
+      "example": "Ich bringe morgen Kaffee mit."
+    }
+  },
+  {
+    "_order": 250,
+    "c": "Trennbare Verben",
+    "w": "abholen",
+    "t": "to pick up",
+    "k": "Verb",
+    "f": "er holt ab, holte ab, hat abgeholt",
+    "l": "A1",
+    "e1": "Ich hole dich vom Bahnhof ab.",
+    "e1t": "I'll pick you up from the station.",
+    "e2": "Kannst du heute die Kinder vom Kindergarten abholen?",
+    "e2t": "Can you pick up the children from kindergarten today?",
+    "g": "The thing collected is accusative. Use von + dative for the place: jemanden vom Bahnhof abholen.",
+    "conjugation": {
+      "n": 106,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich hole ab",
+        "du holst ab",
+        "er/sie/es holt ab",
+        "wir holen ab",
+        "ihr holt ab",
+        "sie/Sie holen ab"
+      ],
+      "perf": "ich habe abgeholt",
+      "_order": 105,
+      "example": "Ich hole dich am Bahnhof ab."
+    }
+  },
+  {
+    "_order": 251,
+    "c": "Trennbare Verben",
+    "w": "zurückkommen",
+    "t": "to come back",
+    "k": "Verb",
+    "f": "er kommt zurück, kam zurück, ist zurückgekommen",
+    "l": "A1",
+    "e1": "Ich komme um fünf zurück.",
+    "e1t": "I'll come back at five.",
+    "e2": "Wann bist du gestern von der Arbeit zurückgekommen?",
+    "e2t": "When did you come back from work yesterday?",
+    "g": "Perfekt takes sein. Use von or aus + dative for the place you return from.",
+    "conjugation": {
+      "n": 112,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich komme zurück",
+        "du kommst zurück",
+        "er/sie/es kommt zurück",
+        "wir kommen zurück",
+        "ihr kommt zurück",
+        "sie/Sie kommen zurück"
+      ],
+      "perf": "ich bin zurückgekommen",
+      "_order": 111,
+      "example": "Ich komme um 18 Uhr zurück."
+    }
+  },
+  {
+    "_order": 253,
+    "c": "Trennbare Verben",
+    "w": "anziehen",
+    "t": "to put on",
+    "k": "Verb",
+    "f": "er zieht an, zog an, hat angezogen",
+    "l": "A1",
+    "e1": "Ich ziehe eine Jacke an.",
+    "e1t": "I'm wearing a jacket.",
+    "e2": "Zieh dich warm an, draußen ist es sehr kalt!",
+    "e2t": "Dress warm, it's very cold outside!",
+    "g": "Sich anziehen means to get dressed. Contrast sich ausziehen and sich umziehen."
+  },
+  {
+    "_order": 256,
+    "c": "Trennbare Verben",
+    "w": "anmachen",
+    "t": "to switch on",
+    "k": "Verb",
+    "f": "er macht an, machte an, hat angemacht",
+    "l": "A1",
+    "e1": "Mach bitte das Licht an.",
+    "e1t": "Please turn on the lights.",
+    "e2": "Kannst du die Heizung anmachen? Mir ist kalt.",
+    "e2t": "Can you turn on the heater? I'm cold.",
+    "g": "Use it for switching on a device. For opening a door use aufmachen. Einschalten is more formal."
+  },
+  {
+    "_order": 259,
+    "c": "Trennbare Verben",
+    "w": "kennenlernen",
+    "t": "to get to know",
+    "k": "Verb",
+    "f": "er lernt kennen, lernte kennen, hat kennengelernt",
+    "l": "A1",
+    "e1": "Ich möchte dich kennenlernen.",
+    "e1t": "I want to get to know you.",
+    "e2": "Wir haben uns im Deutschkurs kennengelernt.",
+    "e2t": "We met in the German course.",
+    "g": "Use an accusative object: Ich lerne ihn kennen. Sich kennenlernen means to get to know one another."
+  },
+  {
+    "_order": 260,
+    "c": "Trennbare Verben",
+    "w": "aussehen",
+    "t": "to look / appear",
+    "k": "Verb",
+    "f": "er sieht aus, sah aus, hat ausgesehen",
+    "l": "A1",
+    "e1": "Du siehst gut aus.",
+    "e1t": "You look good.",
+    "e2": "Wie sieht deine neue Wohnung aus?",
+    "e2t": "What does your new apartment look like?",
+    "g": "Du siehst aus. Use an adjective or wie for a comparison: Er sieht aus wie sein Vater.",
+    "conjugation": {
+      "n": 73,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "sehe aus",
+        "siehst aus",
+        "sieht aus",
+        "sehen aus",
+        "seht aus",
+        "sehen aus"
+      ],
+      "perf": "ich habe ausgesehen",
+      "_order": 72,
+      "example": "Das Essen sieht lecker aus."
+    }
+  },
+  {
+    "_order": 261,
+    "c": "Modalverben & Wünsche",
+    "w": "können",
+    "t": "can / to be able to",
+    "k": "Verb",
+    "f": "ich kann, er kann, konnte, hat gekonnt",
+    "l": "A1",
+    "e1": "Ich kann gut schwimmen.",
+    "e1t": "I can swim well.",
+    "e2": "Kannst du mir morgen beim Umzug helfen?",
+    "e2t": "Can you help me move tomorrow?",
+    "g": "Put the conjugated modal in second position and the infinitive last. Ich kann and er kann have no -t.",
+    "conjugation": {
+      "n": 4,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "kann",
+        "kannst",
+        "kann",
+        "können",
+        "könnt",
+        "können"
+      ],
+      "perf": "ich habe gekonnt",
+      "_order": 3
+    }
+  },
+  {
+    "_order": 262,
+    "c": "Modalverben & Wünsche",
+    "w": "müssen",
+    "t": "must / to have to",
+    "k": "Verb",
+    "f": "ich muss, er muss, musste, hat gemusst",
+    "l": "A1",
+    "e1": "Ich muss heute arbeiten.",
+    "e1t": "I have to work today.",
+    "e2": "Wir müssen den Termin leider verschieben.",
+    "e2t": "Unfortunately, we have to postpone the date.",
+    "g": "Nicht müssen means there is no need: Ich muss nicht kommen. The infinitive goes last.",
+    "conjugation": {
+      "n": 5,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "muss",
+        "musst",
+        "muss",
+        "müssen",
+        "müsst",
+        "müssen"
+      ],
+      "perf": "ich habe gemusst",
+      "_order": 4
+    }
+  },
+  {
+    "_order": 263,
+    "c": "Modalverben & Wünsche",
+    "w": "dürfen",
+    "t": "may / to be allowed to",
+    "k": "Verb",
+    "f": "ich darf, er darf, durfte, hat gedurft",
+    "l": "A1",
+    "e1": "Darf ich hier rauchen?",
+    "e1t": "Can I smoke here?",
+    "e2": "Im Krankenhaus darf man nicht laut telefonieren.",
+    "e2t": "In the hospital you are not allowed to speak loudly.",
+    "g": "Expresses permission. Nicht dürfen means something is forbidden. Compare ich darf and wir dürfen.",
+    "conjugation": {
+      "n": 22,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "darf",
+        "darfst",
+        "darf",
+        "dürfen",
+        "dürft",
+        "dürfen"
+      ],
+      "perf": "ich habe gedurft",
+      "_order": 21,
+      "example": "Darf ich hier sitzen?"
+    }
+  },
+  {
+    "_order": 264,
+    "c": "Modalverben & Wünsche",
+    "w": "sollen",
+    "t": "should / to be supposed to",
+    "k": "Verb",
+    "f": "ich soll, er soll, sollte, hat gesollt",
+    "l": "A1",
+    "e1": "Der Arzt sagt, ich soll viel trinken.",
+    "e1t": "The doctor says I should drink a lot.",
+    "e2": "Soll ich das Fenster aufmachen?",
+    "e2t": "Should I open the window?",
+    "g": "Expresses someone else’s wish or advice. Soll ich …? means Shall I …? The infinitive goes last.",
+    "conjugation": {
+      "n": 10,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "soll",
+        "sollst",
+        "soll",
+        "sollen",
+        "sollt",
+        "sollen"
+      ],
+      "perf": "ich habe gesollt",
+      "_order": 9,
+      "example": "Ich soll morgen anrufen."
+    }
+  },
+  {
+    "_order": 265,
+    "c": "Modalverben & Wünsche",
+    "w": "wollen",
+    "t": "to want",
+    "k": "Verb",
+    "f": "ich will, er will, wollte, hat gewollt",
+    "l": "A1",
+    "e1": "Ich will Deutsch lernen.",
+    "e1t": "I want to learn German.",
+    "e2": "Wir wollen im Sommer nach Berlin fahren.",
+    "e2t": "We want to go to Berlin in the summer.",
+    "g": "Expresses a strong wish or intention. Ich will is more direct than ich möchte."
+  },
+  {
+    "_order": 266,
+    "c": "Modalverben & Wünsche",
+    "w": "möchten",
+    "t": "would like",
+    "k": "Verb",
+    "f": "ich möchte, er möchte, wollte, hat gewollt",
+    "l": "A1",
+    "e1": "Ich möchte einen Kaffee.",
+    "e1t": "I want a coffee.",
+    "e2": "Möchtest du am Wochenende mit uns essen gehen?",
+    "e2t": "Would you like to eat with us on the weekend?",
+    "g": "A polite wish with an accusative object or infinitive: Ich möchte einen Kaffee. For past wishes use wollte."
+  },
+  {
+    "_order": 267,
+    "c": "Modalverben & Wünsche",
+    "w": "mögen",
+    "t": "to like",
+    "k": "Verb",
+    "f": "ich mag, er mag, mochte, hat gemocht",
+    "l": "A1",
+    "e1": "Ich mag Schokolade.",
+    "e1t": "I like chocolate.",
+    "e2": "Meine Schwester mag keine Tomaten.",
+    "e2t": "My sister doesn’t like tomatoes.",
+    "g": "Often used with an accusative noun or pronoun: Ich mag dich. Use kein with an indefinite noun in the negative.",
+    "conjugation": {
+      "n": 26,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "mag",
+        "magst",
+        "mag",
+        "mögen",
+        "mögt",
+        "mögen"
+      ],
+      "perf": "ich habe gemocht",
+      "_order": 25,
+      "example": "Ich mag diesen Film."
+    }
+  },
+  {
+    "_order": 273,
+    "c": "Modalverben & Wünsche",
+    "w": "wünschen",
+    "t": "to wish",
+    "k": "Verb",
+    "f": "er wünscht, wünschte, hat gewünscht",
+    "l": "A1",
+    "e1": "Ich wünsche dir viel Glück!",
+    "e1t": "I wish you the best of luck!",
+    "e2": "Was wünschst du dir zum Geburtstag?",
+    "e2t": "What do you wish for your birthday?",
+    "g": "Use a dative recipient and an accusative wish: Ich wünsche dir viel Glück. Ich wünsche mir … expresses your own wish."
+  },
+  {
+    "_order": 309,
+    "c": "Haus & Wohnung",
+    "w": "wohnen",
+    "t": "to live (reside)",
+    "k": "Verb",
+    "f": "er wohnt, wohnte, hat gewohnt",
+    "l": "A1",
+    "e1": "Ich wohne in Kempten.",
+    "e1t": "I live in Kempten.",
+    "e2": "Wir wohnen seit drei Jahren in dieser Wohnung.",
+    "e2t": "We have lived in this apartment for three years.",
+    "g": "Use in with a town, bei + dative with a person and seit with the present for ongoing residence.",
+    "conjugation": {
+      "n": 78,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "wohne",
+        "wohnst",
+        "wohnt",
+        "wohnen",
+        "wohnt",
+        "wohnen"
+      ],
+      "perf": "ich habe gewohnt",
+      "_order": 77
+    },
+    "tenseExamples": [
+      "Ich wohne in Kempten.",
+      "I live in Kempten.",
+      "Ich habe früher in München gewohnt.",
+      "I used to live in Munich."
+    ]
+  },
+  {
+    "_order": 329,
+    "c": "Möbel & Haushalt",
+    "w": "waschen",
+    "t": "to wash",
+    "k": "Verb",
+    "f": "er wäscht, wusch, hat gewaschen",
+    "l": "A1",
+    "e1": "Ich wasche die Wäsche.",
+    "e1t": "I wash the laundry.",
+    "e2": "Vor dem Essen wäscht er sich die Hände.",
+    "e2t": "Before dinner, he washes his hands.",
+    "g": "Stem change: du wäschst, er wäscht. Use a dative reflexive with a body part: Ich wasche mir die Hände."
+  },
+  {
+    "_order": 330,
+    "c": "Möbel & Haushalt",
+    "w": "putzen",
+    "t": "to clean",
+    "k": "Verb",
+    "f": "er putzt, putzte, hat geputzt",
+    "l": "A1",
+    "e1": "Ich putze das Bad.",
+    "e1t": "I'll clean the bath.",
+    "e2": "Am Samstag putzen wir immer die ganze Wohnung.",
+    "e2t": "On Saturday we always clean the whole apartment.",
+    "g": "The stem ends in tz: du putzt. Zähne putzen means to brush one’s teeth.",
+    "conjugation": {
+      "n": 157,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich putze",
+        "du putzt",
+        "er/sie/es putzt",
+        "wir putzen",
+        "ihr putzt",
+        "sie/Sie putzen"
+      ],
+      "perf": "ich habe geputzt",
+      "_order": 156,
+      "example": "Ich putze heute die Küche."
+    }
+  },
+  {
+    "_order": 357,
+    "c": "Essen",
+    "w": "kochen",
+    "t": "to cook",
+    "k": "Verb",
+    "f": "er kocht, kochte, hat gekocht",
+    "l": "A1",
+    "e1": "Ich koche gern.",
+    "e1t": "I like to cook.",
+    "e2": "Gestern habe ich für meine Freunde türkisch gekocht.",
+    "e2t": "Yesterday I cooked Turkish for my friends.",
+    "g": "Regular Perfekt: hat gekocht. Wasser kocht means water is boiling.",
+    "conjugation": {
+      "n": 98,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "koche",
+        "kochst",
+        "kocht",
+        "kochen",
+        "kocht",
+        "kochen"
+      ],
+      "perf": "ich habe gekocht",
+      "_order": 97,
+      "example": "Heute koche ich eine Suppe."
+    },
+    "tenseExamples": [
+      "Ich koche heute Abend.",
+      "I'm cooking tonight.",
+      "Ich habe gestern gekocht.",
+      "I cooked yesterday."
+    ]
+  },
+  {
+    "_order": 375,
+    "c": "Trinken & Restaurant",
+    "w": "bestellen",
+    "t": "to order",
+    "k": "Verb",
+    "f": "er bestellt, bestellte, hat bestellt",
+    "l": "A1",
+    "e1": "Ich möchte bestellen.",
+    "e1t": "I want to order.",
+    "e2": "Wir haben schon vor zwanzig Minuten bestellt.",
+    "e2t": "We ordered twenty minutes ago.",
+    "g": "Inseparable be-: hat bestellt. Vor zwanzig Minuten means twenty minutes ago.",
+    "conjugation": {
+      "n": 151,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich bestelle",
+        "du bestellst",
+        "er/sie/es bestellt",
+        "wir bestellen",
+        "ihr bestellt",
+        "sie/Sie bestellen"
+      ],
+      "perf": "ich habe bestellt",
+      "_order": 150,
+      "example": "Ich bestelle eine Pizza."
+    }
+  },
+  {
+    "_order": 377,
+    "c": "Trinken & Restaurant",
+    "w": "bezahlen",
+    "t": "to pay",
+    "k": "Verb",
+    "f": "er bezahlt, bezahlte, hat bezahlt",
+    "l": "A1",
+    "e1": "Ich möchte bezahlen.",
+    "e1t": "I want to pay.",
+    "e2": "Kann ich hier mit Karte bezahlen?",
+    "e2t": "Can I pay here with card?",
+    "g": "Inseparable be-: hat bezahlt. Pay bar or mit Karte.",
+    "conjugation": {
+      "n": 152,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich bezahle",
+        "du bezahlst",
+        "er/sie/es bezahlt",
+        "wir bezahlen",
+        "ihr bezahlt",
+        "sie/Sie bezahlen"
+      ],
+      "perf": "ich habe bezahlt",
+      "_order": 151,
+      "example": "Ich bezahle mit Karte."
+    },
+    "tenseExamples": [
+      "Ich bezahle mit Karte.",
+      "I pay with a card.",
+      "Ich habe mit Karte bezahlt.",
+      "I paid with the card."
+    ]
+  },
+  {
+    "_order": 387,
+    "c": "Einkaufen & Geld",
+    "w": "kaufen",
+    "t": "to buy",
+    "k": "Verb",
+    "f": "er kauft, kaufte, hat gekauft",
+    "l": "A1",
+    "e1": "Ich kaufe Brot.",
+    "e1t": "I buy bread.",
+    "e2": "Gestern habe ich mir ein neues Handy gekauft.",
+    "e2t": "Yesterday I bought a new phone.",
+    "g": "Regular Perfekt: hat gekauft. Use an accusative object: einen Apfel kaufen.",
+    "conjugation": {
+      "n": 100,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "kaufe",
+        "kaufst",
+        "kauft",
+        "kaufen",
+        "kauft",
+        "kaufen"
+      ],
+      "perf": "ich habe gekauft",
+      "_order": 99,
+      "example": "Ich kaufe ein Brot."
+    },
+    "tenseExamples": [
+      "Ich kaufe heute Brot.",
+      "I'm buying bread today.",
+      "Ich habe gestern Brot gekauft.",
+      "I bought bread yesterday."
+    ]
+  },
+  {
+    "_order": 388,
+    "c": "Einkaufen & Geld",
+    "w": "verkaufen",
+    "t": "to sell",
+    "k": "Verb",
+    "f": "er verkauft, verkaufte, hat verkauft",
+    "l": "A1",
+    "e1": "Er verkauft sein Auto.",
+    "e1t": "He sells his car.",
+    "e2": "Auf dem Markt verkauft die Frau frisches Obst und Gemüse.",
+    "e2t": "In the market, the woman sells fresh fruit and vegetables.",
+    "g": "Inseparable ver- takes no ge-: hat verkauft.",
+    "conjugation": {
+      "n": 179,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich verkaufe",
+        "du verkaufst",
+        "er/sie/es verkauft",
+        "wir verkaufen",
+        "ihr verkauft",
+        "sie/Sie verkaufen"
+      ],
+      "perf": "ich habe verkauft",
+      "_order": 178,
+      "example": "Ich verkaufe mein altes Handy."
+    }
+  },
+  {
+    "_order": 389,
+    "c": "Einkaufen & Geld",
+    "w": "kosten",
+    "t": "to cost",
+    "k": "Verb",
+    "f": "es kostet, kostete, hat gekostet",
+    "l": "A1",
+    "e1": "Das Buch kostet zehn Euro.",
+    "e1t": "The book costs ten euros.",
+    "e2": "Wie viel hat die Reparatur gekostet?",
+    "e2t": "How much did the repair cost?",
+    "g": "The stem ends in t: es kostet. The item is the subject: Die Schuhe kosten 50 Euro.",
+    "conjugation": {
+      "n": 166,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich koste",
+        "du kostest",
+        "er/sie/es kostet",
+        "wir kosten",
+        "ihr kostet",
+        "sie/Sie kosten"
+      ],
+      "perf": "es hat gekostet",
+      "_order": 165,
+      "example": "Das Ticket kostet 20 Euro."
+    }
+  },
+  {
+    "_order": 423,
+    "c": "Kleidung & Farben",
+    "w": "tragen",
+    "t": "to wear / carry",
+    "k": "Verb",
+    "f": "er trägt, trug, hat getragen",
+    "l": "A1",
+    "e1": "Sie trägt eine Brille.",
+    "e1t": "She's wearing glasses.",
+    "e2": "Heute trägt er einen Anzug, weil er eine wichtige Besprechung hat.",
+    "e2t": "Today he is wearing a suit because he has an important meeting.",
+    "g": "Du trägst, er trägt. Tragen describes wearing. Anziehen describes putting clothes on.",
+    "conjugation": {
+      "n": 65,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "trage",
+        "trägst",
+        "trägt",
+        "tragen",
+        "tragt",
+        "tragen"
+      ],
+      "perf": "ich habe getragen",
+      "_order": 64,
+      "example": "Ich trage eine warme Jacke."
+    }
+  },
+  {
+    "_order": 424,
+    "c": "Kleidung & Farben",
+    "w": "ausziehen",
+    "t": "to take off / move out",
+    "k": "Verb",
+    "f": "er zieht aus, zog aus, hat ausgezogen",
+    "l": "A1",
+    "e1": "Bitte zieh die Schuhe aus.",
+    "e1t": "Please take off your shoes.",
+    "e2": "In vielen Wohnungen zieht man die Schuhe an der Tür aus.",
+    "e2t": "In many apartments, the shoes on the door are taken off.",
+    "g": "The prefix separates: Ich ziehe die Schuhe aus. Moving out uses sein: ist ausgezogen."
+  },
+  {
+    "_order": 458,
+    "c": "Körper & Gesundheit",
+    "w": "wehtun",
+    "t": "to hurt",
+    "k": "Verb",
+    "f": "es tut weh, tat weh, hat wehgetan",
+    "l": "A1",
+    "e1": "Mein Kopf tut weh.",
+    "e1t": "My head hurts.",
+    "e2": "Seit dem Sport tut mir das Knie weh.",
+    "e2t": "Since the sport, my knee hurts.",
+    "g": "The prefix goes last: Mir tut der Bauch weh. With a plural subject: Mir tun die Füße weh."
+  },
+  {
+    "_order": 462,
+    "c": "Arbeit & Beruf",
+    "w": "arbeiten",
+    "t": "to work",
+    "k": "Verb",
+    "f": "er arbeitet, arbeitete, hat gearbeitet",
+    "l": "A1",
+    "e1": "Ich arbeite in Kempten.",
+    "e1t": "I work in Kempten.",
+    "e2": "Seit einem Jahr arbeite ich als Ingenieur bei einer kleinen Firma.",
+    "e2t": "I have been working as an engineer for a small company for a year.",
+    "g": "Du arbeitest, er arbeitet. Use als for the profession and bei for the employer.",
+    "conjugation": {
+      "n": 39,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "arbeite",
+        "arbeitest",
+        "arbeitet",
+        "arbeiten",
+        "arbeitet",
+        "arbeiten"
+      ],
+      "perf": "ich habe gearbeitet",
+      "_order": 38,
+      "example": "Heute arbeite ich im Büro."
+    },
+    "tenseExamples": [
+      "Ich arbeite heute im Büro.",
+      "I work in the office today.",
+      "Ich habe gestern lange gearbeitet.",
+      "I worked for a long time yesterday."
+    ]
+  },
+  {
+    "_order": 488,
+    "c": "Büro & Kommunikation",
+    "w": "schreiben",
+    "t": "to write",
+    "k": "Verb",
+    "f": "er schreibt, schrieb, hat geschrieben",
+    "l": "A1",
+    "e1": "Ich schreibe einen Brief.",
+    "e1t": "I am writing a letter.",
+    "e2": "Hast du dem Kunden schon eine Antwort geschrieben?",
+    "e2t": "Have you already written an answer to the customer?",
+    "g": "Schrieb, hat geschrieben. The recipient is dative: Ich schreibe dir eine E-Mail.",
+    "conjugation": {
+      "n": 49,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "schreibe",
+        "schreibst",
+        "schreibt",
+        "schreiben",
+        "schreibt",
+        "schreiben"
+      ],
+      "perf": "ich habe geschrieben",
+      "_order": 48,
+      "example": "Ich schreibe meiner Schwester."
+    },
+    "tenseExamples": [
+      "Ich schreibe eine E-Mail.",
+      "I'm writing an email.",
+      "Ich habe eine E-Mail geschrieben.",
+      "I wrote an e-mail."
+    ]
+  },
+  {
+    "_order": 498,
+    "c": "Büro & Kommunikation",
+    "w": "schicken",
+    "t": "to send",
+    "k": "Verb",
+    "f": "er schickt, schickte, hat geschickt",
+    "l": "A1",
+    "e1": "Ich schicke dir ein Foto.",
+    "e1t": "I'll send you a picture.",
+    "e2": "Können Sie mir die Rechnung bitte per Post schicken?",
+    "e2t": "Can you please send me the invoice by post?",
+    "g": "Dative person, accusative thing: Ich schicke Ihnen die Datei. A synonym is senden.",
+    "conjugation": {
+      "n": 162,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich schicke",
+        "du schickst",
+        "er/sie/es schickt",
+        "wir schicken",
+        "ihr schickt",
+        "sie/Sie schicken"
+      ],
+      "perf": "ich habe geschickt",
+      "_order": 161,
+      "example": "Ich schicke dir die Datei per E-Mail."
+    }
+  },
+  {
+    "_order": 499,
+    "c": "Büro & Kommunikation",
+    "w": "antworten",
+    "t": "to reply",
+    "k": "Verb",
+    "f": "er antwortet, antwortete, hat geantwortet",
+    "l": "A1",
+    "e1": "Bitte antworten Sie schnell.",
+    "e1t": "Please respond quickly.",
+    "e2": "Er hat noch nicht auf meine E-Mail geantwortet.",
+    "e2t": "He has not yet responded to my email.",
+    "g": "Reply to a person in the dative or to a message with auf + accusative. Er antwortet.",
+    "conjugation": {
+      "n": 178,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich antworte",
+        "du antwortest",
+        "er/sie/es antwortet",
+        "wir antworten",
+        "ihr antwortet",
+        "sie/Sie antworten"
+      ],
+      "perf": "ich habe geantwortet",
+      "_order": 177,
+      "example": "Ich antworte auf die E-Mail."
+    },
+    "tenseExamples": [
+      "Ich antworte dir später.",
+      "I'll answer you later.",
+      "Ich habe dir gestern geantwortet.",
+      "I answered you yesterday."
+    ]
+  },
+  {
+    "_order": 512,
+    "c": "Schule & Lernen",
+    "w": "lernen",
+    "t": "to learn",
+    "k": "Verb",
+    "f": "er lernt, lernte, hat gelernt",
+    "l": "A1",
+    "e1": "Ich lerne Deutsch.",
+    "e1t": "I am learning German.",
+    "e2": "Für die Prüfung habe ich jeden Abend zwei Stunden gelernt.",
+    "e2t": "For the exam I learned two hours every evening.",
+    "g": "Regular Perfekt: hat gelernt. Languages often have no article: Ich lerne Deutsch.",
+    "conjugation": {
+      "n": 42,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "lerne",
+        "lernst",
+        "lernt",
+        "lernen",
+        "lernt",
+        "lernen"
+      ],
+      "perf": "ich habe gelernt",
+      "_order": 41,
+      "example": "Wir lernen jeden Tag Deutsch."
+    },
+    "tenseExamples": [
+      "Ich lerne jeden Abend Deutsch.",
+      "I learn German every night.",
+      "Ich habe gestern Deutsch gelernt.",
+      "I learned German yesterday."
+    ]
+  },
+  {
+    "_order": 516,
+    "c": "Schule & Lernen",
+    "w": "verstehen",
+    "t": "to understand",
+    "k": "Verb",
+    "f": "er versteht, verstand, hat verstanden",
+    "l": "A1",
+    "e1": "Ich verstehe das nicht.",
+    "e1t": "I do not understand.",
+    "e2": "Kannst du das bitte noch einmal sagen? Ich habe dich nicht verstanden.",
+    "e2t": "Can you say that again? I didn't understand you.",
+    "g": "Inseparable ver-: hat verstanden. Takes the accusative: Ich verstehe dich.",
+    "conjugation": {
+      "n": 44,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "verstehe",
+        "verstehst",
+        "versteht",
+        "verstehen",
+        "versteht",
+        "verstehen"
+      ],
+      "perf": "ich habe verstanden",
+      "_order": 43,
+      "example": "Ich verstehe die Frage."
+    },
+    "tenseExamples": [
+      "Ich verstehe die Frage.",
+      "I understand the question.",
+      "Ich habe die Frage verstanden.",
+      "I understood the question."
+    ]
+  },
+  {
+    "_order": 517,
+    "c": "Schule & Lernen",
+    "w": "wiederholen",
+    "t": "to repeat",
+    "k": "Verb",
+    "f": "er wiederholt, wiederholte, hat wiederholt",
+    "l": "A1",
+    "e1": "Bitte wiederholen Sie!",
+    "e1t": "Please repeat!",
+    "e2": "Vor der Prüfung wiederhole ich alle Wörter.",
+    "e2t": "Before the exam, I repeat all the words.",
+    "g": "In the sense of repeat, the verb is inseparable: ich wiederhole, hat wiederholt."
+  },
+  {
+    "_order": 531,
+    "c": "Schule & Lernen",
+    "w": "erklären",
+    "t": "to explain",
+    "k": "Verb",
+    "f": "er erklärt, erklärte, hat erklärt",
+    "l": "A1",
+    "e1": "Können Sie das erklären?",
+    "e1t": "Can you explain that?",
+    "e2": "Mein Freund hat mir die Hausaufgabe erklärt.",
+    "e2t": "My friend explained homework to me.",
+    "g": "Inseparable er-: hat erklärt. Say Ich erkläre dir das Wort (dative person, accusative thing).",
+    "conjugation": {
+      "n": 51,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "erkläre",
+        "erklärst",
+        "erklärt",
+        "erklären",
+        "erklärt",
+        "erklären"
+      ],
+      "perf": "ich habe erklärt",
+      "_order": 50,
+      "example": "Sie erklärt uns die Aufgabe."
+    }
+  },
+  {
+    "_order": 532,
+    "c": "Schule & Lernen",
+    "w": "üben",
+    "t": "to practise",
+    "k": "Verb",
+    "f": "er übt, übte, hat geübt",
+    "l": "A1",
+    "e1": "Wir üben die Aussprache.",
+    "e1t": "We are discussing the matter.",
+    "e2": "Wenn du jeden Tag übst, sprichst du bald gut Deutsch.",
+    "e2t": "If you practice every day, you will soon speak good German.",
+    "g": "Regular Perfekt: hat geübt. The noun is die Übung.",
+    "conjugation": {
+      "n": 176,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich übe",
+        "du übst",
+        "er/sie/es übt",
+        "wir üben",
+        "ihr übt",
+        "sie/Sie üben"
+      ],
+      "perf": "ich habe geübt",
+      "_order": 175,
+      "example": "Ich übe jeden Abend Deutsch."
+    }
+  },
+  {
+    "_order": 533,
+    "c": "Schule & Lernen",
+    "w": "buchstabieren",
+    "t": "to spell out",
+    "k": "Verb",
+    "f": "er buchstabiert, buchstabierte, hat buchstabiert",
+    "l": "A1",
+    "e1": "Können Sie das bitte buchstabieren?",
+    "e1t": "Could you please spell that out?",
+    "e2": "Am Telefon muss ich meinen Namen oft buchstabieren.",
+    "e2t": "On the phone, I often have to spell my name.",
+    "g": "No ge- with -ieren verbs: hat buchstabiert."
+  },
+  {
+    "_order": 566,
+    "c": "Verkehr",
+    "w": "fahren",
+    "t": "to drive / travel by vehicle",
+    "k": "Verb",
+    "f": "er fährt, fuhr, ist gefahren",
+    "l": "A1",
+    "e1": "Ich fahre nach Berlin.",
+    "e1t": "I'm going to Berlin.",
+    "e2": "Letztes Jahr sind wir mit dem Zug nach Österreich gefahren.",
+    "e2t": "Last year we took the train to Austria.",
+    "g": "Du fährst, er fährt. For travelling to a destination, use sein in the Perfekt: ist gefahren.",
+    "conjugation": {
+      "n": 32,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "fahre",
+        "fährst",
+        "fährt",
+        "fahren",
+        "fahrt",
+        "fahren"
+      ],
+      "perf": "ich bin gefahren",
+      "_order": 31,
+      "example": "Ich fahre mit dem Bus zur Arbeit."
+    },
+    "tenseExamples": [
+      "Ich fahre mit dem Zug.",
+      "I take the train.",
+      "Ich bin gestern mit dem Zug gefahren.",
+      "I took the train yesterday."
+    ]
+  },
+  {
+    "_order": 581,
+    "c": "Verkehr",
+    "w": "parken",
+    "t": "to park",
+    "k": "Verb",
+    "f": "er parkt, parkte, hat geparkt",
+    "l": "A1",
+    "e1": "Hier darf man nicht parken.",
+    "e1t": "You can't park here.",
+    "e2": "Ich habe das Auto direkt vor dem Haus geparkt.",
+    "e2t": "I parked the car in front of the house.",
+    "g": "Regular Perfekt: hat geparkt. A location takes the dative: vor dem Haus.",
+    "conjugation": {
+      "n": 175,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich parke",
+        "du parkst",
+        "er/sie/es parkt",
+        "wir parken",
+        "ihr parkt",
+        "sie/Sie parken"
+      ],
+      "perf": "ich habe geparkt",
+      "_order": 174,
+      "example": "Ich parke vor dem Haus."
+    }
+  },
+  {
+    "_order": 588,
+    "c": "Wetter & Natur",
+    "w": "regnen",
+    "t": "to rain",
+    "k": "Verb",
+    "f": "es regnet, regnete, hat geregnet",
+    "l": "A1",
+    "e1": "Es regnet.",
+    "e1t": "It's raining.",
+    "e2": "Gestern hat es den ganzen Tag geregnet.",
+    "e2t": "Yesterday it rained all day.",
+    "g": "An impersonal verb: Es regnet. Perfekt: Es hat geregnet."
+  },
+  {
+    "_order": 595,
+    "c": "Wetter & Natur",
+    "w": "schneien",
+    "t": "to snow",
+    "k": "Verb",
+    "f": "es schneit, schneite, hat geschneit",
+    "l": "A1",
+    "e1": "Es schneit!",
+    "e1t": "It's snowing!",
+    "e2": "Letzte Nacht hat es so stark geschneit, dass die Straßen weiß sind.",
+    "e2t": "Last night it snowed so badly that the streets are white.",
+    "g": "Use the impersonal subject es: Es schneit. Perfekt: Es hat geschneit."
+  },
+  {
+    "_order": 637,
+    "c": "Freizeit & Hobbys",
+    "w": "lesen",
+    "t": "to read",
+    "k": "Verb",
+    "f": "er liest, las, hat gelesen",
+    "l": "A1",
+    "e1": "Ich lese ein Buch.",
+    "e1t": "I'm reading a book.",
+    "e2": "Am Wochenende lese ich gern die Zeitung im Café.",
+    "e2t": "At the weekend I like to read the newspaper in the café.",
+    "g": "Du liest, er liest. Perfekt: hat gelesen.",
+    "conjugation": {
+      "n": 67,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "lese",
+        "liest",
+        "liest",
+        "lesen",
+        "lest",
+        "lesen"
+      ],
+      "perf": "ich habe gelesen",
+      "_order": 66,
+      "example": "Ich lese die Zeitung."
+    },
+    "tenseExamples": [
+      "Ich lese ein Buch.",
+      "I'm reading a book.",
+      "Ich habe das Buch gelesen.",
+      "I have read the book."
+    ]
+  },
+  {
+    "_order": 642,
+    "c": "Freizeit & Hobbys",
+    "w": "spielen",
+    "t": "to play",
+    "k": "Verb",
+    "f": "er spielt, spielte, hat gespielt",
+    "l": "A1",
+    "e1": "Die Kinder spielen im Park.",
+    "e1t": "The kids play in the park.",
+    "e2": "Mein Bruder spielt seit fünf Jahren Klavier.",
+    "e2t": "My brother has been playing the piano for five years.",
+    "g": "Also used with musical instruments: Gitarre spielen.",
+    "conjugation": {
+      "n": 38,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "spiele",
+        "spielst",
+        "spielt",
+        "spielen",
+        "spielt",
+        "spielen"
+      ],
+      "perf": "ich habe gespielt",
+      "_order": 37,
+      "example": "Wir spielen am Freitag Tennis."
+    },
+    "tenseExamples": [
+      "Ich spiele gern Fußball.",
+      "I like to play football.",
+      "Ich habe gestern Fußball gespielt.",
+      "I played football yesterday."
+    ]
+  },
+  {
+    "_order": 643,
+    "c": "Freizeit & Hobbys",
+    "w": "tanzen",
+    "t": "to dance",
+    "k": "Verb",
+    "f": "er tanzt, tanzte, hat getanzt",
+    "l": "A1",
+    "e1": "Wir tanzen gern.",
+    "e1t": "We like to dance.",
+    "e2": "Am Samstag waren wir in der Disco und haben die ganze Nacht getanzt.",
+    "e2t": "On Saturday we were at the disco and danced all night.",
+    "g": "The stem ends in z: du tanzt. Perfekt: hat getanzt."
+  },
+  {
+    "_order": 644,
+    "c": "Freizeit & Hobbys",
+    "w": "malen",
+    "t": "to paint",
+    "k": "Verb",
+    "f": "er malt, malte, hat gemalt",
+    "l": "A1",
+    "e1": "Das Kind malt ein Haus.",
+    "e1t": "The child paints a house.",
+    "e2": "Meine Oma malt gern Bilder von Blumen.",
+    "e2t": "My grandmother likes to paint pictures of flowers.",
+    "g": "Regular: malte, hat gemalt. Compare malen (paint) and zeichnen (draw)."
+  },
+  {
+    "_order": 646,
+    "c": "Freizeit & Hobbys",
+    "w": "singen",
+    "t": "to sing",
+    "k": "Verb",
+    "f": "er singt, sang, hat gesungen",
+    "l": "A1",
+    "e1": "Sie singt sehr schön.",
+    "e1t": "She sings very nicely.",
+    "e2": "Ich singe seit einem Jahr in einem Chor.",
+    "e2t": "I’ve been singing in a choir for a year.",
+    "g": "Irregular forms: sang, hat gesungen."
+  },
+  {
+    "_order": 648,
+    "c": "Freizeit & Hobbys",
+    "w": "wandern",
+    "t": "to hike",
+    "k": "Verb",
+    "f": "er wandert, wanderte, ist gewandert",
+    "l": "A1",
+    "e1": "Wir wandern in den Bergen.",
+    "e1t": "We walk in the mountains.",
+    "e2": "Letzten Sonntag sind wir fünf Stunden im Allgäu gewandert.",
+    "e2t": "Last Sunday we hiked for five hours in the Allgäu.",
+    "g": "Use sein in the Perfekt for hiking: Wir sind gewandert."
+  },
+  {
+    "_order": 660,
+    "c": "Sport",
+    "w": "schwimmen",
+    "t": "to swim",
+    "k": "Verb",
+    "f": "er schwimmt, schwamm, ist geschwommen",
+    "l": "A1",
+    "e1": "Ich schwimme gern.",
+    "e1t": "I like swimming.",
+    "e2": "Im Sommer sind wir jeden Tag im See geschwommen.",
+    "e2t": "In the summer we swim every day in the lake.",
+    "g": "Past forms: schwamm, geschwommen. Use sein when describing movement to a destination."
+  },
+  {
+    "_order": 661,
+    "c": "Sport",
+    "w": "laufen",
+    "t": "to run",
+    "k": "Verb",
+    "f": "er läuft, lief, ist gelaufen",
+    "l": "A1",
+    "e1": "Er läuft sehr schnell.",
+    "e1t": "It runs very fast.",
+    "e2": "Am Sonntag bin ich zehn Kilometer gelaufen.",
+    "e2t": "On Sunday I walked 10 kilometers.",
+    "g": "Du läufst, er läuft. Perfekt: Ich bin gelaufen.",
+    "conjugation": {
+      "n": 50,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "laufe",
+        "läufst",
+        "läuft",
+        "laufen",
+        "lauft",
+        "laufen"
+      ],
+      "perf": "ich bin gelaufen",
+      "_order": 49,
+      "example": "Wir laufen zum Bahnhof."
+    }
+  },
+  {
+    "_order": 662,
+    "c": "Sport",
+    "w": "joggen",
+    "t": "to jog",
+    "k": "Verb",
+    "f": "er joggt, joggte, ist gejoggt",
+    "l": "A1",
+    "e1": "Ich jogge morgens.",
+    "e1t": "I go jogging in the morning.",
+    "e2": "Bevor ich zur Arbeit gehe, jogge ich eine halbe Stunde.",
+    "e2t": "Before I go to work, I jog for half an hour.",
+    "g": "Regular participle gejoggt. A common Perfekt form is Ich bin gejoggt."
+  },
+  {
+    "_order": 666,
+    "c": "Sport",
+    "w": "gewinnen",
+    "t": "to win",
+    "k": "Verb",
+    "f": "er gewinnt, gewann, hat gewonnen",
+    "l": "A1",
+    "e1": "Unser Team gewinnt.",
+    "e1t": "Our team is winning.",
+    "e2": "Wir haben das Spiel gestern mit 3:1 gewonnen.",
+    "e2t": "We won the game 3-1 yesterday.",
+    "g": "Irregular past forms: gewann, hat gewonnen.",
+    "conjugation": {
+      "n": 83,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "gewinne",
+        "gewinnst",
+        "gewinnt",
+        "gewinnen",
+        "gewinnt",
+        "gewinnen"
+      ],
+      "perf": "ich habe gewonnen",
+      "_order": 82,
+      "example": "Heute gewinnt unsere Mannschaft."
+    }
+  },
+  {
+    "_order": 667,
+    "c": "Sport",
+    "w": "verlieren",
+    "t": "to lose",
+    "k": "Verb",
+    "f": "er verliert, verlor, hat verloren",
+    "l": "A1",
+    "e1": "Sie verlieren das Spiel.",
+    "e1t": "They lose the game.",
+    "e2": "Leider hat unsere Mannschaft am Wochenende verloren.",
+    "e2t": "Unfortunately, our team lost at the weekend.",
+    "g": "Inseparable ver-: hat verloren. The opposite is gewinnen.",
+    "conjugation": {
+      "n": 68,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "verliere",
+        "verlierst",
+        "verliert",
+        "verlieren",
+        "verliert",
+        "verlieren"
+      ],
+      "perf": "ich habe verloren",
+      "_order": 67,
+      "example": "Ich verliere beim Spielen selten."
+    }
+  },
+  {
+    "_order": 690,
+    "c": "Gefühle & Charakter",
+    "w": "sich freuen",
+    "t": "to be pleased",
+    "k": "Verb",
+    "f": "er freut sich, freute sich, hat sich gefreut",
+    "l": "A1",
+    "e1": "Ich freue mich sehr.",
+    "e1t": "I am very pleased.",
+    "e2": "Ich freue mich schon auf den Urlaub im Sommer.",
+    "e2t": "I am looking forward to the summer holiday.",
+    "g": "Sich freuen auf looks forward to something. Sich freuen über expresses pleasure about something. Both take the accusative.",
+    "conjugation": {
+      "n": 143,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich freue mich auf ...",
+        "du freust dich auf ...",
+        "er/sie/es freut sich auf ...",
+        "wir freuen uns auf ...",
+        "ihr freut euch auf ...",
+        "sie/Sie freuen sich auf ..."
+      ],
+      "perf": "ich habe mich darauf gefreut",
+      "_order": 142,
+      "label": "sich freuen (auf + Akk.)",
+      "meaning": "to look forward to",
+      "example": "Ich freue mich auf das Wochenende."
+    }
+  },
+  {
+    "_order": 698,
+    "c": "Gefühle & Charakter",
+    "w": "lieben",
+    "t": "to love",
+    "k": "Verb",
+    "f": "er liebt, liebte, hat geliebt",
+    "l": "A1",
+    "e1": "Ich liebe dich.",
+    "e1t": "I love you.",
+    "e2": "Meine Kinder lieben es, im Garten zu spielen.",
+    "e2t": "My kids love to play in the garden.",
+    "g": "Takes the accusative: Ich liebe dich. Stronger than mögen."
+  },
+  {
+    "_order": 810,
+    "c": "Alltag & Routine",
+    "w": "frühstücken",
+    "t": "to have breakfast",
+    "k": "Verb",
+    "f": "er frühstückt, frühstückte, hat gefrühstückt",
+    "l": "A1",
+    "e1": "Ich frühstücke um sieben Uhr.",
+    "e1t": "I’ll have breakfast at seven o’clock.",
+    "e2": "Am Sonntag frühstücken wir immer lange mit der ganzen Familie.",
+    "e2t": "On Sunday we always have breakfast with the whole family.",
+    "g": "The verb stays together: ich frühstücke. Regular Perfekt: hat gefrühstückt.",
+    "conjugation": {
+      "n": 159,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich frühstücke",
+        "du frühstückst",
+        "er/sie/es frühstückt",
+        "wir frühstücken",
+        "ihr frühstückt",
+        "sie/Sie frühstücken"
+      ],
+      "perf": "ich habe gefrühstückt",
+      "_order": 158,
+      "example": "Ich frühstücke vor der Arbeit."
+    }
+  },
+  {
+    "_order": 811,
+    "c": "Alltag & Routine",
+    "w": "duschen",
+    "t": "to shower",
+    "k": "Verb",
+    "f": "er duscht, duschte, hat geduscht",
+    "l": "A1",
+    "e1": "Ich dusche jeden Morgen.",
+    "e1t": "I shower every morning.",
+    "e2": "Nach dem Sport habe ich kalt geduscht.",
+    "e2t": "After the sport I took a cold shower.",
+    "g": "Can also be reflexive: sich duschen. Perfekt: hat geduscht.",
+    "conjugation": {
+      "n": 158,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich dusche",
+        "du duschst",
+        "er/sie/es duscht",
+        "wir duschen",
+        "ihr duscht",
+        "sie/Sie duschen"
+      ],
+      "perf": "ich habe geduscht",
+      "_order": 157,
+      "example": "Ich dusche morgens."
+    }
+  },
+  {
+    "_order": 812,
+    "c": "Alltag & Routine",
+    "w": "sich waschen",
+    "t": "to wash oneself",
+    "k": "Verb",
+    "f": "er wäscht sich, wusch sich, hat sich gewaschen",
+    "l": "A1",
+    "e1": "Das Kind wäscht sich.",
+    "e1t": "The child washes himself.",
+    "e2": "Ich wasche mir vor dem Essen die Hände.",
+    "e2t": "I wash my hands before eating.",
+    "g": "Ich wasche mich. With a body part use the dative: Ich wasche mir die Hände. Du wäschst has an umlaut.",
+    "conjugation": {
+      "n": 133,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich wasche mich",
+        "du wäschst dich",
+        "er/sie/es wäscht sich",
+        "wir waschen uns",
+        "ihr wascht euch",
+        "sie/Sie waschen sich"
+      ],
+      "perf": "ich habe mich gewaschen",
+      "_order": 132,
+      "example": "Ich wasche mich jeden Morgen."
+    }
+  },
+  {
+    "_order": 813,
+    "c": "Alltag & Routine",
+    "w": "sich anziehen",
+    "t": "to get dressed",
+    "k": "Verb",
+    "f": "er zieht sich an, zog sich an, hat sich angezogen",
+    "l": "A1",
+    "e1": "Ich ziehe mich schnell an.",
+    "e1t": "I'll dress quickly.",
+    "e2": "Zieh dir eine Jacke an, es ist kalt draußen.",
+    "e2t": "Put on a jacket, it’s cold outside.",
+    "g": "Both separable and reflexive: Ich ziehe mich an. With an item of clothing: Zieh dir eine Jacke an.",
+    "conjugation": {
+      "n": 134,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich ziehe mich an",
+        "du ziehst dich an",
+        "er/sie/es zieht sich an",
+        "wir ziehen uns an",
+        "ihr zieht euch an",
+        "sie/Sie ziehen sich an"
+      ],
+      "perf": "ich habe mich angezogen",
+      "_order": 133
+    }
+  },
+  {
+    "_order": 814,
+    "c": "Alltag & Routine",
+    "w": "sich ausziehen",
+    "t": "to get undressed",
+    "k": "Verb",
+    "f": "er zieht sich aus, zog sich aus, hat sich ausgezogen",
+    "l": "A1",
+    "e1": "Er zieht sich aus.",
+    "e1t": "He's undressing.",
+    "e2": "Die Kinder ziehen sich aus und gehen ins Bett.",
+    "e2t": "The children undress and go to bed.",
+    "g": "Aus goes last. In the Perfekt, ge goes inside: hat sich ausgezogen.",
+    "conjugation": {
+      "n": 135,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich ziehe mich aus",
+        "du ziehst dich aus",
+        "er/sie/es zieht sich aus",
+        "wir ziehen uns aus",
+        "ihr zieht euch aus",
+        "sie/Sie ziehen sich aus"
+      ],
+      "perf": "ich habe mich ausgezogen",
+      "_order": 134,
+      "example": "Vor dem Duschen ziehe ich mich aus."
+    }
+  },
+  {
+    "_order": 816,
+    "c": "Alltag & Routine",
+    "w": "sich kämmen",
+    "t": "to comb one's hair",
+    "k": "Verb",
+    "f": "er kämmt sich, kämmte sich, hat sich gekämmt",
+    "l": "A1",
+    "e1": "Sie kämmt sich.",
+    "e1t": "She's combing.",
+    "e2": "Ich kämme mir die Haare vor dem Spiegel.",
+    "e2t": "I comb my hair in front of the mirror.",
+    "g": "Compare Ich kämme mich with Ich kämme mir die Haare. The body part is accusative."
+  },
+  {
+    "_order": 818,
+    "c": "Alltag & Routine",
+    "w": "schlafen",
+    "t": "to sleep",
+    "k": "Verb",
+    "f": "er schläft, schlief, hat geschlafen",
+    "l": "A1",
+    "e1": "Das Baby schläft.",
+    "e1t": "The baby is asleep.",
+    "e2": "Ich habe letzte Nacht schlecht geschlafen.",
+    "e2t": "I slept badly last night.",
+    "g": "Du schläfst, er schläft. Perfekt: hat geschlafen.",
+    "conjugation": {
+      "n": 161,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich schlafe",
+        "du schläfst",
+        "er/sie/es schläft",
+        "wir schlafen",
+        "ihr schlaft",
+        "sie/Sie schlafen"
+      ],
+      "perf": "ich habe geschlafen",
+      "_order": 160,
+      "example": "Ich schlafe normalerweise sieben Stunden."
+    },
+    "tenseExamples": [
+      "Ich schlafe acht Stunden.",
+      "I sleep eight hours.",
+      "Ich habe acht Stunden geschlafen.",
+      "I slept eight hours."
+    ]
+  },
+  {
+    "_order": 821,
+    "c": "Alltag & Routine",
+    "w": "sich beeilen",
+    "t": "to hurry",
+    "k": "Verb",
+    "f": "er beeilt sich, beeilte sich, hat sich beeilt",
+    "l": "A1",
+    "e1": "Beeil dich bitte!",
+    "e1t": "Please hurry up!",
+    "e2": "Wir müssen uns beeilen, sonst verpassen wir den Bus.",
+    "e2t": "We have to hurry, otherwise we will miss the bus.",
+    "g": "Ich beeile mich, wir beeilen uns. Inseparable be- takes no ge-: hat sich beeilt.",
+    "conjugation": {
+      "n": 131,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich beeile mich",
+        "du beeilst dich",
+        "er/sie/es beeilt sich",
+        "wir beeilen uns",
+        "ihr beeilt euch",
+        "sie/Sie beeilen sich"
+      ],
+      "perf": "ich habe mich beeilt",
+      "_order": 130,
+      "example": "Ich beeile mich, weil der Bus gleich kommt."
+    }
+  },
+  {
+    "_order": 830,
+    "c": "Alltag & Routine",
+    "w": "baden",
+    "t": "to bathe",
+    "k": "Verb",
+    "f": "er badet, badete, hat gebadet",
+    "l": "A1",
+    "e1": "Das Kind badet gern.",
+    "e1t": "The child likes to bathe.",
+    "e2": "Am Abend bade ich manchmal mit warmem Wasser und entspanne mich.",
+    "e2t": "In the evening I sometimes bathe with warm water and relax.",
+    "g": "The stem ends in d: du badest, er badet. Perfekt: hat gebadet."
+  },
+  {
+    "_order": 837,
+    "c": "Termine & Behörden",
+    "w": "sich anmelden",
+    "t": "to register",
+    "k": "Verb",
+    "f": "er meldet sich an, meldete sich an, hat sich angemeldet",
+    "l": "A1",
+    "e1": "Ich melde mich beim Amt an.",
+    "e1t": "I am registering with the Office.",
+    "e2": "Nach dem Umzug muss man sich innerhalb von zwei Wochen anmelden.",
+    "e2t": "After the move, you have to register within two weeks.",
+    "g": "Reflexive and separable: Ich melde mich an. For a course: sich für einen Kurs anmelden.",
+    "conjugation": {
+      "n": 136,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich melde mich an",
+        "du meldest dich an",
+        "er/sie/es meldet sich an",
+        "wir melden uns an",
+        "ihr meldet euch an",
+        "sie/Sie melden sich an"
+      ],
+      "perf": "ich habe mich angemeldet",
+      "_order": 135,
+      "label": "sich anmelden (für + Akk.)",
+      "meaning": "to register for",
+      "example": "Ich melde mich für den Deutschkurs an."
+    }
+  },
+  {
+    "_order": 844,
+    "c": "Termine & Behörden",
+    "w": "ausfüllen",
+    "t": "to fill in",
+    "k": "Verb",
+    "f": "er füllt aus, füllte aus, hat ausgefüllt",
+    "l": "A1",
+    "e1": "Bitte füllen Sie das aus.",
+    "e1t": "Please fill that in.",
+    "e2": "Ich habe den Antrag ausgefüllt, aber noch nicht abgegeben.",
+    "e2t": "I have completed the request but have not yet submitted it.",
+    "g": "The prefix separates: Füllen Sie das Formular aus. Participle: ausgefüllt."
+  },
+  {
+    "_order": 880,
+    "c": "Reise & Hotel",
+    "w": "reisen",
+    "t": "to travel",
+    "k": "Verb",
+    "f": "er reist, reiste, ist gereist",
+    "l": "A1",
+    "e1": "Ich reise gern.",
+    "e1t": "I like to travel.",
+    "e2": "Letztes Jahr sind wir mit dem Auto durch Spanien gereist.",
+    "e2t": "Last year we travelled by car through Spain.",
+    "g": "For travelling use sein: Ich bin gereist. The du form is reist.",
+    "conjugation": {
+      "n": 97,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "reise",
+        "reist",
+        "reist",
+        "reisen",
+        "reist",
+        "reisen"
+      ],
+      "perf": "ich bin gereist",
+      "_order": 96,
+      "example": "Wir reisen mit dem Zug."
+    },
+    "tenseExamples": [
+      "Ich reise oft mit dem Zug.",
+      "I often travel by train.",
+      "Ich bin letztes Jahr nach Berlin gereist.",
+      "I went to Berlin last year."
+    ]
+  },
+  {
+    "_order": 888,
+    "c": "Reise & Hotel",
+    "w": "fliegen",
+    "t": "to fly",
+    "k": "Verb",
+    "f": "er fliegt, flog, ist geflogen",
+    "l": "A1",
+    "e1": "Ich fliege nach Berlin.",
+    "e1t": "I'm flying to Berlin.",
+    "e2": "Wir sind letzte Woche nach Antalya geflogen.",
+    "e2t": "We flew to Antalya last week.",
+    "g": "Travel by air takes sein: ist geflogen. Use nach for cities and countries without an article."
+  },
+  {
+    "_order": 896,
+    "c": "Reise & Hotel",
+    "w": "packen",
+    "t": "to pack",
+    "k": "Verb",
+    "f": "er packt, packte, hat gepackt",
+    "l": "A1",
+    "e1": "Ich packe meinen Koffer.",
+    "e1t": "I'm packing my suitcase.",
+    "e2": "Hast du die Sonnencreme schon in die Tasche gepackt?",
+    "e2t": "Have you already packed the sunscreen in your pocket?",
+    "g": "In die Tasche packen describes a destination. Regular Perfekt: hat gepackt."
+  },
+  {
+    "_order": 904,
+    "c": "Feste & Feiern",
+    "w": "feiern",
+    "t": "to celebrate",
+    "k": "Verb",
+    "f": "er feiert, feierte, hat gefeiert",
+    "l": "A1",
+    "e1": "Wir feiern heute.",
+    "e1t": "We celebrate today.",
+    "e2": "Am Samstag haben wir meinen Geburtstag im Garten gefeiert.",
+    "e2t": "On Saturday we celebrated my birthday in the garden.",
+    "g": "Wir feiern, ihr feiert. Perfekt: hat gefeiert. The event celebrated is accusative.",
+    "conjugation": {
+      "n": 171,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich feiere",
+        "du feierst",
+        "er/sie/es feiert",
+        "wir feiern",
+        "ihr feiert",
+        "sie/Sie feiern"
+      ],
+      "perf": "ich habe gefeiert",
+      "_order": 170,
+      "example": "Wir feiern am Samstag Geburtstag."
+    }
+  },
+  {
+    "_order": 909,
+    "c": "Feste & Feiern",
+    "w": "schenken",
+    "t": "to give as a gift",
+    "k": "Verb",
+    "f": "er schenkt, schenkte, hat geschenkt",
+    "l": "A1",
+    "e1": "Ich schenke dir ein Buch.",
+    "e1t": "I'll give you a book.",
+    "e2": "Was hast du deinem Vater zum Geburtstag geschenkt?",
+    "e2t": "What did you give your father for his birthday?",
+    "g": "The recipient is dative and the gift accusative: Ich schenke dir ein Buch."
+  },
+  {
+    "_order": 917,
+    "c": "Feste & Feiern",
+    "w": "heiraten",
+    "t": "to get married",
+    "k": "Verb",
+    "f": "er heiratet, heiratete, hat geheiratet",
+    "l": "A1",
+    "e1": "Sie heiraten im Mai.",
+    "e1t": "They are getting married in May.",
+    "e2": "Mein Bruder hat letztes Jahr eine Deutsche geheiratet.",
+    "e2t": "My brother married a German last year.",
+    "g": "Heiraten takes a direct accusative object: jemanden heiraten. The stem ends in t: er heiratet."
+  },
+  {
+    "_order": 1040,
+    "c": "Essen",
+    "w": "essen",
+    "t": "to eat",
+    "k": "Verb",
+    "f": "isst; hat gegessen",
+    "l": "A1",
+    "e1": "Ich esse Brot.",
+    "e1t": "I eat bread.",
+    "e2": "Was isst du gern?",
+    "e2t": "What do you like to eat?",
+    "g": "Du isst, er isst; vowel change e to i.",
+    "conjugation": {
+      "n": 160,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich esse",
+        "du isst",
+        "er/sie/es isst",
+        "wir essen",
+        "ihr esst",
+        "sie/Sie essen"
+      ],
+      "perf": "ich habe gegessen",
+      "_order": 159,
+      "example": "Ich esse mittags in der Kantine."
+    },
+    "tenseExamples": [
+      "Ich esse gern Nudeln.",
+      "I like to eat noodles.",
+      "Ich habe gestern Nudeln gegessen.",
+      "I ate noodles yesterday."
+    ]
+  },
+  {
+    "_order": 1041,
+    "c": "Trinken & Restaurant",
+    "w": "trinken",
+    "t": "to drink",
+    "k": "Verb",
+    "f": "trinkt; hat getrunken",
+    "l": "A1",
+    "e1": "Ich trinke Wasser.",
+    "e1t": "I drink water.",
+    "e2": "Trinkst du Kaffee?",
+    "e2t": "Do you drink coffee?",
+    "g": "Perfekt: haben + getrunken.",
+    "conjugation": {
+      "n": 99,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "trinke",
+        "trinkst",
+        "trinkt",
+        "trinken",
+        "trinkt",
+        "trinken"
+      ],
+      "perf": "ich habe getrunken",
+      "_order": 98,
+      "example": "Ich trinke morgens Kaffee."
+    },
+    "tenseExamples": [
+      "Ich trinke morgens Kaffee.",
+      "I drink coffee in the morning.",
+      "Ich habe heute Kaffee getrunken.",
+      "I drank coffee today."
+    ]
+  },
+  {
+    "_order": 1042,
+    "c": "Grundverben",
+    "w": "fragen",
+    "t": "to ask",
+    "k": "Verb",
+    "f": "fragt; hat gefragt",
+    "l": "A1",
+    "e1": "Ich frage meine Kollegin.",
+    "e1t": "I ask my colleague.",
+    "e2": "Darf ich dich etwas fragen?",
+    "e2t": "May I ask you something?",
+    "g": "Ask a person in the accusative.",
+    "conjugation": {
+      "n": 34,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "frage",
+        "fragst",
+        "fragt",
+        "fragen",
+        "fragt",
+        "fragen"
+      ],
+      "perf": "ich habe gefragt",
+      "_order": 33
+    },
+    "tenseExamples": [
+      "Ich frage den Lehrer.",
+      "I ask the teacher.",
+      "Ich habe den Lehrer gefragt.",
+      "I asked the teacher."
+    ]
+  },
+  {
+    "_order": 1043,
+    "c": "Schule & Lernen",
+    "w": "sprechen",
+    "t": "to speak",
+    "k": "Verb",
+    "f": "spricht; hat gesprochen",
+    "l": "A1",
+    "e1": "Ich spreche Englisch.",
+    "e1t": "I speak English.",
+    "e2": "Sprichst du Deutsch?",
+    "e2t": "Do you speak German?",
+    "g": "Du sprichst, er spricht.",
+    "conjugation": {
+      "n": 29,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "spreche",
+        "sprichst",
+        "spricht",
+        "sprechen",
+        "sprecht",
+        "sprechen"
+      ],
+      "perf": "ich habe gesprochen",
+      "_order": 28,
+      "example": "Wir sprechen über das Wochenende."
+    },
+    "tenseExamples": [
+      "Ich spreche mit meiner Kollegin.",
+      "I am talking to my colleague.",
+      "Ich habe mit meiner Kollegin gesprochen.",
+      "I have spoken to my colleague."
+    ]
+  },
+  {
+    "_order": 1044,
+    "c": "Grundverben",
+    "w": "helfen",
+    "t": "to help",
+    "k": "Verb",
+    "f": "hilft; hat geholfen",
+    "l": "A1",
+    "e1": "Kannst du mir helfen?",
+    "e1t": "Can you help me?",
+    "e2": "Ich helfe meiner Mutter.",
+    "e2t": "I help my mother.",
+    "g": "Helfen takes a dative object.",
+    "conjugation": {
+      "n": 82,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "helfe",
+        "hilfst",
+        "hilft",
+        "helfen",
+        "helft",
+        "helfen"
+      ],
+      "perf": "ich habe geholfen",
+      "_order": 81
+    },
+    "tenseExamples": [
+      "Ich helfe meinem Freund.",
+      "I'm helping my friend.",
+      "Ich habe meinem Freund geholfen.",
+      "I helped my friend."
+    ]
+  },
+  {
+    "_order": 1045,
+    "c": "Grundverben",
+    "w": "suchen",
+    "t": "to look for",
+    "k": "Verb",
+    "f": "sucht; hat gesucht",
+    "l": "A1",
+    "e1": "Ich suche meine Brille.",
+    "e1t": "I am looking for my glasses.",
+    "e2": "Wir suchen eine Wohnung.",
+    "e2t": "We are looking for an apartment.",
+    "g": "Takes an accusative object.",
+    "conjugation": {
+      "n": 60,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "suche",
+        "suchst",
+        "sucht",
+        "suchen",
+        "sucht",
+        "suchen"
+      ],
+      "perf": "ich habe gesucht",
+      "_order": 59,
+      "example": "Ich suche eine Wohnung."
+    }
+  },
+  {
+    "_order": 1046,
+    "c": "Grundverben",
+    "w": "warten",
+    "t": "to wait",
+    "k": "Verb",
+    "f": "wartet; hat gewartet",
+    "l": "A1",
+    "e1": "Ich warte auf den Bus.",
+    "e1t": "I am waiting for the bus.",
+    "e2": "Bitte warte hier.",
+    "e2t": "Please wait here.",
+    "g": "Warten auf + accusative.",
+    "conjugation": {
+      "n": 80,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "warte",
+        "wartest",
+        "wartet",
+        "warten",
+        "wartet",
+        "warten"
+      ],
+      "perf": "ich habe gewartet",
+      "_order": 79
+    },
+    "tenseExamples": [
+      "Ich warte auf den Bus.",
+      "I'm waiting for the bus.",
+      "Ich habe auf den Bus gewartet.",
+      "I was waiting for the bus."
+    ]
+  },
+  {
+    "_order": 1047,
+    "c": "Grundverben",
+    "w": "öffnen",
+    "t": "to open",
+    "k": "Verb",
+    "f": "öffnet; hat geöffnet",
+    "l": "A1",
+    "e1": "Ich öffne das Fenster.",
+    "e1t": "I open the window.",
+    "e2": "Der Laden öffnet um neun.",
+    "e2t": "The shop opens at nine.",
+    "g": "Regular verb.",
+    "conjugation": {
+      "n": 156,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich öffne",
+        "du öffnest",
+        "er/sie/es öffnet",
+        "wir öffnen",
+        "ihr öffnet",
+        "sie/Sie öffnen"
+      ],
+      "perf": "ich habe geöffnet",
+      "_order": 155
+    },
+    "tenseExamples": [
+      "Ich öffne das Fenster.",
+      "I'll open the window.",
+      "Ich habe das Fenster geöffnet.",
+      "I opened the window."
+    ]
+  },
+  {
+    "_order": 1048,
+    "c": "Grundverben",
+    "w": "schließen",
+    "t": "to close",
+    "k": "Verb",
+    "f": "schließt; hat geschlossen",
+    "l": "A1",
+    "e1": "Bitte schließ die Tür.",
+    "e1t": "Please close the door.",
+    "e2": "Der Laden schließt um sechs.",
+    "e2t": "The shop closes at six.",
+    "g": "Perfekt: hat geschlossen.",
+    "conjugation": {
+      "n": 84,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "schließe",
+        "schließt",
+        "schließt",
+        "schließen",
+        "schließt",
+        "schließen"
+      ],
+      "perf": "ich habe geschlossen",
+      "_order": 83,
+      "example": "Ich schließe das Fenster."
+    },
+    "tenseExamples": [
+      "Ich schließe die Tür.",
+      "I'll close the door.",
+      "Ich habe die Tür geschlossen.",
+      "I have closed the door."
+    ]
+  },
+  {
+    "_order": 1049,
+    "c": "Freizeit & Hobbys",
+    "w": "treffen",
+    "t": "to meet",
+    "k": "Verb",
+    "f": "trifft; hat getroffen",
+    "l": "A1",
+    "e1": "Ich treffe meine Freunde.",
+    "e1t": "I meet my friends.",
+    "e2": "Wir treffen uns morgen.",
+    "e2t": "We are meeting tomorrow.",
+    "g": "Du triffst, er trifft.",
+    "conjugation": {
+      "n": 59,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "treffe",
+        "triffst",
+        "trifft",
+        "treffen",
+        "trefft",
+        "treffen"
+      ],
+      "perf": "ich habe getroffen",
+      "_order": 58,
+      "example": "Am Abend treffe ich meine Freunde."
+    },
+    "tenseExamples": [
+      "Ich treffe heute meine Freundin.",
+      "I meet my girlfriend today.",
+      "Ich habe gestern meine Freundin getroffen.",
+      "I met my girlfriend yesterday."
+    ]
+  },
+  {
+    "_order": 1050,
+    "c": "Grundverben",
+    "w": "vergessen",
+    "t": "to forget",
+    "k": "Verb",
+    "f": "vergisst; hat vergessen",
+    "l": "A1",
+    "e1": "Ich vergesse oft meinen Schlüssel.",
+    "e1t": "I often forget my key.",
+    "e2": "Ich habe den Termin vergessen.",
+    "e2t": "I forgot the appointment.",
+    "g": "Inseparable ver-; no ge- in Perfekt.",
+    "conjugation": {
+      "n": 154,
+      "level": "A2",
+      "type": "Next 100",
+      "forms": [
+        "ich vergesse",
+        "du vergisst",
+        "er/sie/es vergisst",
+        "wir vergessen",
+        "ihr vergesst",
+        "sie/Sie vergessen"
+      ],
+      "perf": "ich habe vergessen",
+      "_order": 153,
+      "example": "Ich habe meinen Schlüssel vergessen."
+    }
+  },
+  {
+    "_order": 1118,
+    "c": "Grundverben",
+    "w": "halten",
+    "t": "to hold",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Der Bus hält am Bahnhof.",
+    "e1t": "The bus stops at the station.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 24,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "halte",
+        "hältst",
+        "hält",
+        "halten",
+        "haltet",
+        "halten"
+      ],
+      "perf": "ich habe gehalten",
+      "_order": 23
+    }
+  },
+  {
+    "_order": 1119,
+    "c": "Grundverben",
+    "w": "nennen",
+    "t": "to name",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Sie nennt mir den Preis.",
+    "e1t": "She tells me the price.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 25,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "nenne",
+        "nennst",
+        "nennt",
+        "nennen",
+        "nennt",
+        "nennen"
+      ],
+      "perf": "ich habe genannt",
+      "_order": 24
+    }
+  },
+  {
+    "_order": 1120,
+    "c": "Grundverben",
+    "w": "zeigen",
+    "t": "to show",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Er zeigt mir den Weg.",
+    "e1t": "He shows me the way.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 27,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "zeige",
+        "zeigst",
+        "zeigt",
+        "zeigen",
+        "zeigt",
+        "zeigen"
+      ],
+      "perf": "ich habe gezeigt",
+      "_order": 26
+    }
+  },
+  {
+    "_order": 1121,
+    "c": "Grundverben",
+    "w": "führen",
+    "t": "to lead",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Dieser Weg führt zum See.",
+    "e1t": "This path leads to the lake.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 28,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "führe",
+        "führst",
+        "führt",
+        "führen",
+        "führt",
+        "führen"
+      ],
+      "perf": "ich habe geführt",
+      "_order": 27
+    }
+  },
+  {
+    "_order": 1122,
+    "c": "Grundverben",
+    "w": "leben",
+    "t": "to live",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Meine Eltern leben in der Stadt.",
+    "e1t": "My parents live in the city.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 31,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "lebe",
+        "lebst",
+        "lebt",
+        "leben",
+        "lebt",
+        "leben"
+      ],
+      "perf": "ich habe gelebt",
+      "_order": 30
+    }
+  },
+  {
+    "_order": 1123,
+    "c": "Grundverben",
+    "w": "meinen",
+    "t": "to mean / think",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Was meinst du damit?",
+    "e1t": "What do you mean by that?",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 33,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "meine",
+        "meinst",
+        "meint",
+        "meinen",
+        "meint",
+        "meinen"
+      ],
+      "perf": "ich habe gemeint",
+      "_order": 32
+    }
+  },
+  {
+    "_order": 1124,
+    "c": "Grundverben",
+    "w": "gelten",
+    "t": "to apply / be valid",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Die Fahrkarte gilt bis Montag.",
+    "e1t": "The ticket is valid until Monday.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 36,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "gelte",
+        "giltst",
+        "gilt",
+        "gelten",
+        "geltet",
+        "gelten"
+      ],
+      "perf": "ich habe gegolten",
+      "_order": 35
+    }
+  },
+  {
+    "_order": 1125,
+    "c": "Grundverben",
+    "w": "stellen",
+    "t": "to place upright",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Ich stelle die Tasse auf den Tisch.",
+    "e1t": "I put the cup on the table.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 37,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "stelle",
+        "stellst",
+        "stellt",
+        "stellen",
+        "stellt",
+        "stellen"
+      ],
+      "perf": "ich habe gestellt",
+      "_order": 36
+    }
+  },
+  {
+    "_order": 1126,
+    "c": "Grundverben",
+    "w": "folgen",
+    "t": "to follow",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Bitte folgen Sie mir.",
+    "e1t": "Please follow me.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 41,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "folge",
+        "folgst",
+        "folgt",
+        "folgen",
+        "folgt",
+        "folgen"
+      ],
+      "perf": "ich bin gefolgt",
+      "_order": 40
+    }
+  },
+  {
+    "_order": 1127,
+    "c": "Grundverben",
+    "w": "setzen",
+    "t": "to set down",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Ich setze mich ans Fenster.",
+    "e1t": "I sit down by the window.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 45,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "setze",
+        "setzt",
+        "setzt",
+        "setzen",
+        "setzt",
+        "setzen"
+      ],
+      "perf": "ich habe gesetzt",
+      "_order": 44
+    }
+  },
+  {
+    "_order": 1128,
+    "c": "Grundverben",
+    "w": "beginnen",
+    "t": "to begin",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Der Kurs beginnt um neun Uhr.",
+    "e1t": "The course starts at nine.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 46,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "beginne",
+        "beginnst",
+        "beginnt",
+        "beginnen",
+        "beginnt",
+        "beginnen"
+      ],
+      "perf": "ich habe begonnen",
+      "_order": 45
+    }
+  },
+  {
+    "_order": 1129,
+    "c": "Grundverben",
+    "w": "erzählen",
+    "t": "to tell a story",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Sie erzählt mir eine Geschichte.",
+    "e1t": "She tells me a story.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 47,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "erzähle",
+        "erzählst",
+        "erzählt",
+        "erzählen",
+        "erzählt",
+        "erzählen"
+      ],
+      "perf": "ich habe erzählt",
+      "_order": 46
+    }
+  },
+  {
+    "_order": 1130,
+    "c": "Grundverben",
+    "w": "ziehen",
+    "t": "to pull",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Ich ziehe den Koffer hinter mir her.",
+    "e1t": "I pull the suitcase behind me.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 53,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "ziehe",
+        "ziehst",
+        "zieht",
+        "ziehen",
+        "zieht",
+        "ziehen"
+      ],
+      "perf": "ich habe gezogen",
+      "_order": 52
+    }
+  },
+  {
+    "_order": 1131,
+    "c": "Grundverben",
+    "w": "scheinen",
+    "t": "to shine / seem",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Heute scheint die Sonne.",
+    "e1t": "The sun is shining today.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 54,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "scheine",
+        "scheinst",
+        "scheint",
+        "scheinen",
+        "scheint",
+        "scheinen"
+      ],
+      "perf": "ich habe geschienen",
+      "_order": 53
+    }
+  },
+  {
+    "_order": 1132,
+    "c": "Grundverben",
+    "w": "fallen",
+    "t": "to fall",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Der Schlüssel fällt auf den Boden.",
+    "e1t": "The key falls to the floor.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 55,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "falle",
+        "fällst",
+        "fällt",
+        "fallen",
+        "fallt",
+        "fallen"
+      ],
+      "perf": "ich bin gefallen",
+      "_order": 54
+    }
+  },
+  {
+    "_order": 1133,
+    "c": "Grundverben",
+    "w": "gehören",
+    "t": "to belong",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Wem gehört diese Tasche?",
+    "e1t": "Who does this bag belong to?",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 56,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "gehöre",
+        "gehörst",
+        "gehört",
+        "gehören",
+        "gehört",
+        "gehören"
+      ],
+      "perf": "ich habe gehört",
+      "_order": 55
+    }
+  },
+  {
+    "_order": 1134,
+    "c": "Grundverben",
+    "w": "entstehen",
+    "t": "to arise",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Hier entsteht ein neues Haus.",
+    "e1t": "A new house is being built here.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 57,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "entstehe",
+        "entstehst",
+        "entsteht",
+        "entstehen",
+        "entsteht",
+        "entstehen"
+      ],
+      "perf": "ich bin entstanden",
+      "_order": 56
+    }
+  },
+  {
+    "_order": 1135,
+    "c": "Grundverben",
+    "w": "erhalten",
+    "t": "to receive",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Ich erhalte heute eine Antwort.",
+    "e1t": "I am receiving a reply today.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 58,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "erhalte",
+        "erhältst",
+        "erhält",
+        "erhalten",
+        "erhaltet",
+        "erhalten"
+      ],
+      "perf": "ich habe erhalten",
+      "_order": 57
+    }
+  },
+  {
+    "_order": 1136,
+    "c": "Grundverben",
+    "w": "legen",
+    "t": "to lay down",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Ich lege mein Handy ins Regal.",
+    "e1t": "I put my phone on the shelf.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 61,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "lege",
+        "legst",
+        "legt",
+        "legen",
+        "legt",
+        "legen"
+      ],
+      "perf": "ich habe gelegt",
+      "_order": 60
+    }
+  },
+  {
+    "_order": 1137,
+    "c": "Grundverben",
+    "w": "vorstellen",
+    "t": "to introduce / imagine",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Darf ich dir meine Schwester vorstellen?",
+    "e1t": "May I introduce my sister to you?",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 62,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "stelle vor",
+        "stellst vor",
+        "stellt vor",
+        "stellen vor",
+        "stellt vor",
+        "stellen vor"
+      ],
+      "perf": "ich habe vorgestellt",
+      "_order": 61
+    }
+  },
+  {
+    "_order": 1138,
+    "c": "Grundverben",
+    "w": "handeln",
+    "t": "to act / trade",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Das Buch handelt von einer Reise.",
+    "e1t": "The book is about a journey.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 63,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "handele",
+        "handelst",
+        "handelt",
+        "handeln",
+        "handelt",
+        "handeln"
+      ],
+      "perf": "ich habe gehandelt",
+      "_order": 62
+    }
+  },
+  {
+    "_order": 1139,
+    "c": "Grundverben",
+    "w": "erreichen",
+    "t": "to reach",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Wir erreichen den Bahnhof um acht.",
+    "e1t": "We reach the station at eight.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 64,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "erreiche",
+        "erreichst",
+        "erreicht",
+        "erreichen",
+        "erreicht",
+        "erreichen"
+      ],
+      "perf": "ich habe erreicht",
+      "_order": 63
+    }
+  },
+  {
+    "_order": 1140,
+    "c": "Grundverben",
+    "w": "schaffen",
+    "t": "to manage / create",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Das schaffe ich heute.",
+    "e1t": "I can manage that today.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 66,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "schaffe",
+        "schaffst",
+        "schafft",
+        "schaffen",
+        "schafft",
+        "schaffen"
+      ],
+      "perf": "ich habe geschafft",
+      "_order": 65
+    }
+  },
+  {
+    "_order": 1141,
+    "c": "Grundverben",
+    "w": "darstellen",
+    "t": "to portray",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Das Bild stellt eine Familie dar.",
+    "e1t": "The picture depicts a family.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 69,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "stelle dar",
+        "stellst dar",
+        "stellt dar",
+        "stellen dar",
+        "stellt dar",
+        "stellen dar"
+      ],
+      "perf": "ich habe dargestellt",
+      "_order": 68
+    }
+  },
+  {
+    "_order": 1142,
+    "c": "Grundverben",
+    "w": "erkennen",
+    "t": "to recognise",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Ich erkenne ihn an seiner Stimme.",
+    "e1t": "I recognise him by his voice.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 70,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "erkenne",
+        "erkennst",
+        "erkennt",
+        "erkennen",
+        "erkennt",
+        "erkennen"
+      ],
+      "perf": "ich habe erkannt",
+      "_order": 69
+    }
+  },
+  {
+    "_order": 1143,
+    "c": "Grundverben",
+    "w": "entwickeln",
+    "t": "to develop",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Wir entwickeln eine neue Idee.",
+    "e1t": "We are developing a new idea.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 71,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "entwickle",
+        "entwickelst",
+        "entwickelt",
+        "entwickeln",
+        "entwickelt",
+        "entwickeln"
+      ],
+      "perf": "ich habe entwickelt",
+      "_order": 70
+    }
+  },
+  {
+    "_order": 1144,
+    "c": "Grundverben",
+    "w": "reden",
+    "t": "to talk",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Wir reden über den Kurs.",
+    "e1t": "We talk about the course.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 72,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "rede",
+        "redest",
+        "redet",
+        "reden",
+        "redet",
+        "reden"
+      ],
+      "perf": "ich habe geredet",
+      "_order": 71
+    }
+  },
+  {
+    "_order": 1145,
+    "c": "Grundverben",
+    "w": "erscheinen",
+    "t": "to appear",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Die Zeitung erscheint jeden Morgen.",
+    "e1t": "The newspaper comes out every morning.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 74,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "erscheine",
+        "erscheinst",
+        "erscheint",
+        "erscheinen",
+        "erscheint",
+        "erscheinen"
+      ],
+      "perf": "ich bin erschienen",
+      "_order": 73
+    }
+  },
+  {
+    "_order": 1146,
+    "c": "Grundverben",
+    "w": "bilden",
+    "t": "to form",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Wir bilden zwei Gruppen.",
+    "e1t": "We form two groups.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 75,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "bilde",
+        "bildest",
+        "bildet",
+        "bilden",
+        "bildet",
+        "bilden"
+      ],
+      "perf": "ich habe gebildet",
+      "_order": 74
+    }
+  },
+  {
+    "_order": 1147,
+    "c": "Grundverben",
+    "w": "erwarten",
+    "t": "to expect",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Wir erwarten heute Besuch.",
+    "e1t": "We are expecting visitors today.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 77,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "erwarte",
+        "erwartest",
+        "erwartet",
+        "erwarten",
+        "erwartet",
+        "erwarten"
+      ],
+      "perf": "ich habe erwartet",
+      "_order": 76
+    }
+  },
+  {
+    "_order": 1148,
+    "c": "Grundverben",
+    "w": "betreffen",
+    "t": "to concern",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Die Änderung betrifft unseren Kurs.",
+    "e1t": "The change affects our course.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 79,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "betreffe",
+        "betriffst",
+        "betrifft",
+        "betreffen",
+        "betrefft",
+        "betreffen"
+      ],
+      "perf": "ich habe betroffen",
+      "_order": 78
+    }
+  },
+  {
+    "_order": 1149,
+    "c": "Grundverben",
+    "w": "vergehen",
+    "t": "to pass (time)",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Die Zeit vergeht schnell.",
+    "e1t": "Time passes quickly.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 81,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "vergehe",
+        "vergehst",
+        "vergeht",
+        "vergehen",
+        "vergeht",
+        "vergehen"
+      ],
+      "perf": "ich bin vergangen",
+      "_order": 80
+    }
+  },
+  {
+    "_order": 1150,
+    "c": "Grundverben",
+    "w": "fühlen",
+    "t": "to feel",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Ich fühle mich heute besser.",
+    "e1t": "I feel better today.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 85,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "fühle",
+        "fühlst",
+        "fühlt",
+        "fühlen",
+        "fühlt",
+        "fühlen"
+      ],
+      "perf": "ich habe gefühlt",
+      "_order": 84
+    }
+  },
+  {
+    "_order": 1151,
+    "c": "Grundverben",
+    "w": "bieten",
+    "t": "to offer",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Der Kurs bietet viel Übung.",
+    "e1t": "The course offers plenty of practice.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 86,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "biete",
+        "bietest",
+        "bietet",
+        "bieten",
+        "bietet",
+        "bieten"
+      ],
+      "perf": "ich habe geboten",
+      "_order": 85
+    }
+  },
+  {
+    "_order": 1152,
+    "c": "Grundverben",
+    "w": "interessieren",
+    "t": "to interest",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Sport interessiert mich.",
+    "e1t": "I am interested in sport.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 87,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "interessiere",
+        "interessierst",
+        "interessiert",
+        "interessieren",
+        "interessiert",
+        "interessieren"
+      ],
+      "perf": "ich habe interessiert",
+      "_order": 86
+    }
+  },
+  {
+    "_order": 1153,
+    "c": "Grundverben",
+    "w": "erinnern",
+    "t": "to remind",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Bitte erinnere mich an den Termin.",
+    "e1t": "Please remind me of the appointment.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 88,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "erinnere",
+        "erinnerst",
+        "erinnert",
+        "erinnern",
+        "erinnert",
+        "erinnern"
+      ],
+      "perf": "ich habe erinnert",
+      "_order": 87
+    }
+  },
+  {
+    "_order": 1154,
+    "c": "Grundverben",
+    "w": "ergeben",
+    "t": "to yield / result in",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Zwei und drei ergeben fünf.",
+    "e1t": "Two plus three equals five.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 89,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "ergebe",
+        "ergibst",
+        "ergibt",
+        "ergeben",
+        "ergebt",
+        "ergeben"
+      ],
+      "perf": "ich habe ergeben",
+      "_order": 88
+    }
+  },
+  {
+    "_order": 1155,
+    "c": "Grundverben",
+    "w": "anbieten",
+    "t": "to offer",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Sie bietet mir einen Tee an.",
+    "e1t": "She offers me a cup of tea.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 90,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "biete an",
+        "bietest an",
+        "bietet an",
+        "bieten an",
+        "bietet an",
+        "bieten an"
+      ],
+      "perf": "ich habe angeboten",
+      "_order": 89
+    }
+  },
+  {
+    "_order": 1156,
+    "c": "Grundverben",
+    "w": "studieren",
+    "t": "to study at university",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Mein Bruder studiert in München.",
+    "e1t": "My brother studies in Munich.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 91,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "studiere",
+        "studierst",
+        "studiert",
+        "studieren",
+        "studiert",
+        "studieren"
+      ],
+      "perf": "ich habe studiert",
+      "_order": 90
+    }
+  },
+  {
+    "_order": 1157,
+    "c": "Grundverben",
+    "w": "verbinden",
+    "t": "to connect",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Der Bus verbindet die beiden Orte.",
+    "e1t": "The bus connects the two places.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 92,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "verbinde",
+        "verbindest",
+        "verbindet",
+        "verbinden",
+        "verbindet",
+        "verbinden"
+      ],
+      "perf": "ich habe verbunden",
+      "_order": 91
+    }
+  },
+  {
+    "_order": 1158,
+    "c": "Grundverben",
+    "w": "vergleichen",
+    "t": "to compare",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Ich vergleiche die Preise.",
+    "e1t": "I compare the prices.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 93,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "vergleiche",
+        "vergleichst",
+        "vergleicht",
+        "vergleichen",
+        "vergleicht",
+        "vergleichen"
+      ],
+      "perf": "ich habe verglichen",
+      "_order": 92
+    }
+  },
+  {
+    "_order": 1159,
+    "c": "Grundverben",
+    "w": "bedeuten",
+    "t": "to mean",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Was bedeutet dieses Wort?",
+    "e1t": "What does this word mean?",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 94,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "bedeute",
+        "bedeutest",
+        "bedeutet",
+        "bedeuten",
+        "bedeutet",
+        "bedeuten"
+      ],
+      "perf": "ich habe bedeutet",
+      "_order": 93
+    }
+  },
+  {
+    "_order": 1160,
+    "c": "Grundverben",
+    "w": "schauen",
+    "t": "to look",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Ich schaue aus dem Fenster.",
+    "e1t": "I look out of the window.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 95,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "schaue",
+        "schaust",
+        "schaut",
+        "schauen",
+        "schaut",
+        "schauen"
+      ],
+      "perf": "ich habe geschaut",
+      "_order": 94
+    }
+  },
+  {
+    "_order": 1161,
+    "c": "Grundverben",
+    "w": "benutzen",
+    "t": "to use",
+    "k": "Verb",
+    "f": "",
+    "l": "A1",
+    "e1": "Ich benutze oft das Fahrrad.",
+    "e1t": "I often use the bicycle.",
+    "e2": "",
+    "e2t": "",
+    "g": "Practise the subject forms and the Perfekt.",
+    "conjugation": {
+      "n": 96,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "benutze",
+        "benutzt",
+        "benutzt",
+        "benutzen",
+        "benutzt",
+        "benutzen"
+      ],
+      "perf": "ich habe benutzt",
+      "_order": 95
+    }
+  },
+  {
+    "_order": 1207,
+    "c": "Grundverben",
+    "w": "rufen",
+    "t": "to call / shout",
+    "k": "Verb",
+    "f": "er ruft, rief, hat gerufen",
+    "l": "A1",
+    "e1": "Ich rufe meinen Bruder.",
+    "e1t": "I call my brother.",
+    "e2": "Ich habe meinen Bruder gerufen.",
+    "e2t": "I called my brother.",
+    "g": "Use rufen for calling out; anrufen for a telephone call.",
+    "conjugation": {
+      "n": 201,
+      "_order": 200,
+      "level": "A1",
+      "type": "Core 100",
+      "forms": [
+        "rufe",
+        "rufst",
+        "ruft",
+        "rufen",
+        "ruft",
+        "rufen"
+      ],
+      "perf": "ich habe gerufen"
+    }
+  }
+]

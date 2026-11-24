@@ -1,0 +1,58 @@
+[
+  {
+    "_order": 209,
+    "c": "Fragewörter & Pronomen",
+    "w": "sich",
+    "t": "oneself",
+    "k": "Pronomen",
+    "f": "",
+    "l": "A2",
+    "e1": "Er wäscht sich.",
+    "e1t": "He washes himself.",
+    "e2": "Sie freut sich sehr auf den Urlaub.",
+    "e2t": "She is very much looking forward to the holiday.",
+    "g": "Use sich with third-person subjects and formal Sie. Other reflexive forms include mich, dich, uns and euch."
+  },
+  {
+    "_order": 210,
+    "c": "Fragewörter & Pronomen",
+    "w": "jemand",
+    "t": "someone",
+    "k": "Pronomen",
+    "f": "jemanden (Akk.), jemandem (Dat.)",
+    "l": "A2",
+    "e1": "Ist jemand da?",
+    "e1t": "Is there anyone?",
+    "e2": "Kann mir jemand sagen, wie spät es ist?",
+    "e2t": "Can anyone tell me what time it is?",
+    "g": "Takes a singular verb. Written object forms include jemanden and jemandem."
+  },
+  {
+    "_order": 1031,
+    "c": "Fragewörter & Pronomen",
+    "w": "ihnen",
+    "t": "them (dative)",
+    "k": "Pronomen",
+    "f": "",
+    "l": "A2",
+    "e1": "Ich helfe ihnen.",
+    "e1t": "I help them.",
+    "e2": "Wir geben ihnen Zeit.",
+    "e2t": "We give them time.",
+    "g": "Formal Ihnen is capitalized."
+  },
+  {
+    "_order": 1035,
+    "c": "Fragewörter & Pronomen",
+    "w": "niemand",
+    "t": "nobody",
+    "k": "Pronomen",
+    "f": "",
+    "l": "A2",
+    "e1": "Niemand ist zu Hause.",
+    "e1t": "Nobody is home.",
+    "e2": "Niemand kennt die Antwort.",
+    "e2t": "Nobody knows the answer.",
+    "g": "Takes a singular verb."
+  }
+]

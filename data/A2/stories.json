@@ -1,0 +1,492 @@
+[
+  {
+    "_order": 12,
+    "id": "story13",
+    "level": "A2",
+    "title": "Der erste Arbeitstag",
+    "tr": "The first day at work",
+    "de": "Gestern hatte Selin ihren ersten Arbeitstag. Zuerst hat sie ihren Chef kennengelernt. Danach hat eine Kollegin ihr das Büro gezeigt. Am Abend war Selin müde, aber zufrieden.",
+    "translation": "Yesterday was Selin’s first day at work. First she met her boss. Then a colleague showed her around the office. By the evening Selin was tired but happy with how it went.",
+    "qs": [
+      {
+        "q": "Wann war der erste Arbeitstag?",
+        "a": "Gestern",
+        "wrong": [
+          "Morgen",
+          "Letzte Woche"
+        ]
+      },
+      {
+        "q": "Wer hat ihr das Büro gezeigt?",
+        "a": "Eine Kollegin",
+        "wrong": [
+          "Der Busfahrer",
+          "Ein Kunde"
+        ]
+      },
+      {
+        "q": "Wie fühlte sich Selin am Abend?",
+        "a": "Müde, aber zufrieden",
+        "wrong": [
+          "Wütend",
+          "Sehr krank"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 13,
+    "id": "story14",
+    "level": "A2",
+    "title": "Ein Paket kommt an",
+    "tr": "A parcel arrives",
+    "de": "Ich habe letzte Woche einen Schreibtisch bestellt. Heute sollte das Paket kommen, aber niemand war zu Hause. Der Fahrer hat es beim Nachbarn abgegeben. Morgen hole ich es dort ab.",
+    "translation": "I ordered a desk last week. The parcel was supposed to arrive today, but nobody was home. The driver left it with the neighbour. I’ll pick it up there tomorrow.",
+    "qs": [
+      {
+        "q": "Was habe ich bestellt?",
+        "a": "Einen Schreibtisch",
+        "wrong": [
+          "Ein Fahrrad",
+          "Einen Fernseher"
+        ]
+      },
+      {
+        "q": "Wo ist das Paket?",
+        "a": "Beim Nachbarn",
+        "wrong": [
+          "Bei der Post",
+          "Im Büro"
+        ]
+      },
+      {
+        "q": "Wann hole ich es ab?",
+        "a": "Morgen",
+        "wrong": [
+          "Heute Abend",
+          "Nächste Woche"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 14,
+    "id": "story15",
+    "level": "A2",
+    "title": "Eine Einladung",
+    "tr": "An invitation",
+    "de": "Murat hat seine Freunde zum Essen eingeladen. Er möchte etwas kochen. Das Essen soll nicht zu scharf sein. Seine Freundin bringt einen Salat mit. Alle freuen sich auf den gemeinsamen Abend.",
+    "translation": "Murat has invited his friends over for dinner. He wants to cook something that isn’t too spicy. His girlfriend is bringing a salad. Everyone is looking forward to the evening together.",
+    "qs": [
+      {
+        "q": "Wen hat Murat eingeladen?",
+        "a": "Seine Freunde",
+        "wrong": [
+          "Seinen Chef",
+          "Seine Nachbarn"
+        ]
+      },
+      {
+        "q": "Wie soll das Essen sein?",
+        "a": "Nicht zu scharf",
+        "wrong": [
+          "Sehr scharf",
+          "Sehr süß"
+        ]
+      },
+      {
+        "q": "Was bringt die Freundin mit?",
+        "a": "Einen Salat",
+        "wrong": [
+          "Einen Kuchen",
+          "Ein Getränk"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 15,
+    "id": "story16",
+    "level": "A2",
+    "title": "Im Bürgerbüro",
+    "tr": "At the citizens’ office",
+    "de": "Frau Kaya braucht eine neue Bescheinigung. Deshalb hat sie online einen Termin vereinbart. Im Bürgerbüro zeigt sie ihren Ausweis. Der Mitarbeiter erklärt ihr die Abholzeit.",
+    "translation": "Ms Kaya needs a new certificate, so she booked an appointment online. At the citizens’ office she shows her ID. The employee tells her when she can collect it.",
+    "qs": [
+      {
+        "q": "Warum hat sie einen Termin?",
+        "a": "Wegen einer Bescheinigung",
+        "wrong": [
+          "Für eine Reise",
+          "Für eine Prüfung"
+        ]
+      },
+      {
+        "q": "Wie hat sie den Termin gemacht?",
+        "a": "Online",
+        "wrong": [
+          "Am Schalter",
+          "Per Brief"
+        ]
+      },
+      {
+        "q": "Was zeigt sie?",
+        "a": "Ihren Ausweis",
+        "wrong": [
+          "Ein Foto",
+          "Ein Ticket"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 16,
+    "id": "story17",
+    "level": "A2",
+    "title": "Das kaputte Fahrrad",
+    "tr": "A broken bicycle",
+    "de": "Tim wollte zur Arbeit fahren, aber sein Fahrrad war kaputt. Er musste deshalb den Bus nehmen. Nach der Arbeit hat er das Fahrrad repariert. Jetzt kann er wieder damit fahren.",
+    "translation": "Tim wanted to cycle to work, but his bike was broken. He had to take the bus instead. After work he repaired the bike. Now he can ride it again.",
+    "qs": [
+      {
+        "q": "Was war kaputt?",
+        "a": "Das Fahrrad",
+        "wrong": [
+          "Der Bus",
+          "Das Auto"
+        ]
+      },
+      {
+        "q": "Wie ist Tim zur Arbeit gefahren?",
+        "a": "Mit dem Bus",
+        "wrong": [
+          "Mit dem Zug",
+          "Mit dem Taxi"
+        ]
+      },
+      {
+        "q": "Wann hat er repariert?",
+        "a": "Nach der Arbeit",
+        "wrong": [
+          "Vor dem Frühstück",
+          "Am Wochenende"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 17,
+    "id": "story18",
+    "level": "A2",
+    "title": "Eine neue Wohnung",
+    "tr": "A new apartment",
+    "de": "Wir sind vor einem Monat umgezogen. Unsere neue Wohnung liegt in der Nähe vom Bahnhof. Die Küche ist klein, aber sie gefällt uns sehr. Am Samstag kaufen wir noch ein Regal.",
+    "translation": "We moved a month ago. Our new apartment is near the railway station. The kitchen is small, but we like it a lot. On Saturday we’re buying another shelf.",
+    "qs": [
+      {
+        "q": "Wann sind wir umgezogen?",
+        "a": "Vor einem Monat",
+        "wrong": [
+          "Gestern",
+          "Vor einem Jahr"
+        ]
+      },
+      {
+        "q": "Wo liegt die Wohnung?",
+        "a": "In der Nähe vom Bahnhof",
+        "wrong": [
+          "Am Flughafen",
+          "Neben der Schule"
+        ]
+      },
+      {
+        "q": "Was kaufen wir am Samstag?",
+        "a": "Ein Regal",
+        "wrong": [
+          "Ein Auto",
+          "Einen Fernseher"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 18,
+    "id": "story19",
+    "level": "A2",
+    "title": "Ein Gespräch im Büro",
+    "tr": "A conversation at the office",
+    "de": "Heute hat Jonas ein Problem mit dem Computer. Er schreibt seiner Kollegin eine kurze Nachricht. Sie kommt sofort und hilft ihm. Zusammen finden sie den Fehler und lösen ihn.",
+    "translation": "Jonas has a computer problem today. He sends his colleague a short message. She comes straight away and helps him. Together they find the fault and fix it.",
+    "qs": [
+      {
+        "q": "Womit hat Jonas ein Problem?",
+        "a": "Mit dem Computer",
+        "wrong": [
+          "Mit dem Auto",
+          "Mit dem Telefon"
+        ]
+      },
+      {
+        "q": "Wen schreibt er an?",
+        "a": "Seine Kollegin",
+        "wrong": [
+          "Seinen Vater",
+          "Seinen Nachbarn"
+        ]
+      },
+      {
+        "q": "Was machen sie zusammen?",
+        "a": "Sie lösen den Fehler",
+        "wrong": [
+          "Sie kaufen einen Rechner",
+          "Sie fahren nach Hause"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 19,
+    "id": "story20",
+    "level": "A2",
+    "title": "Ein Besuch bei Freunden",
+    "tr": "Visiting friends",
+    "de": "Letzten Sonntag haben wir Freunde besucht. Weil das Wetter schön war, sind wir zuerst spazieren gegangen. Danach haben wir zusammen gekocht. Gegen neun Uhr sind wir nach Hause gefahren.",
+    "translation": "Last Sunday we visited friends. Since the weather was nice, we went for a walk first. Then we cooked together. We went home at around nine.",
+    "qs": [
+      {
+        "q": "Wann haben wir Freunde besucht?",
+        "a": "Letzten Sonntag",
+        "wrong": [
+          "Am Montag",
+          "Heute Morgen"
+        ]
+      },
+      {
+        "q": "Warum sind wir spazieren gegangen?",
+        "a": "Wegen des schönen Wetters",
+        "wrong": [
+          "Weil es regnete",
+          "Weil wir müde waren"
+        ]
+      },
+      {
+        "q": "Wann sind wir zurückgefahren?",
+        "a": "Gegen neun Uhr",
+        "wrong": [
+          "Um drei Uhr",
+          "Um zwölf Uhr"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 20,
+    "id": "story21",
+    "level": "A2",
+    "title": "Ein Sprachkurs",
+    "tr": "A language course",
+    "de": "Elif lernt seit sechs Monaten Deutsch. Zweimal pro Woche besucht sie einen Kurs. Zu Hause wiederholt sie neue Wörter und hört kurze Dialoge. Sie merkt, dass sie schon viel besser sprechen kann.",
+    "translation": "Elif has been learning German for six months. She goes to a course twice a week. At home she reviews new words and listens to short dialogues. She notices she can already speak much better.",
+    "qs": [
+      {
+        "q": "Seit wann lernt Elif Deutsch?",
+        "a": "Seit sechs Monaten",
+        "wrong": [
+          "Seit zwei Tagen",
+          "Seit drei Jahren"
+        ]
+      },
+      {
+        "q": "Wie oft besucht sie den Kurs?",
+        "a": "Zweimal pro Woche",
+        "wrong": [
+          "Jeden Tag",
+          "Einmal im Monat"
+        ]
+      },
+      {
+        "q": "Was macht sie zu Hause?",
+        "a": "Sie wiederholt Wörter",
+        "wrong": [
+          "Sie arbeitet im Garten",
+          "Sie fährt Rad"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 21,
+    "id": "story22",
+    "level": "A2",
+    "title": "Das Vorstellungsgespräch",
+    "tr": "The job interview",
+    "de": "Nina hat sich bei einer Firma beworben. Heute hat sie ein Vorstellungsgespräch. Der Personalleiter fragt nach ihren Erfahrungen. Nina erklärt ruhig, welche Projekte sie gemacht hat.",
+    "translation": "Nina applied to a company. Today she has a job interview. The HR manager asks about her experience. Nina calmly explains which projects she has worked on.",
+    "qs": [
+      {
+        "q": "Wofür hat sich Nina beworben?",
+        "a": "Für eine Stelle",
+        "wrong": [
+          "Für einen Kurs",
+          "Für eine Wohnung"
+        ]
+      },
+      {
+        "q": "Was hat sie heute?",
+        "a": "Ein Vorstellungsgespräch",
+        "wrong": [
+          "Eine Prüfung",
+          "Einen Urlaub"
+        ]
+      },
+      {
+        "q": "Was erklärt sie?",
+        "a": "Ihre Projekte",
+        "wrong": [
+          "Ihre Reise",
+          "Ihre Familie"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 22,
+    "id": "story23",
+    "level": "A2",
+    "title": "Eine Reise planen",
+    "tr": "Planning a trip",
+    "de": "Wir möchten im Sommer nach Wien fahren. Deshalb vergleichen wir Zugpreise im Internet. Ein Ticket am Freitag ist günstiger als am Samstag. Wir buchen die Reise für Freitag.",
+    "translation": "We want to go to Vienna in summer, so we compare train fares online. A ticket for Friday is cheaper than one for Saturday. We book the trip for Friday.",
+    "qs": [
+      {
+        "q": "Wohin möchten wir fahren?",
+        "a": "Nach Wien",
+        "wrong": [
+          "Nach Köln",
+          "Nach Zürich"
+        ]
+      },
+      {
+        "q": "Wo vergleichen wir die Preise?",
+        "a": "Im Internet",
+        "wrong": [
+          "Im Reisebüro",
+          "Am Flughafen"
+        ]
+      },
+      {
+        "q": "Welcher Tag ist günstiger?",
+        "a": "Freitag",
+        "wrong": [
+          "Samstag",
+          "Sonntag"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 23,
+    "id": "story24",
+    "level": "A2",
+    "title": "Ein Missverständnis",
+    "tr": "A misunderstanding",
+    "de": "Paul hat gesagt, dass das Meeting um elf Uhr beginnt. Maria hat aber zehn Uhr verstanden. Deshalb ist sie eine Stunde zu früh gekommen. Am Ende mussten beide darüber lachen.",
+    "translation": "Paul said the meeting started at eleven, but Maria heard ten. That’s why she arrived an hour early. In the end they both had to laugh about it.",
+    "qs": [
+      {
+        "q": "Wann beginnt das Meeting?",
+        "a": "Um elf Uhr",
+        "wrong": [
+          "Um zehn Uhr",
+          "Um zwölf Uhr"
+        ]
+      },
+      {
+        "q": "Was hat Maria verstanden?",
+        "a": "Zehn Uhr",
+        "wrong": [
+          "Neun Uhr",
+          "Zwölf Uhr"
+        ]
+      },
+      {
+        "q": "Wie früh ist sie gekommen?",
+        "a": "Eine Stunde",
+        "wrong": [
+          "Zwei Stunden",
+          "Zehn Minuten"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 24,
+    "id": "story25",
+    "level": "A2",
+    "title": "Wenn ich Zeit habe",
+    "tr": "When I have time",
+    "de": "Wenn ich abends Zeit habe, lese ich ein Buch. Manchmal höre ich beim Kochen einen Podcast. Am Wochenende gehe ich gern wandern. So kann ich mich nach der Arbeit entspannen.",
+    "translation": "When I have time in the evening, I read a book. Sometimes I listen to a podcast while I cook. At weekends I enjoy hiking. That helps me unwind after work.",
+    "qs": [
+      {
+        "q": "Was mache ich abends?",
+        "a": "Ich lese ein Buch",
+        "wrong": [
+          "Ich arbeite immer",
+          "Ich fahre Zug"
+        ]
+      },
+      {
+        "q": "Was höre ich manchmal?",
+        "a": "Einen Podcast",
+        "wrong": [
+          "Das Radio",
+          "Ein Lied"
+        ]
+      },
+      {
+        "q": "Warum gehe ich wandern?",
+        "a": "Um mich zu entspannen",
+        "wrong": [
+          "Um Geld zu verdienen",
+          "Um einkaufen zu gehen"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 25,
+    "id": "story26",
+    "level": "A2",
+    "title": "Eine Rechnung prüfen",
+    "tr": "Checking a bill",
+    "de": "Heute habe ich eine Stromrechnung bekommen. Der Betrag war höher als erwartet. Deshalb habe ich den Verbrauch kontrolliert. Morgen möchte ich den Anbieter anrufen und nachfragen.",
+    "translation": "I received an electricity bill today. The amount was higher than expected, so I checked my usage. Tomorrow I want to call the supplier and ask about it.",
+    "qs": [
+      {
+        "q": "Welche Rechnung habe ich bekommen?",
+        "a": "Eine Stromrechnung",
+        "wrong": [
+          "Eine Telefonrechnung",
+          "Eine Mietrechnung"
+        ]
+      },
+      {
+        "q": "Was war ungewöhnlich?",
+        "a": "Der hohe Betrag",
+        "wrong": [
+          "Die Adresse",
+          "Das Datum"
+        ]
+      },
+      {
+        "q": "Was mache ich morgen?",
+        "a": "Den Anbieter anrufen",
+        "wrong": [
+          "Eine Reise buchen",
+          "Die Wohnung putzen"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,99 @@
+[
+  {
+    "_order": 20,
+    "id": "praesens-core",
+    "lv": "A1",
+    "title": "Present tense · Präsens",
+    "icon": "⏱️",
+    "source": "Original WortDuell lesson",
+    "intro": "For regular verbs, remove -en and add -e, -st, -t, -en, -t, -en. Some stems need an extra e (du arbeitest). Common irregular verbs such as sein, haben and fahren must be learned separately. The present tense also works for future plans when the time is clear.",
+    "samples": [
+      [
+        "Ich wohne in Kempten.",
+        "I live in Kempten."
+      ],
+      [
+        "Du arbeitest heute.",
+        "You are working today."
+      ],
+      [
+        "Er fährt morgen nach München.",
+        "He is travelling to Munich tomorrow."
+      ]
+    ],
+    "qs": [
+      [
+        "Ich ___ Deutsch. (lernen)",
+        "lerne",
+        [
+          "lernst",
+          "lernen"
+        ],
+        "With ich, the regular ending is -e."
+      ],
+      [
+        "Du ___ in Berlin. (wohnen)",
+        "wohnst",
+        [
+          "wohnt",
+          "wohnen"
+        ],
+        "With du, use -st."
+      ],
+      [
+        "Sie (singular) ___ heute. (arbeiten)",
+        "arbeitet",
+        [
+          "arbeitest",
+          "arbeiten"
+        ],
+        "The stem arbeit- needs an extra e before -t."
+      ],
+      [
+        "Wir ___ zusammen. (kochen)",
+        "kochen",
+        [
+          "kocht",
+          "koche"
+        ],
+        "Wir takes the infinitive-like -en ending."
+      ],
+      [
+        "Ihr ___ Musik. (hören)",
+        "hört",
+        [
+          "hören",
+          "hörst"
+        ],
+        "Ihr takes -t."
+      ],
+      [
+        "Er ___ nach Hause. (fahren)",
+        "fährt",
+        [
+          "fahrt",
+          "fahren"
+        ],
+        "Fahren changes a to ä for er/sie/es."
+      ],
+      [
+        "Ich ___ müde. (sein)",
+        "bin",
+        [
+          "bist",
+          "ist"
+        ],
+        "Sein has irregular present forms."
+      ],
+      [
+        "Sie (plural) ___ Zeit. (haben)",
+        "haben",
+        [
+          "hat",
+          "hast"
+        ],
+        "Plural sie takes haben."
+      ]
+    ]
+  }
+]

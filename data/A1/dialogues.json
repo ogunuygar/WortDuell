@@ -1,0 +1,326 @@
+[
+  {
+    "_order": 0,
+    "id": "conv1",
+    "level": "A1",
+    "tr": "At the café",
+    "title": "Im Café",
+    "turns": [
+      {
+        "line": "Guten Tag! Was möchten Sie trinken?",
+        "good": "Einen Kaffee, bitte.",
+        "bad": [
+          "Ich bin gestern.",
+          "Nein, ich wohne."
+        ],
+        "why": "Einen Kaffee is accusative. Bitte makes the order polite."
+      },
+      {
+        "line": "Möchten Sie auch etwas essen?",
+        "good": "Ja, ein Stück Kuchen, bitte.",
+        "bad": [
+          "Ich habe einen Zug.",
+          "Der Kuchen ist im Büro."
+        ],
+        "why": "Ein Stück Kuchen means a piece of cake."
+      },
+      {
+        "line": "Das macht sechs Euro.",
+        "good": "Bitte schön, hier sind sechs Euro.",
+        "bad": [
+          "Woher bist du Haus?",
+          "Ich arbeite nicht sechs."
+        ],
+        "why": "Hier sind sechs Euro is a natural phrase when handing over money."
+      }
+    ]
+  },
+  {
+    "_order": 1,
+    "id": "conv2",
+    "level": "A1",
+    "tr": "At work",
+    "title": "Im Büro",
+    "turns": [
+      {
+        "line": "Guten Morgen! Wie geht es dir?",
+        "good": "Gut, danke. Und dir?",
+        "bad": [
+          "Ich heißen Montag.",
+          "Bis der Tisch."
+        ],
+        "why": "Und dir? returns an informal question using the dative."
+      },
+      {
+        "line": "Hast du heute viel Arbeit?",
+        "good": "Ja, ich habe heute viel zu tun.",
+        "bad": [
+          "Ich bin ein Kaffee.",
+          "Wir sind nach das Auto."
+        ],
+        "why": "Viel zu tun haben means to have a lot to do."
+      },
+      {
+        "line": "Gehen wir später in die Kantine?",
+        "good": "Ja, gern. Um zwölf Uhr?",
+        "bad": [
+          "Ich musste ein Stuhl.",
+          "Das ist meine Lampe."
+        ],
+        "why": "Ja, gern accepts the invitation. Um introduces a clock time."
+      }
+    ]
+  },
+  {
+    "_order": 2,
+    "id": "conv3",
+    "level": "A1",
+    "tr": "At the supermarket",
+    "title": "Im Supermarkt",
+    "turns": [
+      {
+        "line": "Entschuldigung, wo finde ich Milch?",
+        "good": "Die Milch ist dort hinten.",
+        "bad": [
+          "Ich bin Milch gegangen.",
+          "Wie alt ist der Apfel?"
+        ],
+        "why": "Dort hinten points to the back of the shop."
+      },
+      {
+        "line": "Brauchen Sie noch etwas?",
+        "good": "Ja, ich suche Brot.",
+        "bad": [
+          "Der Brot fahren.",
+          "Gestern keine Sie."
+        ],
+        "why": "Suchen takes a direct object: Ich suche Brot."
+      },
+      {
+        "line": "Möchten Sie eine Tüte?",
+        "good": "Nein, danke. Ich habe eine Tasche.",
+        "bad": [
+          "Ich bin acht Uhr.",
+          "Bitte fahren im Park."
+        ],
+        "why": "Nein, danke politely declines the bag and explains why."
+      }
+    ]
+  },
+  {
+    "_order": 3,
+    "id": "conv4",
+    "level": "A1",
+    "tr": "Asking for directions",
+    "title": "Nach dem Weg fragen",
+    "turns": [
+      {
+        "line": "Entschuldigung, wo ist der Bahnhof?",
+        "good": "Gehen Sie geradeaus.",
+        "bad": [
+          "Ich esse langsam.",
+          "Morgen habe ich Brot."
+        ],
+        "why": "Gehen Sie is a formal instruction. Geradeaus means straight ahead."
+      },
+      {
+        "line": "Ist der Bahnhof weit weg?",
+        "good": "Nein, nur fünf Minuten zu Fuß.",
+        "bad": [
+          "Ja, ich bin ein Bus.",
+          "Der Zug ist rot sehr."
+        ],
+        "why": "Zu Fuß means on foot. Fünf Minuten gives the walking time."
+      },
+      {
+        "line": "Vielen Dank für Ihre Hilfe!",
+        "good": "Gern geschehen!",
+        "bad": [
+          "Du musst einen Schlüssel.",
+          "Ich bin nach um."
+        ],
+        "why": "Gern geschehen is a natural reply to thanks."
+      }
+    ]
+  },
+  {
+    "_order": 4,
+    "id": "conv5",
+    "level": "A1",
+    "tr": "Introducing yourself",
+    "title": "Sich vorstellen",
+    "turns": [
+      {
+        "line": "Hallo! Wie heißt du?",
+        "good": "Ich heiße Anna.",
+        "bad": [
+          "Ich bin heute Brot.",
+          "Du hast wie?"
+        ],
+        "why": "Ich heiße introduces your name."
+      },
+      {
+        "line": "Woher kommst du?",
+        "good": "Ich komme aus der Türkei.",
+        "bad": [
+          "Ich bin bei morgen.",
+          "Der Montag ist Kaffee."
+        ],
+        "why": "Use aus + dative for where you come from: aus der Türkei."
+      },
+      {
+        "line": "Was machst du beruflich?",
+        "good": "Ich arbeite als Ingenieur.",
+        "bad": [
+          "Ich mache gestern.",
+          "Ein Buch ist zum Bahnhof."
+        ],
+        "why": "Use als without an article for a profession."
+      }
+    ]
+  },
+  {
+    "_order": 5,
+    "id": "conv6",
+    "level": "A1",
+    "tr": "At the doctor’s",
+    "title": "Beim Arzt",
+    "turns": [
+      {
+        "line": "Guten Tag! Was fehlt Ihnen?",
+        "good": "Ich habe Kopfschmerzen.",
+        "bad": [
+          "Ich bin morgen Bus.",
+          "Die Milch ist gut."
+        ],
+        "why": "Use haben with a symptom: Ich habe Kopfschmerzen."
+      },
+      {
+        "line": "Seit wann haben Sie Schmerzen?",
+        "good": "Seit gestern Abend.",
+        "bad": [
+          "An der Schule.",
+          "Ich bin Deutschland."
+        ],
+        "why": "Seit gives the starting point of a symptom that is still present."
+      },
+      {
+        "line": "Nehmen Sie bitte Platz.",
+        "good": "Danke schön.",
+        "bad": [
+          "Morgen ich mache.",
+          "Der Bus hat schön."
+        ],
+        "why": "Danke schön acknowledges the doctor’s help."
+      }
+    ]
+  },
+  {
+    "_order": 6,
+    "id": "conv7",
+    "level": "A1",
+    "tr": "At the restaurant",
+    "title": "Im Restaurant",
+    "turns": [
+      {
+        "line": "Haben Sie einen Tisch reserviert?",
+        "good": "Ja, für zwei Personen.",
+        "bad": [
+          "Der Zug fährt nicht.",
+          "Ich kann Auto essen."
+        ],
+        "why": "Für zwei Personen specifies the number of diners."
+      },
+      {
+        "line": "Was möchten Sie bestellen?",
+        "good": "Ich hätte gern eine Suppe.",
+        "bad": [
+          "Du musst morgen sein.",
+          "Mein Kopf ist nach."
+        ],
+        "why": "Ich hätte gern is a polite way to order."
+      },
+      {
+        "line": "Hat es Ihnen geschmeckt?",
+        "good": "Ja, es war sehr lecker.",
+        "bad": [
+          "Ja, ich bin um.",
+          "Wegen der Tisch."
+        ],
+        "why": "Es war sehr lecker gives an opinion about the meal you ate."
+      }
+    ]
+  },
+  {
+    "_order": 7,
+    "id": "conv8",
+    "level": "A1",
+    "tr": "At the station",
+    "title": "Am Bahnhof",
+    "turns": [
+      {
+        "line": "Wann fährt der Zug nach Ulm?",
+        "good": "Um halb zehn.",
+        "bad": [
+          "Der Zug ist schön.",
+          "Ich habe warm."
+        ],
+        "why": "Halb zehn means half past nine."
+      },
+      {
+        "line": "Von welchem Gleis fährt er ab?",
+        "good": "Von Gleis drei.",
+        "bad": [
+          "Heute bin ich eine Suppe.",
+          "Ich habe keine alt."
+        ],
+        "why": "Von Gleis drei gives the departure track."
+      },
+      {
+        "line": "Danke für die Information.",
+        "good": "Sehr gern!",
+        "bad": [
+          "Das ist früh sprechen.",
+          "Ich komme aus neun."
+        ],
+        "why": "Sehr gern is a warm way to accept or acknowledge a request."
+      }
+    ]
+  },
+  {
+    "_order": 8,
+    "id": "conv9",
+    "level": "A1",
+    "tr": "At home",
+    "title": "Zu Hause",
+    "turns": [
+      {
+        "line": "Möchtest du einen Tee?",
+        "good": "Ja, gern. Danke!",
+        "bad": [
+          "Der Tisch ist gestern.",
+          "Wohin ist essen?"
+        ],
+        "why": "Ja, gern accepts the offer politely."
+      },
+      {
+        "line": "Wo ist die Fernbedienung?",
+        "good": "Sie liegt auf dem Tisch.",
+        "bad": [
+          "Ich bin die Schlüssel.",
+          "Morgen liegt arbeiten."
+        ],
+        "why": "Sie refers to a feminine noun. Auf dem Tisch describes a location."
+      },
+      {
+        "line": "Wollen wir einen Film sehen?",
+        "good": "Ja, das ist eine gute Idee.",
+        "bad": [
+          "Ich nehme der gestern.",
+          "Die Familie fährt schön."
+        ],
+        "why": "Eine gute Idee agrees with a suggestion."
+      }
+    ]
+  }
+]

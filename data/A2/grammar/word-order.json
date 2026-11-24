@@ -1,0 +1,293 @@
+[
+  {
+    "_order": 13,
+    "id": "satzklammer",
+    "lv": "A2",
+    "title": "Modal verbs and separable prefixes",
+    "icon": "🔗",
+    "source": "A1–A2 grammar worksheets",
+    "intro": "A conjugated modal comes second in a statement and the other verb stays at the end. A separable prefix also goes to the end of a simple statement.",
+    "samples": [
+      [
+        "Ich kann morgen kommen.",
+        "I can come tomorrow."
+      ],
+      [
+        "Ich rufe dich später an.",
+        "I’ll call you later."
+      ],
+      [
+        "Ich stehe jeden Tag früh auf.",
+        "I get up early every day."
+      ]
+    ],
+    "qs": [
+      [
+        "Ich ___ Deutsch lernen. (would like)",
+        "möchte",
+        [
+          "möchten",
+          "mussst"
+        ],
+        "Use ich möchte with the infinitive lernen."
+      ],
+      [
+        "Du ___ morgen kommen. (can)",
+        "kannst",
+        [
+          "kann",
+          "könnt"
+        ],
+        "With du, können becomes kannst."
+      ],
+      [
+        "Ich ___ jeden Tag um 7 Uhr auf.",
+        "stehe",
+        [
+          "aufstehe",
+          "stehe auf"
+        ],
+        "Aufstehen separates: ich stehe … auf."
+      ],
+      [
+        "Ich rufe dich später ___.",
+        "an",
+        [
+          "auf",
+          "ein"
+        ],
+        "Anrufen separates: ich rufe … an."
+      ],
+      [
+        "Wir ___ heute einkaufen.",
+        "gehen",
+        [
+          "geht",
+          "gehe"
+        ],
+        "The subject wir takes gehen. Einkaufen remains the infinitive."
+      ],
+      [
+        "Ich habe das Fenster ___. (open)",
+        "aufgemacht",
+        [
+          "geaufmacht",
+          "aufmachen"
+        ],
+        "Aufmachen forms the participle aufgemacht."
+      ],
+      [
+        "Du ___ das Buch mitnehmen.",
+        "musst",
+        [
+          "muss",
+          "müssen"
+        ],
+        "Du musst is followed by an infinitive."
+      ],
+      [
+        "Sie ___ das Gerät einschalten. (formal)",
+        "können",
+        [
+          "kannst",
+          "könnt"
+        ],
+        "Formal Sie takes können."
+      ]
+    ]
+  },
+  {
+    "_order": 15,
+    "id": "nebensaetze",
+    "lv": "A2",
+    "title": "Subordinate clauses · weil, dass and wenn",
+    "icon": "🔗",
+    "source": "A2 sentence structure",
+    "intro": "Use weil for reasons, dass for reported thoughts and wenn for conditions. The conjugated verb goes last in each subordinate clause. If that clause comes first, the main-clause verb follows the comma.",
+    "samples": [
+      [
+        "Ich gehe zu Fuß, weil der Bus nicht fährt.",
+        "I’m walking because the bus isn’t running."
+      ],
+      [
+        "Ich glaube, dass sie heute kommt.",
+        "I think she’s coming today."
+      ],
+      [
+        "Wenn ich Zeit habe, rufe ich dich an.",
+        "If I have time, I’ll call you."
+      ]
+    ],
+    "qs": [
+      [
+        "Why are you staying home? Ich bleibe zu Hause, ___ ich krank bin.",
+        "weil",
+        [
+          "dass",
+          "aber"
+        ],
+        "Weil introduces the reason. Bin comes last."
+      ],
+      [
+        "Ich weiß, ___ der Kurs um acht beginnt.",
+        "dass",
+        [
+          "denn",
+          "aber"
+        ],
+        "Dass introduces what I know. Beginnt goes last."
+      ],
+      [
+        "___ ich Zeit habe, komme ich mit.",
+        "Wenn",
+        [
+          "Dass",
+          "Denn"
+        ],
+        "Wenn introduces the condition for coming along."
+      ],
+      [
+        "Wir fahren mit dem Bus, weil es heute ___.",
+        "regnet",
+        [
+          "regnen",
+          "regne"
+        ],
+        "The subject es takes regnet at the end of the clause."
+      ],
+      [
+        "Wenn der Kurs endet, ___ ich nach Hause.",
+        "gehe",
+        [
+          "ich gehe",
+          "gehen"
+        ],
+        "The complete wenn clause fills first position. Gehe follows the comma."
+      ],
+      [
+        "Ich glaube, dass er um sieben ___.",
+        "aufsteht",
+        [
+          "steht auf",
+          "aufstehen"
+        ],
+        "A separable verb stays together at the end of a subordinate clause."
+      ],
+      [
+        "Sie kommt später, weil sie noch arbeiten ___.",
+        "muss",
+        [
+          "müssen",
+          "müsst"
+        ],
+        "The modal verb is conjugated for sie and comes after arbeiten."
+      ],
+      [
+        "Er sagt, dass er die E-Mail geschrieben ___.",
+        "hat",
+        [
+          "ist",
+          "haben"
+        ],
+        "The conjugated Perfekt auxiliary comes last: geschrieben hat."
+      ]
+    ]
+  },
+  {
+    "_order": 18,
+    "id": "connectors",
+    "lv": "A2",
+    "title": "Connect sentences · weil, denn, deshalb",
+    "icon": "✏️",
+    "source": "WortDuell original practice",
+    "intro": "Und, oder, aber and denn coordinate clauses without changing main-clause order. Weil, obwohl, bevor and nachdem introduce subordinate clauses with the finite verb at the end. Deshalb, trotzdem and danach are adverbs; when first in a main clause they are followed by the finite verb.",
+    "samples": [
+      [
+        "Ich bleibe hier, denn ich bin müde.",
+        "I stay here because I am tired."
+      ],
+      [
+        "Ich bleibe hier, weil ich müde bin.",
+        "I stay here because I am tired."
+      ],
+      [
+        "Ich bin müde. Deshalb bleibe ich hier.",
+        "I am tired. Therefore I stay here."
+      ]
+    ],
+    "qs": [
+      [
+        "Choose standard written German after weil.",
+        "weil ich krank bin",
+        [
+          "weil ich bin krank",
+          "weil bin ich krank"
+        ],
+        "The finite verb ends a weil clause."
+      ],
+      [
+        "Choose standard main-clause order after denn.",
+        "denn ich bin krank",
+        [
+          "denn ich krank bin",
+          "denn bin ich krank"
+        ],
+        "Denn preserves main-clause order."
+      ],
+      [
+        "Choose standard order after Deshalb.",
+        "Deshalb bleibe ich hier.",
+        [
+          "Deshalb ich bleibe hier.",
+          "Deshalb hier ich bleibe."
+        ],
+        "Deshalb occupies position one; bleibe is second."
+      ],
+      [
+        "Although it rains: ___.",
+        "obwohl es regnet",
+        [
+          "bevor es regnet",
+          "damit es regnet"
+        ],
+        "Obwohl expresses concession."
+      ],
+      [
+        "Before I eat: ___.",
+        "bevor ich esse",
+        [
+          "nachdem ich esse",
+          "ob ich esse"
+        ],
+        "Bevor means before."
+      ],
+      [
+        "After I have eaten: ___.",
+        "nachdem ich gegessen habe",
+        [
+          "bevor ich gegessen habe",
+          "ob ich gegessen habe"
+        ],
+        "Nachdem means after."
+      ],
+      [
+        "I am tired, but I work: Ich bin müde, ___ ich arbeite.",
+        "aber",
+        [
+          "oder",
+          "damit"
+        ],
+        "Aber contrasts two ideas."
+      ],
+      [
+        "Tea or coffee: Tee ___ Kaffee.",
+        "oder",
+        [
+          "denn",
+          "weil"
+        ],
+        "Oder introduces alternatives."
+      ]
+    ]
+  }
+]

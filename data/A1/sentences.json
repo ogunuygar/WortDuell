@@ -1,0 +1,119 @@
+[
+  {
+    "_order": 0,
+    "lv": "A1",
+    "de": "Ich lerne heute Deutsch.",
+    "tr": "I am learning German today.",
+    "rule": "The conjugated verb comes second.",
+    "alt": [
+      "Heute lerne ich Deutsch."
+    ]
+  },
+  {
+    "_order": 1,
+    "lv": "A1",
+    "de": "Heute lerne ich Deutsch.",
+    "tr": "Today I am learning German.",
+    "rule": "Time comes first, the verb second and the subject next.",
+    "alt": [
+      "Ich lerne heute Deutsch."
+    ]
+  },
+  {
+    "_order": 2,
+    "lv": "A1",
+    "de": "In Kempten arbeite ich.",
+    "tr": "I work at Kempten.",
+    "rule": "A place can come first. The verb stays second."
+  },
+  {
+    "_order": 3,
+    "lv": "A1",
+    "de": "Arbeitest du morgen?",
+    "tr": "Are you working tomorrow?",
+    "rule": "Start a yes/no question with the verb."
+  },
+  {
+    "_order": 4,
+    "lv": "A1",
+    "de": "Wann arbeitest du morgen?",
+    "tr": "When do you work tomorrow?",
+    "rule": "Question word, then verb, then subject."
+  },
+  {
+    "_order": 5,
+    "lv": "A1",
+    "de": "Ich habe kein Auto.",
+    "tr": "I don't have a car.",
+    "rule": "Use kein to negate an indefinite noun."
+  },
+  {
+    "_order": 6,
+    "lv": "A1",
+    "de": "Ich arbeite heute nicht.",
+    "tr": "I'm not working today.",
+    "rule": "Nicht negates the action.",
+    "alt": [
+      "Heute arbeite ich nicht."
+    ]
+  },
+  {
+    "_order": 7,
+    "lv": "A1",
+    "de": "Das ist nicht teuer.",
+    "tr": "It's not expensive.",
+    "rule": "Put nicht before the adjective."
+  },
+  {
+    "_order": 8,
+    "lv": "A1",
+    "de": "Ich sehe den Mann.",
+    "tr": "I see the man.",
+    "rule": "Sehen takes the accusative: den Mann."
+  },
+  {
+    "_order": 9,
+    "lv": "A1",
+    "de": "Ich helfe dem Mann.",
+    "tr": "I'm helping the man.",
+    "rule": "Helfen takes the dative: dem Mann."
+  },
+  {
+    "_order": 10,
+    "lv": "A1",
+    "de": "Ich bin in der Stadt.",
+    "tr": "I'm in town.",
+    "rule": "Wo asks about a location: in + dative."
+  },
+  {
+    "_order": 11,
+    "lv": "A1",
+    "de": "Ich gehe in die Stadt.",
+    "tr": "I'm going to the city.",
+    "rule": "Wohin asks about a destination: in + accusative."
+  },
+  {
+    "_order": 12,
+    "lv": "A1",
+    "de": "Warten Sie bitte.",
+    "tr": "Please wait.",
+    "rule": "Use the verb plus Sie for a formal instruction."
+  },
+  {
+    "_order": 13,
+    "lv": "A1",
+    "de": "Ich fahre mit dem Bus.",
+    "tr": "I'm going to take the bus.",
+    "rule": "Mit always takes the dative."
+  },
+  {
+    "_order": 14,
+    "lv": "A1",
+    "de": "Ich trinke immer Wasser.",
+    "tr": "I always drink water.",
+    "rule": "The conjugated verb stays second.",
+    "alt": [
+      "Immer trinke ich Wasser."
+    ]
+  }
+]

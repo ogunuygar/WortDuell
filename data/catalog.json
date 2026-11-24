@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "levels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "levelDatasets": {
+    "vocabulary": {
+      "levelField": "l",
+      "files": [
+        "vocabulary/nouns.json",
+        "vocabulary/verbs.json",
+        "vocabulary/adjectives.json",
+        "vocabulary/adverbs.json",
+        "vocabulary/prepositions.json",
+        "vocabulary/conjunctions.json",
+        "vocabulary/pronouns.json",
+        "vocabulary/question-words.json",
+        "vocabulary/numbers.json",
+        "vocabulary/particles.json",
+        "vocabulary/expressions.json",
+        "vocabulary/time-expressions.json",
+        "vocabulary/other.json"
+      ]
+    },
+    "GRAMMAR_LESSONS": {
+      "levelField": "lv",
+      "files": [
+        "grammar/word-order.json",
+        "grammar/cases.json",
+        "grammar/tenses.json",
+        "grammar/foundations.json"
+      ]
+    },
+    "BUILDER_BANK": {
+      "file": "sentences.json",
+      "levelField": "lv"
+    },
+    "stories": {
+      "file": "stories.json",
+      "levelField": "level"
+    },
+    "dialogues": {
+      "file": "dialogues.json",
+      "levelField": "level"
+    }
+  },
+  "sharedDatasets": {
+    "cases": "shared/grammar/cases.json",
+    "TOPIC_TR": "shared/topics.json",
+    "DIALOGUES": "shared/dialogue-practice.json",
+    "guideExtra": "shared/grammar/grammar-reference.json"
+  }
+}

@@ -1,0 +1,422 @@
+[
+  {
+    "_order": 0,
+    "id": "story1",
+    "level": "A1",
+    "title": "Ein neuer Morgen",
+    "tr": "A new morning",
+    "de": "Heute stehe ich um sieben Uhr auf. Ich mache Kaffee und esse Brot. Danach fahre ich mit dem Bus zur Arbeit. Mein Kollege sagt: Guten Morgen!",
+    "translation": "Today I get up at seven. I make coffee and eat bread. Then I take the bus to work. My colleague says, “Good morning!”",
+    "qs": [
+      {
+        "q": "Wann stehe ich auf?",
+        "a": "Um sieben Uhr",
+        "wrong": [
+          "Um neun Uhr",
+          "Um zwölf Uhr"
+        ]
+      },
+      {
+        "q": "Was trinke ich?",
+        "a": "Kaffee",
+        "wrong": [
+          "Tee",
+          "Wasser"
+        ]
+      },
+      {
+        "q": "Womit fahre ich zur Arbeit?",
+        "a": "Mit dem Bus",
+        "wrong": [
+          "Mit dem Fahrrad",
+          "Mit dem Zug"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 1,
+    "id": "story2",
+    "level": "A1",
+    "title": "Im Supermarkt",
+    "tr": "At the supermarket",
+    "de": "Anna geht am Samstag einkaufen. Sie braucht Milch, Eier und Äpfel. Im Supermarkt findet sie alles. An der Kasse bezahlt sie zwölf Euro.",
+    "translation": "Anna goes shopping on Saturday. She needs milk, eggs and apples. She finds everything at the supermarket. At the checkout she pays twelve euros.",
+    "qs": [
+      {
+        "q": "Wann geht Anna einkaufen?",
+        "a": "Am Samstag",
+        "wrong": [
+          "Am Montag",
+          "Am Dienstag"
+        ]
+      },
+      {
+        "q": "Was braucht sie?",
+        "a": "Milch, Eier und Äpfel",
+        "wrong": [
+          "Brot und Käse",
+          "Reis und Kaffee"
+        ]
+      },
+      {
+        "q": "Wie viel bezahlt sie?",
+        "a": "Zwölf Euro",
+        "wrong": [
+          "Zwei Euro",
+          "Zwanzig Euro"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 2,
+    "id": "story3",
+    "level": "A1",
+    "title": "Meine Wohnung",
+    "tr": "My apartment",
+    "de": "Meine Wohnung ist klein, aber hell. Sie hat ein Schlafzimmer, ein Wohnzimmer und eine Küche. Der Tisch steht am Fenster. Ich fühle mich hier wohl.",
+    "translation": "My apartment is small but bright. It has a bedroom, a living room and a kitchen. The table is by the window. I feel at home here.",
+    "qs": [
+      {
+        "q": "Wie ist die Wohnung?",
+        "a": "Klein und hell",
+        "wrong": [
+          "Groß und dunkel",
+          "Alt und kalt"
+        ]
+      },
+      {
+        "q": "Wo steht der Tisch?",
+        "a": "Am Fenster",
+        "wrong": [
+          "Im Bad",
+          "Im Garten"
+        ]
+      },
+      {
+        "q": "Wie viele Schlafzimmer gibt es?",
+        "a": "Eins",
+        "wrong": [
+          "Zwei",
+          "Drei"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 3,
+    "id": "story4",
+    "level": "A1",
+    "title": "Ein Termin beim Arzt",
+    "tr": "A doctor’s appointment",
+    "de": "Tom hat heute einen Termin beim Arzt. Er kommt um zehn Uhr. Die Ärztin fragt: Wo haben Sie Schmerzen? Tom sagt: Mein Kopf tut weh.",
+    "translation": "Tom has a doctor’s appointment today. He arrives at ten. The doctor asks, “Where does it hurt?” Tom says, “My head hurts.”",
+    "qs": [
+      {
+        "q": "Wann kommt Tom?",
+        "a": "Um zehn Uhr",
+        "wrong": [
+          "Um acht Uhr",
+          "Um zwölf Uhr"
+        ]
+      },
+      {
+        "q": "Wer stellt die Frage?",
+        "a": "Die Ärztin",
+        "wrong": [
+          "Der Lehrer",
+          "Die Verkäuferin"
+        ]
+      },
+      {
+        "q": "Was tut Tom weh?",
+        "a": "Sein Kopf",
+        "wrong": [
+          "Sein Fuß",
+          "Sein Arm"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 4,
+    "id": "story5",
+    "level": "A1",
+    "title": "Das Wochenende",
+    "tr": "The weekend",
+    "de": "Am Wochenende treffe ich meine Freundin. Wir gehen im Park spazieren. Danach trinken wir Tee in einem Café. Am Abend sehen wir einen Film.",
+    "translation": "I’m meeting my girlfriend at the weekend. We go for a walk in the park, then have tea in a café. In the evening we watch a film.",
+    "qs": [
+      {
+        "q": "Wen treffe ich?",
+        "a": "Meine Freundin",
+        "wrong": [
+          "Meinen Chef",
+          "Meinen Arzt"
+        ]
+      },
+      {
+        "q": "Wo gehen wir spazieren?",
+        "a": "Im Park",
+        "wrong": [
+          "Im Büro",
+          "Im Bahnhof"
+        ]
+      },
+      {
+        "q": "Was machen wir am Abend?",
+        "a": "Wir sehen einen Film",
+        "wrong": [
+          "Wir arbeiten",
+          "Wir schwimmen"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 5,
+    "id": "story6",
+    "level": "A1",
+    "title": "Mit dem Zug",
+    "tr": "Travelling by train",
+    "de": "Ich möchte nach München fahren. Mein Zug fährt um neun Uhr ab. Am Bahnhof kaufe ich eine Fahrkarte. Die Fahrt dauert eine Stunde.",
+    "translation": "I want to go to Munich. My train leaves at nine. I buy a ticket at the station. The journey takes an hour.",
+    "qs": [
+      {
+        "q": "Wohin möchte ich fahren?",
+        "a": "Nach München",
+        "wrong": [
+          "Nach Berlin",
+          "Nach Hamburg"
+        ]
+      },
+      {
+        "q": "Wann fährt der Zug ab?",
+        "a": "Um neun Uhr",
+        "wrong": [
+          "Um sechs Uhr",
+          "Um elf Uhr"
+        ]
+      },
+      {
+        "q": "Wie lange dauert die Fahrt?",
+        "a": "Eine Stunde",
+        "wrong": [
+          "Drei Stunden",
+          "Zehn Minuten"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 6,
+    "id": "story7",
+    "level": "A1",
+    "title": "In der Küche",
+    "tr": "In the kitchen",
+    "de": "Heute koche ich Nudeln. Zuerst schneide ich Tomaten. Dann gebe ich Wasser in den Topf. Nach zwanzig Minuten ist das Essen fertig.",
+    "translation": "Today I’m cooking pasta. First I cut up some tomatoes. Then I put water in the pot. Twenty minutes later the meal is ready.",
+    "qs": [
+      {
+        "q": "Was koche ich?",
+        "a": "Nudeln",
+        "wrong": [
+          "Reis",
+          "Suppe"
+        ]
+      },
+      {
+        "q": "Was schneide ich?",
+        "a": "Tomaten",
+        "wrong": [
+          "Äpfel",
+          "Kartoffeln"
+        ]
+      },
+      {
+        "q": "Wann ist das Essen fertig?",
+        "a": "Nach zwanzig Minuten",
+        "wrong": [
+          "Nach zwei Stunden",
+          "Nach fünf Minuten"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 7,
+    "id": "story8",
+    "level": "A1",
+    "title": "Ein neuer Kollege",
+    "tr": "A new colleague",
+    "de": "In unserem Büro arbeitet ein neuer Kollege. Er heißt Paul und kommt aus Köln. Wir trinken zusammen Kaffee. Paul ist sehr freundlich.",
+    "translation": "A new colleague works in our office. His name is Paul and he comes from Cologne. We have coffee together. Paul is very friendly.",
+    "qs": [
+      {
+        "q": "Wie heißt der Kollege?",
+        "a": "Paul",
+        "wrong": [
+          "Peter",
+          "Max"
+        ]
+      },
+      {
+        "q": "Woher kommt er?",
+        "a": "Aus Köln",
+        "wrong": [
+          "Aus Wien",
+          "Aus Hamburg"
+        ]
+      },
+      {
+        "q": "Wie ist Paul?",
+        "a": "Freundlich",
+        "wrong": [
+          "Unfreundlich",
+          "Müde"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 8,
+    "id": "story9",
+    "level": "A1",
+    "title": "Das Wetter",
+    "tr": "The weather",
+    "de": "Heute ist es sonnig und warm. Ich ziehe eine leichte Jacke an. Am Nachmittag gehe ich nach draußen. Morgen soll es regnen.",
+    "translation": "It’s sunny and warm today. I put on a light jacket. In the afternoon I go outside. It’s supposed to rain tomorrow.",
+    "qs": [
+      {
+        "q": "Wie ist das Wetter heute?",
+        "a": "Sonnig und warm",
+        "wrong": [
+          "Kalt und windig",
+          "Schnee"
+        ]
+      },
+      {
+        "q": "Was ziehe ich an?",
+        "a": "Eine leichte Jacke",
+        "wrong": [
+          "Einen Mantel",
+          "Ein Kleid"
+        ]
+      },
+      {
+        "q": "Was passiert morgen?",
+        "a": "Es soll regnen",
+        "wrong": [
+          "Es schneit",
+          "Es bleibt sonnig"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 9,
+    "id": "story10",
+    "level": "A1",
+    "title": "In der Bibliothek",
+    "tr": "At the library",
+    "de": "Mira lernt Deutsch in der Bibliothek. Sie liest ein kleines Buch. Neben ihr sitzt ein Student. Um fünf Uhr geht sie nach Hause.",
+    "translation": "Mira studies German at the library. She reads a little book. A student is sitting next to her. At five she goes home.",
+    "qs": [
+      {
+        "q": "Wo lernt Mira?",
+        "a": "In der Bibliothek",
+        "wrong": [
+          "Im Kino",
+          "Im Hotel"
+        ]
+      },
+      {
+        "q": "Was liest sie?",
+        "a": "Ein kleines Buch",
+        "wrong": [
+          "Eine Zeitung",
+          "Eine E-Mail"
+        ]
+      },
+      {
+        "q": "Wann geht sie nach Hause?",
+        "a": "Um fünf Uhr",
+        "wrong": [
+          "Um sieben Uhr",
+          "Um neun Uhr"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 10,
+    "id": "story11",
+    "level": "A1",
+    "title": "Mein Geburtstag",
+    "tr": "My birthday",
+    "de": "Heute habe ich Geburtstag. Meine Freunde kommen am Abend. Wir essen Kuchen und hören Musik. Ich bekomme ein schönes Buch als Geschenk.",
+    "translation": "Today is my birthday. My friends are coming this evening. We eat cake and listen to music. I get a lovely book as a present.",
+    "qs": [
+      {
+        "q": "Wer kommt am Abend?",
+        "a": "Meine Freunde",
+        "wrong": [
+          "Meine Kollegen",
+          "Meine Lehrer"
+        ]
+      },
+      {
+        "q": "Was essen wir?",
+        "a": "Kuchen",
+        "wrong": [
+          "Pizza",
+          "Suppe"
+        ]
+      },
+      {
+        "q": "Was bekomme ich?",
+        "a": "Ein Buch",
+        "wrong": [
+          "Ein Fahrrad",
+          "Eine Uhr"
+        ]
+      }
+    ]
+  },
+  {
+    "_order": 11,
+    "id": "story12",
+    "level": "A1",
+    "title": "Im Restaurant",
+    "tr": "At the restaurant",
+    "de": "Lena und Max sind im Restaurant. Lena bestellt eine Suppe. Max möchte einen Salat und Wasser. Der Kellner bringt das Essen schnell.",
+    "translation": "Lena and Max are at a restaurant. Lena orders soup. Max would like a salad and some water. The waiter brings the food quickly.",
+    "qs": [
+      {
+        "q": "Was bestellt Lena?",
+        "a": "Eine Suppe",
+        "wrong": [
+          "Eine Pizza",
+          "Einen Salat"
+        ]
+      },
+      {
+        "q": "Was möchte Max trinken?",
+        "a": "Wasser",
+        "wrong": [
+          "Saft",
+          "Kaffee"
+        ]
+      },
+      {
+        "q": "Wer bringt das Essen?",
+        "a": "Der Kellner",
+        "wrong": [
+          "Der Koch",
+          "Der Fahrer"
+        ]
+      }
+    ]
+  }
+]

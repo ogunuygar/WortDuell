@@ -1,0 +1,99 @@
+[
+  {
+    "_order": 19,
+    "id": "time-duration",
+    "lv": "A2",
+    "title": "Duration and sequence · vor, seit, in",
+    "icon": "✏️",
+    "source": "WortDuell original practice",
+    "intro": "Vor + dative measures time back from now, seit + dative expresses an ongoing situation, and in + dative can indicate a future interval. Danach and davor connect events. For completed past events, use Perfekt in everyday conversation.",
+    "samples": [
+      [
+        "Ich bin vor zwei Tagen angekommen.",
+        "I arrived two days ago."
+      ],
+      [
+        "Ich wohne seit einem Jahr hier.",
+        "I have lived here for a year."
+      ],
+      [
+        "In zwei Wochen beginnt der Kurs.",
+        "The course starts in two weeks."
+      ]
+    ],
+    "qs": [
+      [
+        "Two days ago: ___ zwei Tagen.",
+        "vor",
+        [
+          "seit",
+          "in"
+        ],
+        "Vor points back to a completed past time."
+      ],
+      [
+        "For an ongoing year: ___ einem Jahr.",
+        "seit",
+        [
+          "vor",
+          "bis"
+        ],
+        "Seit indicates an ongoing situation."
+      ],
+      [
+        "In two weeks (future): ___ zwei Wochen.",
+        "in",
+        [
+          "vor",
+          "seit"
+        ],
+        "In indicates time until a future event."
+      ],
+      [
+        "I have lived here for a year and still do.",
+        "Ich wohne seit einem Jahr hier.",
+        [
+          "Ich wohne vor einem Jahr hier.",
+          "Ich wohne in einem Jahr hier."
+        ],
+        "Use present tense with seit for an ongoing state."
+      ],
+      [
+        "After that: ___.",
+        "danach",
+        [
+          "davor",
+          "gestern"
+        ],
+        "Danach refers to a subsequent event."
+      ],
+      [
+        "Before that: ___.",
+        "davor",
+        [
+          "danach",
+          "übermorgen"
+        ],
+        "Davor refers to an earlier event."
+      ],
+      [
+        "Since Monday (ongoing): ___ Montag.",
+        "seit",
+        [
+          "vor",
+          "um"
+        ],
+        "Seit can introduce the starting day."
+      ],
+      [
+        "Within one week: innerhalb ___ Woche.",
+        "einer",
+        [
+          "eine",
+          "einen"
+        ],
+        "Innerhalb commonly takes genitive."
+      ]
+    ]
+  }
+]

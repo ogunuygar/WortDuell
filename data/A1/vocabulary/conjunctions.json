@@ -1,0 +1,58 @@
+[
+  {
+    "_order": 758,
+    "c": "Konjunktionen",
+    "w": "und",
+    "t": "and",
+    "k": "Konjunktion",
+    "f": "",
+    "l": "A1",
+    "e1": "Ich trinke Kaffee und Tee.",
+    "e1t": "I drink coffee and tea.",
+    "e2": "Ich komme nach Hause und koche das Abendessen.",
+    "e2t": "I come home and cook dinner.",
+    "g": "Und joins words or clauses without changing their word order."
+  },
+  {
+    "_order": 759,
+    "c": "Konjunktionen",
+    "w": "aber",
+    "t": "but",
+    "k": "Konjunktion",
+    "f": "",
+    "l": "A1",
+    "e1": "Das Auto ist alt, aber gut.",
+    "e1t": "The car is old, but good.",
+    "e2": "Ich möchte kommen, aber ich habe leider keine Zeit.",
+    "e2t": "I want to come, but unfortunately I don’t have time.",
+    "g": "Aber joins clauses. A statement after it keeps normal verb-second order."
+  },
+  {
+    "_order": 760,
+    "c": "Konjunktionen",
+    "w": "oder",
+    "t": "or",
+    "k": "Konjunktion",
+    "f": "",
+    "l": "A1",
+    "e1": "Möchtest du Wasser oder Saft?",
+    "e1t": "Do you want water or juice?",
+    "e2": "Wir fahren mit dem Bus oder wir gehen zu Fuß.",
+    "e2t": "We take the bus or we walk.",
+    "g": "Oder leaves word order unchanged, as und does."
+  },
+  {
+    "_order": 761,
+    "c": "Konjunktionen",
+    "w": "denn",
+    "t": "because (coordinating)",
+    "k": "Konjunktion",
+    "f": "",
+    "l": "A1",
+    "e1": "Ich bleibe zu Hause, denn ich bin krank.",
+    "e1t": "I stay home because I am sick.",
+    "e2": "Wir nehmen ein Taxi, denn der Bus kommt heute nicht.",
+    "e2t": "We take a taxi, because the bus does not come today.",
+    "g": "Denn introduces a reason with main-clause word order. After weil the conjugated verb goes last."
+  }
+]

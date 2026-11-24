@@ -1,0 +1,293 @@
+[
+  {
+    "_order": 5,
+    "id": "perfekt",
+    "lv": "A2",
+    "title": "Perfekt · Talking about the past",
+    "icon": "⏳",
+    "source": "A1–A2 grammar worksheets",
+    "intro": "Use a conjugated form of haben or sein and put the past participle at the end. Many verbs of movement use sein.",
+    "samples": [
+      [
+        "Ich habe Deutsch gelernt.",
+        "I learned German."
+      ],
+      [
+        "Du bist zur Schule gegangen.",
+        "You went to school."
+      ],
+      [
+        "Ich habe meine Freundin angerufen.",
+        "I called my girlfriend."
+      ]
+    ],
+    "qs": [
+      [
+        "Ich ___ Deutsch gelernt.",
+        "habe",
+        [
+          "bin",
+          "werde"
+        ],
+        "Lernen forms the Perfekt with haben: ich habe gelernt."
+      ],
+      [
+        "Du ___ nach Hause gegangen.",
+        "bist",
+        [
+          "hast",
+          "wirst"
+        ],
+        "Gehen uses sein: du bist gegangen."
+      ],
+      [
+        "Wir haben Pizza ___.",
+        "gegessen",
+        [
+          "geesst",
+          "essen"
+        ],
+        "The participle of essen is gegessen."
+      ],
+      [
+        "Gestern habe ich ___. (arbeiten)",
+        "gearbeitet",
+        [
+          "gear­beiten",
+          "arbeitet"
+        ],
+        "Arbeiten forms the participle gearbeitet."
+      ],
+      [
+        "Ich habe meine Freundin ___. (anrufen)",
+        "angerufen",
+        [
+          "geanrufen",
+          "anruft"
+        ],
+        "Anrufen has a separable prefix: angerufen."
+      ],
+      [
+        "Sie hat in München ___. (studieren)",
+        "studiert",
+        [
+          "gestudiert",
+          "studieren"
+        ],
+        "Studieren ends in -ieren and takes no ge-."
+      ],
+      [
+        "Wir ___ nach Berlin gefahren.",
+        "sind",
+        [
+          "haben",
+          "werden"
+        ],
+        "Travelling to Berlin takes sein: wir sind gefahren."
+      ],
+      [
+        "Ich habe ein Auto ___. (kaufen)",
+        "gekauft",
+        [
+          "gekaufen",
+          "kaufen"
+        ],
+        "Kaufen is regular: gekauft."
+      ]
+    ]
+  },
+  {
+    "_order": 6,
+    "id": "praeteritum",
+    "lv": "A2",
+    "title": "Simple past · war, hatte, konnte",
+    "icon": "🕰️",
+    "source": "A1–A2 grammar worksheets",
+    "intro": "War, hatte and the simple past forms of modal verbs are common in everyday German. With a modal, leave the other verb in the infinitive.",
+    "samples": [
+      [
+        "Gestern war ich müde.",
+        "I was tired yesterday."
+      ],
+      [
+        "Ich hatte keine Zeit.",
+        "I had no time."
+      ],
+      [
+        "Ich konnte nicht kommen.",
+        "I couldn’t come."
+      ]
+    ],
+    "qs": [
+      [
+        "Gestern ___ ich müde.",
+        "war",
+        [
+          "bin",
+          "habe"
+        ],
+        "The simple past of sein for ich is war."
+      ],
+      [
+        "Früher ___ ich kein Auto.",
+        "hatte",
+        [
+          "habe",
+          "hatten"
+        ],
+        "The simple past of haben for ich is hatte."
+      ],
+      [
+        "Ich ___ gestern nicht kommen.",
+        "konnte",
+        [
+          "kann",
+          "könnt"
+        ],
+        "Können becomes konnte for ich."
+      ],
+      [
+        "Wir ___ viel arbeiten.",
+        "mussten",
+        [
+          "musste",
+          "müssen"
+        ],
+        "Müssen becomes mussten for wir."
+      ],
+      [
+        "Du ___ gestern krank.",
+        "warst",
+        [
+          "wirst",
+          "wart"
+        ],
+        "The du form of war is warst."
+      ],
+      [
+        "Sie ___ keine Zeit. (she, past)",
+        "hatte",
+        [
+          "hatten",
+          "hättest"
+        ],
+        "The singular past form for sie is hatte."
+      ],
+      [
+        "Ich ___ einen Kaffee trinken. (want, past)",
+        "wollte",
+        [
+          "will",
+          "wollen"
+        ],
+        "Wollen becomes wollte for ich."
+      ],
+      [
+        "Ihr ___ gestern zu Hause.",
+        "wart",
+        [
+          "warst",
+          "waren"
+        ],
+        "The ihr form is wart."
+      ]
+    ]
+  },
+  {
+    "_order": 7,
+    "id": "futur",
+    "lv": "A2",
+    "title": "Future plans · Präsens and Futur I",
+    "icon": "📅",
+    "source": "Futur I and present tense worksheet",
+    "intro": "A time expression often lets you talk about the future in the present tense. Futur I uses werden plus an infinitive at the end.",
+    "samples": [
+      [
+        "Morgen arbeite ich.",
+        "I’m working tomorrow. This is natural in conversation."
+      ],
+      [
+        "Ich werde morgen arbeiten.",
+        "I will work tomorrow. Werden makes the future explicit."
+      ],
+      [
+        "Sie wird später anrufen.",
+        "She will call later."
+      ]
+    ],
+    "qs": [
+      [
+        "I’m working tomorrow. Choose the natural everyday German.",
+        "Morgen arbeite ich.",
+        [
+          "Morgen ich werde arbeiten.",
+          "Morgen ich arbeiten."
+        ],
+        "Morgen supplies the future time, so the present tense is natural."
+      ],
+      [
+        "Ich ___ morgen arbeiten. (Futur I)",
+        "werde",
+        [
+          "wird",
+          "werden"
+        ],
+        "With ich, use werde plus arbeiten."
+      ],
+      [
+        "Du ___ später anrufen. (Futur I)",
+        "wirst",
+        [
+          "werde",
+          "werdet"
+        ],
+        "With du, use wirst plus the infinitive."
+      ],
+      [
+        "Er ___ ein Auto kaufen. (Futur I)",
+        "wird",
+        [
+          "werden",
+          "wirst"
+        ],
+        "With er, use wird plus the infinitive."
+      ],
+      [
+        "Wir ___ Deutsch lernen. (Futur I)",
+        "werden",
+        [
+          "wird",
+          "werdet"
+        ],
+        "With wir, use werden."
+      ],
+      [
+        "Ihr ___ morgen kommen. (Futur I)",
+        "werdet",
+        [
+          "werden",
+          "wird"
+        ],
+        "With ihr, use werdet."
+      ],
+      [
+        "Nächste Woche ___ wir nach München.",
+        "fahren",
+        [
+          "gefahren",
+          "fährst"
+        ],
+        "Nächste Woche gives the future time. The present-tense form is fahren."
+      ],
+      [
+        "Where does the second verb go in Futur I?",
+        "At the end, as an infinitive",
+        [
+          "In second position",
+          "Always at the beginning"
+        ],
+        "Conjugate werden in second position. Put the infinitive last."
+      ]
+    ]
+  }
+]

@@ -1,0 +1,487 @@
+[
+  {
+    "_order": 2,
+    "id": "pronomen",
+    "lv": "A1",
+    "title": "Articles and personal pronouns",
+    "icon": "👥",
+    "source": "German case reference",
+    "intro": "Pronouns change with case: ich → mich → mir, du → dich → dir, er → ihn → ihm.",
+    "samples": [
+      [
+        "Ich liebe dich.",
+        "I love you. Dich is accusative."
+      ],
+      [
+        "Ich helfe dir.",
+        "I help you. Dir is dative."
+      ],
+      [
+        "Wir warten auf dich.",
+        "We’re waiting for you. Warten auf takes the accusative."
+      ]
+    ],
+    "qs": [
+      [
+        "Ich sehe ___ (du).",
+        "dich",
+        [
+          "dir",
+          "du"
+        ],
+        "Sehen takes dich in the accusative."
+      ],
+      [
+        "Ich helfe ___ (du).",
+        "dir",
+        [
+          "dich",
+          "du"
+        ],
+        "Helfen takes dir in the dative."
+      ],
+      [
+        "Kannst du ___ helfen? (ich)",
+        "mir",
+        [
+          "mich",
+          "ich"
+        ],
+        "The dative of ich is mir."
+      ],
+      [
+        "Ich kenne ___ (er).",
+        "ihn",
+        [
+          "ihm",
+          "er"
+        ],
+        "Kennen takes the accusative ihn."
+      ],
+      [
+        "Das gehört ___ (sie, female).",
+        "ihr",
+        [
+          "sie",
+          "ihn"
+        ],
+        "Gehören takes the dative ihr."
+      ],
+      [
+        "Er besucht ___ (wir).",
+        "uns",
+        [
+          "wir",
+          "ihnen"
+        ],
+        "Besuchen takes an accusative object. The form is uns."
+      ],
+      [
+        "Ich spreche mit ___ (Sie, formal).",
+        "Ihnen",
+        [
+          "Sie",
+          "Ihr"
+        ],
+        "Mit takes the dative. Capitalise formal Ihnen."
+      ],
+      [
+        "___ Freunde kommen heute.",
+        "Meine",
+        [
+          "Meinen",
+          "Meinem"
+        ],
+        "The subject is plural: meine Freunde."
+      ]
+    ]
+  },
+  {
+    "_order": 9,
+    "id": "negation",
+    "lv": "A1",
+    "title": "Negation · nicht and kein",
+    "icon": "🚫",
+    "source": "A1–A2 grammar worksheets",
+    "intro": "Use kein to negate a noun that would otherwise have ein or no article. Use nicht to negate an action, an adjective or a specific part of the sentence.",
+    "samples": [
+      [
+        "Ich habe kein Auto.",
+        "I don’t have a car."
+      ],
+      [
+        "Das ist nicht teuer.",
+        "That isn’t expensive."
+      ],
+      [
+        "Ich arbeite heute nicht.",
+        "I’m not working today."
+      ]
+    ],
+    "qs": [
+      [
+        "Ich habe ___ Auto.",
+        "kein",
+        [
+          "nicht",
+          "keinen"
+        ],
+        "Auto is neuter: kein Auto."
+      ],
+      [
+        "Ich trinke ___ Kaffee.",
+        "keinen",
+        [
+          "kein",
+          "nicht"
+        ],
+        "Kaffee is masculine accusative: keinen Kaffee."
+      ],
+      [
+        "Das ist ___ teuer.",
+        "nicht",
+        [
+          "kein",
+          "keine"
+        ],
+        "Negate an adjective with nicht."
+      ],
+      [
+        "Ich arbeite heute ___.",
+        "nicht",
+        [
+          "kein",
+          "keine"
+        ],
+        "Nicht negates the action here."
+      ],
+      [
+        "Ich habe ___ Zeit.",
+        "keine",
+        [
+          "nicht",
+          "kein"
+        ],
+        "Zeit is feminine: keine Zeit."
+      ],
+      [
+        "Ich fahre ___ nach München.",
+        "nicht",
+        [
+          "kein",
+          "keine"
+        ],
+        "Nicht negates the journey to Munich."
+      ],
+      [
+        "Ich kenne ___ Mann.",
+        "keinen",
+        [
+          "kein",
+          "nicht"
+        ],
+        "Ein Mann becomes keinen Mann as a negated direct object."
+      ],
+      [
+        "Das ist ___ Problem.",
+        "kein",
+        [
+          "keine",
+          "nicht"
+        ],
+        "Problem is neuter: kein Problem."
+      ]
+    ]
+  },
+  {
+    "_order": 12,
+    "id": "zeit",
+    "lv": "A1",
+    "title": "Clock times, dates and numbers",
+    "icon": "🕒",
+    "source": "A1–A2 grammar worksheets",
+    "intro": "Halb refers to the following hour. Viertel nach means quarter past. Use am plus an ordinal to give a date.",
+    "samples": [
+      [
+        "Es ist halb drei.",
+        "It’s half past two."
+      ],
+      [
+        "Um acht Uhr habe ich einen Termin.",
+        "I have an appointment at eight."
+      ],
+      [
+        "Am dritten Oktober.",
+        "On the third of October."
+      ]
+    ],
+    "qs": [
+      [
+        "14:30 →",
+        "halb drei",
+        [
+          "halb zwei",
+          "Viertel nach zwei"
+        ],
+        "Halb drei means halfway to three: 2:30."
+      ],
+      [
+        "14:15 →",
+        "Viertel nach zwei",
+        [
+          "Viertel vor zwei",
+          "halb drei"
+        ],
+        "Viertel nach zwei means a quarter past two."
+      ],
+      [
+        "14:45 →",
+        "Viertel vor drei",
+        [
+          "Viertel nach drei",
+          "halb zwei"
+        ],
+        "Viertel vor drei means a quarter to three."
+      ],
+      [
+        "How do you read the date am 3. Oktober aloud?",
+        "am dritten Oktober",
+        [
+          "am drei Oktober",
+          "in dritte Oktober"
+        ],
+        "After am, the ordinal takes -en: am dritten Oktober."
+      ],
+      [
+        "21 →",
+        "einundzwanzig",
+        [
+          "zwanzigeins",
+          "einszwanzig"
+        ],
+        "Say units, und, then tens: einundzwanzig."
+      ],
+      [
+        "gestern →",
+        "yesterday",
+        [
+          "tomorrow",
+          "today"
+        ],
+        "Gestern means yesterday."
+      ],
+      [
+        "übermorgen →",
+        "the day after tomorrow",
+        [
+          "the day before yesterday",
+          "yesterday"
+        ],
+        "Übermorgen means the day after tomorrow."
+      ],
+      [
+        "später →",
+        "later",
+        [
+          "early",
+          "never"
+        ],
+        "Später means later."
+      ]
+    ]
+  },
+  {
+    "_order": 16,
+    "id": "time-daily",
+    "lv": "A1",
+    "title": "Everyday time · Heute, morgen, um, am",
+    "icon": "✏️",
+    "source": "WortDuell original practice",
+    "intro": "Use heute, gestern and morgen without a preposition. Use um for clock times, am for days, im for months and seasons. Use von … bis for ranges. Time expressions at the start of a statement are followed by the finite verb.",
+    "samples": [
+      [
+        "Morgen arbeite ich.",
+        "I am working tomorrow."
+      ],
+      [
+        "Am Montag beginnt der Kurs.",
+        "The course starts on Monday."
+      ],
+      [
+        "Um sieben Uhr stehe ich auf.",
+        "I get up at seven."
+      ]
+    ],
+    "qs": [
+      [
+        "I work tomorrow: Ich arbeite ___.",
+        "morgen",
+        [
+          "gestern",
+          "vorgestern"
+        ],
+        "Morgen means tomorrow."
+      ],
+      [
+        "The shop opens at nine: Der Laden öffnet ___ neun Uhr.",
+        "um",
+        [
+          "am",
+          "im"
+        ],
+        "Use um for clock times."
+      ],
+      [
+        "On Monday: ___ Montag.",
+        "am",
+        [
+          "um",
+          "im"
+        ],
+        "Am is an dem, used with days."
+      ],
+      [
+        "In May: ___ Mai.",
+        "im",
+        [
+          "um",
+          "am"
+        ],
+        "Use im with months."
+      ],
+      [
+        "From Monday to Friday: von Montag ___ Freitag.",
+        "bis",
+        [
+          "seit",
+          "vor"
+        ],
+        "Von … bis indicates a range."
+      ],
+      [
+        "The day after tomorrow: ___.",
+        "übermorgen",
+        [
+          "vorgestern",
+          "gestern"
+        ],
+        "Übermorgen is two days from today."
+      ],
+      [
+        "Choose standard main-clause order.",
+        "Heute gehe ich einkaufen.",
+        [
+          "Heute ich gehe einkaufen.",
+          "Heute einkaufen ich gehe."
+        ],
+        "Heute is first and gehe is second."
+      ],
+      [
+        "In the mornings: ___.",
+        "morgens",
+        [
+          "morgen",
+          "gestern"
+        ],
+        "Morgens refers to repeated mornings."
+      ]
+    ]
+  },
+  {
+    "_order": 17,
+    "id": "personal-pronouns",
+    "lv": "A1",
+    "title": "Personal pronouns · ich, du, er, sie",
+    "icon": "✏️",
+    "source": "WortDuell original practice",
+    "intro": "Subject pronouns: ich, du, er/sie/es, wir, ihr, sie/Sie. Direct objects often use accusative (mich, dich, ihn); helfen and danken require dative (mir, dir, ihm). Formal Sie and Ihnen are capitalized.",
+    "samples": [
+      [
+        "Ich sehe dich.",
+        "I see you."
+      ],
+      [
+        "Er hilft mir.",
+        "He helps me."
+      ],
+      [
+        "Können Sie mir helfen?",
+        "Can you help me?"
+      ]
+    ],
+    "qs": [
+      [
+        "He is here: ___ ist hier.",
+        "Er",
+        [
+          "Ihn",
+          "Ihm"
+        ],
+        "Use er as a masculine subject."
+      ],
+      [
+        "I see him: Ich sehe ___.",
+        "ihn",
+        [
+          "er",
+          "ihm"
+        ],
+        "Sehen takes an accusative object."
+      ],
+      [
+        "I help you (du): Ich helfe ___.",
+        "dir",
+        [
+          "dich",
+          "du"
+        ],
+        "Helfen takes dative."
+      ],
+      [
+        "She works: ___ arbeitet.",
+        "Sie",
+        [
+          "Ihnen",
+          "Wir"
+        ],
+        "Sie with arbeitet is third-person singular."
+      ],
+      [
+        "We live here: ___ wohnen hier.",
+        "Wir",
+        [
+          "Ich",
+          "Er"
+        ],
+        "Wir takes wohnen."
+      ],
+      [
+        "I thank you all: Ich danke ___.",
+        "euch",
+        [
+          "ihr",
+          "du"
+        ],
+        "Danken requires dative."
+      ],
+      [
+        "People speak German here: Hier spricht ___ Deutsch.",
+        "man",
+        [
+          "wir",
+          "euch"
+        ],
+        "Man is an indefinite singular subject."
+      ],
+      [
+        "It is raining: ___ regnet.",
+        "Es",
+        [
+          "Ihn",
+          "Wir"
+        ],
+        "Weather expressions often use es."
+      ]
+    ]
+  }
+]

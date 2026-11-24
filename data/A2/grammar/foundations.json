@@ -1,0 +1,390 @@
+[
+  {
+    "_order": 3,
+    "id": "adjektiv",
+    "lv": "A2",
+    "title": "Adjective endings",
+    "icon": "🎨",
+    "source": "A1–A2 adjective endings",
+    "intro": "The adjective ending depends on the article, case and gender. Identify the noun’s role before choosing the ending.",
+    "samples": [
+      [
+        "der schöne Tag",
+        "The beautiful day. Masculine nominative after der takes -e."
+      ],
+      [
+        "einen guten Kaffee",
+        "A good coffee. Masculine accusative after einen takes -en."
+      ],
+      [
+        "mit einer netten Kollegin",
+        "With a nice colleague. Dative after einer takes -en."
+      ]
+    ],
+    "qs": [
+      [
+        "der ___ Tag (schön)",
+        "schöne",
+        [
+          "schönen",
+          "schöner"
+        ],
+        "After der in masculine nominative, use schöne."
+      ],
+      [
+        "ein ___ Tag (schön)",
+        "schöner",
+        [
+          "schöne",
+          "schönen"
+        ],
+        "Ein has no ending here, so the adjective supplies -er."
+      ],
+      [
+        "den ___ Film (neu)",
+        "neuen",
+        [
+          "neue",
+          "neues"
+        ],
+        "Masculine accusative after den takes -en."
+      ],
+      [
+        "eine ___ Frau (nett)",
+        "nette",
+        [
+          "netten",
+          "netter"
+        ],
+        "After eine in feminine nominative, use nette."
+      ],
+      [
+        "ein ___ Haus (groß)",
+        "großes",
+        [
+          "große",
+          "großen"
+        ],
+        "A neuter noun after ein needs -es on the adjective."
+      ],
+      [
+        "mit einem ___ Kollegen (nett)",
+        "netten",
+        [
+          "netter",
+          "nettes"
+        ],
+        "After dative einem, the adjective takes -en."
+      ],
+      [
+        "in einer ___ Wohnung (klein)",
+        "kleinen",
+        [
+          "kleine",
+          "kleiner"
+        ],
+        "After dative einer, the adjective takes -en."
+      ],
+      [
+        "Ich suche einen ___ Arzt. (gut)",
+        "guten",
+        [
+          "gute",
+          "gutes"
+        ],
+        "Masculine accusative after einen takes -en."
+      ]
+    ]
+  },
+  {
+    "_order": 11,
+    "id": "vergleich",
+    "lv": "A2",
+    "title": "Comparisons · Komparativ",
+    "icon": "📈",
+    "source": "A1–A2 grammar worksheets",
+    "intro": "Comparatives usually add -er. Use als to compare different degrees and so … wie when two things are equal.",
+    "samples": [
+      [
+        "Der Zug ist schneller als der Bus.",
+        "The train is faster than the bus."
+      ],
+      [
+        "Diese Lösung ist besser.",
+        "This solution is better."
+      ],
+      [
+        "Mein Auto ist so schnell wie dein Auto.",
+        "My car is as fast as yours."
+      ]
+    ],
+    "qs": [
+      [
+        "schnell → faster",
+        "schneller",
+        [
+          "am schnellsten",
+          "schnellen"
+        ],
+        "Add -er: schneller."
+      ],
+      [
+        "gut → better",
+        "besser",
+        [
+          "guter",
+          "am besten"
+        ],
+        "Gut is irregular: besser."
+      ],
+      [
+        "groß → bigger",
+        "größer",
+        [
+          "großer",
+          "größten"
+        ],
+        "Groß adds an umlaut: größer."
+      ],
+      [
+        "Der Zug ist schneller ___ der Bus.",
+        "als",
+        [
+          "wie",
+          "von"
+        ],
+        "After a comparative, use als."
+      ],
+      [
+        "Mein Auto ist so schnell ___ dein Auto.",
+        "wie",
+        [
+          "als",
+          "mit"
+        ],
+        "Equal comparison: so … wie."
+      ],
+      [
+        "gern → preferably",
+        "lieber",
+        [
+          "gerner",
+          "am liebsten"
+        ],
+        "The comparative of gern is lieber."
+      ],
+      [
+        "viel → more",
+        "mehr",
+        [
+          "vieler",
+          "meiste"
+        ],
+        "The comparative of viel is mehr."
+      ],
+      [
+        "schnell → fastest",
+        "am schnellsten",
+        [
+          "schnellster",
+          "schneller"
+        ],
+        "The superlative is am schnellsten."
+      ]
+    ]
+  },
+  {
+    "_order": 14,
+    "id": "woerter",
+    "lv": "A2",
+    "title": "Pronoun order and short expressions",
+    "icon": "💬",
+    "source": "A1–A2 grammar worksheets",
+    "intro": "When both objects are pronouns, accusative usually comes before dative. Use da- and wo-compounds to refer to things and situations.",
+    "samples": [
+      [
+        "Ich gebe meiner Freundin das Buch.",
+        "I give my girlfriend the book."
+      ],
+      [
+        "Ich gebe es ihr.",
+        "I give it to her."
+      ],
+      [
+        "Worauf wartest du?",
+        "What are you waiting for?"
+      ]
+    ],
+    "qs": [
+      [
+        "Ich gebe ___ das Buch. (to her)",
+        "ihr",
+        [
+          "sie",
+          "ihn"
+        ],
+        "The recipient is feminine dative: ihr."
+      ],
+      [
+        "“I give it to her.”",
+        "Ich gebe es ihr.",
+        [
+          "Ich gebe ihr es.",
+          "Ich gebe sie ihm."
+        ],
+        "With two unstressed pronouns, put accusative es before dative ihr."
+      ],
+      [
+        "Ich warte auf den Termin → Ich warte ___.",
+        "darauf",
+        [
+          "daran",
+          "darüber"
+        ],
+        "Replace auf + thing with darauf."
+      ],
+      [
+        "Wir sprechen über das Projekt → Wir sprechen ___.",
+        "darüber",
+        [
+          "darauf",
+          "darin"
+        ],
+        "Replace über + thing with darüber."
+      ],
+      [
+        "“Nobody is in the office.”",
+        "Niemand ist im Büro.",
+        [
+          "Man ist im Büro.",
+          "Jemand sind im Büro."
+        ],
+        "Niemand means nobody and takes a singular verb."
+      ],
+      [
+        "“People speak German in Germany.”",
+        "In Deutschland spricht man Deutsch.",
+        [
+          "In Deutschland sprechen man Deutsch.",
+          "In Deutschland man sprechen Deutsch."
+        ],
+        "Man takes the third-person singular: spricht."
+      ],
+      [
+        "Ich ___, Deutsch zu lernen.",
+        "versuche",
+        [
+          "muss zu",
+          "kann zu"
+        ],
+        "Versuchen can take zu plus an infinitive."
+      ],
+      [
+        "“I would like a coffee.” (polite)",
+        "Ich möchte einen Kaffee.",
+        [
+          "Ich Kaffee wollen.",
+          "Ich bin Kaffee."
+        ],
+        "Möchte expresses a polite request."
+      ]
+    ]
+  },
+  {
+    "_order": 21,
+    "id": "reflexive-core",
+    "lv": "A2",
+    "title": "Reflexive verbs · Reflexive Verben",
+    "icon": "↔",
+    "source": "Original WortDuell lesson",
+    "intro": "Reflexive verbs use a pronoun referring back to the subject. In the accusative: mich, dich, sich, uns, euch, sich. In some expressions with a separate direct object, use mir or dir instead: Ich wasche mir die Hände. Learn reflexive verbs with their usual prepositions.",
+    "samples": [
+      [
+        "Ich freue mich auf den Urlaub.",
+        "I am looking forward to the holiday."
+      ],
+      [
+        "Wir treffen uns um acht.",
+        "We meet at eight."
+      ],
+      [
+        "Ich wasche mir die Hände.",
+        "I wash my hands."
+      ]
+    ],
+    "qs": [
+      [
+        "Ich freue ___ auf das Wochenende.",
+        "mich",
+        [
+          "mir",
+          "dich"
+        ],
+        "Sich freuen uses the accusative reflexive pronoun mich for ich."
+      ],
+      [
+        "Du musst ___ beeilen.",
+        "dich",
+        [
+          "dir",
+          "sich"
+        ],
+        "With du, the accusative reflexive form is dich."
+      ],
+      [
+        "Er interessiert ___ für Musik.",
+        "sich",
+        [
+          "ihn",
+          "mir"
+        ],
+        "With er, use sich."
+      ],
+      [
+        "Wir treffen ___ morgen.",
+        "uns",
+        [
+          "euch",
+          "sich"
+        ],
+        "Wir takes uns."
+      ],
+      [
+        "Ihr könnt ___ ausruhen.",
+        "euch",
+        [
+          "uns",
+          "sich"
+        ],
+        "Ihr takes euch."
+      ],
+      [
+        "Sie (plural) haben ___ angemeldet.",
+        "sich",
+        [
+          "sie",
+          "euch"
+        ],
+        "Plural sie takes sich."
+      ],
+      [
+        "Ich wasche ___ die Hände.",
+        "mir",
+        [
+          "mich",
+          "sich"
+        ],
+        "Die Hände is the direct object, so the reflexive pronoun is dative mir."
+      ],
+      [
+        "Ich bedanke mich ___ dir für die Hilfe.",
+        "bei",
+        [
+          "auf",
+          "um"
+        ],
+        "Sich bedanken bei + dative identifies the person."
+      ]
+    ]
+  }
+]

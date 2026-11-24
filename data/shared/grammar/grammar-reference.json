@@ -1,0 +1,68 @@
+[
+  {
+    "title": "German cases at a glance",
+    "intro": "Look at the verb or preposition to decide which case you need. Then choose the matching article.",
+    "rows": [
+      [
+        "Nominativ",
+        "der / die / das / die"
+      ],
+      [
+        "Akkusativ",
+        "den / die / das / die"
+      ],
+      [
+        "Dativ",
+        "dem / der / dem / den"
+      ],
+      [
+        "Genitive (extra)",
+        "des / der / des / der"
+      ]
+    ]
+  },
+  {
+    "title": "Präsens – Perfekt – Futur I",
+    "intro": "Everyday A1–A2 sentences. German often uses the present tense with a time expression to talk about the future.",
+    "rows": [
+      [
+        "Präsens",
+        "Ich lerne Deutsch."
+      ],
+      [
+        "Perfekt",
+        "Ich habe Deutsch gelernt."
+      ],
+      [
+        "Futur I",
+        "Ich werde Deutsch lernen."
+      ],
+      [
+        "Present tense with future meaning",
+        "Morgen lerne ich Deutsch."
+      ]
+    ]
+  },
+  {
+    "title": "Wo? / Wohin?",
+    "intro": "With two-way prepositions, Wo? asks about a location (dative). Wohin? asks about a destination (accusative).",
+    "rows": [
+      [
+        "Wo?",
+        "Ich bin in der Stadt."
+      ],
+      [
+        "Wohin?",
+        "Ich gehe in die Stadt."
+      ],
+      [
+        "mit",
+        "Dativ: mit dem Bus"
+      ],
+      [
+        "für",
+        "Akkusativ: für den Mann"
+      ]
+    ]
+  }
+]

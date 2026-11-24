@@ -1,0 +1,314 @@
+[
+  {
+    "place": "At work",
+    "line": "Guten Morgen! Wie war dein Wochenende?",
+    "tr": "Good morning! How was your weekend?",
+    "options": [
+      "Es war sehr schön, danke!",
+      "Ich bin ein Tisch.",
+      "Der Bus ist blau.",
+      "Das kostet fünf Euro."
+    ],
+    "correct": 0,
+    "tip": "Wie war …? asks how something was. Dein is informal."
+  },
+  {
+    "place": "At the doctor’s",
+    "line": "Haben Sie einen Termin?",
+    "tr": "Do you have an appointment?",
+    "options": [
+      "Ja, um zehn Uhr auf den Namen Yılmaz.",
+      "Nein, ich habe kein Brot.",
+      "Ich komme aus dem Urlaub.",
+      "Mir gefällt die Farbe."
+    ],
+    "correct": 0,
+    "tip": "Auf den Namen … means under the name … Use Sie in formal situations."
+  },
+  {
+    "place": "At the restaurant",
+    "line": "Was möchten Sie trinken?",
+    "tr": "What would you like to drink?",
+    "options": [
+      "Ich gehe morgen arbeiten.",
+      "Ein Wasser ohne Kohlensäure, bitte.",
+      "Mein Zug fährt um acht.",
+      "Ich kann nicht schwimmen."
+    ],
+    "correct": 1,
+    "tip": "Ohne Kohlensäure means still, without carbonation."
+  },
+  {
+    "place": "On the train",
+    "line": "Ist dieser Platz noch frei?",
+    "tr": "Is this seat still free?",
+    "options": [
+      "Ich lerne Deutsch.",
+      "Die Tür ist offen.",
+      "Ja, bitte setzen Sie sich.",
+      "Das ist sehr teuer."
+    ],
+    "correct": 2,
+    "tip": "Sich setzen means to sit down. The formal imperative is Setzen Sie sich."
+  },
+  {
+    "place": "At the supermarket",
+    "line": "Möchten Sie eine Tüte?",
+    "tr": "Would you like a bag?",
+    "options": [
+      "Ja, eine kleine, bitte.",
+      "Ich heiße Anna.",
+      "Das Wetter ist schön.",
+      "Um halb fünf."
+    ],
+    "correct": 0,
+    "tip": "Eine kleine stands for eine kleine Tüte."
+  },
+  {
+    "place": "At the office",
+    "line": "Kannst du mir die Datei schicken?",
+    "tr": "Can you send me the file?",
+    "options": [
+      "Die Datei ist ein Apfel.",
+      "Klar, ich schicke sie dir gleich.",
+      "Ich fahre nach Hause.",
+      "Nein, es ist Montag."
+    ],
+    "correct": 1,
+    "tip": "Use the dative for the recipient and accusative for the file. With two pronouns say sie dir."
+  },
+  {
+    "place": "At the town hall",
+    "line": "Haben Sie Ihren Ausweis dabei?",
+    "tr": "Do you have your ID with you?",
+    "options": [
+      "Ja, hier ist er.",
+      "Das Essen schmeckt gut.",
+      "Es regnet nicht.",
+      "Ich bin müde."
+    ],
+    "correct": 0,
+    "tip": "Dabeihaben means to have something with you."
+  },
+  {
+    "place": "In the apartment building",
+    "line": "Könnten Sie bitte etwas leiser sein?",
+    "tr": "Could you be a little quieter, please?",
+    "options": [
+      "Danke für das Geschenk.",
+      "Natürlich, entschuldigen Sie bitte.",
+      "Der Tisch ist groß.",
+      "Ich habe zwei Geschwister."
+    ],
+    "correct": 1,
+    "tip": "Könnten Sie …? introduces a polite request."
+  },
+  {
+    "place": "At the café",
+    "line": "Zahlen Sie zusammen oder getrennt?",
+    "tr": "Are you paying together or separately?",
+    "options": [
+      "Wir zahlen getrennt, bitte.",
+      "Ich wohne hier.",
+      "Nein, ich kann nicht.",
+      "Es ist sehr kalt."
+    ],
+    "correct": 0,
+    "tip": "Getrennt zahlen means to pay separately."
+  },
+  {
+    "place": "On the phone",
+    "line": "Könnte ich bitte mit Herrn Müller sprechen?",
+    "tr": "Could I speak to Mr Müller, please?",
+    "options": [
+      "Das geht schnell.",
+      "Einen Augenblick, bitte.",
+      "Der Hund schläft.",
+      "Ich habe Durst."
+    ],
+    "correct": 1,
+    "tip": "Einen Augenblick means one moment."
+  },
+  {
+    "place": "At work",
+    "line": "Bis wann brauchst du den Bericht?",
+    "tr": "When do you need the report by?",
+    "options": [
+      "Seit zwei Tagen.",
+      "Das ist mein Auto.",
+      "Am besten bis Freitag.",
+      "Ja, sehr gut."
+    ],
+    "correct": 2,
+    "tip": "Bis Freitag means by Friday."
+  },
+  {
+    "place": "At the hotel",
+    "line": "Haben Sie eine Reservierung?",
+    "tr": "Do you have a reservation?",
+    "options": [
+      "Ja, auf den Namen Demir.",
+      "Es ist sonnig.",
+      "Ich esse kein Fleisch.",
+      "Ich bin 25 Jahre alt."
+    ],
+    "correct": 0,
+    "tip": "Give the booking name with auf den Namen + surname."
+  },
+  {
+    "place": "On public transport",
+    "line": "Fährt dieser Bus zum Bahnhof?",
+    "tr": "Does this bus go to the station?",
+    "options": [
+      "Ich verstehe die Frage nicht.",
+      "Ja, aber Sie müssen einmal umsteigen.",
+      "Es ist eine schöne Stadt.",
+      "Ich hätte gerne Kaffee."
+    ],
+    "correct": 1,
+    "tip": "Umsteigen means to change buses or trains."
+  },
+  {
+    "place": "At the pharmacy",
+    "line": "Was kann ich für Sie tun?",
+    "tr": "What can I do for you?",
+    "options": [
+      "Ich brauche etwas gegen Kopfschmerzen.",
+      "Ich fahre nach Berlin.",
+      "Ich arbeite als Ingenieur.",
+      "Ich habe eine Katze."
+    ],
+    "correct": 0,
+    "tip": "Etwas gegen Kopfschmerzen is something for a headache."
+  },
+  {
+    "place": "With friends",
+    "line": "Hast du heute Abend Zeit?",
+    "tr": "Are you free this evening?",
+    "options": [
+      "Es kostet zehn Euro.",
+      "Ja, was hast du vor?",
+      "Der Schlüssel ist weg.",
+      "Nein, ich spreche Spanisch."
+    ],
+    "correct": 1,
+    "tip": "Was hast du vor? means what are you planning to do?"
+  },
+  {
+    "place": "Asking for directions",
+    "line": "Entschuldigung, wo ist die nächste Apotheke?",
+    "tr": "Excuse me, where is the nearest pharmacy?",
+    "options": [
+      "Ich habe Hunger.",
+      "Das ist mein Beruf.",
+      "Gehen Sie geradeaus und dann links.",
+      "Ich komme morgen zurück."
+    ],
+    "correct": 2,
+    "tip": "Geradeaus means straight ahead. Dann links means then left."
+  },
+  {
+    "place": "In a work meeting",
+    "line": "Haben wir noch offene Fragen?",
+    "tr": "Do we have any outstanding questions?",
+    "options": [
+      "Nein, von meiner Seite ist alles klar.",
+      "Ich bin gestern gelaufen.",
+      "Hier ist ein Brot.",
+      "Der Bus hat Verspätung."
+    ],
+    "correct": 0,
+    "tip": "Von meiner Seite means from my side."
+  },
+  {
+    "place": "While shopping",
+    "line": "Kann ich das umtauschen?",
+    "tr": "Can I exchange this?",
+    "options": [
+      "Ja, haben Sie den Kassenbon?",
+      "Ich lerne seit März.",
+      "Heute gibt es Regen.",
+      "Ich mag Äpfel."
+    ],
+    "correct": 0,
+    "tip": "Der Kassenbon is the till receipt."
+  },
+  {
+    "place": "Making a hospital appointment",
+    "line": "Passt Ihnen Dienstag um vierzehn Uhr?",
+    "tr": "Does Tuesday at two in the afternoon suit you?",
+    "options": [
+      "Ich kenne ihn nicht.",
+      "Ja, der Termin passt mir gut.",
+      "Das Fenster ist auf.",
+      "Ich esse jetzt."
+    ],
+    "correct": 1,
+    "tip": "Passen takes a dative person: Der Termin passt mir."
+  },
+  {
+    "place": "With a neighbour",
+    "line": "Können Sie bitte das Paket für mich annehmen?",
+    "tr": "Could you accept the parcel for me, please?",
+    "options": [
+      "Ich habe Ferien.",
+      "Die Bahn fährt spät.",
+      "Natürlich, kein Problem.",
+      "Nein, das ist meine Jacke."
+    ],
+    "correct": 2,
+    "tip": "Ein Paket annehmen means to accept a parcel."
+  },
+  {
+    "place": "At a job interview",
+    "line": "Wann könnten Sie bei uns anfangen?",
+    "tr": "When could you start working with us?",
+    "options": [
+      "Ich könnte ab dem ersten November anfangen.",
+      "Ich wohne in der Küche.",
+      "Ich mag den Sommer.",
+      "Der Kaffee ist heiß."
+    ],
+    "correct": 0,
+    "tip": "Ab dem + dative gives the starting date."
+  },
+  {
+    "place": "At the post office",
+    "line": "Möchten Sie den Brief als Einschreiben versenden?",
+    "tr": "Would you like to send the letter by registered mail?",
+    "options": [
+      "Nein, ich bin nicht krank.",
+      "Ja, bitte als Einschreiben.",
+      "Ich brauche ein Auto.",
+      "Er hat Geburtstag."
+    ],
+    "correct": 1,
+    "tip": "Das Einschreiben means registered mail."
+  },
+  {
+    "place": "Technical support",
+    "line": "Funktioniert das Gerät jetzt?",
+    "tr": "Is the device working now?",
+    "options": [
+      "Es ist schon dunkel.",
+      "Ich habe die Tür geschlossen.",
+      "Ja, nach dem Neustart funktioniert es.",
+      "Ich fahre mit dem Zug."
+    ],
+    "correct": 2,
+    "tip": "Der Neustart means a restart."
+  },
+  {
+    "place": "On the phone",
+    "line": "Könnten Sie das bitte wiederholen?",
+    "tr": "Could you repeat that, please?",
+    "options": [
+      "Natürlich, ich sage es noch einmal.",
+      "Der Computer ist neu.",
+      "Ich komme aus der Stadt.",
+      "Nein, das ist ein Stuhl."
+    ],
+    "correct": 0,
+    "tip": "Wiederholen means to repeat. Noch einmal means once more."
+  }
+]

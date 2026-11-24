@@ -1,0 +1,30 @@
+[
+  {
+    "_order": 793,
+    "c": "Adverbien & Partikeln",
+    "w": "doch",
+    "t": "yes (contradicting a negative)",
+    "k": "Partikel",
+    "f": "",
+    "l": "A1",
+    "e1": "Kommst du nicht? – Doch, ich komme!",
+    "e1t": "Are you not coming? - Yes, I am coming!",
+    "e2": "Komm doch mal vorbei, wir trinken einen Kaffee.",
+    "e2t": "Come on over, we'll have a coffee.",
+    "g": "Doch can contradict a negative question or statement. It can also add emphasis inside a sentence."
+  },
+  {
+    "_order": 794,
+    "c": "Adverbien & Partikeln",
+    "w": "ja",
+    "t": "yes",
+    "k": "Partikel",
+    "f": "",
+    "l": "A1",
+    "e1": "Das ist ja toll!",
+    "e1t": "That's great!",
+    "e2": "Du kennst ja meinen Bruder, er wohnt jetzt in Berlin.",
+    "e2t": "You know my brother, he now lives in Berlin.",
+    "g": "Ja can stand alone as yes or act as a particle inside a statement."
+  }
+]

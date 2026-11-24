@@ -1,0 +1,608 @@
+[
+  {
+    "de": "Der Mann arbeitet in der Firma.",
+    "case": "Nominativ",
+    "word": "der Mann",
+    "tr": "man / husband"
+  },
+  {
+    "de": "Die Frau liest ein Buch.",
+    "case": "Nominativ",
+    "word": "die Frau",
+    "tr": "woman / wife"
+  },
+  {
+    "de": "Das Kind spielt im Garten.",
+    "case": "Nominativ",
+    "word": "das Kind",
+    "tr": "child"
+  },
+  {
+    "de": "Der Tisch ist rund.",
+    "case": "Nominativ",
+    "word": "der Tisch",
+    "tr": "table"
+  },
+  {
+    "de": "Die Lampe hängt über dem Tisch.",
+    "case": "Nominativ",
+    "word": "die Lampe",
+    "tr": "lamp"
+  },
+  {
+    "de": "Das Buch ist interessant.",
+    "case": "Nominativ",
+    "word": "das Buch",
+    "tr": "book"
+  },
+  {
+    "de": "Der Stuhl steht in der Ecke.",
+    "case": "Nominativ",
+    "word": "der Stuhl",
+    "tr": "chair"
+  },
+  {
+    "de": "Die Schule ist modern.",
+    "case": "Nominativ",
+    "word": "die Schule",
+    "tr": "school"
+  },
+  {
+    "de": "Das Auto ist schnell.",
+    "case": "Nominativ",
+    "word": "das Auto",
+    "tr": "car"
+  },
+  {
+    "de": "Der Hund ist freundlich.",
+    "case": "Nominativ",
+    "word": "der Hund",
+    "tr": "dog"
+  },
+  {
+    "de": "Die Katze schläft ruhig.",
+    "case": "Nominativ",
+    "word": "die Katze",
+    "tr": "cat"
+  },
+  {
+    "de": "Das Haus ist groß.",
+    "case": "Nominativ",
+    "word": "das Haus",
+    "tr": "house"
+  },
+  {
+    "de": "Der Freund ist nett.",
+    "case": "Nominativ",
+    "word": "der Freund",
+    "tr": "male friend / boyfriend"
+  },
+  {
+    "de": "Die Freundin ist lustig.",
+    "case": "Nominativ",
+    "word": "die Freundin",
+    "tr": "female friend / girlfriend"
+  },
+  {
+    "de": "Das Fenster ist offen.",
+    "case": "Nominativ",
+    "word": "das Fenster",
+    "tr": "window"
+  },
+  {
+    "de": "Der Lehrer ist streng.",
+    "case": "Nominativ",
+    "word": "der Lehrer",
+    "tr": "teacher (male)"
+  },
+  {
+    "de": "Die Lehrerin ist freundlich.",
+    "case": "Nominativ",
+    "word": "die Lehrerin",
+    "tr": "teacher (female)"
+  },
+  {
+    "de": "Das Heft ist neu.",
+    "case": "Nominativ",
+    "word": "das Heft",
+    "tr": "notebook"
+  },
+  {
+    "de": "Der Apfel ist rot.",
+    "case": "Nominativ",
+    "word": "der Apfel",
+    "tr": "apple"
+  },
+  {
+    "de": "Die Banane ist gelb.",
+    "case": "Nominativ",
+    "word": "die Banane",
+    "tr": "banana"
+  },
+  {
+    "de": "Das Wasser ist kalt.",
+    "case": "Nominativ",
+    "word": "das Wasser",
+    "tr": "water"
+  },
+  {
+    "de": "Der Stift ist blau.",
+    "case": "Nominativ",
+    "word": "der Stift",
+    "tr": "pen"
+  },
+  {
+    "de": "Die Zeitung ist alt.",
+    "case": "Nominativ",
+    "word": "die Zeitung",
+    "tr": "newspaper"
+  },
+  {
+    "de": "Das Handy ist teuer.",
+    "case": "Nominativ",
+    "word": "das Handy",
+    "tr": "mobile phone"
+  },
+  {
+    "de": "Der Computer ist neu.",
+    "case": "Nominativ",
+    "word": "der Computer",
+    "tr": "computer"
+  },
+  {
+    "de": "Die Uhr ist kaputt.",
+    "case": "Nominativ",
+    "word": "die Uhr",
+    "tr": "clock / watch"
+  },
+  {
+    "de": "Das Bild ist schön.",
+    "case": "Nominativ",
+    "word": "das Bild",
+    "tr": "picture"
+  },
+  {
+    "de": "Der Tag ist sonnig.",
+    "case": "Nominativ",
+    "word": "der Tag",
+    "tr": "day"
+  },
+  {
+    "de": "Die Nacht ist still.",
+    "case": "Nominativ",
+    "word": "die Nacht",
+    "tr": "night"
+  },
+  {
+    "de": "Das Jahr ist lang.",
+    "case": "Nominativ",
+    "word": "das Jahr",
+    "tr": "year"
+  },
+  {
+    "de": "Der Junge ist müde.",
+    "case": "Nominativ",
+    "word": "der Junge",
+    "tr": "boy"
+  },
+  {
+    "de": "Die Blume ist bunt.",
+    "case": "Nominativ",
+    "word": "die Blume",
+    "tr": "flower"
+  },
+  {
+    "de": "Das Essen ist lecker.",
+    "case": "Nominativ",
+    "word": "das Essen",
+    "tr": "food / meal"
+  },
+  {
+    "de": "Der Name ist schwierig.",
+    "case": "Nominativ",
+    "word": "der Name",
+    "tr": "name"
+  },
+  {
+    "de": "Ich sehe den Vater im Garten.",
+    "case": "Akkusativ",
+    "word": "der Vater",
+    "tr": "father"
+  },
+  {
+    "de": "Ich umarme die Mutter herzlich.",
+    "case": "Akkusativ",
+    "word": "die Mutter",
+    "tr": "mother"
+  },
+  {
+    "de": "Ich halte das Baby in meinen Armen.",
+    "case": "Akkusativ",
+    "word": "das Baby",
+    "tr": "baby"
+  },
+  {
+    "de": "Wir treffen den Chef heute.",
+    "case": "Akkusativ",
+    "word": "der Chef",
+    "tr": "boss"
+  },
+  {
+    "de": "Ich mache die Arbeit fertig.",
+    "case": "Akkusativ",
+    "word": "die Arbeit",
+    "tr": "work"
+  },
+  {
+    "de": "Ich brauche das Geld dringend.",
+    "case": "Akkusativ",
+    "word": "das Geld",
+    "tr": "money"
+  },
+  {
+    "de": "Ich sehe den Film im Kino.",
+    "case": "Akkusativ",
+    "word": "der Film",
+    "tr": "film"
+  },
+  {
+    "de": "Ich höre die Musik sehr laut.",
+    "case": "Akkusativ",
+    "word": "die Musik",
+    "tr": "music"
+  },
+  {
+    "de": "Ich singe das Lied mit.",
+    "case": "Akkusativ",
+    "word": "das Lied",
+    "tr": "song"
+  },
+  {
+    "de": "Ich wasche den Fuß.",
+    "case": "Akkusativ",
+    "word": "der Fuß",
+    "tr": "foot"
+  },
+  {
+    "de": "Ich halte die Hand meiner Freundin.",
+    "case": "Akkusativ",
+    "word": "die Hand",
+    "tr": "hand"
+  },
+  {
+    "de": "Ich bewege das Bein langsam.",
+    "case": "Akkusativ",
+    "word": "das Bein",
+    "tr": "leg"
+  },
+  {
+    "de": "Ich drehe den Kopf zur Seite.",
+    "case": "Akkusativ",
+    "word": "der Kopf",
+    "tr": "head"
+  },
+  {
+    "de": "Ich putze die Nase meines Kindes.",
+    "case": "Akkusativ",
+    "word": "die Nase",
+    "tr": "nose"
+  },
+  {
+    "de": "Ich schließe das Auge.",
+    "case": "Akkusativ",
+    "word": "das Auge",
+    "tr": "eye"
+  },
+  {
+    "de": "Ich öffne den Mund beim Zahnarzt.",
+    "case": "Akkusativ",
+    "word": "der Mund",
+    "tr": "mouth"
+  },
+  {
+    "de": "Ich lerne die Sprache jeden Tag ein bisschen besser.",
+    "case": "Akkusativ",
+    "word": "die Sprache",
+    "tr": "language"
+  },
+  {
+    "de": "Ich wiederhole das Wort.",
+    "case": "Akkusativ",
+    "word": "das Wort",
+    "tr": "word"
+  },
+  {
+    "de": "Ich schreibe den Satz an die Tafel.",
+    "case": "Akkusativ",
+    "word": "der Satz",
+    "tr": "sentence"
+  },
+  {
+    "de": "Ich beantworte die Frage.",
+    "case": "Akkusativ",
+    "word": "die Frage",
+    "tr": "question"
+  },
+  {
+    "de": "Ich löse das Problem.",
+    "case": "Akkusativ",
+    "word": "das Problem",
+    "tr": "problem"
+  },
+  {
+    "de": "Ich schreibe den Brief heute Abend.",
+    "case": "Akkusativ",
+    "word": "der Brief",
+    "tr": "letter"
+  },
+  {
+    "de": "Ich lese die E-Mail sofort.",
+    "case": "Akkusativ",
+    "word": "die E-Mail",
+    "tr": "email"
+  },
+  {
+    "de": "Ich höre das Gespräch aufmerksam.",
+    "case": "Akkusativ",
+    "word": "das Gespräch",
+    "tr": "conversation"
+  },
+  {
+    "de": "Ich plane den Monat im Voraus.",
+    "case": "Akkusativ",
+    "word": "der Monat",
+    "tr": "month"
+  },
+  {
+    "de": "Ich wähle die Nummer.",
+    "case": "Akkusativ",
+    "word": "die Nummer",
+    "tr": "number (identifier)"
+  },
+  {
+    "de": "Ich benutze das Telefon oft.",
+    "case": "Akkusativ",
+    "word": "das Telefon",
+    "tr": "telephone"
+  },
+  {
+    "de": "Ich nehme den Bus zur Arbeit.",
+    "case": "Akkusativ",
+    "word": "der Bus",
+    "tr": "bus"
+  },
+  {
+    "de": "Ich nehme die Bahn nach Hause.",
+    "case": "Akkusativ",
+    "word": "die Bahn",
+    "tr": "railway / train"
+  },
+  {
+    "de": "Ich repariere das Fahrrad.",
+    "case": "Akkusativ",
+    "word": "das Fahrrad",
+    "tr": "bicycle"
+  },
+  {
+    "de": "Ich verpasse den Zug.",
+    "case": "Akkusativ",
+    "word": "der Zug",
+    "tr": "train"
+  },
+  {
+    "de": "Ich überquere die Straße.",
+    "case": "Akkusativ",
+    "word": "die Straße",
+    "tr": "street"
+  },
+  {
+    "de": "Ich buche das Hotel online.",
+    "case": "Akkusativ",
+    "word": "das Hotel",
+    "tr": "hotel"
+  },
+  {
+    "de": "Ich vertraue dem Arzt.",
+    "case": "Dativ",
+    "word": "der Arzt",
+    "tr": "doctor"
+  },
+  {
+    "de": "Ich danke der Ärztin für die Hilfe.",
+    "case": "Dativ",
+    "word": "die Ärztin",
+    "tr": "doctor (female)"
+  },
+  {
+    "de": "Ich schreibe dem Krankenhaus eine E-Mail.",
+    "case": "Dativ",
+    "word": "das Krankenhaus",
+    "tr": "hospital"
+  },
+  {
+    "de": "In der letzten Minute fällt ein Tor.",
+    "case": "Dativ",
+    "word": "die Minute",
+    "tr": "minute"
+  },
+  {
+    "de": "Nach dem Frühstück gehe ich zur Arbeit.",
+    "case": "Dativ",
+    "word": "das Frühstück",
+    "tr": "breakfast"
+  },
+  {
+    "de": "Ich gebe dem Kaffee etwas Milch hinzu.",
+    "case": "Dativ",
+    "word": "der Kaffee",
+    "tr": "coffee"
+  },
+  {
+    "de": "Ich füge der Milch etwas Honig hinzu.",
+    "case": "Dativ",
+    "word": "die Milch",
+    "tr": "milk"
+  },
+  {
+    "de": "Mit dem Brot esse ich Käse.",
+    "case": "Dativ",
+    "word": "das Brot",
+    "tr": "bread"
+  },
+  {
+    "de": "Zu dem Kuchen passt Schlagsahne.",
+    "case": "Dativ",
+    "word": "der Kuchen",
+    "tr": "cake"
+  },
+  {
+    "de": "Ich gebe der Suppe etwas Salz hinzu.",
+    "case": "Dativ",
+    "word": "die Suppe",
+    "tr": "soup"
+  },
+  {
+    "de": "Mit dem Salz schmeckt die Suppe besser.",
+    "case": "Dativ",
+    "word": "das Salz",
+    "tr": "salt"
+  },
+  {
+    "de": "Ich vermische den Zimt mit dem Zucker.",
+    "case": "Dativ",
+    "word": "der Zucker",
+    "tr": "sugar"
+  },
+  {
+    "de": "Auf der Flasche steht ein Name.",
+    "case": "Dativ",
+    "word": "die Flasche",
+    "tr": "bottle"
+  },
+  {
+    "de": "Aus dem Glas trinke ich Wasser.",
+    "case": "Dativ",
+    "word": "das Glas",
+    "tr": "glass"
+  },
+  {
+    "de": "Auf dem Teller liegt das Essen.",
+    "case": "Dativ",
+    "word": "der Teller",
+    "tr": "plate"
+  },
+  {
+    "de": "Mit der Gabel esse ich Nudeln.",
+    "case": "Dativ",
+    "word": "die Gabel",
+    "tr": "fork"
+  },
+  {
+    "de": "Mit dem Messer schneide ich das Brot.",
+    "case": "Dativ",
+    "word": "das Messer",
+    "tr": "knife"
+  },
+  {
+    "de": "Mit dem Löffel esse ich die Suppe.",
+    "case": "Dativ",
+    "word": "der Löffel",
+    "tr": "spoon"
+  },
+  {
+    "de": "In der Tasse ist heißer Tee.",
+    "case": "Dativ",
+    "word": "die Tasse",
+    "tr": "cup"
+  },
+  {
+    "de": "Ich gebe dem Restaurant eine gute Bewertung.",
+    "case": "Dativ",
+    "word": "das Restaurant",
+    "tr": "restaurant"
+  },
+  {
+    "de": "Ich erkläre dem Schüler die Aufgabe.",
+    "case": "Dativ",
+    "word": "der Schüler",
+    "tr": "school pupil"
+  },
+  {
+    "de": "Ich helfe der Schülerin mit den Hausaufgaben.",
+    "case": "Dativ",
+    "word": "die Schülerin",
+    "tr": "school pupil (female)"
+  },
+  {
+    "de": "Wir lernen in dem Klassenzimmer neben der Bibliothek.",
+    "case": "Dativ",
+    "word": "das Klassenzimmer",
+    "tr": "classroom"
+  },
+  {
+    "de": "Mit dem Bleistift schreibe ich meinen Namen.",
+    "case": "Dativ",
+    "word": "der Bleistift",
+    "tr": "pencil"
+  },
+  {
+    "de": "An der Tafel steht eine Notiz.",
+    "case": "Dativ",
+    "word": "die Tafel",
+    "tr": "blackboard"
+  },
+  {
+    "de": "Auf dem Papier liegt ein Lineal.",
+    "case": "Dativ",
+    "word": "das Papier",
+    "tr": "paper"
+  },
+  {
+    "de": "An dem Schlüssel hängt ein Anhänger.",
+    "case": "Dativ",
+    "word": "der Schlüssel",
+    "tr": "key"
+  },
+  {
+    "de": "Vor der Tür steht ein Mann.",
+    "case": "Dativ",
+    "word": "die Tür",
+    "tr": "door"
+  },
+  {
+    "de": "Ich folge dem Beispiel.",
+    "case": "Dativ",
+    "word": "das Beispiel",
+    "tr": "example"
+  },
+  {
+    "de": "An dem Tag habe ich einen Termin.",
+    "case": "Dativ",
+    "word": "der Tag",
+    "tr": "day"
+  },
+  {
+    "de": "In der Woche habe ich viele Termine.",
+    "case": "Dativ",
+    "word": "die Woche",
+    "tr": "week"
+  },
+  {
+    "de": "Nach dem Wochenende bin ich wieder im Büro.",
+    "case": "Dativ",
+    "word": "das Wochenende",
+    "tr": "weekend"
+  },
+  {
+    "de": "Mit dem Namen bin ich zufrieden.",
+    "case": "Dativ",
+    "word": "der Name",
+    "tr": "name"
+  },
+  {
+    "de": "In der Stadt gibt es viele Cafés.",
+    "case": "Dativ",
+    "word": "die Stadt",
+    "tr": "city / town"
+  }
+]

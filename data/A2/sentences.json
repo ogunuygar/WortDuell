@@ -1,0 +1,144 @@
+[
+  {
+    "_order": 15,
+    "lv": "A2",
+    "de": "Ich muss morgen arbeiten.",
+    "tr": "I have to work tomorrow.",
+    "rule": "Put muss second and the infinitive last."
+  },
+  {
+    "_order": 16,
+    "lv": "A2",
+    "de": "Ich rufe dich später an.",
+    "tr": "I'll call you later.",
+    "rule": "The separable prefix goes last.",
+    "alt": [
+      "Später rufe ich dich an."
+    ]
+  },
+  {
+    "_order": 17,
+    "lv": "A2",
+    "de": "Ich habe gestern gearbeitet.",
+    "tr": "I worked yesterday.",
+    "rule": "Put habe second and gearbeitet last.",
+    "alt": [
+      "Gestern habe ich gearbeitet."
+    ]
+  },
+  {
+    "_order": 18,
+    "lv": "A2",
+    "de": "Ich gebe einer Frau ein Buch.",
+    "tr": "I give a woman a book.",
+    "rule": "The recipient is dative. The gift is accusative."
+  },
+  {
+    "_order": 19,
+    "lv": "A2",
+    "de": "Ich sehe den neuen Film.",
+    "tr": "I see the new movie.",
+    "rule": "Masculine accusative: den neuen Film."
+  },
+  {
+    "_order": 20,
+    "lv": "A2",
+    "de": "Ich gebe der netten Frau ein Geschenk.",
+    "tr": "I give the nice woman a gift.",
+    "rule": "After dative der, use the adjective ending -en."
+  },
+  {
+    "_order": 21,
+    "lv": "A2",
+    "de": "Wir wohnen in einem großen Haus.",
+    "tr": "We live in a big house.",
+    "rule": "A location takes the dative: in einem großen Haus."
+  },
+  {
+    "_order": 22,
+    "lv": "A2",
+    "de": "Wir fahren in die alte Stadt.",
+    "tr": "We're going to the old town.",
+    "rule": "A destination takes the accusative: in die alte Stadt."
+  },
+  {
+    "_order": 23,
+    "lv": "A2",
+    "de": "Gestern war ich müde.",
+    "tr": "Yesterday I was tired.",
+    "rule": "The simple past of sein for ich is war."
+  },
+  {
+    "_order": 24,
+    "lv": "A2",
+    "de": "Ich konnte nicht kommen.",
+    "tr": "I couldn't come.",
+    "rule": "The past modal is konnte. The infinitive goes last."
+  },
+  {
+    "_order": 25,
+    "lv": "A2",
+    "de": "Morgen arbeite ich.",
+    "tr": "Tomorrow I will work.",
+    "rule": "The present tense with a time expression can describe the future."
+  },
+  {
+    "_order": 26,
+    "lv": "A2",
+    "de": "Ich werde morgen arbeiten.",
+    "tr": "I will be working tomorrow.",
+    "rule": "Werden is conjugated. The infinitive goes last.",
+    "alt": [
+      "Morgen werde ich arbeiten."
+    ]
+  },
+  {
+    "_order": 27,
+    "lv": "A2",
+    "de": "Nächste Woche fahren wir nach München.",
+    "tr": "Next week we will go to Munich.",
+    "rule": "The time phrase comes first, then the finite verb."
+  },
+  {
+    "_order": 28,
+    "lv": "A2",
+    "de": "Könnten Sie das bitte wiederholen?",
+    "tr": "Could you please repeat that?",
+    "rule": "Könnten Sie …? is a polite request."
+  },
+  {
+    "_order": 29,
+    "lv": "A2",
+    "de": "Ich versuche, jeden Tag Deutsch zu lernen.",
+    "tr": "I try to learn German every day.",
+    "rule": "Versuchen takes a zu-infinitive. Lernen goes last."
+  },
+  {
+    "_order": 30,
+    "lv": "A2",
+    "de": "Ich gebe es ihr.",
+    "tr": "I'll give it to her.",
+    "rule": "With two pronouns, accusative es usually comes before dative ihr."
+  },
+  {
+    "_order": 31,
+    "lv": "A2",
+    "de": "Der Zug ist schneller als der Bus.",
+    "tr": "The train is faster than the bus.",
+    "rule": "Use als after a comparative."
+  },
+  {
+    "_order": 32,
+    "lv": "A2",
+    "de": "Ich habe meine Freundin angerufen.",
+    "tr": "I called my girlfriend.",
+    "rule": "Anrufen becomes angerufen and takes haben."
+  },
+  {
+    "_order": 33,
+    "lv": "A2",
+    "de": "Ich hätte gern einen Kaffee.",
+    "tr": "I'd like to have a coffee.",
+    "rule": "Ich hätte gern politely introduces an order."
+  }
+]
