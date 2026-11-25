@@ -255,7 +255,7 @@ const wdIntro=document.createElement('div');wdIntro.id='wdSimpleHome';wdIntro.in
  <div class="wd-paths-title"><h3>Explore other activities</h3><span>No fixed schedule</span></div>
  <div class="wd-simple-paths"><button data-wd-path="academy"><span class="wd-path-icon">Aa</span><b>Grammar</b><small>Short lessons and examples</small></button><button data-wd-path="story"><span class="wd-path-icon">▤</span><b>Stories</b><small>Reading comprehension</small></button><button data-wd-path="talk"><span class="wd-path-icon">“ ”</span><b>Conversation</b><small>Everyday German</small></button><button data-wd-path="dict"><span class="wd-path-icon">⌕</span><b>My dictionary</b><small>${DATA.length.toLocaleString('en-GB')} words and notes</small></button></div>
  <details class="wd-extra"><summary>More practice and daily review <span>⌄</span></summary><div class="wd-extra-actions"><button data-wd-path="review">Adaptive review</button><button data-wd-path="daily">Previous daily plan</button><button data-wd-path="hub">All exercises</button><button data-wd-path="verbs">${ACADEMY_DATA.verbs.length} verb conjugations</button><button data-wd-path="personal">My words</button></div></details>`;
-const homeTop=wdHome.querySelector('.wd-home-top');homeTop.insertAdjacentElement('afterend',wdIntro);
+$('wdMobileProgress').insertAdjacentElement('afterend',wdIntro);
 setLevelOptions($('wdLevelPicker'), vocabularyLevels, allLevelLabel(vocabularyLevels));
 $('wdTopicPicker').innerHTML=`<option value="all">All topics · ${DATA.length.toLocaleString('en-GB')} words</option>`+TOPICS.map(t=>`<option value="${esc(t)}">${esc(TOPIC_TR[t]||t)}</option>`).join('');
 $('wdGroupKind').onclick=()=>{wdPref().group='kind';save();wdRenderPicker();};

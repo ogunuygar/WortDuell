@@ -52,6 +52,26 @@
       </div>
     </div>
 
+    <section id="wdMobileProgress" aria-labelledby="wdMobileProgressTitle">
+      <div class="wd-mobile-progress-heading"><h2 id="wdMobileProgressTitle">My progress</h2><button type="button" class="iconbtn" id="wdMobileHistory">View history →</button></div>
+      <div class="wd-mobile-progress-grid">
+        <div><strong id="wdMobileToday" class="num">0</strong><span>Questions today</span></div>
+        <div><strong id="wdMobileTotal" class="num">0</strong><span>Total questions</span></div>
+        <div><strong id="wdMobileAccuracy" class="num">–</strong><span>Accuracy</span></div>
+        <div><strong id="wdMobileLearned" class="num">0</strong><span>Learned words</span></div>
+        <div><strong id="wdMobileStreak" class="num">0</strong><span>Day streak</span></div>
+        <div><strong id="wdMobilePoints" class="num">0</strong><span>Points</span></div>
+      </div>
+      <span class="notice">Main practice counters; dedicated Grammar Academy results are tracked separately.</span>
+      <div class="wd-mobile-cloud">
+        <div class="wd-mobile-progress-heading"><b>Google Drive</b><button type="button" class="iconbtn" id="wdMobileCloudSettings">Settings →</button></div>
+        <span id="wdMobileCloudAccount">No account linked</span>
+        <span id="wdMobileCloudStatus" role="status" aria-live="polite">Preparing sync…</span>
+        <span id="wdMobileCloudLast">Last sync: —</span>
+        <button type="button" class="btn soft block" id="wdMobileSyncNow" disabled>Sync now</button>
+      </div>
+    </section>
+
     <div class="stats wd-stats">
       <div class="stat"><b class="num" id="stLearn">0</b><span>learned</span></div>
       <div class="stat"><b class="num" id="stAcc">–</b><span>accuracy</span></div>
@@ -192,7 +212,7 @@
    <!-- PROGRESS / MEMORY -->
    <section id="progress" hidden class="wrap" style="padding:0">
      <div class="top"><h2 style="font-size:24px">📊 Progress history</h2><button class="iconbtn" data-home>Home</button></div>
-     <p class="notice">Your progress is saved automatically. Open the file in the same browser to see your history.</p>
+     <p class="notice">Your progress is saved on this device. Connect the same Google account in Settings to sync it with other devices.</p>
      <div class="today-strip">
        <div class="mini-stat"><strong id="pStreak">0</strong><span>day streak</span></div>
        <div class="mini-stat"><strong id="pTotal">0</strong><span>questions in total</span></div>
