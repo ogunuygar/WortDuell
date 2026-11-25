@@ -374,11 +374,11 @@
     </div>
     <div class="card" id="cloudSettings">
       <b>Google Drive · shared learning progress</b>
-      <span class="notice">Sync release: WD-SYNC-5 · Security 1 · <span id="wdRuntimeVersion">Starting runtime…</span></span>
+      <span class="notice">Sync release: WD-SYNC-6 · Security 1 · <span id="wdRuntimeVersion">Starting runtime…</span></span>
       <span class="muted" id="cloudAccount">No account linked</span>
       <span class="notice" id="cloudStatus" role="status" aria-live="polite">Preparing sync…</span>
       <div class="pwa-actions"><button class="btn" id="cloudConnect" type="button">Connect Google</button><button class="btn soft" id="cloudSync" type="button" disabled>Sync now</button><button class="btn soft" id="cloudDisconnect" type="button" disabled>Disconnect</button></div>
-      <span class="notice">Only WortDuell’s private Drive application data is accessed. Automatic sync runs on Home or Settings while online and connected. Reconnect when Google authorization expires. Back up before first linking. Use one open WortDuell window per device. Reset/import are disabled after linking to protect shared progress.</span>
+      <span class="notice">Only WortDuell’s private Drive application data is accessed. Automatic sync runs on Home or Settings while online and connected. Reconnect when Google authorization expires. Back up before first linking. Use one open WortDuell window per device. Import is disabled after linking to protect shared progress. Reset All Progress resets learning progress on every linked device after confirmation.</span>
     </div>
     <div class="card" id="pwaSettings">
       <b>App &amp; offline updates</b>
@@ -398,8 +398,8 @@
      </div>
     <div class="card">
       <b>Reset</b>
-      <span class="muted" style="font-size:14px">This removes all points, learned words and favourites.</span>
-      <button class="btn soft" id="sReset">Reset progress</button>
+      <span class="muted" style="font-size:14px">This resets all learning progress, including points, learned words, favourites and history. If Google is linked, connect online to reset cloud progress too. Other devices reset on their next sync. Your settings are kept.</span>
+      <button class="btn soft" id="sReset">Reset All Progress</button>
     </div>
   </section>
 

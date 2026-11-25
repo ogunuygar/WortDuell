@@ -1,6 +1,6 @@
 /* ---------- settings ---------- */
 function exportCode(){try{return btoa(unescape(encodeURIComponent(JSON.stringify(S))));}catch(e){return '';}}
-function renderSettings(){$('sAuto').checked=S.set.auto;$('sAutoQuestion').checked=S.set.autoQuestion;setSeg($('segRate'),S.set.rate);setSeg($('segTime'),S.set.time);$('sExport').value=exportCode();$('sReset').dataset.arm='';$('sReset').textContent="Reset progress";
+function renderSettings(){$('sAuto').checked=S.set.auto;$('sAutoQuestion').checked=S.set.autoQuestion;setSeg($('segRate'),S.set.rate);setSeg($('segTime'),S.set.time);$('sExport').value=exportCode();$('sReset').textContent="Reset All Progress";
   $('sStorage').textContent=storageOK?"Progress is saved in this browser. Connect Google Drive to sync between devices, or use a backup.":"⚠️ Local storage is unavailable. Download a backup.";
   $('sStorage').classList.toggle('warn',!storageOK);pickVoice();}
 $('sAuto').onchange=e=>{S.set.auto=e.target.checked;save();};
@@ -30,6 +30,9 @@ function downloadBackup(){
 }
 $('sDownload').onclick=downloadBackup;
 $('pBackup').onclick=downloadBackup;
-$('sReset').onclick=()=>{const b=$('sReset');if(b.dataset.arm!=='1'){b.dataset.arm='1';b.textContent="Tap again to confirm";return;}
-  const keep=S.set;S=fresh();S.set=keep;save();renderSettings();toast("Progress reset");};
-
+function resetLocalProgress(){
+  if(!confirm('Reset ALL learning progress on this device? Your settings will be kept. This cannot be undone without a backup.'))return;
+  const keep=S.set;S=fresh();S.set=keep;save();renderSettings();toast(storageOK?'All progress reset':'Reset could not be saved');
+}
+// Safe fallback if the cloud module fails to initialize.
+$('sReset').onclick=()=>{try{if(localStorage.getItem('wortduell.cloud.v3.406290812417')){toast('Cloud sync is unavailable. Reload before resetting.');return;}}catch(e){toast('Local storage is unavailable.');return;}resetLocalProgress();};

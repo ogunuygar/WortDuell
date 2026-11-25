@@ -51,8 +51,14 @@ function cloudMergeCore(){
    }else throw Error('Unknown cloud operation');
   }return state;
  }
- function replay(seed,batches){const seen=new Set();for(const b of [...batches].sort((a,b)=>a.clock-b.clock||a.id.localeCompare(b.id))){if(seen.has(b.id))continue;seen.add(b.id);apply(seed,b.ops);}return seed;}
- return {clone,eq,diff,apply,replay};
+ const ordered=batches=>[...batches].sort((a,b)=>a.clock-b.clock||a.id.localeCompare(b.id));
+ function latestReset(batches){return ordered(batches).filter(b=>b.reset===true).at(-1)||null;}
+ function replay(seed,batches){
+  const seen=new Set(), reset=latestReset(batches), epoch=reset?.id||null;
+  if(reset)apply(seed,reset.ops);
+  for(const b of ordered(batches)){if(b.reset===true||(b.epoch||null)!==epoch||seen.has(b.id))continue;seen.add(b.id);apply(seed,b.ops);}return seed;
+ }
+ return {clone,eq,diff,apply,replay,latestReset};
 }
 /* CLOUD_RUNTIME */
 try {
@@ -64,19 +70,19 @@ try {
  refreshMobileCloud=()=>{
   const account=ui('wdMobileCloudAccount'), line=ui('wdMobileCloudStatus'), last=ui('wdMobileCloudLast'), button=ui('wdMobileSyncNow');
   account.textContent=meta?.account?'Linked account: '+(meta.email||'Google Drive'):'No account linked';
-  const dirty=Boolean(meta?.initialized&&(meta.pending||C.diff(meta.base,snapshot()).length));
+  const dirty=Boolean(meta?.initialized&&(meta.pendingReset||meta.pending||C.diff(meta.base,snapshot()).length));
   const valid=Boolean(token&&Date.now()<expiry);
   let text=status.textContent, state='neutral';
-  if(!navigator.onLine)text='Offline · local progress is kept.';
+  if(!navigator.onLine)text=meta?.pendingReset?'Offline · reset pending. Reconnect to finish.':'Offline · local progress is kept.';
   else if(stale||text.startsWith('Sync paused:')||text.startsWith('Cloud state needs attention'))state='error';
   else if(meta?.account&&!valid&&!busy)text='Connect Google to resume syncing.';
   else if(valid&&!busy&&dirty)text='Local changes waiting to sync.';
-  else if(valid&&!busy&&!dirty&&text.startsWith('Synced '))state='synced';
+  else if(valid&&!busy&&!dirty&&(text.startsWith('Synced ')||text.startsWith('All progress reset. Synced ')))state='synced';
   line.textContent=text;line.dataset.state=state;
   last.textContent=meta?.last?'Last sync: '+new Date(meta.last).toLocaleString():'Last sync: —';
   button.disabled=busy||stale||!valid||!navigator.onLine;
  };
- function controls(){connect.disabled=busy||stale;syncBtn.disabled=busy||stale||!token;disconnect.disabled=busy||!token;ui('cloudAccount').textContent=meta?.account?'Linked account: '+(meta.email||'Google Drive'):'No account linked';refreshMobileCloud();}
+ function controls(){ui('sReset').disabled=busy||stale||Boolean(meta?.pendingReset);connect.disabled=busy||stale;syncBtn.disabled=busy||stale||!token;disconnect.disabled=busy||!token;ui('cloudAccount').textContent=meta?.account?'Linked account: '+(meta.email||'Google Drive'):'No account linked';refreshMobileCloud();}
  function fail(e){if(e.status===401){token='';expiry=0;tell('Google session expired. Connect again; your local work is safe.');}else tell('Sync paused: '+(e.message||String(e))+' Local progress is kept.');controls();}
  try{const raw=localStorage.getItem(META);if(raw){meta=JSON.parse(raw);validateStateTree(meta);}if(meta?.transaction){const t=meta.transaction;if(C.eq(JSON.parse(localStorage.getItem(KEY)||'null'),t.before)||C.eq(snapshot(),t.before)){S=migrate(t.after);save();if(!storageOK)throw Error('Local storage is unavailable');}else if(!C.eq(JSON.parse(localStorage.getItem(KEY)||'null'),t.after)&&!C.eq(snapshot(),t.after))throw Error('Interrupted sync: back up progress before retrying');delete meta.transaction;persist();}}catch(e){stale=true;tell('Cloud state needs attention. Export a backup. '+e.message);}
  if(!stale)tell(meta?.account?'Connect Google to resume syncing. Offline progress is kept.':'Connect your Google account to sync progress between devices.');controls();
@@ -91,7 +97,7 @@ try {
   }return response.status===204?null:response.json();
  }
  async function list(){let page='',ids=[];do{const q=new URLSearchParams({spaces:'appDataFolder',q:"name contains '"+PREFIX+"'",fields:'nextPageToken,files(id,name)',pageSize:'1000'});if(page)q.set('pageToken',page);const result=await api('/drive/v3/files?'+q,{},'list app data');ids.push(...(result.files||[]).filter(f=>f.name.startsWith(PREFIX)).map(f=>f.id));page=result.nextPageToken||'';}while(page);return ids;}
- async function fetchBatch(id){if(cache.has(id))return cache.get(id);const b=await api('/drive/v3/files/'+encodeURIComponent(id)+'?alt=media',{},'read batch');if(b?.schema!==1||typeof b.id!=='string'||!Number.isSafeInteger(b.clock)||!Array.isArray(b.ops))throw Error('Unsupported cloud record');validateStateTree(b);cache.set(id,b);return b;}
+ async function fetchBatch(id){if(cache.has(id))return cache.get(id);const b=await api('/drive/v3/files/'+encodeURIComponent(id)+'?alt=media',{},'read batch');if(b?.schema!==1||typeof b.id!=='string'||!Number.isSafeInteger(b.clock)||!Array.isArray(b.ops)||(b.epoch!=null&&typeof b.epoch!=='string')||(b.reset!==undefined&&b.reset!==true))throw Error('Unsupported cloud record');validateStateTree(b);cache.set(id,b);return b;}
  async function upload(p){
   const boundary='wd_'+crypto.randomUUID().replaceAll('-','');
   const metadata={name:PREFIX+p.batch.id+'.json',parents:['appDataFolder'],mimeType:'application/json'};
@@ -102,9 +108,9 @@ try {
  }
  const hasWork=s=>!!(s.ans||s.pts||Object.keys(s.w||{}).length||s.fav?.length||Object.keys(s.adaptive?.skills||{}).length||Object.keys(s.grammar?.byLesson||{}).length||s.grammar?.verb?.n||s.study?.extra?.length||Object.keys(s.study?.modes||{}).length);
  const safeScreen=()=>!ui('settings').hidden||!ui('home').hidden;
- async function run(manual=false){
+ async function run(manual=false,requestReset=false){
   if(busy||stale||!token||!navigator.onLine||!safeScreen()||(!manual&&document.hidden))return;
-  busy=true;lastAttempt=Date.now();controls();tell('Syncing with Google Drive…');
+  busy=true;lastAttempt=Date.now();controls();tell(requestReset||meta?.pendingReset?'Resetting all progress…':'Syncing with Google Drive…');
   try{
    if(!storageOK)throw Error('Local storage is unavailable');
    if(!meta?.account)throw Error('Connect Google first');
@@ -112,6 +118,26 @@ try {
    const ids=new Set([...(meta.known||[]),...listed]);
    const batches=[];for(const id of ids){batches.push(await fetchBatch(id));}
    if(stale)throw Error('Another tab changed cloud data. Reload before syncing.');
+   // A reset is a durable generation boundary. Old-generation batches (including late
+   // uploads from offline devices or old app versions) can never recreate reset progress.
+   if(requestReset&&!meta.pendingReset){
+    const clock=Math.max(Date.now(),...batches.map(b=>b.clock+1),(meta.clock||0)+1);
+    const id=crypto.randomUUID(), clean=fresh();clean.set=C.clone(S.set);
+    meta.pendingReset={batch:{schema:1,id,clock,reset:true,ops:C.diff(fresh(),clean)}};persist();
+   }
+   if(meta.pendingReset){
+    const p=meta.pendingReset, existing=batches.filter(b=>b.id===p.batch.id);
+    if(existing.some(b=>!C.eq(b,p.batch)))throw Error('Conflicting reset record');
+    if(!existing.length){ids.add(await upload(p));batches.push(p.batch);}
+   }
+   const epoch=C.latestReset(batches)?.id||null;
+   if(meta.pendingReset||epoch!==(meta.epoch||null)){
+    if(!safeScreen()||stale){tell('Cloud reset recorded. Return to Home or Settings to finish.');return;}
+    const after=migrate(C.replay(fresh(),batches));
+    commit(after,after,ids,batches,epoch);
+    tell('All progress reset. Synced '+new Date(meta.last).toLocaleTimeString()+'.');
+    return;
+   }
    if(!meta.initialized){const local=snapshot();let seed=!ids.size;
     if(ids.size&&hasWork(local)){
      if(confirm('Cloud progress already exists. Is this device’s existing progress INDEPENDENT (not imported/copied from another device)? OK = merge independent progress; Cancel = choose cloud copy.'))seed=true;
@@ -122,7 +148,7 @@ try {
    }
    let captured;
    if(!meta.pending){captured=snapshot();const ops=C.diff(meta.base,captured);
-    if(ops.length){const clock=Math.max(Date.now(),...batches.map(b=>b.clock+1), (meta.clock||0)+1);const id=crypto.randomUUID();meta.pending={batch:{schema:1,id,clock,ops},snapshot:captured};persist();}
+    if(ops.length){const clock=Math.max(Date.now(),...batches.map(b=>b.clock+1), (meta.clock||0)+1);const id=crypto.randomUUID();meta.pending={batch:{schema:1,id,clock,epoch,ops},snapshot:captured};persist();}
    }
    if(meta.pending){
     const p=meta.pending, existing=batches.filter(b=>b.id===p.batch.id);
@@ -134,13 +160,24 @@ try {
    // Never change an active exercise's state. The uploaded batch is retained for a safe retry.
    if(!safeScreen()||stale){tell('Cloud changes saved. Return to Home or Settings to merge.');return;}
    const current=snapshot(), merged=migrate(C.replay(fresh(),batches)), after=migrate(C.apply(C.clone(merged),C.diff(captured,current)));
-   // Journal the local commit so a reload between the two localStorage writes can recover.
-   meta={...meta,base:C.clone(merged),known:[...ids],clock:Math.max(meta.clock||0,...batches.map(b=>b.clock)),pending:null,last:new Date().toISOString(),transaction:{before:JSON.parse(localStorage.getItem(KEY)||'null'),after:C.clone(after)}};persist();
-   S=after;save();if(!storageOK){stale=true;throw Error('Unable to save merged progress. Export a backup and reload.');}delete meta.transaction;persist();
-   if(!ui('settings').hidden)renderSettings();else renderHome();
+   commit(merged,after,ids,batches,epoch);
    tell('Synced '+new Date(meta.last).toLocaleTimeString()+'. Local progress is also saved.');
-  }catch(e){fail(e);}finally{busy=false;controls();}
+  }catch(e){fail(e);if(meta?.pendingReset)tell(status.textContent+' Reset pending: reconnect or sync again to finish.');}finally{busy=false;controls();}
  }
+ // Journal the local commit so a reload between the two localStorage writes can recover.
+ function commit(merged,after,ids,batches,epoch){
+  meta={...meta,initialized:true,base:C.clone(merged),known:[...ids],clock:Math.max(meta.clock||0,...batches.map(b=>b.clock)),epoch,pending:null,pendingReset:null,last:new Date().toISOString(),transaction:{before:JSON.parse(localStorage.getItem(KEY)||'null'),after:C.clone(after)}};persist();
+  S=after;save();if(!storageOK){stale=true;throw Error('Unable to save merged progress. Export a backup and reload.');}delete meta.transaction;persist();
+  if(!ui('settings').hidden)renderSettings();else renderHome();
+ }
+ ui('sReset').onclick=()=>{
+  if(busy||stale)return;
+  if(!meta?.account){resetLocalProgress();return;}
+  if(!token||Date.now()>=expiry||!navigator.onLine){toast('Connect Google while online to reset all devices.');tell('Connect Google to reset all progress.');return;}
+  if(!safeScreen())return;
+  if(!confirm('Reset ALL learning progress on this device and Google Drive? Other devices will reset on their next sync. Unsynced progress from before the reset will be discarded. Your settings and Google connection will be kept. Continue?'))return;
+  return run(true,true);
+ };
  connect.onclick=()=>{
   if(stale){tell('Reload this page before connecting.');return;}if(!navigator.onLine){tell('Connect to the internet first.');return;}
   if(!ready){loadGIS();tell('Google sign-in is loading. Tap Connect Google again in a moment.');return;}
@@ -159,8 +196,8 @@ try {
  syncBtn.onclick=()=>run(true);
  ui('wdMobileSyncNow').onclick=()=>run(true);
  disconnect.onclick=()=>{token='';expiry=0;cache.clear();tell('Disconnected. Progress remains on this device. Connect the same account to resume syncing.');controls();};
- // Reset/import are deliberately blocked for a linked device: a replacement is not an incremental change.
- for(const id of ['sReset','sLoad','sFile'])ui(id).addEventListener(id==='sFile'?'change':'click',e=>{if(meta?.account){e.stopImmediatePropagation();e.preventDefault();if(id==='sFile')e.target.value='';toast('Cloud-linked progress cannot be reset or imported. Download a backup instead.');}},true);
+ // Import remains blocked for a linked device: a replacement is not an incremental change.
+ for(const id of ['sLoad','sFile'])ui(id).addEventListener(id==='sFile'?'change':'click',e=>{if(meta?.account){e.stopImmediatePropagation();e.preventDefault();if(id==='sFile')e.target.value='';toast('Cloud-linked progress cannot be imported. Download a backup instead.');}},true);
  window.addEventListener('storage',e=>{if(e.key===META){stale=true;token='';tell('Another WortDuell tab changed sync state. Reload this tab before syncing.');controls();}});
  window.addEventListener('online',()=>{refreshMobileCloud();loadGIS();run();});window.addEventListener('offline',refreshMobileCloud);document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshMobileCloud();run();}});
  setInterval(()=>{if(Date.now()-lastAttempt>=60000)run();},60000);
