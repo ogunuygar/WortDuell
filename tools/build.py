@@ -7,6 +7,6 @@ FILES = ['01-vocabulary.js', '02-storage.js', '03-helpers.js', '04-speech.js', '
 parts = [(SOURCE / name).read_text(encoding="utf-8") for name in FILES]
 output = ("// Generated from js/source/ by tools/build.py. Do not edit directly.\n"
           "loadWortDuellData().then(function(content){\n\"use strict\";\n"
-          + "".join(parts) + "}).catch(wortDuellLoadError);\n")
+          + "\n".join(parts) + "}).catch(wortDuellLoadError);\n")
 (ROOT / "js" / "app.js").write_text(output, encoding="utf-8")
 print("Built js/app.js")

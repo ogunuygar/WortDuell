@@ -4,12 +4,33 @@ function bindSeg(el,fn){el.addEventListener('click',e=>{const b=e.target.closest
 bindSeg($('segDir'),v=>{S.set.dir=v;save();});
 bindSeg($('segLvl'),v=>{S.set.lvl=v;save();});
 bindSeg($('segLen'),v=>{S.set.len=+v;save();});
+// Keep the mobile card in sync with Settings even during startup.
+let refreshMobileCloud=()=>{
+  const account=$('cloudAccount'),status=$('cloudStatus'),sync=$('cloudSync');
+  if(!account||!status||!sync)return;
+  $('wdMobileCloudAccount').textContent=account.textContent;
+  $('wdMobileCloudStatus').textContent=status.textContent;
+  $('wdMobileSyncNow').disabled=sync.disabled;
+};
+const wdCloudSettingsObserver=new MutationObserver(()=>refreshMobileCloud());
+for(const id of ['cloudAccount','cloudStatus','cloudSync']){
+  const node=$(id);if(node)wdCloudSettingsObserver.observe(node,{childList:true,characterData:true,subtree:true,attributes:true,attributeFilter:['disabled']});
+}
+$('wdMobileSyncNow').onclick=()=>$('cloudSync').click();
 function renderHome(){
   const L=DATA.filter(d=>learned(d.i)).length;
   $('stLearn').textContent=L;
   $('stAcc').textContent=S.ans?Math.round(S.ok/S.ans*100)+'%':'–';
   $('stPts').textContent=S.pts>=10000?(S.pts/1000).toFixed(1)+'k':S.pts;
   $('stToday').textContent=daily(today()).answers;
+  const fmt=n=>Number(n||0).toLocaleString('en-GB');
+  $('wdMobileToday').textContent=fmt(daily(today()).answers);
+  $('wdMobileTotal').textContent=fmt(S.ans);
+  $('wdMobileAccuracy').textContent=S.ans?Math.round(S.ok/S.ans*100)+'%':'–';
+  $('wdMobileLearned').textContent=fmt(L);
+  $('wdMobileStreak').textContent=fmt(streak());
+  $('wdMobilePoints').textContent=fmt(S.pts);
+  refreshMobileCloud();
   $('stProg').textContent=L+' / '+DATA.length;
   $('barAll').style.width=(L/DATA.length*100)+'%';
   const nw=DATA.filter(d=>isWrong(d.i)).length;
@@ -38,3 +59,6 @@ $('btnSet').onclick=()=>{show('settings');renderSettings();};
 $('btnReview').onclick=()=>reviewNow();
 $('btnProgress').onclick=$('btnHistory').onclick=()=>{show('progress');renderProgress();};
 
+
+$('wdMobileHistory').onclick=()=>{show('progress');renderProgress();};
+$('wdMobileCloudSettings').onclick=()=>{show('settings');renderSettings();$('cloudConnect').scrollIntoView({block:'center'});};

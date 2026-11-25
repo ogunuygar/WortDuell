@@ -1,5 +1,5 @@
 /* ---------- storage ---------- */
-const KEY='wortduell1000.v1'; // Keep legacy key, so old progress loads in the same origin.
+const KEY='wortduell1000.v3'; // Clean-start release; previous data is not deleted.
 const DAY=86400000, INTERVALS=[1,3,7,14,30];
 const fresh=()=>({v:4,w:{},fav:[],pts:0,best:0,ans:0,ok:0,days:{},dirStats:{},modeStats:{},topicStats:{},dailyPlan:null,set:{lvl:'all',len:10,dir:'mix',auto:true,autoQuestion:false,rate:0.9,time:0}});
 const localDate=(date=new Date())=>`${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
@@ -7,7 +7,20 @@ const today=()=>localDate();
 const dayKeyOffset=n=>{const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+n);return localDate(d);};
 const blankDay=()=>({answers:0,correct:0,points:0,learned:0,review:0});
 let S=fresh(),storageOK=true;
+// Reject dangerous keys at every depth before importing/replaying state.
+function validateStateTree(value, depth=0){
+  if(depth>40)throw new Error('Progress data is too deeply nested');
+  if(value===null||typeof value!=='object'){
+    if(typeof value==='number'&&!Number.isFinite(value))throw new Error('Invalid progress number');
+    return;
+  }
+  for(const key of Object.keys(value)){
+    if(['__proto__','constructor','prototype'].includes(key))throw new Error('Unsafe progress key');
+    validateStateTree(value[key],depth+1);
+  }
+}
 function migrate(o){
+  validateStateTree(o);
   if(!o||typeof o!=='object'||!o.w||typeof o.w!=='object'||Array.isArray(o.w))throw new Error('Invalid progress');
   const m=Object.assign(fresh(),o);
   m.set=Object.assign(fresh().set,o.set||{});

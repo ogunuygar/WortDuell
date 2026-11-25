@@ -1,4 +1,5 @@
 
+
 /* WortDuell Sade: fewer decisions outside, richer learning inside. */
 #home>.stats,#home>.wd-global-progress,#home>.hero,#home>.quick,#home>.wd-history,#home>#dailyCard,#home>#hubHomeCard,#home>.mode-grid,#home>.home-academy,#home>#topics{display:none!important}
 #home>.sec-h{display:none!important}
@@ -154,3 +155,24 @@
 .wd-stage-line span{color:var(--muted)}
 .wd-stage-line .bar{grid-column:1/-1}
 @media(max-width:430px){.wd-skill-strip span{padding:6px 7px;font-size:11px}}
+
+/* Mobile/tablet progress summary: desktop navigation remains unchanged. */
+#wdMobileProgress{display:none}
+@media(max-width:1079px){
+ #wdMobileProgress{display:flex;flex-direction:column;gap:12px;border:1px solid var(--line);border-radius:18px;padding:16px;background:var(--surface);box-shadow:var(--shadow);min-width:0}
+ .wd-mobile-progress-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+ .wd-mobile-progress-heading h2{font-size:19px;margin:0;letter-spacing:-.02em}
+ .wd-mobile-progress-heading .iconbtn{min-height:44px;font-size:12px;padding:8px 10px}
+ .wd-mobile-progress-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .wd-mobile-progress-grid>div{display:flex;flex-direction:column;gap:4px;background:var(--sunk);border-radius:11px;padding:11px;min-width:0}
+ .wd-mobile-progress-grid strong{font-size:24px;line-height:1.2;overflow-wrap:anywhere}
+ .wd-mobile-progress-grid span,.wd-mobile-cloud>span{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+ .wd-mobile-cloud{display:flex;flex-direction:column;gap:7px;border-top:1px solid var(--line);padding-top:9px;min-width:0}
+ .wd-mobile-cloud .btn{min-height:44px}
+ #wdMobileCloudStatus[data-state="synced"]{color:var(--ok)}
+ #wdMobileCloudStatus[data-state="error"]{color:var(--bad)}
+}
+@media(min-width:600px) and (max-width:1079px){.wd-mobile-progress-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+@media(min-width:1080px){#home #wdMobileProgress{display:flex;flex-direction:column;gap:12px;border:1px solid var(--line);border-radius:18px;padding:16px;background:var(--surface);min-width:0}.wd-mobile-progress-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.wd-mobile-progress-heading h2{font-size:19px;margin:0}.wd-mobile-progress-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.wd-mobile-progress-grid>div{display:flex;flex-direction:column;gap:4px;background:var(--sunk);border-radius:11px;padding:11px;min-width:0}.wd-mobile-progress-grid strong{font-size:24px}.wd-mobile-progress-grid span,.wd-mobile-cloud>span{font-size:12px;color:var(--muted);overflow-wrap:anywhere}.wd-mobile-cloud{display:flex;flex-direction:column;gap:7px;border-top:1px solid var(--line);padding-top:9px;min-width:0}.wd-mobile-cloud .btn{min-height:44px}#wdMobileCloudStatus[data-state="synced"]{color:var(--ok)}#wdMobileCloudStatus[data-state="error"]{color:var(--bad)}}
+

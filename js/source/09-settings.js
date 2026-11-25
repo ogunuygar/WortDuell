@@ -1,7 +1,7 @@
 /* ---------- settings ---------- */
 function exportCode(){try{return btoa(unescape(encodeURIComponent(JSON.stringify(S))));}catch(e){return '';}}
 function renderSettings(){$('sAuto').checked=S.set.auto;$('sAutoQuestion').checked=S.set.autoQuestion;setSeg($('segRate'),S.set.rate);setSeg($('segTime'),S.set.time);$('sExport').value=exportCode();$('sReset').dataset.arm='';$('sReset').textContent="Reset progress";
-  $('sStorage').textContent=storageOK?"Progress is saved in this browser. Import your backup when changing devices.":"⚠️ Local storage is unavailable. Download a backup.";
+  $('sStorage').textContent=storageOK?"Progress is saved in this browser. Connect Google Drive to sync between devices, or use a backup.":"⚠️ Local storage is unavailable. Download a backup.";
   $('sStorage').classList.toggle('warn',!storageOK);pickVoice();}
 $('sAuto').onchange=e=>{S.set.auto=e.target.checked;save();};
 $('sAutoQuestion').onchange=e=>{S.set.autoQuestion=e.target.checked;save();};

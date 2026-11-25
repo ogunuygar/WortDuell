@@ -25,8 +25,9 @@ function addLevelFilter(container, id, levels, onChange) {
   container.appendChild(select);
   return select;
 }
+
 /* ---------- storage ---------- */
-const KEY='wortduell1000.v1'; // Keep legacy key, so old progress loads in the same origin.
+const KEY='wortduell1000.v3'; // Clean-start release; previous data is not deleted.
 const DAY=86400000, INTERVALS=[1,3,7,14,30];
 const fresh=()=>({v:4,w:{},fav:[],pts:0,best:0,ans:0,ok:0,days:{},dirStats:{},modeStats:{},topicStats:{},dailyPlan:null,set:{lvl:'all',len:10,dir:'mix',auto:true,autoQuestion:false,rate:0.9,time:0}});
 const localDate=(date=new Date())=>`${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
@@ -34,7 +35,20 @@ const today=()=>localDate();
 const dayKeyOffset=n=>{const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+n);return localDate(d);};
 const blankDay=()=>({answers:0,correct:0,points:0,learned:0,review:0});
 let S=fresh(),storageOK=true;
+// Reject dangerous keys at every depth before importing/replaying state.
+function validateStateTree(value, depth=0){
+  if(depth>40)throw new Error('Progress data is too deeply nested');
+  if(value===null||typeof value!=='object'){
+    if(typeof value==='number'&&!Number.isFinite(value))throw new Error('Invalid progress number');
+    return;
+  }
+  for(const key of Object.keys(value)){
+    if(['__proto__','constructor','prototype'].includes(key))throw new Error('Unsafe progress key');
+    validateStateTree(value[key],depth+1);
+  }
+}
 function migrate(o){
+  validateStateTree(o);
   if(!o||typeof o!=='object'||!o.w||typeof o.w!=='object'||Array.isArray(o.w))throw new Error('Invalid progress');
   const m=Object.assign(fresh(),o);
   m.set=Object.assign(fresh().set,o.set||{});
@@ -95,6 +109,7 @@ function recordAnswer(d,ok,points,wasLearned,wasReview){
   save();
 }
 
+
 /* ---------- helpers ---------- */
 const $=id=>document.getElementById(id);
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -102,6 +117,7 @@ const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a
 const SPK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg>';
 function wordHTML(d){return d.art?`<span class="art ${d.art}">${d.art}</span> ${esc(d.bare)}`:esc(d.w);}
 function toast(t){const el=$('toast');el.textContent=t;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,1800);}
+
 
 /* ---------- speech ---------- */
 let voices={de:null,tr:null};
@@ -126,10 +142,12 @@ function speak(t,lang='de-DE'){
 document.addEventListener('click',e=>{const b=e.target.closest('[data-say]');if(b){e.preventDefault();e.stopPropagation();speak(b.getAttribute('data-say'),b.getAttribute('data-lang')||'de-DE');}});
 const say=(t,label,lang='de-DE')=>`<button type="button" class="speak" data-say="${esc(t)}" data-lang="${esc(lang)}" title="${esc(label||"Read aloud")}" aria-label="${esc(label||"Read aloud")}">${SPK}</button>`;
 
+
 /* ---------- screens ---------- */
 const SCREENS=['home','quiz','result','dict','settings','progress','practice','practiceResult','analytics','academy','lesson','grammarPlay','grammarDone','verbs','verbPlay','cases','builder','builderEnd','hub','hubStories','hubStory','hubTalks','hubTalk','hubVerb','hubCloze','hubCards','hubRepeat','hubPersonal','hubMistakes','hubGuide'];
 function show(id){SCREENS.forEach(s=>$(s).hidden=s!==id);window.scrollTo(0,0);if(id==='home')renderHome();}
 document.querySelectorAll('[data-home]').forEach(b=>b.onclick=()=>show('home'));
+
 
 /* ---------- home ---------- */
 function setSeg(el,val){el.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.v==String(val))));}
@@ -137,12 +155,33 @@ function bindSeg(el,fn){el.addEventListener('click',e=>{const b=e.target.closest
 bindSeg($('segDir'),v=>{S.set.dir=v;save();});
 bindSeg($('segLvl'),v=>{S.set.lvl=v;save();});
 bindSeg($('segLen'),v=>{S.set.len=+v;save();});
+// Keep the mobile card in sync with Settings even during startup.
+let refreshMobileCloud=()=>{
+  const account=$('cloudAccount'),status=$('cloudStatus'),sync=$('cloudSync');
+  if(!account||!status||!sync)return;
+  $('wdMobileCloudAccount').textContent=account.textContent;
+  $('wdMobileCloudStatus').textContent=status.textContent;
+  $('wdMobileSyncNow').disabled=sync.disabled;
+};
+const wdCloudSettingsObserver=new MutationObserver(()=>refreshMobileCloud());
+for(const id of ['cloudAccount','cloudStatus','cloudSync']){
+  const node=$(id);if(node)wdCloudSettingsObserver.observe(node,{childList:true,characterData:true,subtree:true,attributes:true,attributeFilter:['disabled']});
+}
+$('wdMobileSyncNow').onclick=()=>$('cloudSync').click();
 function renderHome(){
   const L=DATA.filter(d=>learned(d.i)).length;
   $('stLearn').textContent=L;
   $('stAcc').textContent=S.ans?Math.round(S.ok/S.ans*100)+'%':'–';
   $('stPts').textContent=S.pts>=10000?(S.pts/1000).toFixed(1)+'k':S.pts;
   $('stToday').textContent=daily(today()).answers;
+  const fmt=n=>Number(n||0).toLocaleString('en-GB');
+  $('wdMobileToday').textContent=fmt(daily(today()).answers);
+  $('wdMobileTotal').textContent=fmt(S.ans);
+  $('wdMobileAccuracy').textContent=S.ans?Math.round(S.ok/S.ans*100)+'%':'–';
+  $('wdMobileLearned').textContent=fmt(L);
+  $('wdMobileStreak').textContent=fmt(streak());
+  $('wdMobilePoints').textContent=fmt(S.pts);
+  refreshMobileCloud();
   $('stProg').textContent=L+' / '+DATA.length;
   $('barAll').style.width=(L/DATA.length*100)+'%';
   const nw=DATA.filter(d=>isWrong(d.i)).length;
@@ -170,6 +209,10 @@ $('btnDict').onclick=()=>{show('dict');renderDict();};
 $('btnSet').onclick=()=>{show('settings');renderSettings();};
 $('btnReview').onclick=()=>reviewNow();
 $('btnProgress').onclick=$('btnHistory').onclick=()=>{show('progress');renderProgress();};
+
+
+$('wdMobileHistory').onclick=()=>{show('progress');renderProgress();};
+$('wdMobileCloudSettings').onclick=()=>{show('settings');renderSettings();$('cloudConnect').scrollIntoView({block:'center'});};
 
 /* ---------- quiz engine ---------- */
 let G=null;
@@ -287,6 +330,7 @@ $('btnAgain').onclick=()=>start(G.pool,G.opt);
 $('btnRetryWrong').onclick=()=>{const w=G.res.filter(r=>!r.ok).map(r=>r.d);start(w,{title:"Review mistakes",len:w.length,dir:G.opt.dir});};
 $('btnHome').onclick=()=>show('home');
 
+
 /* ---------- dictionary ---------- */
 $('dTopic').innerHTML="<option value=\"\">All topics</option><option value=\"*fav\">Favourites</option><option value=\"*wrong\">My mistakes</option>"+TOPICS.map((t,k)=>`<option value="${k}">${esc(t)}</option>`).join('');
 let dT=null;$('dSearch').addEventListener('input',()=>{clearTimeout(dT);dT=setTimeout(renderDict,150);});$('dTopic').onchange=renderDict;
@@ -302,10 +346,11 @@ function renderDict(){
 }
 $('dList').addEventListener('toggle',e=>{const el=e.target;if(el.open){const b=el.querySelector('.body');if(!b.innerHTML)b.innerHTML=detailHTML(DATA[+el.dataset.i]);}},true);
 
+
 /* ---------- settings ---------- */
 function exportCode(){try{return btoa(unescape(encodeURIComponent(JSON.stringify(S))));}catch(e){return '';}}
 function renderSettings(){$('sAuto').checked=S.set.auto;$('sAutoQuestion').checked=S.set.autoQuestion;setSeg($('segRate'),S.set.rate);setSeg($('segTime'),S.set.time);$('sExport').value=exportCode();$('sReset').dataset.arm='';$('sReset').textContent="Reset progress";
-  $('sStorage').textContent=storageOK?"Progress is saved in this browser. Import your backup when changing devices.":"⚠️ Local storage is unavailable. Download a backup.";
+  $('sStorage').textContent=storageOK?"Progress is saved in this browser. Connect Google Drive to sync between devices, or use a backup.":"⚠️ Local storage is unavailable. Download a backup.";
   $('sStorage').classList.toggle('warn',!storageOK);pickVoice();}
 $('sAuto').onchange=e=>{S.set.auto=e.target.checked;save();};
 $('sAutoQuestion').onchange=e=>{S.set.autoQuestion=e.target.checked;save();};
@@ -336,6 +381,7 @@ $('sDownload').onclick=downloadBackup;
 $('pBackup').onclick=downloadBackup;
 $('sReset').onclick=()=>{const b=$('sReset');if(b.dataset.arm!=='1'){b.dataset.arm='1';b.textContent="Tap again to confirm";return;}
   const keep=S.set;S=fresh();S.set=keep;save();renderSettings();toast("Progress reset");};
+
 
 /* ---------- spaced review and multi-day memory ---------- */
 function reviewNow(){const words=dueWords();if(!words.length){toast("No reviews due yet");return;}
@@ -368,6 +414,7 @@ $('activityGrid').addEventListener('click',e=>{const b=e.target.closest('[data-d
 });
 $('pReview').onclick=reviewNow;
 $('pWrong').onclick=()=>start(DATA.filter(d=>isWrong(d.i)),{title:"Review mistakes",len:20,dir:S.set.dir});
+
 
 /* ---------- Pro learning engine: all data stays under legacy storage key ---------- */
 const MODE_LABELS={choice:"Word recognition",type:"Writing",listen:"Listening",sentence:"Sentence building",article:"Article",plural:"Plural",dialogue:"Dialogue",art:"Article",gap:"Fill in the blank",de2tr:"DE → EN",tr2de:"EN → DE"};
@@ -709,6 +756,7 @@ function renderAnalytics(){
   $('analysisDifficult').innerHTML=errors.map(d=>`<div class="rrow"><div class="t"><b>${wordHTML(d)}</b><span>${esc(d.t)} · ${S.w[d.i].x} incorrect, ${S.w[d.i].r} correct</span></div>${say(d.w)}</div>`).join('')||"<p class=\"muted\">No missed words yet.</p>";
 }
 
+
 /* WortDuell A1-A2 Akademi: additive, offline, no dependencies. */
 const ACADEMY_DATA={verbs: content.verbs, casework: content.cases};
 const GRAMMAR_LESSONS=content.GRAMMAR_LESSONS;
@@ -819,6 +867,7 @@ function renderCases(){
  $('casesList').innerHTML=rows.map((c,i)=>`<div class="case-example"><span class="tag">${esc(c.case)}</span><b>${esc(c.de)}</b><small>Focus word: ${esc(c.word)} (${esc(c.tr)})</small><span>${say(c.de,"Listen to the example sentence")}</span></div>`).join('');
 }
 $('casesSelect').addEventListener('change',e=>{caseFilter=e.target.value;renderCases();});
+
 /* Dedicated, rule-tagged German sentence builder from the supplied worksheets. */
 const BUILDER_BANK=content.BUILDER_BANK;
 let BPLUS=null;
@@ -870,6 +919,7 @@ $('builderCheck').onclick=()=>{
  $('builderFeedback').innerHTML=`<div class="verdict ${accepted?'ok':'bad'}">${accepted?"✓ Correct sentence!":"Check the word order"}</div><b>${esc(item.de)}</b><p class="notice">${esc(item.rule)}</p>${adaptNudge('builder:'+item.de,accepted,item.rule+' '+item.de)}${item.alt?.length?`<p class="notice"><strong>Another correct version:</strong> ${esc(item.alt.join(' / '))}</p>`:''}<div class="row">${say(item.de,"Listen to the sentence")}<button class="btn primary" id="builderNext" style="flex:1">${BPLUS.i+1>=BPLUS.items.length?"Results":"Continue"}</button></div>`;
  $('builderNext').onclick=()=>{BPLUS.i++;builderRender();};
 };
+
 
 /* WortDuell A1-A2: calm daily study hub, additive and compatible with v1 storage. */
 const HUB_DATA={stories: content.stories, dialogues: content.dialogues};
@@ -943,7 +993,7 @@ function repeatRate(ok){const t=hRepeat,c=t.entries[t.i];hLog("Spoken repetition
 $('hRepeatToHub').onclick=()=>{showHub('hub');drawHub();};
 let editPersonal=null;
 function renderPersonal(){showHub('hubPersonal');$('myLevel').value=content.levels.includes(hub().settings.level)?hub().settings.level:'A1';renderPersonalList();}
-function renderPersonalList(){const custom=hub().extra;const q=fold($('mySearch').value||'');$('myTotal').textContent=custom.length+" words";$('myList').innerHTML=custom.filter(x=>fold(x.de+' '+x.tr+' '+x.ex).includes(q)).map(x=>`<div class="hub-list-item"><b>${esc(x.de)}</b><small>${esc(x.tr)} · ${esc(x.level)} ${x.ex?'· '+esc(x.ex):''}</small><div class="row"><button class="btn soft" data-mine-edit="${x.id}">Düzenle</button><button class="btn soft" data-mine-remove="${x.id}">Sil</button>${say(x.de,"Listen to the word")}</div></div>`).join('')||"<p class=\"notice\">No words yet. Add your first word.</p>";$('myFlash').disabled=custom.length===0;$('myFlash').textContent=`Practise my words (${custom.length})`;}
+function renderPersonalList(){const custom=hub().extra;const q=fold($('mySearch').value||'');$('myTotal').textContent=custom.length+" words";$('myList').innerHTML=custom.filter(x=>fold(x.de+' '+x.tr+' '+x.ex).includes(q)).map(x=>`<div class="hub-list-item"><b>${esc(x.de)}</b><small>${esc(x.tr)} · ${esc(x.level)} ${x.ex?'· '+esc(x.ex):''}</small><div class="row"><button class="btn soft" data-mine-edit="${esc(x.id)}">Düzenle</button><button class="btn soft" data-mine-remove="${esc(x.id)}">Sil</button>${say(x.de,"Listen to the word")}</div></div>`).join('')||"<p class=\"notice\">No words yet. Add your first word.</p>";$('myFlash').disabled=custom.length===0;$('myFlash').textContent=`Practise my words (${custom.length})`;}
 $('mySearch').oninput=renderPersonalList;
 $('mySave').onclick=()=>{const de=$('myDE').value.trim(),tr=$('myTR').value.trim(),level=$('myLevel').value,ex=$('myEx').value.trim();if(!de||!tr){toast("Enter the German word and its English meaning");return;}const h=hub();if(editPersonal){const item=h.extra.find(x=>x.id===editPersonal);if(item)Object.assign(item,{de,tr,level,ex});}else{h.extra.push({id:Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,7),de,tr,level,ex});}save();editPersonal=null;for(const id of ['myDE','myTR','myEx'])$(id).value='';$('mySave').textContent="Save word";$('myCancel').hidden=true;renderPersonalList();toast("Word saved");};
 $('myList').addEventListener('click',e=>{const ed=e.target.closest('[data-mine-edit]');if(ed){const x=hub().extra.find(v=>v.id===ed.dataset.mineEdit);if(!x)return;editPersonal=x.id;$('myDE').value=x.de;$('myTR').value=x.tr;$('myEx').value=x.ex||'';$('myLevel').value=x.level;$('mySave').textContent="Save changes";$('myCancel').hidden=false;window.scrollTo(0,0);return;}const del=e.target.closest('[data-mine-remove]');if(del){if(del.dataset.armed==='1'){hub().extra=hub().extra.filter(x=>x.id!==del.dataset.mineRemove);save();renderPersonalList();}else{del.dataset.armed='1';del.textContent="Delete? Tap again";}}});
@@ -973,6 +1023,7 @@ renderHome=function(){hOriginalRender();updateStudyHome();adaptHome();};
 /* Even old backups import safely: hub() initializes new fields lazily. */
 const hOriginalImport=importProgress;
 importProgress=function(raw){hOriginalImport(raw);hub();adaptive();save();updateStudyHome();adaptHome();};
+
 
 
 /* === Akıllı Öğrenme: shared memory inside the legacy progress === */
@@ -1095,6 +1146,7 @@ function adaptReviewNext(){
  toast("No difficult questions are due. Try a new question.");
 }
 
+
 /* --- Wide desktop chrome. Layout stays unchanged. --- */
 const wdNavTo=(target)=>{
   if(target==='home')show('home');
@@ -1151,6 +1203,7 @@ const wdOldSave=save;
 let wdUpdateRequested=false;
 save=function(){wdOldSave();if(!wdUpdateRequested){wdUpdateRequested=true;requestAnimationFrame(()=>{wdUpdateRequested=false;wdUpdateRail();});}};
 wdUpdateRail();
+
 
 /* --- WortDuell Sade Anlam Testi integration --- */
 /* WortDuell Sade: existing study screens/data/storage are retained. */
@@ -1407,9 +1460,9 @@ const wdIntro=document.createElement('div');wdIntro.id='wdSimpleHome';wdIntro.in
  <div class="wd-options-row"><label>Level<select id="wdLevelPicker" class="wd-simple-select"><option value="all">A1 + A2</option><option value="A1">A1</option><option value="A2">A2</option></select></label><label>Round<select id="wdCountPicker" class="wd-simple-select"><option value="5">5 words</option><option value="10">10 words</option><option value="20">20 words</option><option value="30">30 words</option><option value="40">40 words</option><option value="50">50 words</option></select></label></div>
  <div class="wd-start-footer"><span id="wdStudySummary" class="muted-small"></span><button class="btn primary" id="wdBeginLearn">Start learning <span aria-hidden="true">→</span></button></div></div>
  <div class="wd-paths-title"><h3>Explore other activities</h3><span>No fixed schedule</span></div>
- <div class="wd-simple-paths"><button type="button" data-ai-open><span class="wd-path-icon">✦</span><b>AI tutor</b><small>Grammar and local AI</small></button><button data-wd-path="academy"><span class="wd-path-icon">Aa</span><b>Grammar</b><small>Short lessons and examples</small></button><button data-wd-path="story"><span class="wd-path-icon">▤</span><b>Stories</b><small>Reading comprehension</small></button><button data-wd-path="talk"><span class="wd-path-icon">“ ”</span><b>Conversation</b><small>Everyday German</small></button><button data-wd-path="dict"><span class="wd-path-icon">⌕</span><b>My dictionary</b><small>${DATA.length.toLocaleString('en-GB')} words and notes</small></button></div>
+ <div class="wd-simple-paths"><button data-wd-path="academy"><span class="wd-path-icon">Aa</span><b>Grammar</b><small>Short lessons and examples</small></button><button data-wd-path="story"><span class="wd-path-icon">▤</span><b>Stories</b><small>Reading comprehension</small></button><button data-wd-path="talk"><span class="wd-path-icon">“ ”</span><b>Conversation</b><small>Everyday German</small></button><button data-wd-path="dict"><span class="wd-path-icon">⌕</span><b>My dictionary</b><small>${DATA.length.toLocaleString('en-GB')} words and notes</small></button></div>
  <details class="wd-extra"><summary>More practice and daily review <span>⌄</span></summary><div class="wd-extra-actions"><button data-wd-path="review">Adaptive review</button><button data-wd-path="daily">Previous daily plan</button><button data-wd-path="hub">All exercises</button><button data-wd-path="verbs">${ACADEMY_DATA.verbs.length} verb conjugations</button><button data-wd-path="personal">My words</button></div></details>`;
-const homeTop=wdHome.querySelector('.wd-home-top');homeTop.insertAdjacentElement('afterend',wdIntro);
+$('wdMobileProgress').insertAdjacentElement('afterend',wdIntro);
 setLevelOptions($('wdLevelPicker'), vocabularyLevels, allLevelLabel(vocabularyLevels));
 $('wdTopicPicker').innerHTML=`<option value="all">All topics · ${DATA.length.toLocaleString('en-GB')} words</option>`+TOPICS.map(t=>`<option value="${esc(t)}">${esc(TOPIC_TR[t]||t)}</option>`).join('');
 $('wdGroupKind').onclick=()=>{wdPref().group='kind';save();wdRenderPicker();};
@@ -1448,7 +1501,6 @@ wdDictKind.onchange=renderDict;
 // Gentle defaults only for new users; keep old settings untouched if a backup exists.
 const wdNavNames={home:"Home",hub:"Learn",academy:"Grammar",dict:"My dictionary",progress:"My progress",settings:"Settings"};
 document.querySelectorAll('.wd-side .wd-nav-item').forEach(b=>{
- if(b.hasAttribute('data-ai-open'))return;
  const id=b.dataset.go;if(!(id in wdNavNames)){b.hidden=true;return;}
  b.lastElementChild.textContent=wdNavNames[id];
 });
@@ -1483,4 +1535,181 @@ const wdOldHomeRender=renderHome;
 renderHome=function(){wdOldHomeRender();wdRenderPicker();};
 
 renderHome();
+
+/* Google Drive appDataFolder sync. Append-only batches; no OAuth secrets or tokens on disk. */
+function cloudMergeCore(){
+ const clone=x=>x===undefined?undefined:JSON.parse(JSON.stringify(x));
+ const obj=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
+ const eq=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+ const safe=k=>typeof k==='string'&&!['__proto__','prototype','constructor'].includes(k);
+ const counter=p=>{
+  const [a,b]=p,k=p.at(-1);
+  if(p.length===1)return ['pts','ans','ok'].includes(k);
+  if(a==='w')return ['r','x'].includes(k);
+  if(a==='days')return p.length===3&&['answers','correct','points','learned','review'].includes(k)||p.length===4&&p[2]==='modes';
+  if(['dirStats','modeStats','topicStats'].includes(a))return ['n','ok','points'].includes(k);
+  if(a==='grammar')return ['n','ok'].includes(k);
+  if(a==='adaptive'&&b==='skills')return ['n','ok','bad'].includes(k);
+  if(a==='study')return ['n','ok','runs','count','known','again'].includes(k)&&['modes','stories','conversations','mistakes','cards'].includes(b);
+  return false;
+ };
+ function diff(a,b,p=[],out=[]){
+  if(eq(a,b))return out;
+  if(p.length&&(p[0]==='dailyPlan'||p.join('.')==='adaptive.recent')){out.push(b===undefined?['del',p]:['set',p,clone(b)]);return out;}
+  if(p.join('.')==='fav'||p.join('.')==='study.extra'){
+   const key=x=>p[0]==='fav'?String(x):x.id, old=new Map((Array.isArray(a)?a:[]).map(x=>[key(x),x])), next=new Map((Array.isArray(b)?b:[]).map(x=>[key(x),x]));
+   for(const [id,v] of next)if(!eq(old.get(id),v))out.push(['item',p,id,clone(v)]);
+   for(const id of old.keys())if(!next.has(id))out.push(['removeItem',p,id]);return out;
+  }
+  if(obj(b)&&(obj(a)||a===undefined||a===null)){
+   if(p.length&&!obj(a))out.push(['ensure',p]);
+   for(const k of new Set([...Object.keys(a||{}),...Object.keys(b)]))if(safe(k))diff(a?.[k],b[k],[...p,k],out);return out;
+  }
+  if(b===undefined){out.push(['del',p]);return out;}
+  if(typeof b==='number'&&counter(p)){const delta=b-(typeof a==='number'?a:0);if(delta||a===undefined)out.push(['add',p,delta]);return out;}
+  if(p.at(-1)==='best'||p.at(-1)==='recognitionHits'){out.push(['max',p,b]);return out;}
+  if(p.includes('mastery')&&typeof b==='boolean'){if(b)out.push(['set',p,true]);return out;}
+  if(p.at(-1)==='learnedOn'){out.push(['earliest',p,b]);return out;}
+  out.push(['set',p,clone(b)]);return out;
+ }
+ function apply(state,ops){
+  for(const op of ops){
+   const [kind,p,v,item]=op;validateStateTree(v);validateStateTree(item);if(!Array.isArray(p)||!p.length||p.length>12||!p.every(safe))throw Error('Invalid cloud change path');
+   let t=state;for(const k of p.slice(0,-1)){if(!Object.hasOwn(t,k)||!obj(t[k]))t[k]={};t=t[k];}const k=p.at(-1);
+   if(kind==='del')delete t[k];
+   else if(kind==='ensure'){if(!obj(t[k]))t[k]={};}
+   else if(kind==='add'){if(!Number.isFinite(v)||!counter(p))throw Error('Invalid cloud counter');t[k]=Math.max(0,(Number(t[k])||0)+v);}
+   else if(kind==='max')t[k]=Math.max(Number(t[k])||0,Number(v)||0);
+   else if(kind==='earliest'){if(!t[k]||v<t[k])t[k]=v;}
+   else if(kind==='set')t[k]=clone(v);
+   else if(kind==='item'||kind==='removeItem'){
+    if(!['fav','study.extra'].includes(p.join('.')))throw Error('Invalid list change');
+    const arr=Array.isArray(t[k])?t[k]:[], key=x=>p[0]==='fav'?String(x):x.id;
+    t[k]=arr.filter(x=>key(x)!==v);if(kind==='item')t[k].push(clone(item));
+   }else throw Error('Unknown cloud operation');
+  }return state;
+ }
+ function replay(seed,batches){const seen=new Set();for(const b of [...batches].sort((a,b)=>a.clock-b.clock||a.id.localeCompare(b.id))){if(seen.has(b.id))continue;seen.add(b.id);apply(seed,b.ops);}return seed;}
+ return {clone,eq,diff,apply,replay};
+}
+/* CLOUD_RUNTIME */
+try {
+(()=>{
+ const C=cloudMergeCore(), META='wortduell.cloud.v3.406290812417', PREFIX='wortduell-sync-v3-', CLIENT='406290812417-8ioo5cb50nktmsl0spp2r4t1egtjjm42.apps.googleusercontent.com', SCOPE='https://www.googleapis.com/auth/drive.appdata';
+ const ui=id=>document.getElementById(id), status=ui('cloudStatus'), connect=ui('cloudConnect'), syncBtn=ui('cloudSync'), disconnect=ui('cloudDisconnect');
+ let meta=null, token='', expiry=0, busy=false, stale=false, ready=false, loading=false, cache=new Map(), lastAttempt=0;
+ const snapshot=()=>C.clone(S), tell=t=>{status.textContent=t;refreshMobileCloud();}, persist=()=>{try{localStorage.setItem(META,JSON.stringify(meta));}catch(e){stale=true;throw Error('Cloud journal could not be saved. Export a backup and reload.');}};
+ refreshMobileCloud=()=>{
+  const account=ui('wdMobileCloudAccount'), line=ui('wdMobileCloudStatus'), last=ui('wdMobileCloudLast'), button=ui('wdMobileSyncNow');
+  account.textContent=meta?.account?'Linked account: '+(meta.email||'Google Drive'):'No account linked';
+  const dirty=Boolean(meta?.initialized&&(meta.pending||C.diff(meta.base,snapshot()).length));
+  const valid=Boolean(token&&Date.now()<expiry);
+  let text=status.textContent, state='neutral';
+  if(!navigator.onLine)text='Offline · local progress is kept.';
+  else if(stale||text.startsWith('Sync paused:')||text.startsWith('Cloud state needs attention'))state='error';
+  else if(meta?.account&&!valid&&!busy)text='Connect Google to resume syncing.';
+  else if(valid&&!busy&&dirty)text='Local changes waiting to sync.';
+  else if(valid&&!busy&&!dirty&&text.startsWith('Synced '))state='synced';
+  line.textContent=text;line.dataset.state=state;
+  last.textContent=meta?.last?'Last sync: '+new Date(meta.last).toLocaleString():'Last sync: —';
+  button.disabled=busy||stale||!valid||!navigator.onLine;
+ };
+ function controls(){connect.disabled=busy||stale;syncBtn.disabled=busy||stale||!token;disconnect.disabled=busy||!token;ui('cloudAccount').textContent=meta?.account?'Linked account: '+(meta.email||'Google Drive'):'No account linked';refreshMobileCloud();}
+ function fail(e){if(e.status===401){token='';expiry=0;tell('Google session expired. Connect again; your local work is safe.');}else tell('Sync paused: '+(e.message||String(e))+' Local progress is kept.');controls();}
+ try{const raw=localStorage.getItem(META);if(raw){meta=JSON.parse(raw);validateStateTree(meta);}if(meta?.transaction){const t=meta.transaction;if(C.eq(JSON.parse(localStorage.getItem(KEY)||'null'),t.before)||C.eq(snapshot(),t.before)){S=migrate(t.after);save();if(!storageOK)throw Error('Local storage is unavailable');}else if(!C.eq(JSON.parse(localStorage.getItem(KEY)||'null'),t.after)&&!C.eq(snapshot(),t.after))throw Error('Interrupted sync: back up progress before retrying');delete meta.transaction;persist();}}catch(e){stale=true;tell('Cloud state needs attention. Export a backup. '+e.message);}
+ if(!stale)tell(meta?.account?'Connect Google to resume syncing. Offline progress is kept.':'Connect your Google account to sync progress between devices.');controls();
+ function loadGIS(){if(ready||loading||!navigator.onLine)return;loading=true;const script=document.createElement('script');script.src='https://accounts.google.com/gsi/client';script.async=true;script.onload=()=>{ready=Boolean(window.google?.accounts?.oauth2);loading=false;};script.onerror=()=>{loading=false;};document.head.append(script);}
+ loadGIS();
+ async function api(path,opts={},operation='request'){
+  if(!token||Date.now()>=expiry){const e=Error('Google session expired');e.status=401;throw e;}
+  const response=await fetch('https://www.googleapis.com'+path,{...opts,headers:{...opts.headers,Authorization:'Bearer '+token},cache:'no-store',credentials:'omit'});
+  if(!response.ok){
+   let reason='';try{const data=await response.json();const value=data?.error?.errors?.[0]?.reason||data?.error?.status;if(typeof value==='string'&&/^[a-zA-Z0-9_]+$/.test(value))reason=' · '+value;}catch(_){}
+   const e=Error('Google Drive '+operation+' HTTP '+response.status+reason);e.status=response.status;throw e;
+  }return response.status===204?null:response.json();
+ }
+ async function list(){let page='',ids=[];do{const q=new URLSearchParams({spaces:'appDataFolder',q:"name contains '"+PREFIX+"'",fields:'nextPageToken,files(id,name)',pageSize:'1000'});if(page)q.set('pageToken',page);const result=await api('/drive/v3/files?'+q,{},'list app data');ids.push(...(result.files||[]).filter(f=>f.name.startsWith(PREFIX)).map(f=>f.id));page=result.nextPageToken||'';}while(page);return ids;}
+ async function fetchBatch(id){if(cache.has(id))return cache.get(id);const b=await api('/drive/v3/files/'+encodeURIComponent(id)+'?alt=media',{},'read batch');if(b?.schema!==1||typeof b.id!=='string'||!Number.isSafeInteger(b.clock)||!Array.isArray(b.ops))throw Error('Unsupported cloud record');validateStateTree(b);cache.set(id,b);return b;}
+ async function upload(p){
+  const boundary='wd_'+crypto.randomUUID().replaceAll('-','');
+  const metadata={name:PREFIX+p.batch.id+'.json',parents:['appDataFolder'],mimeType:'application/json'};
+  const body='--'+boundary+'\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n'+JSON.stringify(metadata)+'\r\n--'+boundary+'\r\nContent-Type: application/json\r\n\r\n'+JSON.stringify(p.batch)+'\r\n--'+boundary+'--\r\n';
+  const result=await api('/upload/drive/v3/files?uploadType=multipart&fields=id',{method:'POST',headers:{'Content-Type':'multipart/related; boundary='+boundary},body},'create batch');
+  if(typeof result?.id!=='string'||!result.id)throw Error('Drive create batch returned no file ID');
+  cache.set(result.id,p.batch);return result.id;
+ }
+ const hasWork=s=>!!(s.ans||s.pts||Object.keys(s.w||{}).length||s.fav?.length||Object.keys(s.adaptive?.skills||{}).length||Object.keys(s.grammar?.byLesson||{}).length||s.grammar?.verb?.n||s.study?.extra?.length||Object.keys(s.study?.modes||{}).length);
+ const safeScreen=()=>!ui('settings').hidden||!ui('home').hidden;
+ async function run(manual=false){
+  if(busy||stale||!token||!navigator.onLine||!safeScreen()||(!manual&&document.hidden))return;
+  busy=true;lastAttempt=Date.now();controls();tell('Syncing with Google Drive…');
+  try{
+   if(!storageOK)throw Error('Local storage is unavailable');
+   if(!meta?.account)throw Error('Connect Google first');
+   const listed=await list();
+   const ids=new Set([...(meta.known||[]),...listed]);
+   const batches=[];for(const id of ids){batches.push(await fetchBatch(id));}
+   if(stale)throw Error('Another tab changed cloud data. Reload before syncing.');
+   if(!meta.initialized){const local=snapshot();let seed=!ids.size;
+    if(ids.size&&hasWork(local)){
+     if(confirm('Cloud progress already exists. Is this device’s existing progress INDEPENDENT (not imported/copied from another device)? OK = merge independent progress; Cancel = choose cloud copy.'))seed=true;
+     else if(!confirm('Use the cloud copy instead of this device’s old progress? A local backup will be downloaded first. Cancel to stop syncing.')){tell('Initial sync cancelled. Local progress is unchanged.');return;}
+     if(!seed)downloadBackup();
+    }
+    meta.base=seed?{}:local;meta.initialized=true;persist();
+   }
+   let captured;
+   if(!meta.pending){captured=snapshot();const ops=C.diff(meta.base,captured);
+    if(ops.length){const clock=Math.max(Date.now(),...batches.map(b=>b.clock+1), (meta.clock||0)+1);const id=crypto.randomUUID();meta.pending={batch:{schema:1,id,clock,ops},snapshot:captured};persist();}
+   }
+   if(meta.pending){
+    const p=meta.pending, existing=batches.filter(b=>b.id===p.batch.id);
+    if(existing.some(b=>!C.eq(b,p.batch)))throw Error('Conflicting cloud batch; local work kept');
+    if(!existing.length){ids.add(await upload(p));batches.push(p.batch);}
+    captured=p.snapshot;
+   }
+   else captured=captured||snapshot();
+   // Never change an active exercise's state. The uploaded batch is retained for a safe retry.
+   if(!safeScreen()||stale){tell('Cloud changes saved. Return to Home or Settings to merge.');return;}
+   const current=snapshot(), merged=migrate(C.replay(fresh(),batches)), after=migrate(C.apply(C.clone(merged),C.diff(captured,current)));
+   // Journal the local commit so a reload between the two localStorage writes can recover.
+   meta={...meta,base:C.clone(merged),known:[...ids],clock:Math.max(meta.clock||0,...batches.map(b=>b.clock)),pending:null,last:new Date().toISOString(),transaction:{before:JSON.parse(localStorage.getItem(KEY)||'null'),after:C.clone(after)}};persist();
+   S=after;save();if(!storageOK){stale=true;throw Error('Unable to save merged progress. Export a backup and reload.');}delete meta.transaction;persist();
+   if(!ui('settings').hidden)renderSettings();else renderHome();
+   tell('Synced '+new Date(meta.last).toLocaleTimeString()+'. Local progress is also saved.');
+  }catch(e){fail(e);}finally{busy=false;controls();}
+ }
+ connect.onclick=()=>{
+  if(stale){tell('Reload this page before connecting.');return;}if(!navigator.onLine){tell('Connect to the internet first.');return;}
+  if(!ready){loadGIS();tell('Google sign-in is loading. Tap Connect Google again in a moment.');return;}
+  busy=true;controls();tell('Waiting for Google sign-in…');
+  try{const client=google.accounts.oauth2.initTokenClient({client_id:CLIENT,scope:SCOPE,include_granted_scopes:false,callback:async r=>{
+   if(r.error||!r.access_token){busy=false;fail(Error(r.error||'No token returned'));return;}
+   const scopes=String(r.scope||'').trim().split(/\s+/).filter(Boolean);
+   const lifetime=Number(r.expires_in);
+   if(scopes.length!==1||scopes[0]!==SCOPE||!Number.isFinite(lifetime)||lifetime<=30){busy=false;token='';expiry=0;fail(Error('Unexpected Google permission or token lifetime. Only private application data is allowed.'));return;}
+   token=r.access_token;expiry=Date.now()+lifetime*1000-30000;
+   try{const about=await api('/drive/v3/about?fields=user(permissionId,emailAddress,displayName)',{},'identify account');const user=about.user;if(!user?.permissionId)throw Error('Cannot identify Drive account');if(meta?.account&&meta.account!==user.permissionId){token='';throw Error('This device is linked to another Google account. Reconnect using the original account.');}
+    if(!meta){meta={account:user.permissionId,email:user.emailAddress||user.displayName||'',initialized:false,base:null,known:[],clock:0,pending:null};persist();}busy=false;controls();await run(true);
+   }catch(e){busy=false;token='';fail(e);}
+  },error_callback:e=>{busy=false;fail(Error(e.type||'Google popup failed'));}});client.requestAccessToken({prompt:'select_account'});}catch(e){busy=false;fail(e);}
+ };
+ syncBtn.onclick=()=>run(true);
+ ui('wdMobileSyncNow').onclick=()=>run(true);
+ disconnect.onclick=()=>{token='';expiry=0;cache.clear();tell('Disconnected. Progress remains on this device. Connect the same account to resume syncing.');controls();};
+ // Reset/import are deliberately blocked for a linked device: a replacement is not an incremental change.
+ for(const id of ['sReset','sLoad','sFile'])ui(id).addEventListener(id==='sFile'?'change':'click',e=>{if(meta?.account){e.stopImmediatePropagation();e.preventDefault();if(id==='sFile')e.target.value='';toast('Cloud-linked progress cannot be reset or imported. Download a backup instead.');}},true);
+ window.addEventListener('storage',e=>{if(e.key===META){stale=true;token='';tell('Another WortDuell tab changed sync state. Reload this tab before syncing.');controls();}});
+ window.addEventListener('online',()=>{refreshMobileCloud();loadGIS();run();});window.addEventListener('offline',refreshMobileCloud);document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshMobileCloud();run();}});
+ setInterval(()=>{if(Date.now()-lastAttempt>=60000)run();},60000);
+})();
+ document.getElementById('wdRuntimeVersion').textContent='Runtime ready';
+} catch (error) {
+ console.error('WortDuell sync initialization',error);
+ const message='Sync initialization failed: '+(error.message||String(error));
+ for(const id of ['cloudStatus','wdMobileCloudStatus']){const el=document.getElementById(id);if(el)el.textContent=message;}
+ document.getElementById('wdRuntimeVersion').textContent='Runtime error';
+ for(const id of ['cloudConnect','cloudSync','wdMobileSyncNow','cloudDisconnect']){const el=document.getElementById(id);if(el)el.disabled=true;}
+}
+
 }).catch(wortDuellLoadError);

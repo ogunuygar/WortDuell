@@ -16,7 +16,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, help='New empty deployment directory (optional)')
     args = parser.parse_args()
-    files = [ROOT / name for name in ('index.html', 'manifest.webmanifest', 'js/app.js', 'js/data-loader.js', 'js/pwa.js', 'js/ai.js', 'js/ai-worker.js')]
+    files = [ROOT / name for name in ('index.html', 'manifest.webmanifest', 'js/app.js', 'js/data-loader.js', 'js/pwa.js', 'js/runtime-status.js')]
     for folder, pattern in [('css', '*.css'), ('icons', '*.png')]:
         files.extend((ROOT / folder).glob(pattern))
     # Include only datasets explicitly referenced by the runtime catalog.
