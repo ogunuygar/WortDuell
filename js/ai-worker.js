@@ -8,7 +8,21 @@ self.onmessage = async ({data}) => {
   if (busy) return;
   busy = true;
   try {
-    if (data.type === 'load') {
+    if (data.type === 'delete') {
+      // This worker is separate from inference; deletion never requires a GPU.
+      const {deleteModelAllInfoInCache, hasModelInCache, prebuiltAppConfig} = await import(runtimeURL);
+      const ids = Object.values(models).flatMap(base => ['-q4f16_1-MLC','-q4f32_1-MLC'].map(suffix => base + suffix));
+      const failures = [];
+      for (const id of ids) {
+        try {
+          // Also remove partially downloaded variants, not only complete models.
+          await deleteModelAllInfoInCache(id, prebuiltAppConfig);
+          if (await hasModelInCache(id, prebuiltAppConfig)) throw Error('Model still in cache');
+        } catch (error) { failures.push(id + ': ' + String(error?.message || error)); }
+      }
+      if (failures.length) throw Error('Could not verify full deletion. Retry: ' + failures.join('; '));
+      send('deleted');
+    } else if (data.type === 'load') {
       if (!navigator.gpu) throw Error('WebGPU is not available in this browser worker. Try updated Safari or desktop Chrome.');
       const adapter = await navigator.gpu.requestAdapter();
       if (!adapter) throw Error('No compatible GPU adapter.');
@@ -22,7 +36,7 @@ self.onmessage = async ({data}) => {
       send('ready', {model:id});
     } else if (data.type === 'generate') {
       if (!engine) throw Error('Load the model first.');
-      const chunks = await engine.chat.completions.create({messages:data.messages, stream:true, max_tokens:320, temperature:data.mode === 'grammar' ? 0.15 : 0.45, top_p:0.85});
+      const chunks = await engine.chat.completions.create({messages:data.messages, stream:true, max_tokens:400, temperature:0.25, top_p:0.85});
       for await (const chunk of chunks) {
         const text = chunk.choices?.[0]?.delta?.content;
         if (text) send('token',{text});

@@ -360,6 +360,18 @@
       <div class="pwa-actions"><button class="btn soft" id="pwaCheck" type="button">Check for updates</button><button class="btn" id="pwaApply" type="button" hidden>Apply update &amp; reload</button></div>
       <span class="notice">Saved lessons work offline after setup. Speech availability depends on your device. Back up progress before switching browsers or installing the app.</span>
     </div>
+    <div class="card" id="aiStorageSettings">
+      <b>AI model storage</b>
+      <span class="muted" id="aiStorageModel"></span>
+      <span id="aiStorageStatus" role="status" class="notice">Checking AI status…</span>
+      <progress id="aiStorageProgress" max="1" value="0" hidden aria-label="AI model download progress"></progress>
+      <div class="ai-storage-actions">
+        <button class="btn soft" type="button" id="aiStorageDownload">Download Model</button>
+        <button class="btn soft" type="button" id="aiStorageUnload">Unload Model</button>
+        <button class="btn soft" type="button" id="aiStorageDelete">Delete Model</button>
+      </div>
+      <span class="notice">Unload stops AI and releases working memory. Delete removes WortDuell's downloaded AI model variants from this browser's storage, not your learning progress. Other devices are unaffected. Internet may be required to load the model management runtime.</span>
+    </div>
     <div class="card">
       <b>Back up progress</b>
       <span class="muted" style="font-size:14px">Your progress is saved on this device. Copy the backup code and import it to continue on another device.</span>
@@ -416,19 +428,16 @@
   <p>Finish your exercise before reloading. Other open WortDuell tabs may also reload.</p>
   <div class="pwa-actions"><button class="btn" id="pwaBannerApply" type="button">Update &amp; reload</button><button class="btn soft" id="pwaDismiss" type="button">Later</button></div>
 </div>
-<dialog id="aiDialog" aria-labelledby="aiTitle">
-  <div class="ai-heading"><h2 id="aiTitle">✦ Local AI tutor</h2><button type="button" class="btn soft" id="aiClose">Close</button></div>
-  <p>Practise German with an optional on-device language model. No AI API key or subscription.</p>
-  <p class="ai-note">Experimental: small models can make grammar mistakes. The first load downloads hundreds of MB or more from external hosts. Use Wi-Fi. Each device has its own cache; internet may be needed again. No model runs before you load it.</p>
-  <div class="ai-controls"><label>Model<select id="aiModel"><option value="light">Qwen 2.5 0.5B · light</option><option value="balanced">Qwen 2.5 1.5B · better quality</option></select></label><label>Level<select id="aiLevel"><option>A1</option><option>A2</option></select></label></div>
-  <div class="ai-actions"><button type="button" class="btn primary" id="aiLoad">Load AI model</button><button type="button" class="btn soft" id="aiStop" disabled>Stop / release AI</button></div>
-  <p id="aiStatus" role="status">AI is off.</p><progress id="aiProgress" max="1" value="0" hidden aria-label="Model loading progress"></progress>
-  <label>Activity<select id="aiMode"><option value="grammar">Grammar checker</option><option value="conversation">German conversation</option><option value="explain">Explain a word or rule</option><option value="practice">AI exercise</option></select></label>
-  <div id="aiLog" role="log" aria-label="Tutor conversation" aria-live="off"></div>
-  <form id="aiForm"><label>Your sentence or question<textarea id="aiInput" maxlength="600" required placeholder="Write a German sentence or ask in English…"></textarea></label>
-    <div class="ai-actions"><button type="button" class="btn soft" id="aiExample">Try an example</button><button type="submit" class="btn primary" id="aiSend" disabled>Ask AI</button><button type="button" class="btn soft" id="aiClear">Clear chat</button></div>
-  </form><p class="ai-note">Messages stay in this session and are processed by the local model. Closing the tutor or leaving the app stops the AI worker. Your existing study records are not changed.</p>
-</dialog>
+<button type="button" id="aiLauncher" data-ai-open aria-controls="aiDialog" aria-expanded="false" aria-label="Open AI tutor">✦ <span>AI Tutor</span></button>
+<aside id="aiDialog" hidden aria-labelledby="aiTitle">
+  <header class="ai-heading"><div><h2 id="aiTitle">✦ AI Tutor</h2><small>Ask anything about German</small></div><button type="button" class="ai-icon" id="aiClose" aria-label="Close tutor">×</button></header>
+  <div class="ai-setup" id="aiSetup"><p id="aiIntro">Download the local AI once on this device. No API key. Use Wi-Fi; the model is several hundred MB or more.</p><button type="button" class="btn primary" id="aiLoad">Download AI model</button></div>
+  <div class="ai-state"><p id="aiStatus" role="status">AI is not loaded.</p><button type="button" class="ai-icon ai-stop" id="aiStop" hidden>Stop</button></div>
+  <progress id="aiProgress" max="1" value="0" hidden aria-label="Model loading progress"></progress>
+  <div id="aiLog" role="log" aria-label="Tutor conversation" aria-live="off"><div class="ai-welcome"><strong>Hallo! 👋</strong><p>Ask me about a word, a sentence or a grammar rule.</p><button type="button" class="ai-example" data-ai-example="Why do we use dem instead of den?">Why dem instead of den?</button><button type="button" class="ai-example" data-ai-example="What is the difference between weil and denn?">weil vs. denn</button></div></div>
+  <form id="aiForm"><label class="ai-sr-only" for="aiInput">Your question</label><textarea id="aiInput" maxlength="1000" rows="2" required placeholder="Ask your German tutor…"></textarea><button type="submit" class="btn primary" id="aiSend" aria-label="Send message">↑</button></form>
+  <footer class="ai-footer"><small>Local AI · Can make mistakes</small><button type="button" id="aiClear" class="ai-link">New chat</button></footer>
+</aside>
 <script src="js/ai.js" defer></script>
 <script src="js/pwa.js" defer></script>
 <script src="js/data-loader.js"></script>
