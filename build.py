@@ -69,12 +69,28 @@ def update_csp(html):
     return html
 
 
+def update_pwa_meta(html):
+    """Retain the Apple tag and add its standard mobile counterpart once."""
+    standard = r'<meta\b[^>]*\bname\s*=\s*(?:"mobile-web-app-capable"|\'mobile-web-app-capable\'|mobile-web-app-capable(?=\s|/?>))[^>]*>'
+    apple = r'<meta\b[^>]*\bname\s*=\s*(?:"apple-mobile-web-app-capable"|\'apple-mobile-web-app-capable\'|apple-mobile-web-app-capable(?=\s|/?>))[^>]*>'
+    if re.search(standard, html, re.IGNORECASE):
+        return html
+    tag = '<meta name="mobile-web-app-capable" content="yes">'
+    html, count = re.subn(apple, lambda m: m[0] + tag, html, count=1, flags=re.IGNORECASE)
+    if not count:
+        html, count = re.subn(r'</head\s*>', lambda m: tag + m[0], html, count=1, flags=re.IGNORECASE)
+        if not count:
+            raise RuntimeError('No head element found for PWA metadata')
+    return html
+
+
 def main():
     index = ROOT / 'index.html'
     html = migrate(index.read_text(encoding='utf-8'))
     for new in (*REPLACEMENTS.values(), CLIENT):
         if new not in html:
             raise RuntimeError(f'Expected migration marker missing: {new}')
+    html = update_pwa_meta(html)
     html = update_csp(html)
     files = sorted(SOURCE.glob('[0-9][0-9]-*.js'))
     if len(files) != 18 or files[-1].name != '18-cloud-sync.js':
@@ -93,7 +109,7 @@ def main():
               + ''.join(parts) + '}).catch(wortDuellLoadError);\n')
     (ROOT / 'js' / 'app.js').write_text(output, encoding='utf-8')
     index.write_text(html, encoding='utf-8')
-    print('Built js/app.js; updated index.html OAuth, storage v2 and CSP.')
+    print('Built js/app.js; updated index.html OAuth, storage v2, PWA metadata and CSP.')
 
 
 if __name__ == '__main__':
