@@ -1,4 +1,5 @@
-<!doctype html><html lang="en"><head><meta charset=utf8><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://accounts.google.com/gsi/client 'sha256-2CH+9PzRV4NBgXMZAzKAOJLg5MykW96mIfbQmPddgxI=' 'sha256-xSOq9gNRYR/e9wG7ICJX6Z6U0b1vRES0Hk+Q3nQR4u8=' 'sha256-9DJNifH1v0ktBFIRrefy5k5qXzLHYOjATnjXBLhUsMw=' 'sha256-hdV8hhdXbQcLdCRxnvrBhLaxiG0ykbWqxp+z56fxlMc='; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; connect-src 'self' https://www.googleapis.com https://accounts.google.com/gsi/; frame-src https://accounts.google.com/gsi/; img-src 'self' data: blob:; font-src 'self'; media-src 'self' blob:; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self' https://accounts.google.com; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="stylesheet" href="css/learning.css"><link rel="stylesheet" href="css/desktop.css" id="wideDesktopStyles"><link rel="stylesheet" href="css/adaptive.css" id="adaptiveStyle"><style id="wortSadeStyles">
+<!doctype html><html lang="en"><head><meta charset=utf8><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://accounts.google.com/gsi/client 'sha256-2CH+9PzRV4NBgXMZAzKAOJLg5MykW96mIfbQmPddgxI=' 'sha256-/YYjnYwdpfcSiaWqf0oNb/eC6PugmuMIiReSDecp3tE=' 'sha256-9DJNifH1v0ktBFIRrefy5k5qXzLHYOjATnjXBLhUsMw='; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; connect-src 'self' https://www.googleapis.com https://accounts.google.com/gsi/; frame-src https://accounts.google.com/gsi/; img-src 'self' data: blob:; font-src 'self'; media-src 'self' blob:; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self' https://accounts.google.com; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="stylesheet" href="css/learning.css"><link rel="stylesheet" href="css/desktop.css" id="wideDesktopStyles"><link rel="stylesheet" href="css/adaptive.css" id="adaptiveStyle"><style id="wortSadeStyles">
+
 /* WortDuell Sade: fewer decisions outside, richer learning inside. */
 #home>.stats,#home>.wd-global-progress,#home>.hero,#home>.quick,#home>.wd-history,#home>#dailyCard,#home>#hubHomeCard,#home>.mode-grid,#home>.home-academy,#home>#topics{display:none!important}
 #home>.sec-h{display:none!important}
@@ -715,7 +716,7 @@ function addLevelFilter(container, id, levels, onChange) {
   return select;
 }
 /* ---------- storage ---------- */
-const KEY='wortduell1000.v2'; // Keep legacy key, so old progress loads in the same origin.
+const KEY='wortduell1000.v1'; // Keep legacy key, so old progress loads in the same origin.
 const DAY=86400000, INTERVALS=[1,3,7,14,30];
 const fresh=()=>({v:4,w:{},fav:[],pts:0,best:0,ans:0,ok:0,days:{},dirStats:{},modeStats:{},topicStats:{},dailyPlan:null,set:{lvl:'all',len:10,dir:'mix',auto:true,autoQuestion:false,rate:0.9,time:0}});
 const localDate=(date=new Date())=>`${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
@@ -2267,7 +2268,7 @@ function cloudMergeCore(){
 /* CLOUD_RUNTIME */
 try {
 (()=>{
- const C=cloudMergeCore(), META='wortduell.cloud.v2', PREFIX='wortduell-sync-v2-', CLIENT='406290812417-8ioo5cb50nktmsl0spp2r4t1egtjjm42.apps.googleusercontent.com', SCOPE='https://www.googleapis.com/auth/drive.appdata';
+ const C=cloudMergeCore(), META='wortduell.cloud.v1.406290812417', PREFIX='wortduell-sync-v1-', CLIENT='406290812417-8ioo5cb50nktmsl0spp2r4t1egtjjm42.apps.googleusercontent.com', SCOPE='https://www.googleapis.com/auth/drive.appdata';
  const ui=id=>document.getElementById(id), status=ui('cloudStatus'), connect=ui('cloudConnect'), syncBtn=ui('cloudSync'), disconnect=ui('cloudDisconnect');
  let meta=null, token='', expiry=0, busy=false, stale=false, ready=false, loading=false, cache=new Map(), lastAttempt=0;
  const snapshot=()=>C.clone(S), tell=t=>{status.textContent=t;refreshMobileCloud();}, persist=()=>{try{localStorage.setItem(META,JSON.stringify(meta));}catch(e){stale=true;throw Error('Cloud journal could not be saved. Export a backup and reload.');}};
