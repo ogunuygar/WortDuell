@@ -4,7 +4,19 @@ function bindSeg(el,fn){el.addEventListener('click',e=>{const b=e.target.closest
 bindSeg($('segDir'),v=>{S.set.dir=v;save();});
 bindSeg($('segLvl'),v=>{S.set.lvl=v;save();});
 bindSeg($('segLen'),v=>{S.set.len=+v;save();});
-let refreshMobileCloud=()=>{};
+// Keep the mobile card in sync with Settings even during startup.
+let refreshMobileCloud=()=>{
+  const account=$('cloudAccount'),status=$('cloudStatus'),sync=$('cloudSync');
+  if(!account||!status||!sync)return;
+  $('wdMobileCloudAccount').textContent=account.textContent;
+  $('wdMobileCloudStatus').textContent=status.textContent;
+  $('wdMobileSyncNow').disabled=sync.disabled;
+};
+const wdCloudSettingsObserver=new MutationObserver(()=>refreshMobileCloud());
+for(const id of ['cloudAccount','cloudStatus','cloudSync']){
+  const node=$(id);if(node)wdCloudSettingsObserver.observe(node,{childList:true,characterData:true,subtree:true,attributes:true,attributeFilter:['disabled']});
+}
+$('wdMobileSyncNow').onclick=()=>$('cloudSync').click();
 function renderHome(){
   const L=DATA.filter(d=>learned(d.i)).length;
   $('stLearn').textContent=L;
