@@ -2268,7 +2268,7 @@ function cloudMergeCore(){
 /* CLOUD_RUNTIME */
 try {
 (()=>{
- const C=cloudMergeCore(), META='wortduell.cloud.v1', PREFIX='wortduell-sync-v1-', CLIENT='680154645414-7c0mr680ricb69h3mggb4uo0ibl9r6i4.apps.googleusercontent.com', SCOPE='https://www.googleapis.com/auth/drive.appdata';
+ const C=cloudMergeCore(), META='wortduell.cloud.v1', PREFIX='wortduell-sync-v1-', CLIENT='406290812417-8ioo5cb50nktmsl0spp2r4t1egtjjm42.apps.googleusercontent.com', SCOPE='https://www.googleapis.com/auth/drive.appdata';
  const ui=id=>document.getElementById(id), status=ui('cloudStatus'), connect=ui('cloudConnect'), syncBtn=ui('cloudSync'), disconnect=ui('cloudDisconnect');
  let meta=null, token='', expiry=0, busy=false, stale=false, ready=false, loading=false, cache=new Map(), lastAttempt=0;
  const snapshot=()=>C.clone(S), tell=t=>{status.textContent=t;refreshMobileCloud();}, persist=()=>{try{localStorage.setItem(META,JSON.stringify(meta));}catch(e){stale=true;throw Error('Cloud journal could not be saved. Export a backup and reload.');}};
