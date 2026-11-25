@@ -373,6 +373,7 @@
     </div>
     <div class="card" id="cloudSettings">
       <b>Google Drive · shared learning progress</b>
+      <span class="notice">Sync release: WD-SYNC-3</span>
       <span class="muted" id="cloudAccount">No account linked</span>
       <span class="notice" id="cloudStatus" role="status" aria-live="polite">Preparing sync…</span>
       <div class="pwa-actions"><button class="btn" id="cloudConnect" type="button">Connect Google</button><button class="btn soft" id="cloudSync" type="button" disabled>Sync now</button><button class="btn soft" id="cloudDisconnect" type="button" disabled>Disconnect</button></div>
@@ -445,4 +446,16 @@
 <script src="js/data-loader.js"></script>
 <script src="js/app.js"></script>
 
+<script>
+// A missing or outdated runtime must not look like a sync in progress.
+setTimeout(function(){
+  var status=document.getElementById('cloudStatus');
+  if(status && status.textContent.trim()==='Preparing sync…'){
+    var msg='Sync module did not initialize. Check the published release (WD-SYNC-3). Local progress is unchanged.';
+    status.textContent=msg;
+    var mobile=document.getElementById('wdMobileCloudStatus');if(mobile)mobile.textContent=msg;
+    var connect=document.getElementById('cloudConnect');if(connect)connect.disabled=true;
+  }
+},15000);
+</script>
 </body></html>
