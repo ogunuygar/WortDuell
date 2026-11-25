@@ -1,6 +1,6 @@
 // Dedicated worker: no model work until an explicit Load request.
 // The pinned third-party runtime and model artifacts are downloaded by the browser.
-const runtimeURL = 'https://esm.run/@mlc-ai/web-llm@0.2.85';
+const runtimeURL = 'https://esm.run/@mlc-ai/web-llm@0.2.82';
 const models = {light:'Qwen2.5-0.5B-Instruct', balanced:'Qwen2.5-1.5B-Instruct'};
 let engine = null, busy = false;
 const send = (type, data = {}) => self.postMessage({type, ...data});
