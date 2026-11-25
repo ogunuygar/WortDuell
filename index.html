@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="stylesheet" href="css/learning.css"><link rel="stylesheet" href="css/desktop.css" id="wideDesktopStyles"><link rel="stylesheet" href="css/adaptive.css" id="adaptiveStyle"><style id="wortSadeStyles">
+<!doctype html><html lang="en"><head><meta charset=utf8><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://accounts.google.com/gsi/client 'sha256-2CH+9PzRV4NBgXMZAzKAOJLg5MykW96mIfbQmPddgxI=' 'sha256-xSOq9gNRYR/e9wG7ICJX6Z6U0b1vRES0Hk+Q3nQR4u8=' 'sha256-9DJNifH1v0ktBFIRrefy5k5qXzLHYOjATnjXBLhUsMw='; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; connect-src 'self' https://www.googleapis.com https://accounts.google.com/gsi/; frame-src https://accounts.google.com/gsi/; img-src 'self' data: blob:; font-src 'self'; media-src 'self' blob:; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self' https://accounts.google.com; upgrade-insecure-requests"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="stylesheet" href="css/learning.css"><link rel="stylesheet" href="css/desktop.css" id="wideDesktopStyles"><link rel="stylesheet" href="css/adaptive.css" id="adaptiveStyle"><style id="wortSadeStyles">
 
 /* WortDuell Sade: fewer decisions outside, richer learning inside. */
 #home>.stats,#home>.wd-global-progress,#home>.hero,#home>.quick,#home>.wd-history,#home>#dailyCard,#home>#hubHomeCard,#home>.mode-grid,#home>.home-academy,#home>#topics{display:none!important}
@@ -552,7 +552,7 @@
     <div class="card" id="cloudSettings">
       <b>Google Drive · shared learning progress</b>
       <!-- WD-SYNC-3 build guard compatibility -->
-      <span class="notice">Sync release: WD-SYNC-4 · <span id="wdRuntimeVersion">Starting runtime…</span></span>
+      <span class="notice">Sync release: WD-SYNC-4 · Security 1 · <span id="wdRuntimeVersion">Starting runtime…</span></span>
       <span class="muted" id="cloudAccount">No account linked</span>
       <span class="notice" id="cloudStatus" role="status" aria-live="polite">Preparing sync…</span>
       <div class="pwa-actions"><button class="btn" id="cloudConnect" type="button">Connect Google</button><button class="btn soft" id="cloudSync" type="button" disabled>Sync now</button><button class="btn soft" id="cloudDisconnect" type="button" disabled>Disconnect</button></div>
@@ -724,7 +724,20 @@ const today=()=>localDate();
 const dayKeyOffset=n=>{const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()+n);return localDate(d);};
 const blankDay=()=>({answers:0,correct:0,points:0,learned:0,review:0});
 let S=fresh(),storageOK=true;
+// Reject dangerous keys at every depth before importing/replaying state.
+function validateStateTree(value, depth=0){
+  if(depth>40)throw new Error('Progress data is too deeply nested');
+  if(value===null||typeof value!=='object'){
+    if(typeof value==='number'&&!Number.isFinite(value))throw new Error('Invalid progress number');
+    return;
+  }
+  for(const key of Object.keys(value)){
+    if(['__proto__','constructor','prototype'].includes(key))throw new Error('Unsafe progress key');
+    validateStateTree(value[key],depth+1);
+  }
+}
 function migrate(o){
+  validateStateTree(o);
   if(!o||typeof o!=='object'||!o.w||typeof o.w!=='object'||Array.isArray(o.w))throw new Error('Invalid progress');
   const m=Object.assign(fresh(),o);
   m.set=Object.assign(fresh().set,o.set||{});
@@ -1657,7 +1670,7 @@ function repeatRate(ok){const t=hRepeat,c=t.entries[t.i];hLog("Spoken repetition
 $('hRepeatToHub').onclick=()=>{showHub('hub');drawHub();};
 let editPersonal=null;
 function renderPersonal(){showHub('hubPersonal');$('myLevel').value=content.levels.includes(hub().settings.level)?hub().settings.level:'A1';renderPersonalList();}
-function renderPersonalList(){const custom=hub().extra;const q=fold($('mySearch').value||'');$('myTotal').textContent=custom.length+" words";$('myList').innerHTML=custom.filter(x=>fold(x.de+' '+x.tr+' '+x.ex).includes(q)).map(x=>`<div class="hub-list-item"><b>${esc(x.de)}</b><small>${esc(x.tr)} · ${esc(x.level)} ${x.ex?'· '+esc(x.ex):''}</small><div class="row"><button class="btn soft" data-mine-edit="${x.id}">Düzenle</button><button class="btn soft" data-mine-remove="${x.id}">Sil</button>${say(x.de,"Listen to the word")}</div></div>`).join('')||"<p class=\"notice\">No words yet. Add your first word.</p>";$('myFlash').disabled=custom.length===0;$('myFlash').textContent=`Practise my words (${custom.length})`;}
+function renderPersonalList(){const custom=hub().extra;const q=fold($('mySearch').value||'');$('myTotal').textContent=custom.length+" words";$('myList').innerHTML=custom.filter(x=>fold(x.de+' '+x.tr+' '+x.ex).includes(q)).map(x=>`<div class="hub-list-item"><b>${esc(x.de)}</b><small>${esc(x.tr)} · ${esc(x.level)} ${x.ex?'· '+esc(x.ex):''}</small><div class="row"><button class="btn soft" data-mine-edit="${esc(x.id)}">Düzenle</button><button class="btn soft" data-mine-remove="${esc(x.id)}">Sil</button>${say(x.de,"Listen to the word")}</div></div>`).join('')||"<p class=\"notice\">No words yet. Add your first word.</p>";$('myFlash').disabled=custom.length===0;$('myFlash').textContent=`Practise my words (${custom.length})`;}
 $('mySearch').oninput=renderPersonalList;
 $('mySave').onclick=()=>{const de=$('myDE').value.trim(),tr=$('myTR').value.trim(),level=$('myLevel').value,ex=$('myEx').value.trim();if(!de||!tr){toast("Enter the German word and its English meaning");return;}const h=hub();if(editPersonal){const item=h.extra.find(x=>x.id===editPersonal);if(item)Object.assign(item,{de,tr,level,ex});}else{h.extra.push({id:Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,7),de,tr,level,ex});}save();editPersonal=null;for(const id of ['myDE','myTR','myEx'])$(id).value='';$('mySave').textContent="Save word";$('myCancel').hidden=true;renderPersonalList();toast("Word saved");};
 $('myList').addEventListener('click',e=>{const ed=e.target.closest('[data-mine-edit]');if(ed){const x=hub().extra.find(v=>v.id===ed.dataset.mineEdit);if(!x)return;editPersonal=x.id;$('myDE').value=x.de;$('myTR').value=x.tr;$('myEx').value=x.ex||'';$('myLevel').value=x.level;$('mySave').textContent="Save changes";$('myCancel').hidden=false;window.scrollTo(0,0);return;}const del=e.target.closest('[data-mine-remove]');if(del){if(del.dataset.armed==='1'){hub().extra=hub().extra.filter(x=>x.id!==del.dataset.mineRemove);save();renderPersonalList();}else{del.dataset.armed='1';del.textContent="Delete? Tap again";}}});
@@ -2234,8 +2247,8 @@ function cloudMergeCore(){
  }
  function apply(state,ops){
   for(const op of ops){
-   const [kind,p,v,item]=op;if(!Array.isArray(p)||!p.length||p.length>12||!p.every(safe))throw Error('Invalid cloud change path');
-   let t=state;for(const k of p.slice(0,-1)){if(!obj(t[k]))t[k]={};t=t[k];}const k=p.at(-1);
+   const [kind,p,v,item]=op;validateStateTree(v);validateStateTree(item);if(!Array.isArray(p)||!p.length||p.length>12||!p.every(safe))throw Error('Invalid cloud change path');
+   let t=state;for(const k of p.slice(0,-1)){if(!Object.hasOwn(t,k)||!obj(t[k]))t[k]={};t=t[k];}const k=p.at(-1);
    if(kind==='del')delete t[k];
    else if(kind==='ensure'){if(!obj(t[k]))t[k]={};}
    else if(kind==='add'){if(!Number.isFinite(v)||!counter(p))throw Error('Invalid cloud counter');t[k]=Math.max(0,(Number(t[k])||0)+v);}
@@ -2276,13 +2289,13 @@ try {
  };
  function controls(){connect.disabled=busy||stale;syncBtn.disabled=busy||stale||!token;disconnect.disabled=busy||!token;ui('cloudAccount').textContent=meta?.account?'Linked account: '+(meta.email||'Google Drive'):'No account linked';refreshMobileCloud();}
  function fail(e){if(e.status===401){token='';expiry=0;tell('Google session expired. Connect again; your local work is safe.');}else tell('Sync paused: '+(e.message||String(e))+' Local progress is kept.');controls();}
- try{const raw=localStorage.getItem(META);if(raw)meta=JSON.parse(raw);if(meta?.transaction){const t=meta.transaction;if(C.eq(JSON.parse(localStorage.getItem(KEY)||'null'),t.before)||C.eq(snapshot(),t.before)){S=migrate(t.after);save();if(!storageOK)throw Error('Local storage is unavailable');}else if(!C.eq(JSON.parse(localStorage.getItem(KEY)||'null'),t.after)&&!C.eq(snapshot(),t.after))throw Error('Interrupted sync: back up progress before retrying');delete meta.transaction;persist();}}catch(e){stale=true;tell('Cloud state needs attention. Export a backup. '+e.message);}
+ try{const raw=localStorage.getItem(META);if(raw){meta=JSON.parse(raw);validateStateTree(meta);}if(meta?.transaction){const t=meta.transaction;if(C.eq(JSON.parse(localStorage.getItem(KEY)||'null'),t.before)||C.eq(snapshot(),t.before)){S=migrate(t.after);save();if(!storageOK)throw Error('Local storage is unavailable');}else if(!C.eq(JSON.parse(localStorage.getItem(KEY)||'null'),t.after)&&!C.eq(snapshot(),t.after))throw Error('Interrupted sync: back up progress before retrying');delete meta.transaction;persist();}}catch(e){stale=true;tell('Cloud state needs attention. Export a backup. '+e.message);}
  if(!stale)tell(meta?.account?'Connect Google to resume syncing. Offline progress is kept.':'Connect your Google account to sync progress between devices.');controls();
  function loadGIS(){if(ready||loading||!navigator.onLine)return;loading=true;const script=document.createElement('script');script.src='https://accounts.google.com/gsi/client';script.async=true;script.onload=()=>{ready=Boolean(window.google?.accounts?.oauth2);loading=false;};script.onerror=()=>{loading=false;};document.head.append(script);}
  loadGIS();
  async function api(path,opts={}){
   if(!token||Date.now()>=expiry){const e=Error('Google session expired');e.status=401;throw e;}
-  const response=await fetch('https://www.googleapis.com'+path,{...opts,headers:{...opts.headers,Authorization:'Bearer '+token},cache:'no-store'});
+  const response=await fetch('https://www.googleapis.com'+path,{...opts,headers:{...opts.headers,Authorization:'Bearer '+token},cache:'no-store',credentials:'omit'});
   if(!response.ok){const e=Error('Google Drive HTTP '+response.status);e.status=response.status;throw e;}return response.status===204?null:response.json();
  }
  async function list(){let page='',ids=[];do{const q=new URLSearchParams({spaces:'appDataFolder',q:"name contains '"+PREFIX+"'",fields:'nextPageToken,files(id,name)',pageSize:'1000'});if(page)q.set('pageToken',page);const result=await api('/drive/v3/files?'+q);ids.push(...(result.files||[]).filter(f=>f.name.startsWith(PREFIX)).map(f=>f.id));page=result.nextPageToken||'';}while(page);return ids;}
@@ -2331,7 +2344,10 @@ try {
   busy=true;controls();tell('Waiting for Google sign-in…');
   try{const client=google.accounts.oauth2.initTokenClient({client_id:CLIENT,scope:SCOPE,include_granted_scopes:false,callback:async r=>{
    if(r.error||!r.access_token){busy=false;fail(Error(r.error||'No token returned'));return;}
-   token=r.access_token;expiry=Date.now()+(Number(r.expires_in)||3600)*1000-30000;
+   const scopes=String(r.scope||'').trim().split(/\s+/).filter(Boolean);
+   const lifetime=Number(r.expires_in);
+   if(scopes.length!==1||scopes[0]!==SCOPE||!Number.isFinite(lifetime)||lifetime<=30){busy=false;token='';expiry=0;fail(Error('Unexpected Google permission or token lifetime. Only private application data is allowed.'));return;}
+   token=r.access_token;expiry=Date.now()+lifetime*1000-30000;
    try{const about=await api('/drive/v3/about?fields=user(permissionId,emailAddress,displayName)');const user=about.user;if(!user?.permissionId)throw Error('Cannot identify Drive account');if(meta?.account&&meta.account!==user.permissionId){token='';throw Error('This device is linked to another Google account. Reconnect using the original account.');}
     if(!meta){meta={account:user.permissionId,email:user.emailAddress||user.displayName||'',initialized:false,base:null,known:[],clock:0,pending:null};persist();}busy=false;controls();await run(true);
    }catch(e){busy=false;token='';fail(e);}
