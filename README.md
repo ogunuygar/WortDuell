@@ -1,6 +1,6 @@
 # WortDuell — Unified A1/A2 German–English PWA
 
-This version builds on WortDuell_A1A2_Expanded. It keeps the existing learning engine, layout, backup format and `wortduell1000.v1` storage key. This release adds PWA support and automated GitHub Pages deployment. AI and cloud sync are not included.
+This version builds on WortDuell_A1A2_Expanded. It keeps the existing learning engine, layout, backup format and `wortduell1000.v1` storage key. This release adds PWA support and automated GitHub Pages deployment. The experimental AI was removed. Google Drive sync is now available as an optional beta.
 
 ## Publish and install (PWA)
 
@@ -90,7 +90,7 @@ Time words are stored once in time-expressions.json where applicable. They also 
 - To add a conjugation, add a `conjugation` object to the existing verb record: unique `n` (next 202), unique `_order` (next 201), `level`, `type`, six `forms`, and `perf`. Prefer bare subject forms and a `type` other than the legacy `Next 100` (which denotes forms prefixed with subject pronouns). Optional `label` preserves a specific exercise label such as a prepositional construction. Use `tenseExamples` with four strings (German present, English present, German perfect, English perfect) for an optional pair of extra sentences.
 - Grammar lesson IDs and global `_order` must be unique; next lesson order is 22. Edit the relevant category file; all files in the catalog load automatically. B1–C2 folders remain empty. No new content becomes visible until its dataset actually contains records.
 - Edit JSON; no JavaScript rebuild is required for content updates. For local PWA development regenerate the offline metadata and apply the update, or let the GitHub Actions workflow handle this on push. If editing JS source, run `python3 tools/build.py` (Windows `py tools/build.py`). The ready-to-run bundle is included. Catalog schema version 2 requires this loader.
-- Before changing URL, browser or device, export your old progress in Settings, then import it in the new version. No cloud sync yet. Do not upload personal progress backups to a public repository.
+- Before linking or changing devices, export a local backup in Settings. Use Google Drive sync for linked devices; manual import is disabled once linked. Do not upload personal progress backups to a public repository.
 
 ## Curriculum references and limits
 
@@ -114,3 +114,12 @@ The original data and learning JavaScript are unchanged. Syntax, generated relea
 This release removes the local AI tutor, model management UI and runtime. If upgrading from the experimental AI release, use Settings → AI model storage → Delete Model on each device/browser/app context **before applying this release**; back up progress first. Removing source files does not remove models already cached by WebLLM. Do not clear all website data unless you have a verified progress backup.
 
 When applying the removal patch, overwrite the six included files in their original paths and delete the obsolete `css/ai.css`, `js/ai.js`, `js/ai-worker.js`, and `tools/test_ai.mjs` from the repository. The release builder excludes obsolete AI runtime files even if they are left behind. Keep your existing `.github/workflows/pages.yml` unchanged.
+
+## Google Drive sync (beta)
+
+- Google Cloud: enable Drive API, configure external test user and authorize `https://ogunuygar.github.io` as a JavaScript origin. The public OAuth client ID is included in `js/source/18-cloud-sync.js`; no client secret, password or access token belongs in Git. The only scope is `https://www.googleapis.com/auth/drive.appdata`.
+- In the published app open Settings → Connect Google. Sign in to the same Google account on every device. Begin with the device containing your main existing progress. Download a backup before linking. On subsequent devices with old progress, merge only if the histories are genuinely independent; if the progress was copied/imported, choose the cloud copy instead (a backup is downloaded).
+- Sync now is available on Settings; automatic sync runs approximately every minute on visible Home or Settings while connected and online. Offline changes remain local. Google access tokens are held only in memory; reconnect after closing the app or token expiration. Disconnect pauses sync without erasing either copy; the account remains bound locally.
+- Changes use append-only Drive batches with preallocated IDs and replay deduplication. Counters merge by delta; favourites and personal words merge by item. Review timing, conflicting settings and the daily plan use last recorded batch ordering, not a perfect reconstruction of individual answers. Simultaneous mastery of the same word may overcount daily completion events. Do not import/reset linked progress or open multiple windows of this app in the same browser. Cloud reset/account switching, history compaction, and full multi-tab coordination are not implemented. Local storage exhaustion or deletion of cloud files stops sync rather than silently dropping history.
+- The appDataFolder is hidden in normal Drive views. Clearing browser/site data can delete unsynced local work. Keep local backups, especially during beta testing.
+- Verified locally: pure merge tests (`node tools/test_cloud_sync.mjs`), JavaScript syntax, release generation and simulated PWA lifecycle. Real OAuth, Drive requests and Safari/iOS installed-app popup compatibility have not been tested.

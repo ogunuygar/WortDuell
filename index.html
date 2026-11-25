@@ -351,6 +351,13 @@
       <b>Timer</b>
       <div class="seg" id="segTime"><button data-v="0" aria-pressed="false">No timer</button><button data-v="20" aria-pressed="true">20 sec</button><button data-v="12" aria-pressed="false">12 sec</button></div>
     </div>
+    <div class="card" id="cloudSettings">
+      <b>Google Drive · shared learning progress</b>
+      <span class="muted" id="cloudAccount">No account linked</span>
+      <span class="notice" id="cloudStatus" role="status" aria-live="polite">Preparing sync…</span>
+      <div class="pwa-actions"><button class="btn" id="cloudConnect" type="button">Connect Google</button><button class="btn soft" id="cloudSync" type="button" disabled>Sync now</button><button class="btn soft" id="cloudDisconnect" type="button" disabled>Disconnect</button></div>
+      <span class="notice">Only WortDuell’s private Drive application data is accessed. Automatic sync runs on Home or Settings while online and connected. Reconnect when Google authorization expires. Back up before first linking. Use one open WortDuell window per device. Reset/import are disabled after linking to protect shared progress.</span>
+    </div>
     <div class="card" id="pwaSettings">
       <b>App &amp; offline updates</b>
       <span class="muted" id="pwaStatus" role="status">Checking offline support…</span>
