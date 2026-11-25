@@ -7,7 +7,6 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="icons/icon-192.png">
 <link rel="stylesheet" href="css/pwa.css">
-<link rel="stylesheet" href="css/ai.css">
 </head><body>
 
 
@@ -30,7 +29,6 @@
       <button type="button" data-go="stories" class="wd-nav-item"><span class="wd-emoji">▤</span><span>Mini stories</span></button>
       <button type="button" data-go="talk" class="wd-nav-item"><span class="wd-emoji">☏</span><span>Speaking practice</span></button>
       <button type="button" data-go="builder" class="wd-nav-item"><span class="wd-emoji">✧</span><span>Sentence builder+</span></button>
-      <button type="button" data-ai-open class="wd-nav-item"><span class="wd-emoji">✦</span><span>AI tutor</span></button>
       <div class="wd-nav-rule"></div>
       <div class="wd-side-label">LIBRARY</div>
       <button type="button" data-go="academy" class="wd-nav-item"><span class="wd-emoji">▧</span><span>Grammar academy</span></button>
@@ -360,18 +358,6 @@
       <div class="pwa-actions"><button class="btn soft" id="pwaCheck" type="button">Check for updates</button><button class="btn" id="pwaApply" type="button" hidden>Apply update &amp; reload</button></div>
       <span class="notice">Saved lessons work offline after setup. Speech availability depends on your device. Back up progress before switching browsers or installing the app.</span>
     </div>
-    <div class="card" id="aiStorageSettings">
-      <b>AI model storage</b>
-      <span class="muted" id="aiStorageModel"></span>
-      <span id="aiStorageStatus" role="status" class="notice">Checking AI status…</span>
-      <progress id="aiStorageProgress" max="1" value="0" hidden aria-label="AI model download progress"></progress>
-      <div class="ai-storage-actions">
-        <button class="btn soft" type="button" id="aiStorageDownload">Download Model</button>
-        <button class="btn soft" type="button" id="aiStorageUnload">Unload Model</button>
-        <button class="btn soft" type="button" id="aiStorageDelete">Delete Model</button>
-      </div>
-      <span class="notice">Unload stops AI and releases working memory. Delete removes WortDuell's downloaded AI model variants from this browser's storage, not your learning progress. Other devices are unaffected. Internet may be required to load the model management runtime.</span>
-    </div>
     <div class="card">
       <b>Back up progress</b>
       <span class="muted" style="font-size:14px">Your progress is saved on this device. Copy the backup code and import it to continue on another device.</span>
@@ -428,17 +414,6 @@
   <p>Finish your exercise before reloading. Other open WortDuell tabs may also reload.</p>
   <div class="pwa-actions"><button class="btn" id="pwaBannerApply" type="button">Update &amp; reload</button><button class="btn soft" id="pwaDismiss" type="button">Later</button></div>
 </div>
-<button type="button" id="aiLauncher" data-ai-open aria-controls="aiDialog" aria-expanded="false" aria-label="Open AI tutor">✦ <span>AI Tutor</span></button>
-<aside id="aiDialog" hidden aria-labelledby="aiTitle">
-  <header class="ai-heading"><div><h2 id="aiTitle">✦ AI Tutor</h2><small>Ask anything about German</small></div><button type="button" class="ai-icon" id="aiClose" aria-label="Close tutor">×</button></header>
-  <div class="ai-setup" id="aiSetup"><p id="aiIntro">Download the local AI once on this device. No API key. Use Wi-Fi; the model is several hundred MB or more.</p><button type="button" class="btn primary" id="aiLoad">Download AI model</button></div>
-  <div class="ai-state"><p id="aiStatus" role="status">AI is not loaded.</p><button type="button" class="ai-icon ai-stop" id="aiStop" hidden>Stop</button></div>
-  <progress id="aiProgress" max="1" value="0" hidden aria-label="Model loading progress"></progress>
-  <div id="aiLog" role="log" aria-label="Tutor conversation" aria-live="off"><div class="ai-welcome"><strong>Hallo! 👋</strong><p>Ask me about a word, a sentence or a grammar rule.</p><button type="button" class="ai-example" data-ai-example="Why do we use dem instead of den?">Why dem instead of den?</button><button type="button" class="ai-example" data-ai-example="What is the difference between weil and denn?">weil vs. denn</button></div></div>
-  <form id="aiForm"><label class="ai-sr-only" for="aiInput">Your question</label><textarea id="aiInput" maxlength="1000" rows="2" required placeholder="Ask your German tutor…"></textarea><button type="submit" class="btn primary" id="aiSend" aria-label="Send message">↑</button></form>
-  <footer class="ai-footer"><small>Local AI · Can make mistakes</small><button type="button" id="aiClear" class="ai-link">New chat</button></footer>
-</aside>
-<script src="js/ai.js" defer></script>
 <script src="js/pwa.js" defer></script>
 <script src="js/data-loader.js"></script>
 <script src="js/app.js"></script>
