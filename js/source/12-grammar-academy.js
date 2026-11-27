@@ -33,7 +33,8 @@ function renderGrammarQuestion(){
  const options=shuffle([q.answer,...q.others]);A.options=options;
  $('grammarOptions').innerHTML=options.map((s,i)=>`<button type="button" data-gchoice="${i}" class="grammar-option">${esc(s)}</button>`).join('');
 }
-function registerGrammar(ok){const g=gram(),l=g.byLesson[A.lesson.id]||(g.byLesson[A.lesson.id]={n:0,ok:0});l.n++;if(ok)l.ok++;const day=g.day[today()]||(g.day[today()]={n:0,ok:0});day.n++;if(ok)day.ok++;const q=A.qs[A.i];if(q)adaptTrack('grammar:'+A.lesson.id+':'+q.q,ok,A.lesson.title,'grammar-topic:'+A.lesson.id);save();}
+function recordAcademyDay(ok){const g=gram();g.day=g.day||{};const day=g.day[today()]||(g.day[today()]={n:0,ok:0});day.n++;if(ok)day.ok++;}
+function registerGrammar(ok){const g=gram(),l=g.byLesson[A.lesson.id]||(g.byLesson[A.lesson.id]={n:0,ok:0});l.n++;if(ok)l.ok++;recordAcademyDay(ok);const q=A.qs[A.i];if(q)adaptTrack('grammar:'+A.lesson.id+':'+q.q,ok,A.lesson.title,'grammar-topic:'+A.lesson.id);save();}
 function grammarAnswer(i){
  if(!A||A.answered)return;A.answered=true;const q=A.qs[A.i],ok=A.options[i]===q.answer;
  if(ok)A.ok++;registerGrammar(ok);
@@ -91,7 +92,7 @@ $('verbChoices').addEventListener('click',e=>{
  const b=e.target.closest('[data-vchoice]');if(!b||vPractice.answered)return;
  const {v,p}=vPractice.list[vPractice.i],ans=formParts(v,p),ok=vPractice.options[+b.dataset.vchoice]===ans;
  vPractice.answered=true;if(ok)vPractice.ok++;
- gram().verb.n++;if(ok)gram().verb.ok++;adaptTrack('verb-choice:'+v.v+':'+p,ok,"Verb conjugation",'verb:'+v.v);save();
+ gram().verb.n++;if(ok)gram().verb.ok++;recordAcademyDay(ok);adaptTrack('verb-choice:'+v.v+':'+p,ok,"Verb conjugation",'verb:'+v.v);save();
  $('verbChoices').querySelectorAll('button').forEach((el,k)=>{el.disabled=true;if(vPractice.options[k]===ans)el.classList.add('correct');else if(k===+b.dataset.vchoice)el.classList.add('incorrect');});
  $('verbFeedback').hidden=false;$('verbFeedback').innerHTML=`<div class="verdict ${ok?'ok':'bad'}">${ok?"✓ Correct":"Check the correct form"}</div><p><b>${esc(persons[p])} ${esc(ans)}</b> ${say(persons[p]+' '+ans,"Listen to the verb form")}</p>${adaptNudge('verb-choice:'+v.v+':'+p,ok,v.example)}<button class="btn primary block" id="nextVerb">Continue</button>`;
  $('nextVerb').onclick=()=>{vPractice.i++;renderVerbQuestion();};

@@ -20,13 +20,14 @@ $('wdMobileSyncNow').onclick=()=>$('cloudSync').click();
 function renderHome(){
   const L=DATA.filter(d=>learned(d.i)).length;
   $('stLearn').textContent=L;
-  $('stAcc').textContent=S.ans?Math.round(S.ok/S.ans*100)+'%':'–';
+  const totals=questionTotals(S);
+  $('stAcc').textContent=totals.n?Math.round(totals.ok/totals.n*100)+'%':'–';
   $('stPts').textContent=S.pts>=10000?(S.pts/1000).toFixed(1)+'k':S.pts;
   $('stToday').textContent=daily(today()).answers;
   const fmt=n=>Number(n||0).toLocaleString('en-GB');
   $('wdMobileToday').textContent=fmt(daily(today()).answers);
-  $('wdMobileTotal').textContent=fmt(S.ans);
-  $('wdMobileAccuracy').textContent=S.ans?Math.round(S.ok/S.ans*100)+'%':'–';
+  $('wdMobileTotal').textContent=fmt(totals.n);
+  $('wdMobileAccuracy').textContent=totals.n?Math.round(totals.ok/totals.n*100)+'%':'–';
   $('wdMobileLearned').textContent=fmt(L);
   $('wdMobileStreak').textContent=fmt(streak());
   $('wdMobilePoints').textContent=fmt(S.pts);

@@ -319,7 +319,7 @@ function renderAnalytics(){
   const totalDone=Object.values(S.days).reduce((acc,d)=>acc+(d.answers||0),0);
   const d30=Array.from({length:30},(_,i)=>dayKeyOffset(i-29));
   const in30=d30.reduce((s,k)=>s+daily(k).answers,0);
-  $('analysisTotals').innerHTML=[["All 3 skills complete",learnedCount+' / '+DATA.length],["Total questions",S.ans],["Last 30 days",in30],["Day streak",streak()+" days"]].map(([l,v])=>`<div><strong>${v}</strong><span>${l}</span></div>`).join('');
+  $('analysisTotals').innerHTML=[["All 3 skills complete",learnedCount+' / '+DATA.length],["Total questions",questionTotals(S).n],["Last 30 days",in30],["Day streak",streak()+" days"]].map(([l,v])=>`<div><strong>${v}</strong><span>${l}</span></div>`).join('');
   const mx=Math.max(1,...d30.map(k=>daily(k).answers));
   $('analysisChart').innerHTML=d30.map(k=>{const n=daily(k).answers;return `<div class="hbar-wrap" title="${k}: ${n} questions"><div class="hbar"><i style="height:${n?Math.max(9,100*n/mx):0}%"></i></div><span>${k.slice(-2)}</span></div>`;}).join('');
   const directionHTML=dir=>{
@@ -330,8 +330,7 @@ function renderAnalytics(){
     return `<div class="analysis-line"><strong>${dir==='de2tr'?"🇩🇪 DE → 🇬🇧 EN":"🇬🇧 EN → 🇩🇪 DE"}</strong><small>${s.n} questions · ${s.n?Math.round(100*s.ok/s.n):0}% · ${strong} strong · ${waiting} reviews</small><div class="bar"><i style="width:${s.n?100*s.ok/s.n:0}%"></i></div></div>`;
   };
   $('analysisDirections').innerHTML=directionHTML('de2tr')+directionHTML('tr2de');
-  const modeLabels=['de2tr','tr2de','type','listen','sentence','article','plural','dialogue','art','gap','choice'];
-  $('analysisModes').innerHTML=modeLabels.filter(k=>S.modeStats[k]?.n).map(k=>{const a=S.modeStats[k];return `<div class="analysis-line"><strong>${esc(MODE_LABELS[k]||k)}</strong><small>${a.ok}/${a.n} · ${Math.round(100*a.ok/a.n)}%</small><div class="bar"><i style="width:${100*a.ok/a.n}%"></i></div></div>`;}).join('')||"<p class=\"muted\">No questions answered in this version yet.</p>";
+  renderQuestionBreakdown($('analysisModes'));
   const topics=Object.entries(S.topicStats).filter(([k,a])=>a.n>=2).sort((a,b)=>a[1].ok/a[1].n-b[1].ok/b[1].n).slice(0,8);
   $('analysisTopics').innerHTML=topics.map(([t,a])=>`<div class="analysis-line"><strong>${esc(TOPIC_TR[t]||t)}</strong><small>${a.ok}/${a.n} · ${Math.round(100*a.ok/a.n)}%</small><div class="bar"><i style="width:${100*a.ok/a.n}%"></i></div></div>`).join('')||"<p class=\"muted\">Answer at least two questions to compare topics.</p>";
   const errors=DATA.filter(d=>S.w[d.i]?.x>0).sort((a,b)=>{const ra=S.w[a.i],rb=S.w[b.i];return (rb.x/(rb.x+rb.r))-(ra.x/(ra.x+ra.r))||rb.x-ra.x;}).slice(0,12);

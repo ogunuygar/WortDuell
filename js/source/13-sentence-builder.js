@@ -43,7 +43,7 @@ $('builderCheck').onclick=()=>{
  if(ordered.length<item.tokens.length){toast("Select all the words first");return;}
  const accepted=[item.de,...(item.alt||[])].some(v=>tokenEqual(ordered,cleanTokens(v)));
  if(accepted)BPLUS.correct++;
- const g=gram();g.byLesson.builder=g.byLesson.builder||{n:0,ok:0};g.byLesson.builder.n++;if(accepted)g.byLesson.builder.ok++;adaptTrack('builder:'+item.de,accepted,'Satzbau');save();
+ const g=gram();g.byLesson.builder=g.byLesson.builder||{n:0,ok:0};g.byLesson.builder.n++;if(accepted)g.byLesson.builder.ok++;recordAcademyDay(accepted);adaptTrack('builder:'+item.de,accepted,'Satzbau');save();
  BPLUS.done=true;
  $('builderFeedback').hidden=false;
  $('builderFeedback').innerHTML=`<div class="verdict ${accepted?'ok':'bad'}">${accepted?"✓ Correct sentence!":"Check the word order"}</div><b>${esc(item.de)}</b><p class="notice">${esc(item.rule)}</p>${adaptNudge('builder:'+item.de,accepted,item.rule+' '+item.de)}${item.alt?.length?`<p class="notice"><strong>Another correct version:</strong> ${esc(item.alt.join(' / '))}</p>`:''}<div class="row">${say(item.de,"Listen to the sentence")}<button class="btn primary" id="builderNext" style="flex:1">${BPLUS.i+1>=BPLUS.items.length?"Results":"Continue"}</button></div>`;

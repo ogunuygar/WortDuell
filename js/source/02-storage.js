@@ -70,7 +70,39 @@ const masteryCounts=()=>DATA.reduce((acc,d)=>{const m=masteryFor(d.i);if(m.recog
 const masteryBadge=i=>{const m=masteryFor(i);return `<div class="wd-skill-strip" aria-label="Word becerileri"><span class="${m.recognition?'is-done':''}">${m.recognition?'✓':'○'} I recognise it</span><span class="${m.writing?'is-done':''}">${m.writing?'✓':'○'} I can write it</span><span class="${m.sentence?'is-done':''}">${m.sentence?'✓':'○'} I can build a sentence</span></div>`;};
 const isWrong=i=>!!(S.w[i]&&S.w[i].x>0&&S.w[i].b<2);
 const due=i=>{const r=S.w[i];return !!r&&((r.r+r.x>0&&(!r.next||r.next<=Date.now()))||Object.values(r.directions||{}).some(m=>(m.r+m.x)>0&&m.next<=Date.now()));};
-const daily=key=>S.days[key]||blankDay();
+// Read-only reporting: the legacy main counter excludes Academy, verb-choice and dedicated builder.
+const countAnswers=x=>Number.isFinite(x)&&x>=0?Math.floor(x):0;
+function questionTotals(state){
+ const extra=[...Object.values(state.grammar?.byLesson||{}),state.grammar?.verb];
+ return extra.reduce((t,x)=>({n:t.n+countAnswers(x?.n),ok:t.ok+countAnswers(x?.ok)}),{n:countAnswers(state.ans),ok:countAnswers(state.ok)});
+}
+function questionBreakdown(state){
+ const legacy=state.modeStats||{},hub=state.study?.modes||{},lessons=state.grammar?.byLesson||{};
+ const sum=(...xs)=>xs.reduce((a,x)=>({n:a.n+countAnswers(x?.n),ok:a.ok+countAnswers(x?.ok)}),{n:0,ok:0});
+ const rows=[
+  ['Vocabulary · DE → EN',sum(legacy.de2tr,legacy.choice,hub['Word · First meaning'])],
+  ['Vocabulary · EN → DE',sum(legacy.tr2de)],
+  ['Mini exercise · 4 choices',sum(hub['Word · 4 choices'])],
+  ['Writing words',sum(legacy.type)],
+  ['Fill in the gap',sum(legacy.gap,hub.Gap,hub['Word · Fill in the blank'])],
+  ['Sentence building',sum(legacy.sentence,hub['Word · Sentence building'],lessons.builder)],
+  ['Articles & plurals',sum(legacy.art,legacy.article,legacy.plural)],
+  ['Grammar Academy',sum(...Object.entries(lessons).filter(([k])=>k!=='builder').map(([,v])=>v))],
+  ['Verb forms & writing',sum(state.grammar?.verb,hub['Verb writing'])],
+  ['Listening',sum(legacy.listen)],
+  ['Reading · mini stories',sum(hub.Story)],
+  ['Conversation practice',sum(legacy.dialogue,hub['Dialogue Pro'])],
+  ['Spoken repetition (self-rated)',sum(hub['Spoken repetition'])]
+ ];
+ const total=questionTotals(state),known=sum(...rows.map(([,v])=>v));
+ // Historical backups may have attempts without mode information. Do not invent categories.
+ if(total.n>known.n)rows.push(['Other / older unclassified questions',{n:total.n-known.n,ok:Math.max(0,Math.min(total.n-known.n,total.ok-known.ok))}]);
+ return {total,rows,mismatch:known.n>total.n||known.ok>total.ok||total.ok>total.n};
+}
+function daily(key){
+ const d=S.days[key]||blankDay(),g=S.grammar?.day?.[key];
+ return {...d,answers:countAnswers(d.answers)+countAnswers(g?.n),correct:countAnswers(d.correct)+countAnswers(g?.ok)};
+}
 const dueWords=()=>DATA.filter(d=>due(d.i));
 function streak(){let n=0,j=0;if(!daily(today()).answers)j=-1;while(daily(dayKeyOffset(j)).answers>0){n++;j--;}return n;}
 function recordAnswer(d,ok,points,wasLearned,wasReview){
