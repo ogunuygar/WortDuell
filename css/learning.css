@@ -133,3 +133,25 @@ button.hub-list-item:active{transform:scale(.99)}
 .hub-grammar-grid>*{padding:8px;background:var(--sunk);overflow-wrap:anywhere}
 #hubPersonal .practice-input{font-size:16px;font-weight:500}
 @media(max-width:390px){.hub-kind-picker button{font-size:12px;padding:8px 5px}}
+
+/* Compact progress reporting, using the existing theme. */
+.wd-report-total{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:4px 0 12px}
+.wd-report-total strong{font-size:24px;color:var(--ok);font-variant-numeric:tabular-nums}
+.wd-report-total span{font-size:12px;color:var(--muted)}
+.wd-report-rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0 16px}
+.wd-report-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}
+.wd-roadmap-group{border:1px solid var(--line);border-radius:12px;margin:8px 0;padding:0 10px}
+.wd-roadmap-group summary{cursor:pointer;padding:12px 0;display:flex;justify-content:space-between;gap:10px;font-size:14px}
+.wd-roadmap-group summary span{color:var(--muted);font-size:12px}
+.wd-roadmap-group summary b::before{content:'▸ ';color:var(--muted)}
+.wd-roadmap-group[open] summary b::before{content:'▾ '}
+.wd-roadmap-row{display:block;width:100%;text-align:left;background:transparent;color:inherit;border:0;border-top:1px solid var(--line);padding:10px 0;cursor:pointer;font:inherit}
+.wd-roadmap-line{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:5px}
+.wd-roadmap-line b{font-size:13px;overflow-wrap:anywhere;min-width:0}
+.wd-roadmap-line small,.wd-road-status{font-size:11px;color:var(--muted)}
+.wd-road-status{white-space:nowrap;font-weight:700}
+.wd-road-status[data-state="Completed"]{color:var(--ok)}
+.wd-road-status[data-state="Needs review"],.wd-road-status[data-state="Review due"]{color:var(--bad)}
+.wd-roadmap-row .bar{height:5px}
+.wd-roadmap-row .bar i{background:var(--ok)}
+#wdRoadLevel{max-width:110px}
