@@ -98,7 +98,39 @@ const masteryCounts=()=>DATA.reduce((acc,d)=>{const m=masteryFor(d.i);if(m.recog
 const masteryBadge=i=>{const m=masteryFor(i);return `<div class="wd-skill-strip" aria-label="Word becerileri"><span class="${m.recognition?'is-done':''}">${m.recognition?'✓':'○'} I recognise it</span><span class="${m.writing?'is-done':''}">${m.writing?'✓':'○'} I can write it</span><span class="${m.sentence?'is-done':''}">${m.sentence?'✓':'○'} I can build a sentence</span></div>`;};
 const isWrong=i=>!!(S.w[i]&&S.w[i].x>0&&S.w[i].b<2);
 const due=i=>{const r=S.w[i];return !!r&&((r.r+r.x>0&&(!r.next||r.next<=Date.now()))||Object.values(r.directions||{}).some(m=>(m.r+m.x)>0&&m.next<=Date.now()));};
-const daily=key=>S.days[key]||blankDay();
+// Read-only reporting: the legacy main counter excludes Academy, verb-choice and dedicated builder.
+const countAnswers=x=>Number.isFinite(x)&&x>=0?Math.floor(x):0;
+function questionTotals(state){
+ const extra=[...Object.values(state.grammar?.byLesson||{}),state.grammar?.verb];
+ return extra.reduce((t,x)=>({n:t.n+countAnswers(x?.n),ok:t.ok+countAnswers(x?.ok)}),{n:countAnswers(state.ans),ok:countAnswers(state.ok)});
+}
+function questionBreakdown(state){
+ const legacy=state.modeStats||{},hub=state.study?.modes||{},lessons=state.grammar?.byLesson||{};
+ const sum=(...xs)=>xs.reduce((a,x)=>({n:a.n+countAnswers(x?.n),ok:a.ok+countAnswers(x?.ok)}),{n:0,ok:0});
+ const rows=[
+  ['Vocabulary · DE → EN',sum(legacy.de2tr,legacy.choice,hub['Word · First meaning'])],
+  ['Vocabulary · EN → DE',sum(legacy.tr2de)],
+  ['Mini exercise · 4 choices',sum(hub['Word · 4 choices'])],
+  ['Writing words',sum(legacy.type)],
+  ['Fill in the gap',sum(legacy.gap,hub.Gap,hub['Word · Fill in the blank'])],
+  ['Sentence building',sum(legacy.sentence,hub['Word · Sentence building'],lessons.builder)],
+  ['Articles & plurals',sum(legacy.art,legacy.article,legacy.plural)],
+  ['Grammar Academy',sum(...Object.entries(lessons).filter(([k])=>k!=='builder').map(([,v])=>v))],
+  ['Verb forms & writing',sum(state.grammar?.verb,hub['Verb writing'])],
+  ['Listening',sum(legacy.listen)],
+  ['Reading · mini stories',sum(hub.Story)],
+  ['Conversation practice',sum(legacy.dialogue,hub['Dialogue Pro'])],
+  ['Spoken repetition (self-rated)',sum(hub['Spoken repetition'])]
+ ];
+ const total=questionTotals(state),known=sum(...rows.map(([,v])=>v));
+ // Historical backups may have attempts without mode information. Do not invent categories.
+ if(total.n>known.n)rows.push(['Other / older unclassified questions',{n:total.n-known.n,ok:Math.max(0,Math.min(total.n-known.n,total.ok-known.ok))}]);
+ return {total,rows,mismatch:known.n>total.n||known.ok>total.ok||total.ok>total.n};
+}
+function daily(key){
+ const d=S.days[key]||blankDay(),g=S.grammar?.day?.[key];
+ return {...d,answers:countAnswers(d.answers)+countAnswers(g?.n),correct:countAnswers(d.correct)+countAnswers(g?.ok)};
+}
 const dueWords=()=>DATA.filter(d=>due(d.i));
 function streak(){let n=0,j=0;if(!daily(today()).answers)j=-1;while(daily(dayKeyOffset(j)).answers>0){n++;j--;}return n;}
 function recordAnswer(d,ok,points,wasLearned,wasReview){
@@ -171,13 +203,14 @@ $('wdMobileSyncNow').onclick=()=>$('cloudSync').click();
 function renderHome(){
   const L=DATA.filter(d=>learned(d.i)).length;
   $('stLearn').textContent=L;
-  $('stAcc').textContent=S.ans?Math.round(S.ok/S.ans*100)+'%':'–';
+  const totals=questionTotals(S);
+  $('stAcc').textContent=totals.n?Math.round(totals.ok/totals.n*100)+'%':'–';
   $('stPts').textContent=S.pts>=10000?(S.pts/1000).toFixed(1)+'k':S.pts;
   $('stToday').textContent=daily(today()).answers;
   const fmt=n=>Number(n||0).toLocaleString('en-GB');
   $('wdMobileToday').textContent=fmt(daily(today()).answers);
-  $('wdMobileTotal').textContent=fmt(S.ans);
-  $('wdMobileAccuracy').textContent=S.ans?Math.round(S.ok/S.ans*100)+'%':'–';
+  $('wdMobileTotal').textContent=fmt(totals.n);
+  $('wdMobileAccuracy').textContent=totals.n?Math.round(totals.ok/totals.n*100)+'%':'–';
   $('wdMobileLearned').textContent=fmt(L);
   $('wdMobileStreak').textContent=fmt(streak());
   $('wdMobilePoints').textContent=fmt(S.pts);
@@ -395,7 +428,8 @@ function daySummary(key){const day=daily(key),accuracy=day.legacy?"Earlier recor
   $('dayDetail').innerHTML=`<div><strong>${esc(key)}</strong><span>Selected day</span></div><div><strong>${day.answers}</strong><span>Questions answered</span></div><div><strong>${esc(accuracy)}</strong><span>Accuracy</span></div><div><strong>${day.learned||0}</strong><span>Newly learned</span></div><div><strong>${day.points||0}</strong><span>Points earned</span></div><div><strong>${day.review||0}</strong><span>Review questions</span></div>`;
 }
 function renderProgress(){
-  $('pStreak').textContent=streak();$('pTotal').textContent=S.ans;
+  $('pStreak').textContent=streak();$('pTotal').textContent=questionTotals(S).n;
+  renderQuestionBreakdown($('wdQuestionBreakdown'));renderRoadmap();
   const n=DATA.filter(d=>learned(d.i)).length;
   $('pLearn').textContent=n;$('pMasterText').textContent=`${n} / ${DATA.length} words completed in all three skills`;
   $('pMasterBar').style.width=(100*n/DATA.length)+'%';
@@ -418,6 +452,59 @@ $('activityGrid').addEventListener('click',e=>{const b=e.target.closest('[data-d
 $('pReview').onclick=reviewNow;
 $('pWrong').onclick=()=>start(DATA.filter(d=>isWrong(d.i)),{title:"Review mistakes",len:20,dir:S.set.dir});
 
+
+/* ---------- Read-only learning roadmap (existing adaptive evidence) ---------- */
+function questionCoverage(keys,skills,now=Date.now(),fallbackAttempts=0){
+ const unique=[...new Set(keys)],records=unique.map(k=>skills[k]);
+ const seen=records.filter(x=>x?.n>0).length;
+ const passed=records.filter(x=>x?.n>0&&x.streak>0).length;
+ const due=records.filter(x=>x?.n>0&&x.streak>0&&x.due>0&&x.due<=now).length;
+ return {total:unique.length,seen,passed,due,started:seen>0||fallbackAttempts>0};
+}
+function roadmapStatus(c){
+ if(c.total&&c.passed===c.total)return c.due?'Review due':'Completed';
+ if(!c.started)return 'Not started';
+ if(c.total&&c.seen===c.total)return 'Needs review';
+ return 'In progress';
+}
+function renderQuestionBreakdown(root){
+ const {total,rows,mismatch}=questionBreakdown(S);
+ const dir=S.dirStats||{};
+ root.innerHTML=`<div class="wd-report-total"><strong>${total.n}</strong><span>total answered attempts · ${total.n?Math.round(total.ok/total.n*100)+'% accuracy':'no answers yet'}</span></div>
+ <div class="wd-report-rows">${rows.map(([label,x])=>`<div class="wd-report-row"><span>${esc(label)}</span><b class="num">${x.n}</b></div>`).join('')}</div>
+ <p class="notice">Every checked answer counts once, including retries, mistakes and mini exercises. Listening to audio, reading examples and flipping cards do not count. Spoken repetition is self-rated.</p>
+ <p class="notice">Direction statistics: DE → EN ${countAnswers(dir.de2tr?.n)} · EN → DE ${countAnswers(dir.tr2de?.n)}. These overlap with the categories above and are not added again.</p>${mismatch?'<p class="notice">Some older counters are inconsistent. The stored total is kept; categories may not reconcile.</p>':''}`;
+}
+let roadmapLevel='all';
+function renderRoadmap(){
+ const root=$('wdRoadmap'),skills=S.adaptive?.skills||{},now=Date.now();
+ const selected=x=>roadmapLevel==='all'||x===roadmapLevel;
+ const grammar=GRAMMAR_LESSONS.filter(l=>selected(l.lv)).map(l=>({name:l.title,level:l.lv,kind:'grammar',id:l.id,...questionCoverage(l.qs.map(q=>'grammar:'+l.id+':'+q[0]),skills,now,S.grammar?.byLesson?.[l.id]?.n||0)}));
+ const stories=HUB_DATA.stories.filter(l=>selected(l.level)).map(l=>({name:l.title,level:l.level,kind:'story',id:l.id,...questionCoverage(l.qs.map((_,i)=>'hub:Story:'+l.id+':'+i),skills,now,S.study?.stories?.[l.id]?.runs||0)}));
+ const talks=HUB_DATA.dialogues.filter(l=>selected(l.level)).map(l=>({name:l.title,level:l.level,kind:'talk',id:l.id,...questionCoverage(l.turns.map((_,i)=>'hub:Dialogue Pro:'+l.id+':'+i),skills,now,S.study?.conversations?.[l.id]?.runs||0)}));
+ const vocab=[];
+ for(const level of vocabularyLevels.filter(selected))for(const topic of TOPICS){
+  const words=DATA.filter(d=>d.l===level&&d.c===topic);if(!words.length)continue;
+  const passed=words.filter(d=>learned(d.i)).length,seen=words.filter(d=>{const r=S.w[d.i];return r&&(r.r||r.x||r.mastery)||Boolean(skills['hub:Word · First meaning:'+d.i+':guess']?.n);}).length;
+  vocab.push({name:TOPIC_TR[topic]||topic,level,kind:'vocab',id:topic,total:words.length,seen:Math.max(seen,passed),passed,due:words.filter(d=>learned(d.i)&&due(d.i)).length,started:seen>0||passed>0});
+ }
+ const groups=[['Grammar topics',grammar],['Vocabulary topics',vocab],['Mini stories',stories],['Conversations',talks]];
+ const all=groups.flatMap(([,items])=>items),complete=all.filter(x=>x.total&&x.passed===x.total).length;
+ const row=x=>{const status=roadmapStatus(x),percent=x.total?100*x.passed/x.total:0;return `<button type="button" class="wd-roadmap-row" data-road-kind="${x.kind}" data-road-id="${esc(x.id)}" data-road-level="${esc(x.level)}"><div class="wd-roadmap-line"><b>${esc(x.name)}</b><span class="wd-road-status" data-state="${status}">${status}</span></div><div class="wd-roadmap-line"><small>${esc(x.level)} · ${x.passed}/${x.total} ${x.kind==='vocab'?'words mastered':'questions correct'} · ${x.seen} tried</small><span aria-hidden="true">→</span></div><div class="bar"><i style="width:${percent}%"></i></div></button>`;};
+ // Keep open groups when the history or level filter is refreshed.
+ const previous=new Set([...root.querySelectorAll('details[open]')].map(e=>e.dataset.group));
+ const first=!root.children.length;
+ root.innerHTML=`<div class="wd-report-total"><strong>${complete}/${all.length}</strong><span>topics & activities completed · ${all.filter(x=>roadmapStatus(x)==='Review due').length} due for review</span></div>${groups.map(([label,items],i)=>`<details class="wd-roadmap-group" data-group="${i}" ${(previous.has(String(i))||(first&&i===0))?'open':''}><summary><b>${label}</b><span>${items.filter(x=>x.total&&x.passed===x.total).length}/${items.length}</span></summary>${items.map(row).join('')||'<p class="notice">No content at this level yet.</p>'}</details>`).join('')}`;
+}
+$('wdRoadLevel').addEventListener('change',e=>{roadmapLevel=e.target.value;renderRoadmap();});
+$('wdRoadmap').addEventListener('click',e=>{
+ const b=e.target.closest('[data-road-kind]');if(!b)return;
+ const {roadKind:k,roadId:id,roadLevel:lv}=b.dataset;
+ if(k==='grammar')openLesson(id);
+ else if(k==='story')openStory(id);
+ else if(k==='talk')openTalk(id);
+ else if(k==='vocab')wdBeginLesson(DATA.filter(d=>d.l===lv&&d.c===id));
+});
 
 /* ---------- Pro learning engine: all data stays under legacy storage key ---------- */
 const MODE_LABELS={choice:"Word recognition",type:"Writing",listen:"Listening",sentence:"Sentence building",article:"Article",plural:"Plural",dialogue:"Dialogue",art:"Article",gap:"Fill in the blank",de2tr:"DE → EN",tr2de:"EN → DE"};
@@ -740,7 +827,7 @@ function renderAnalytics(){
   const totalDone=Object.values(S.days).reduce((acc,d)=>acc+(d.answers||0),0);
   const d30=Array.from({length:30},(_,i)=>dayKeyOffset(i-29));
   const in30=d30.reduce((s,k)=>s+daily(k).answers,0);
-  $('analysisTotals').innerHTML=[["All 3 skills complete",learnedCount+' / '+DATA.length],["Total questions",S.ans],["Last 30 days",in30],["Day streak",streak()+" days"]].map(([l,v])=>`<div><strong>${v}</strong><span>${l}</span></div>`).join('');
+  $('analysisTotals').innerHTML=[["All 3 skills complete",learnedCount+' / '+DATA.length],["Total questions",questionTotals(S).n],["Last 30 days",in30],["Day streak",streak()+" days"]].map(([l,v])=>`<div><strong>${v}</strong><span>${l}</span></div>`).join('');
   const mx=Math.max(1,...d30.map(k=>daily(k).answers));
   $('analysisChart').innerHTML=d30.map(k=>{const n=daily(k).answers;return `<div class="hbar-wrap" title="${k}: ${n} questions"><div class="hbar"><i style="height:${n?Math.max(9,100*n/mx):0}%"></i></div><span>${k.slice(-2)}</span></div>`;}).join('');
   const directionHTML=dir=>{
@@ -751,8 +838,7 @@ function renderAnalytics(){
     return `<div class="analysis-line"><strong>${dir==='de2tr'?"🇩🇪 DE → 🇬🇧 EN":"🇬🇧 EN → 🇩🇪 DE"}</strong><small>${s.n} questions · ${s.n?Math.round(100*s.ok/s.n):0}% · ${strong} strong · ${waiting} reviews</small><div class="bar"><i style="width:${s.n?100*s.ok/s.n:0}%"></i></div></div>`;
   };
   $('analysisDirections').innerHTML=directionHTML('de2tr')+directionHTML('tr2de');
-  const modeLabels=['de2tr','tr2de','type','listen','sentence','article','plural','dialogue','art','gap','choice'];
-  $('analysisModes').innerHTML=modeLabels.filter(k=>S.modeStats[k]?.n).map(k=>{const a=S.modeStats[k];return `<div class="analysis-line"><strong>${esc(MODE_LABELS[k]||k)}</strong><small>${a.ok}/${a.n} · ${Math.round(100*a.ok/a.n)}%</small><div class="bar"><i style="width:${100*a.ok/a.n}%"></i></div></div>`;}).join('')||"<p class=\"muted\">No questions answered in this version yet.</p>";
+  renderQuestionBreakdown($('analysisModes'));
   const topics=Object.entries(S.topicStats).filter(([k,a])=>a.n>=2).sort((a,b)=>a[1].ok/a[1].n-b[1].ok/b[1].n).slice(0,8);
   $('analysisTopics').innerHTML=topics.map(([t,a])=>`<div class="analysis-line"><strong>${esc(TOPIC_TR[t]||t)}</strong><small>${a.ok}/${a.n} · ${Math.round(100*a.ok/a.n)}%</small><div class="bar"><i style="width:${100*a.ok/a.n}%"></i></div></div>`).join('')||"<p class=\"muted\">Answer at least two questions to compare topics.</p>";
   const errors=DATA.filter(d=>S.w[d.i]?.x>0).sort((a,b)=>{const ra=S.w[a.i],rb=S.w[b.i];return (rb.x/(rb.x+rb.r))-(ra.x/(ra.x+ra.r))||rb.x-ra.x;}).slice(0,12);
@@ -795,7 +881,8 @@ function renderGrammarQuestion(){
  const options=shuffle([q.answer,...q.others]);A.options=options;
  $('grammarOptions').innerHTML=options.map((s,i)=>`<button type="button" data-gchoice="${i}" class="grammar-option">${esc(s)}</button>`).join('');
 }
-function registerGrammar(ok){const g=gram(),l=g.byLesson[A.lesson.id]||(g.byLesson[A.lesson.id]={n:0,ok:0});l.n++;if(ok)l.ok++;const day=g.day[today()]||(g.day[today()]={n:0,ok:0});day.n++;if(ok)day.ok++;const q=A.qs[A.i];if(q)adaptTrack('grammar:'+A.lesson.id+':'+q.q,ok,A.lesson.title,'grammar-topic:'+A.lesson.id);save();}
+function recordAcademyDay(ok){const g=gram();g.day=g.day||{};const day=g.day[today()]||(g.day[today()]={n:0,ok:0});day.n++;if(ok)day.ok++;}
+function registerGrammar(ok){const g=gram(),l=g.byLesson[A.lesson.id]||(g.byLesson[A.lesson.id]={n:0,ok:0});l.n++;if(ok)l.ok++;recordAcademyDay(ok);const q=A.qs[A.i];if(q)adaptTrack('grammar:'+A.lesson.id+':'+q.q,ok,A.lesson.title,'grammar-topic:'+A.lesson.id);save();}
 function grammarAnswer(i){
  if(!A||A.answered)return;A.answered=true;const q=A.qs[A.i],ok=A.options[i]===q.answer;
  if(ok)A.ok++;registerGrammar(ok);
@@ -853,7 +940,7 @@ $('verbChoices').addEventListener('click',e=>{
  const b=e.target.closest('[data-vchoice]');if(!b||vPractice.answered)return;
  const {v,p}=vPractice.list[vPractice.i],ans=formParts(v,p),ok=vPractice.options[+b.dataset.vchoice]===ans;
  vPractice.answered=true;if(ok)vPractice.ok++;
- gram().verb.n++;if(ok)gram().verb.ok++;adaptTrack('verb-choice:'+v.v+':'+p,ok,"Verb conjugation",'verb:'+v.v);save();
+ gram().verb.n++;if(ok)gram().verb.ok++;recordAcademyDay(ok);adaptTrack('verb-choice:'+v.v+':'+p,ok,"Verb conjugation",'verb:'+v.v);save();
  $('verbChoices').querySelectorAll('button').forEach((el,k)=>{el.disabled=true;if(vPractice.options[k]===ans)el.classList.add('correct');else if(k===+b.dataset.vchoice)el.classList.add('incorrect');});
  $('verbFeedback').hidden=false;$('verbFeedback').innerHTML=`<div class="verdict ${ok?'ok':'bad'}">${ok?"✓ Correct":"Check the correct form"}</div><p><b>${esc(persons[p])} ${esc(ans)}</b> ${say(persons[p]+' '+ans,"Listen to the verb form")}</p>${adaptNudge('verb-choice:'+v.v+':'+p,ok,v.example)}<button class="btn primary block" id="nextVerb">Continue</button>`;
  $('nextVerb').onclick=()=>{vPractice.i++;renderVerbQuestion();};
@@ -916,7 +1003,7 @@ $('builderCheck').onclick=()=>{
  if(ordered.length<item.tokens.length){toast("Select all the words first");return;}
  const accepted=[item.de,...(item.alt||[])].some(v=>tokenEqual(ordered,cleanTokens(v)));
  if(accepted)BPLUS.correct++;
- const g=gram();g.byLesson.builder=g.byLesson.builder||{n:0,ok:0};g.byLesson.builder.n++;if(accepted)g.byLesson.builder.ok++;adaptTrack('builder:'+item.de,accepted,'Satzbau');save();
+ const g=gram();g.byLesson.builder=g.byLesson.builder||{n:0,ok:0};g.byLesson.builder.n++;if(accepted)g.byLesson.builder.ok++;recordAcademyDay(accepted);adaptTrack('builder:'+item.de,accepted,'Satzbau');save();
  BPLUS.done=true;
  $('builderFeedback').hidden=false;
  $('builderFeedback').innerHTML=`<div class="verdict ${accepted?'ok':'bad'}">${accepted?"✓ Correct sentence!":"Check the word order"}</div><b>${esc(item.de)}</b><p class="notice">${esc(item.rule)}</p>${adaptNudge('builder:'+item.de,accepted,item.rule+' '+item.de)}${item.alt?.length?`<p class="notice"><strong>Another correct version:</strong> ${esc(item.alt.join(' / '))}</p>`:''}<div class="row">${say(item.de,"Listen to the sentence")}<button class="btn primary" id="builderNext" style="flex:1">${BPLUS.i+1>=BPLUS.items.length?"Results":"Continue"}</button></div>`;
