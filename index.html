@@ -220,11 +220,21 @@
        <div class="mini-stat"><strong id="pLearn">0</strong><span>all 3 stages complete</span></div>
      </div>
      <div class="card">
+       <div class="sec-h"><h2>Question breakdown</h2></div>
+       <div id="wdQuestionBreakdown"></div>
+     </div>
+     <div class="card">
+       <div class="sec-h"><h2>My learning roadmap</h2><select id="wdRoadLevel" aria-label="Roadmap level"><option value="all">A1 + A2</option><option value="A1">A1</option><option value="A2">A2</option></select></div>
+       <p class="notice">Complete every distinct question correctly, or all three skills for every word. Completed topics can still be due for review. Select a topic to practise.</p>
+       <div id="wdRoadmap"></div>
+     </div>
+     <div class="card">
        <div class="sec-h"><h2>Study calendar</h2>
          <div class="seg" id="segDays"><button data-v="7" aria-pressed="true">7 days</button><button data-v="30" aria-pressed="false">30 days</button></div>
        </div>
        <div class="activity-grid" id="activityGrid"></div>
        <div class="daily-detail num" id="dayDetail"></div>
+       <p class="notice">Older verb-choice and dedicated sentence-builder attempts did not store dates. They count in the total, but cannot be assigned to past calendar days.</p>
      </div>
      <div class="card">
        <div class="sec-h"><h2>My memory</h2><span class="muted-small">Spaced repetition</span></div>
@@ -253,7 +263,7 @@
   </section>
   <section id="analytics" hidden class="wrap" style="padding:0">
     <div class="top"><h2 style="font-size:24px">📈 Detailed statistics</h2><button class="iconbtn" data-home>Home</button></div>
-    <p class="notice">Your previous points and word progress carry over. Statistics by mode and direction start with questions answered in this version.</p>
+    <p class="notice">Question types and directions are separate views of the same attempts. Older attempts without a recorded type appear as unclassified.</p>
     <div class="analysis-mini" id="analysisTotals"></div>
     <div class="card"><div class="sec-h"><h2>Last 30 days</h2><span class="muted-small">Questions per day</span></div><div class="history-preview" id="analysisChart" style="min-height:100px"></div></div>
     <div class="card"><h2>Recall by translation direction</h2><div id="analysisDirections" class="analytics-list"></div></div>
@@ -374,7 +384,7 @@
     </div>
     <div class="card" id="cloudSettings">
       <b>Google Drive · shared learning progress</b>
-      <span class="notice">Sync release: WD-SYNC-6 · Security 1 · <span id="wdRuntimeVersion">Starting runtime…</span></span>
+      <span class="notice">Sync release: WD-SYNC-7 · Security 1 · <span id="wdRuntimeVersion">Starting runtime…</span></span>
       <span class="muted" id="cloudAccount">No account linked</span>
       <span class="notice" id="cloudStatus" role="status" aria-live="polite">Preparing sync…</span>
       <div class="pwa-actions"><button class="btn" id="cloudConnect" type="button">Connect Google</button><button class="btn soft" id="cloudSync" type="button" disabled>Sync now</button><button class="btn soft" id="cloudDisconnect" type="button" disabled>Disconnect</button></div>
